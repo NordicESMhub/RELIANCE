@@ -44,7 +44,7 @@
 
 #### Results: where results were deposited? 
 
-- All CESM2 simulation output is available for download from Uninett Sigma: https://archive.sigma2.no/pages/public/datasetDetail.jsf?id=10.11582/2020.00028. - code to generate figures in the paper?
+- All CESM2 simulation output is available for download from Uninett Sigma: https://archive.sigma2.no/pages/public/datasetDetail.jsf?id=10.11582/2020.00028. - [Extended data](https://www.nature.com/articles/s41561-020-00649-1#MOESM5)
 
 #### Collaboration: how was the collaboration during this process?
 
