@@ -14,6 +14,7 @@
 
 ### Overview of the research community
 
+At University of Oslo, the Department of Geosciences is heavily involved in research related to climate and the impacts of climate change to our societies and enenvironments. These encompass broad research fields which ignores the traditional boundaries between geoscience disciplines, hence many researchers contribute to international networks, centres and projects worldwide.
 
 ### Typical day of a researcher
 
@@ -22,14 +23,14 @@
 
 [![DOI](https://img.shields.io/badge/DOI-10.1038%2Fs41561--020--00649--1-blue)](https://doi.org/10.1038/s41561-020-00649-1)
 
-
+Galaxy Climate
 #### (research/investigation) with demoes:
 
 ##### Data used: how was the data accessed (e.g., what repositories or locations). 
 
-- All CESM2 simulation output is available for download from Uninett Sigma: https://archive.sigma2.no/pages/public/datasetDetail.jsf?id=10.11582/2020.00028. - The standard CloudSat and CALIPSO data products (version R05) used in this study (2B-CWC-RO, 2C-ICE, ECMWF-AUX) were downloaded from the CloudSat Data Processing Center’s (at Cooperative Institute for Research in the Atmosphere, Colorado State University, Fort Collins) [website](http://www.cloudsat.cira.colostate.edu/). 
+- All own CESM2 simulation outputs are available for download from Uninett Sigma: https://archive.sigma2.no/pages/public/datasetDetail.jsf?id=10.11582/2020.00028. - The standard CloudSat and CALIPSO data products (version R05) used in this study (2B-CWC-RO, 2C-ICE, ECMWF-AUX) were downloaded from the CloudSat Data Processing Center’s (at Cooperative Institute for Research in the Atmosphere, Colorado State University, Fort Collins) [website](http://www.cloudsat.cira.colostate.edu/). 
 
-- The historical surface air temperature from CESM2 used in Fig. 1a is available through the Earth System Grid Federation (ESGF) server (https://esgf-data.dkrz.de/search/cmip6-dkrz/) under CMIP6, ‘source ID’ CESM2-FV2 and ‘experiment ID’ historical. The data used in this article were downloaded on 20 April 2020. 
+- All NCAR's CMIP6 historical surface air temperature data from CESM2 used in Fig. 1a is available through the Earth System Grid Federation (ESGF) server (https://esgf-data.dkrz.de/search/cmip6-dkrz/) under CMIP6, ‘source ID’ CESM2-FV2 and ‘experiment ID’ historical. The data used in this article were downloaded on 20 April 2020. 
 
 - The dataset containing observed surface temperature, GISTEMP v4, was downloaded from https://data.giss.nasa.gov/gistemp/ on 6 May 2020. Source data are provided with this paper.
 
@@ -42,9 +43,16 @@
 
 #### Method used: workflows? scripts? where are they?
 
+No specific worflow management system was used at the time, however the Department recently started to work with: 
+- [Galaxy](https://galaxyproject.org/)
+- [Snakemake](https://snakemake.readthedocs.io/)
+- [Cylc](https://cylc.github.io/)
+
+Workflows are then stored in [WorkflowHub](https://workflowhub.eu/) under topic Galaxy Climate.
+
 #### Results: where results were deposited? 
 
-- All CESM2 simulation output is available for download from Uninett Sigma: https://archive.sigma2.no/pages/public/datasetDetail.jsf?id=10.11582/2020.00028. - [Extended data](https://www.nature.com/articles/s41561-020-00649-1#MOESM5)
+- All own CESM2 simulation output is available for download from Uninett Sigma: https://archive.sigma2.no/pages/public/datasetDetail.jsf?id=10.11582/2020.00028. - [Extended data](https://www.nature.com/articles/s41561-020-00649-1#MOESM5)
 
 #### Collaboration: how was the collaboration during this process?
 
