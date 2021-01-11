@@ -10,11 +10,11 @@
 
 ## Atmospheric and climate modelling Virtual Research Community (VRC) 
 
-*Led by the University of Oslo, norway*
+*Led by the University of Oslo, Norway*
 
 ### Overview of the research community
 
-At University of Oslo, the Department of Geosciences is heavily involved in research related to climate and the impacts of climate change to our societies and enenvironments. These encompass broad research fields which ignores the traditional boundaries between geoscience disciplines, hence many researchers contribute to international networks, centres and projects worldwide.
+At University of Oslo, the Department of Geosciences is heavily involved in research related to climate and the impacts of climate change on our societies and enenvironments. These encompass broad research fields which ignores the traditional boundaries between geoscience disciplines, hence many researchers contribute to international networks, centres and projects worldwide.
 
 ### Typical day of a researcher
 
