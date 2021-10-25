@@ -1,0 +1,28 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: welcome
+parts:
+- caption: About
+  chapters:
+  - file: CONDUCT
+  - file: LICENSE
+
+- caption: ADAM service jupyter notebooks
+  chapters:
+  - file: adam/setup
+    sections:
+          - glob: adam/notebooks/*
+
+- caption: ROHUB service jupyter notebooks
+  chapters:
+  - file: rohub/setup
+    sections:
+          - glob: rohub/notebooks/*
+
+- caption: Scientific showcase series
+  chapters:
+  - file: science/intro
+    sections:
+          - glob: science/notebooks/*

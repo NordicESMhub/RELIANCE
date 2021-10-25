@@ -18,7 +18,6 @@ At University of Oslo, the Department of Geosciences is heavily involved in rese
 
 ### Typical day of a researcher
 
-
 ### Walk through Nature Geoscience paper “Equilibrium climate sensitivity above 5 °C plausible due to state-dependent cloud feedback” - Jenny Bjordal,  Trude Storelvmo, Kari Alterskjær & Tim Carlsen 
 
 [![DOI](https://img.shields.io/badge/DOI-10.1038%2Fs41561--020--00649--1-blue)](https://doi.org/10.1038/s41561-020-00649-1)
@@ -81,3 +80,26 @@ Workflows are then stored in [WorkflowHub](https://workflowhub.eu/) under topic 
 - Grand Challenge 4: Reducing the consequences of large volcanic eruptions – case study 4 and 5
 
 
+# Jupyter book to showcase RELIANCE services
+
+## Usage
+
+### Building the book
+
+If you'd like to develop and/or build the content book, you should:
+
+1. Clone this repository
+2. Run `pip install -r requirements.txt` (it is recommended you do this within a virtual environment)
+3. (Optional) Edit the books source files located in the `content/` directory
+4. Run `jupyter-book clean content/` to remove any existing builds
+5. Run `jupyter-book build content/`
+
+A fully-rendered HTML version of the book will be built in `content/_build/html/`.
+
+## Contributors
+
+We welcome and recognize all contributions. You can see a list of current contributors in the [contributors tab](https://github.com/NordicESMHub/RELIANCE/graphs/contributors).
+
+## Credits
+
+The showcases are created using the excellent open source [Jupyter Book project](https://jupyterbook.org/) and the [executablebooks/cookiecutter-jupyter-book template](https://github.com/executablebooks/cookiecutter-jupyter-book).
