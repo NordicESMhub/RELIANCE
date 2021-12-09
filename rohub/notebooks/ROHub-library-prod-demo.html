@@ -1,0 +1,1391 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Example to use Rohub from Jupyter notebook &#8212; Showcase Jupyter notebooks series</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="EOSC-Future demo" href="../../science/eosc-future.html" />
+    <link rel="prev" title="ROHUB service" href="../setup.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/reliance-icon.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Showcase Jupyter notebooks series</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../welcome.html">
+   Welcome to RELIANCE showcase series
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  About
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../CONDUCT.html">
+   Code of Conduct
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../LICENSE.html">
+   LICENSE
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  ADAM service jupyter notebooks
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../adam/setup.html">
+   ADAM service
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../adam/notebooks/MOD_AquaCHL_ADAM.html">
+     Using ADAM-API to access MODIS Aqua CHL
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../adam/notebooks/UERRA_ADAM.html">
+     Using ADAM-API to access UERRA regional reanalysis
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  ROHUB service jupyter notebooks
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../setup.html">
+   ROHUB service
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Example to use Rohub from Jupyter notebook
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Scientific showcase series
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../science/eosc-future.html">
+   EOSC-Future demo
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../demo-eosc-future/README.html">
+     Demo for EOSC-Future
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../demo-eosc-future/RELIANCE-Datacube-featuring-EOSC_v0.2.html">
+     Using CAMS European air quality analysis from Copernicus Atmosphere Monitoring with RELIANCE services
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../demo-eosc-future/RELIANCE_v0.2-France.html">
+     Using CAMS European air quality analysis from Copernicus Atmosphere Monitoring with RELIANCE services
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../science/intro.html">
+   Notebooks from researchers
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../science/notebooks/CMIP6_hr_1985-2014.html">
+     Example with high-resolution CMIP6 models (~100 km) using Pangeo catalog
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../science/notebooks/ERA5_1985-2014.html">
+     Example ERA5
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/rohub/notebooks/ROHub-library-prod-demo.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/NordicESMHub/RELIANCE"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/NordicESMHub/RELIANCE/issues/new?title=Issue%20on%20page%20%2Frohub/notebooks/ROHub-library-prod-demo.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/NordicESMHub/RELIANCE/main?urlpath=tree/content/rohub/notebooks/ROHub-library-prod-demo.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#install-library-if-not-present">
+   Install library if not present
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#import-library">
+   Import library
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#authenticate">
+   Authenticate
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ro-methods">
+   RO methods
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#create-new-ro">
+     Create new RO
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#find-ros">
+     Find ROs
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#list-my-ros">
+     List my ROs
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#load-ro">
+     Load RO
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#show-basic-metadata">
+     Show basic metadata
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#add-modify-basic-metadata">
+     Add/modify basic metadata
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#list-ro-folders">
+     List RO Folders
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#aggregate-resource-internal">
+     Aggregate resource (internal)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#aggregate-resouce-external">
+     Aggregate resouce (external)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#list-ro-resources">
+     List RO resources
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#add-geolocation">
+     Add geolocation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#export-to-ro-crate">
+     Export to RO-crate
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#add-authors-contributors-publishers-copyrightholders">
+   Add authors/contributors/publishers/copyrightHolders
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#list-users">
+     List users
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#add-authors-contributors">
+     Add authors/contributors
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#list-organizations">
+     List organizations
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#add-publisher-copyright-holder">
+     Add publisher/copyright holder
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ro-evolution">
+   RO Evolution
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#create-simple-snapshot-archive">
+     Create simple snapshot/archive
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#create-snapshot-archive-optionally-assign-doi-publish-it-in-zenodo">
+     Create snapshot/archive, optionally assign DOI + publish it in Zenodo
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#load-published-snapshot-archive-and-list-zenodo-id-doi">
+       Load published snapshot/archive and list zenodo id/doi
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#create-snapshot-archive-optionally-assign-doi-publish-it-in-b2share">
+     Create snapshot/archive, optionally assign DOI + publish it in B2Share
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#load-published-snapshot-archive-and-list-b2share-id-doi">
+       Load published snapshot/archive and list b2share id/doi
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#fork-existing-ro-to-reuse-it-for-my-own-purposes">
+     Fork existing RO to reuse it for my own purposes
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#resource-methods">
+   Resource methods
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#load-resource">
+     Load resource
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     show basic metadata
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#add-modify-metadata">
+     Add/modify metadata
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#modify-content-internal-resource">
+     Modify content (internal resource)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#modify-content-external-resource">
+     Modify content (external resource)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#retrieve-resource">
+     Retrieve resource
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#assign-doi">
+     Assign DOI
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#utils">
+   Utils
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#remove-ro">
+     remove RO
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#show-user-id">
+     show user id
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#show-possible-values-for-ro-types-resources-types-templates-etc">
+     show possible values for RO types, Resources types, templates, etc.
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#create-external-user">
+     create external user
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#create-organization">
+     create organization
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#load-full-metadata">
+     load full metadata
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#rohub-library-version">
+     rohub library version
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#set-evolution-setting">
+     Set evolution setting
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#add-annotation-general">
+     add annotation general
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#remove-annotation">
+     remove annotation
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="example-to-use-rohub-from-jupyter-notebook">
+<h1>Example to use Rohub from Jupyter notebook<a class="headerlink" href="#example-to-use-rohub-from-jupyter-notebook" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="install-library-if-not-present">
+<h2>Install library if not present<a class="headerlink" href="#install-library-if-not-present" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip install rohub
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="import-library">
+<h2>Import library<a class="headerlink" href="#import-library" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">rohub</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="authenticate">
+<h2>Authenticate<a class="headerlink" href="#authenticate" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>you need to create two files in /home/jovyan</p>
+<ul>
+<li><p>rohub-user: contains your rohub username</p></li>
+<li><p>rohub-pwd: add your password in this file</p></li>
+</ul>
+</li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rohub_user</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;/home/jovyan/rohub-user&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()</span>
+<span class="n">rohub_pwd</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;/home/jovyan/rohub-pwd&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()</span>
+<span class="n">rohub</span><span class="o">.</span><span class="n">login</span><span class="p">(</span><span class="n">username</span><span class="o">=</span><span class="n">rohub_user</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="n">rohub_pwd</span><span class="p">)</span>
+<span class="c1">#rohub_client_id = open(&quot;/home/jovyan/rohub-client_id&quot;).read().rstrip()</span>
+<span class="c1">#rohub_client_secret = open(&quot;/home/jovyan/rohub-client_secret&quot;).read().rstrip()</span>
+<span class="c1">#rohub.login(client_id=rohub_client_id, client_secret=rohub_client_secret)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="ro-methods">
+<h2>RO methods<a class="headerlink" href="#ro-methods" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="create-new-ro">
+<h3>Create new RO<a class="headerlink" href="#create-new-ro" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ro_title</span><span class="o">=</span><span class="s2">&quot;8th December - Copernicus Atmosphere Monitoring Service Data Cube Research Object&quot;</span>
+<span class="n">ro_research_areas</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Earth sciences&quot;</span><span class="p">]</span>
+<span class="n">ro_description</span><span class="o">=</span><span class="s2">&quot;This Research Object demonstrate how to compute monthly map of PM10 over your country&quot;</span>
+<span class="n">ro_ros_type</span><span class="o">=</span><span class="s2">&quot;Data-centric Research Object&quot;</span>
+<span class="n">ro_ros_template</span><span class="o">=</span><span class="s2">&quot;Data Centric Research Object folders structure&quot;</span>
+
+<span class="n">ro</span> <span class="o">=</span> <span class="n">rohub</span><span class="o">.</span><span class="n">ros_create</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="n">ro_title</span><span class="p">,</span> <span class="n">research_areas</span><span class="o">=</span><span class="n">ro_research_areas</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="n">ro_description</span><span class="p">,</span> <span class="n">ros_type</span><span class="o">=</span><span class="n">ro_ros_type</span><span class="p">,</span> <span class="n">template</span><span class="o">=</span><span class="n">ro_ros_template</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="find-ros">
+<h3>Find ROs<a class="headerlink" href="#find-ros" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rohub</span><span class="o">.</span><span class="n">ros_find</span><span class="p">(</span><span class="n">search</span><span class="o">=</span><span class="s2">&quot;December&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="list-my-ros">
+<h3>List my ROs<a class="headerlink" href="#list-my-ros" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">myros</span><span class="o">=</span><span class="n">rohub</span><span class="o">.</span><span class="n">list_my_ros</span><span class="p">()</span>
+<span class="n">myros</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">10</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="load-ro">
+<h3>Load RO<a class="headerlink" href="#load-ro" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ro_id</span><span class="o">=</span><span class="n">myros</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="s2">&quot;identifier&quot;</span><span class="p">]</span>
+<span class="n">ro</span><span class="o">=</span><span class="n">rohub</span><span class="o">.</span><span class="n">ros_load</span><span class="p">(</span><span class="n">identifier</span><span class="o">=</span><span class="n">ro_id</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="show-basic-metadata">
+<h3>Show basic metadata<a class="headerlink" href="#show-basic-metadata" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ro</span><span class="o">.</span><span class="n">show_metadata</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="add-modify-basic-metadata">
+<h3>Add/modify basic metadata<a class="headerlink" href="#add-modify-basic-metadata" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ro</span><span class="o">.</span><span class="n">description</span><span class="o">=</span><span class="s2">&quot;This Research Object demonstrate how to compute monthly map of PM10 over your country - modified&quot;</span>
+<span class="n">ro</span><span class="o">.</span><span class="n">editors</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;annefou@geo.uio.no&quot;</span><span class="p">,</span> <span class="s2">&quot;dario.stelitano@ingv.it&quot;</span><span class="p">]</span>
+<span class="n">ro</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="list-ro-folders">
+<h3>List RO Folders<a class="headerlink" href="#list-ro-folders" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">myfolders</span> <span class="o">=</span> <span class="n">ro</span><span class="o">.</span><span class="n">list_folders</span><span class="p">()</span>
+<span class="n">myfolders</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="aggregate-resource-internal">
+<h3>Aggregate resource (internal)<a class="headerlink" href="#aggregate-resource-internal" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">resi_res_type</span><span class="o">=</span><span class="s2">&quot;Sketch&quot;</span>
+<span class="n">resi_file_path</span><span class="o">=</span><span class="s2">&quot;/home/jovyan/files/flow-dcro.png&quot;</span>
+<span class="n">resi_title</span><span class="o">=</span><span class="s2">&quot;Flow to compute monthly map&quot;</span>
+<span class="n">resi_folder</span><span class="o">=</span><span class="n">myfolders</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="s2">&quot;identifier&quot;</span><span class="p">]</span>
+
+<span class="n">my_res_int0</span><span class="o">=</span><span class="n">ro</span><span class="o">.</span><span class="n">add_internal_resource</span><span class="p">(</span><span class="n">res_type</span><span class="o">=</span><span class="n">resi_res_type</span><span class="p">,</span><span class="n">file_path</span><span class="o">=</span><span class="n">resi_file_path</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="n">resi_title</span><span class="p">,</span> <span class="n">folder</span><span class="o">=</span><span class="n">resi_folder</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="aggregate-resouce-external">
+<h3>Aggregate resouce (external)<a class="headerlink" href="#aggregate-resouce-external" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rese_res_type</span><span class="o">=</span><span class="s2">&quot;Data Cube Collection&quot;</span>
+<span class="n">rese_file_url</span><span class="o">=</span><span class="s2">&quot;https://reliance-das.adamplatform.eu/opensearch/datasets?datasetId=EU_CAMS_SURFACE_PM10_G&quot;</span>
+<span class="n">rese_title</span><span class="o">=</span><span class="s2">&quot;EU_CAMS_SURFACE_PM10_G&quot;</span>
+<span class="n">rese_description</span><span class="o">=</span><span class="s2">&quot;This dataset provides daily air quality analyses and forecasts for Europe.</span><span class="se">\n\n</span><span class="s2">CAMS produces specific daily air quality analyses and forecasts for the European domain at significantly higher spatial resolution (0.1 degrees, approx. 10km) than is available from the global analyses and forecasts. The production is based on an ensemble of nine air quality forecasting systems across Europe. A median ensemble is calculated from individual outputs, since ensemble products yield on average better performance than the individual model products. The spread between the nine models are used to provide an estimate of the forecast uncertainty. The analysis combines model data with observations provided by the European Environment Agency (EEA) into a complete and consistent dataset using various data assimilation techniques depending upon the air-quality forecasting system used. In parallel, air quality forecasts are produced once a day for the next four days. Both the analysis and the forecast are available at hourly time steps at seven height levels.</span><span class="se">\n\n</span><span class="s2">Note that only nitrogen monoxide, nitrogen dioxide, sulphur dioxide, ozone, PM2.5, PM10 and dust are regularly validated against in situ observations, and therefore forecasts of all other variables are unvalidated and should be considered experimental.&quot;</span>
+
+<span class="n">ro</span><span class="o">.</span><span class="n">add_external_resource</span><span class="p">(</span><span class="n">res_type</span><span class="o">=</span><span class="n">rese_res_type</span><span class="p">,</span> <span class="n">url</span><span class="o">=</span><span class="n">rese_file_url</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="n">rese_title</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span> <span class="n">rese_description</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rese_res_type</span><span class="o">=</span><span class="s2">&quot;Result&quot;</span>
+<span class="n">rese_file_url</span><span class="o">=</span><span class="s2">&quot;https://reliance-das.adamplatform.eu/wcs?service=WCS&amp;Request=GetCoverage&amp;CoverageID=EU_CAMS_SURFACE_PM10_G&amp;subset=unix(2018-09-01,2018-09-01)&amp;format=image/tiff&quot;</span>
+<span class="n">rese_title</span><span class="o">=</span><span class="s2">&quot;Daily PM10 concentration&quot;</span>
+<span class="n">rese_description</span><span class="o">=</span><span class="s2">&quot;Daily PM10 concentration for 1st September 2018 over Europe&quot;</span>
+
+<span class="n">ro</span><span class="o">.</span><span class="n">add_external_resource</span><span class="p">(</span><span class="n">res_type</span><span class="o">=</span><span class="n">rese_res_type</span><span class="p">,</span> <span class="n">url</span><span class="o">=</span><span class="n">rese_file_url</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="n">rese_title</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span> <span class="n">rese_description</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rese_res_type</span><span class="o">=</span><span class="s2">&quot;Data Cube Product&quot;</span>
+<span class="n">rese_file_url</span><span class="o">=</span><span class="s2">&quot;https://reliance-das.adamplatform.eu/opensearch/search?datasetId=EU_CAMS_SURFACE_PM10_G&amp;startDate=2018-09-01&amp;endDate=2018-09-01&quot;</span>
+<span class="n">rese_title</span><span class="o">=</span><span class="s2">&quot;Index of daily PM10 concentration for September 1st 2018&quot;</span>
+<span class="n">rese_description</span><span class="o">=</span><span class="s2">&quot;List of hourly PM10 concentration data for September 1st 2018 over Europe&quot;</span>
+
+<span class="n">ro</span><span class="o">.</span><span class="n">add_external_resource</span><span class="p">(</span><span class="n">res_type</span><span class="o">=</span><span class="n">rese_res_type</span><span class="p">,</span> <span class="n">url</span><span class="o">=</span><span class="n">rese_file_url</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="n">rese_title</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="n">rese_description</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rese_res_type</span><span class="o">=</span><span class="s2">&quot;Jupyter Notebook&quot;</span>
+<span class="n">rese_file_url</span><span class="o">=</span><span class="s2">&quot;https://zenodo.org/record/5554786#.YYlWo9nMI-Q&quot;</span>
+<span class="n">rese_title</span><span class="o">=</span><span class="s2">&quot;Jupter Notebook of CAMS European air quality analysis from Copernicus Atmosphere Monitoring with RELIANCE services&quot;</span>
+<span class="n">rese_description</span><span class="o">=</span><span class="s2">&quot;Jupyter Notebook for discovering, accessing and processing RELIANCE data cube, and creating a Research Object with results, and finally publish it in Zenodo&quot;</span>
+
+<span class="n">my_res_ext0</span><span class="o">=</span><span class="n">ro</span><span class="o">.</span><span class="n">add_external_resource</span><span class="p">(</span><span class="n">res_type</span><span class="o">=</span><span class="n">rese_res_type</span><span class="p">,</span> <span class="n">url</span><span class="o">=</span><span class="n">rese_file_url</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="n">rese_title</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="n">rese_description</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rese_res_type</span><span class="o">=</span><span class="s2">&quot;Dataset&quot;</span>
+<span class="n">rese_file_url</span><span class="o">=</span><span class="s2">&quot;https://box.psnc.pl/f/d90a0e1e0d/?raw=1&quot;</span>
+<span class="n">rese_title</span><span class="o">=</span><span class="s2">&quot;Catch data from Norway&quot;</span>
+<span class="n">rese_description</span><span class="o">=</span><span class="s2">&quot;Catch data records sample from 2019&quot;</span>
+
+<span class="n">my_res_ext1</span><span class="o">=</span><span class="n">ro</span><span class="o">.</span><span class="n">add_external_resource</span><span class="p">(</span><span class="n">res_type</span><span class="o">=</span><span class="n">rese_res_type</span><span class="p">,</span> <span class="n">url</span><span class="o">=</span><span class="n">rese_file_url</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="n">rese_title</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="n">rese_description</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="list-ro-resources">
+<h3>List RO resources<a class="headerlink" href="#list-ro-resources" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ro</span><span class="o">.</span><span class="n">list_resources</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="add-geolocation">
+<h3>Add geolocation<a class="headerlink" href="#add-geolocation" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">geojson_as_text_point_python</span><span class="o">=</span> <span class="p">{</span>
+  <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">&quot;geojson&quot;</span><span class="p">:</span> <span class="s2">&quot;https://purl.org/geojson/vocab#&quot;</span>
+  <span class="p">},</span>
+  <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Feature&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;geometry&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Point&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;coordinates&quot;</span><span class="p">:</span> <span class="p">[</span> <span class="mf">38.0</span><span class="p">,</span> <span class="mf">38.0</span> <span class="p">]</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">ro</span><span class="o">.</span><span class="n">add_geolocation</span><span class="p">(</span><span class="n">body_specification_json</span><span class="o">=</span><span class="n">geojson_as_text_point_python</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#ro.add_geolocation(body_specification_json=&quot;/home/jovyan/ROHub-API/files/EuropeBOX.geojson&quot;)</span>
+<span class="c1">#ro.add_geolocation(body_specification_json=&quot;/home/jovyan/ROHub-API/files/fra.geo-ld.json&quot;)</span>
+<span class="c1">#ro.add_geolocation(body_specification_json=&quot;/home/jovyan/ROHub-API/files/geojson-test-simple_mp.json&quot;)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="export-to-ro-crate">
+<h3>Export to RO-crate<a class="headerlink" href="#export-to-ro-crate" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#ro.export_to_rocrate(filename=&quot;my-ro-crate&quot;)</span>
+<span class="n">ro</span><span class="o">.</span><span class="n">export_to_rocrate</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;my-ro-crate&quot;</span><span class="p">,</span> <span class="n">use_format</span><span class="o">=</span><span class="s2">&quot;zip&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="add-authors-contributors-publishers-copyrightholders">
+<h2>Add authors/contributors/publishers/copyrightHolders<a class="headerlink" href="#add-authors-contributors-publishers-copyrightholders" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="list-users">
+<h3>List users<a class="headerlink" href="#list-users" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">usernames</span><span class="o">=</span><span class="n">rohub</span><span class="o">.</span><span class="n">users_find</span><span class="p">(</span><span class="n">search</span><span class="o">=</span><span class="s2">&quot;Anne&quot;</span><span class="p">)</span>
+<span class="n">usernames</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">user_id_anne</span><span class="o">=</span><span class="n">usernames</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="s2">&quot;username&quot;</span><span class="p">]</span>
+<span class="n">user_id_anne</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">usernames</span><span class="o">=</span><span class="n">rohub</span><span class="o">.</span><span class="n">users_find</span><span class="p">(</span><span class="n">search</span><span class="o">=</span><span class="s2">&quot;Nieves&quot;</span><span class="p">)</span>
+<span class="n">usernames</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">user_id_nieves</span><span class="o">=</span><span class="n">usernames</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="s2">&quot;username&quot;</span><span class="p">]</span>
+<span class="n">user_id_nieves</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="add-authors-contributors">
+<h3>Add authors/contributors<a class="headerlink" href="#add-authors-contributors" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ro</span><span class="o">.</span><span class="n">set_authors</span><span class="p">(</span><span class="n">agents</span><span class="o">=</span><span class="p">[</span><span class="n">user_id_anne</span><span class="p">,</span><span class="n">user_id_nieves</span><span class="p">])</span>
+<span class="c1">#ro.set_authors(agents=[&quot;dontdoit@lochness.uk&quot;])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ro</span><span class="o">.</span><span class="n">set_contributors</span><span class="p">(</span><span class="n">agents</span><span class="o">=</span><span class="p">[{</span><span class="s2">&quot;user_id&quot;</span><span class="p">:</span><span class="s2">&quot;rapnonexist_3@hotmail.com&quot;</span><span class="p">,</span> 
+                             <span class="s2">&quot;display_name&quot;</span><span class="p">:</span> <span class="s2">&quot;Pepito Bato&quot;</span><span class="p">,</span> 
+                             <span class="s2">&quot;email&quot;</span><span class="p">:</span><span class="s2">&quot;example3@hotmail.com&quot;</span><span class="p">,</span>
+                             <span class="s2">&quot;orcid_id&quot;</span><span class="p">:</span><span class="s2">&quot;0000-0002-8316-3192&quot;</span><span class="p">,</span>
+                             <span class="s2">&quot;affiliation&quot;</span><span class="p">:</span> <span class="s2">&quot;PCSS&quot;</span><span class="p">}])</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="list-organizations">
+<h3>List organizations<a class="headerlink" href="#list-organizations" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">organizations</span><span class="o">=</span><span class="n">rohub</span><span class="o">.</span><span class="n">organizations_find</span><span class="p">(</span><span class="n">search</span><span class="o">=</span><span class="s2">&quot;poznan&quot;</span><span class="p">)</span>
+<span class="n">organizations</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="add-publisher-copyright-holder">
+<h3>Add publisher/copyright holder<a class="headerlink" href="#add-publisher-copyright-holder" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ro</span><span class="o">.</span><span class="n">set_publishers</span><span class="p">(</span><span class="n">agents</span><span class="o">=</span><span class="p">[</span><span class="n">organizations</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="s2">&quot;organization_id&quot;</span><span class="p">]])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ro</span><span class="o">.</span><span class="n">set_copyright_holders</span><span class="p">(</span><span class="n">agents</span><span class="o">=</span><span class="p">[{</span><span class="s2">&quot;org_id&quot;</span><span class="p">:</span><span class="s2">&quot;neworg_1@example.org&quot;</span><span class="p">,</span> 
+                                  <span class="s2">&quot;display_name&quot;</span><span class="p">:</span> <span class="s2">&quot;Example Org 1&quot;</span><span class="p">,</span> 
+                                  <span class="s2">&quot;email&quot;</span><span class="p">:</span><span class="s2">&quot;neworg1@example.org&quot;</span><span class="p">,</span>
+                                  <span class="s2">&quot;ror_identifier&quot;</span><span class="p">:</span><span class="s2">&quot;abcd123&quot;</span><span class="p">,</span>
+                                  <span class="s2">&quot;organization_url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://neworg1.example.org&quot;</span><span class="p">}])</span>
+<span class="c1">#ro.set_copyright_holders(agents=[{&quot;dontexist&quot;}])</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="ro-evolution">
+<h2>RO Evolution<a class="headerlink" href="#ro-evolution" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="create-simple-snapshot-archive">
+<h3>Create simple snapshot/archive<a class="headerlink" href="#create-simple-snapshot-archive" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">snapshot_id</span><span class="o">=</span><span class="n">ro</span><span class="o">.</span><span class="n">snapshot</span><span class="p">()</span>
+<span class="n">snapshot_id</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="create-snapshot-archive-optionally-assign-doi-publish-it-in-zenodo">
+<h3>Create snapshot/archive, optionally assign DOI + publish it in Zenodo<a class="headerlink" href="#create-snapshot-archive-optionally-assign-doi-publish-it-in-zenodo" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">snapshot_title</span><span class="o">=</span><span class="s2">&quot;Copernicus Atmosphere Monitoring Service Data Cube RO December 8th - published v1&quot;</span>
+<span class="n">snapshot_id_pub</span><span class="o">=</span><span class="n">ro</span><span class="o">.</span><span class="n">snapshot</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="n">snapshot_title</span><span class="p">,</span> <span class="n">create_doi</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">publication_services</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Zenodo&quot;</span><span class="p">])</span>
+<span class="n">snapshot_id_pub</span>
+<span class="c1">#%snapshot_id=ro.snapshot(create_doi=True, publication_services=[&quot;Zenodo&quot;])</span>
+<span class="c1">#%snapshot_id=ro.snapshot(publication_services=[&quot;Zenodo&quot;])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="load-published-snapshot-archive-and-list-zenodo-id-doi">
+<h4>Load published snapshot/archive and list zenodo id/doi<a class="headerlink" href="#load-published-snapshot-archive-and-list-zenodo-id-doi" title="Permalink to this headline">¶</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">published_ro</span> <span class="o">=</span> <span class="n">rohub</span><span class="o">.</span><span class="n">ros_load</span><span class="p">(</span><span class="n">identifier</span><span class="o">=</span><span class="n">snapshot_id_pub</span><span class="p">)</span>
+<span class="n">published_ro</span><span class="o">.</span><span class="n">list_publications</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="create-snapshot-archive-optionally-assign-doi-publish-it-in-b2share">
+<h3>Create snapshot/archive, optionally assign DOI + publish it in B2Share<a class="headerlink" href="#create-snapshot-archive-optionally-assign-doi-publish-it-in-b2share" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">snapshot_title</span><span class="o">=</span><span class="s2">&quot;Copernicus Atmosphere Monitoring Service Data Cube RO December 8th - published v2&quot;</span>
+<span class="n">snapshot_id_pub</span><span class="o">=</span><span class="n">ro</span><span class="o">.</span><span class="n">snapshot</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="n">snapshot_title</span><span class="p">,</span> <span class="n">create_doi</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">publication_services</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;B2SHARE&quot;</span><span class="p">])</span>
+<span class="n">snapshot_id_pub</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="load-published-snapshot-archive-and-list-b2share-id-doi">
+<h4>Load published snapshot/archive and list b2share id/doi<a class="headerlink" href="#load-published-snapshot-archive-and-list-b2share-id-doi" title="Permalink to this headline">¶</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">published_ro</span> <span class="o">=</span> <span class="n">rohub</span><span class="o">.</span><span class="n">ros_load</span><span class="p">(</span><span class="n">identifier</span><span class="o">=</span><span class="n">snapshot_id_pub</span><span class="p">)</span>
+<span class="n">published_ro</span><span class="o">.</span><span class="n">list_publications</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="fork-existing-ro-to-reuse-it-for-my-own-purposes">
+<h3>Fork existing RO to reuse it for my own purposes<a class="headerlink" href="#fork-existing-ro-to-reuse-it-for-my-own-purposes" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fork_id</span><span class="o">=</span><span class="n">ro</span><span class="o">.</span><span class="n">fork</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;Forked Copernicus Atmosphere Monitoring Service Data Cube RO December 8th&quot;</span><span class="p">)</span>
+<span class="n">forked_ro</span> <span class="o">=</span> <span class="n">rohub</span><span class="o">.</span><span class="n">ros_load</span><span class="p">(</span><span class="n">identifier</span><span class="o">=</span><span class="n">fork_id</span><span class="p">)</span>
+<span class="n">forked_ro</span><span class="o">.</span><span class="n">show_metadata</span><span class="p">()</span>
+<span class="c1">#%time fork_id=ro.fork()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="resource-methods">
+<h2>Resource methods<a class="headerlink" href="#resource-methods" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="load-resource">
+<h3>Load resource<a class="headerlink" href="#load-resource" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">results</span><span class="o">=</span><span class="n">ro</span><span class="o">.</span><span class="n">list_resources</span><span class="p">()</span>
+<span class="n">results</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_res1</span><span class="o">=</span><span class="n">rohub</span><span class="o">.</span><span class="n">resource_load</span><span class="p">(</span><span class="n">identifier</span><span class="o">=</span><span class="n">results</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">5</span><span class="p">,</span><span class="s2">&quot;identifier&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id1">
+<h3>show basic metadata<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_res1</span><span class="o">.</span><span class="n">show_metadata</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="add-modify-metadata">
+<h3>Add/modify metadata<a class="headerlink" href="#add-modify-metadata" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_res1</span><span class="o">.</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;Flow to compute monthly map - updated&quot;</span>
+<span class="n">my_res1</span><span class="o">.</span><span class="n">description</span><span class="o">=</span><span class="s2">&quot;This resource has this description&quot;</span>
+<span class="n">my_res1</span><span class="o">.</span><span class="n">folder</span><span class="o">=</span><span class="n">myfolders</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="s2">&quot;identifier&quot;</span><span class="p">]</span>
+<span class="n">my_res1</span><span class="o">.</span><span class="n">update_metadata</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="modify-content-internal-resource">
+<h3>Modify content (internal resource)<a class="headerlink" href="#modify-content-internal-resource" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">resi_file_path</span><span class="o">=</span><span class="s2">&quot;/home/jovyan/files/Group 910.png&quot;</span>
+<span class="n">my_res1</span><span class="o">.</span><span class="n">update_content</span><span class="p">(</span><span class="n">file_path</span><span class="o">=</span><span class="n">resi_file_path</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="modify-content-external-resource">
+<h3>Modify content (external resource)<a class="headerlink" href="#modify-content-external-resource" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_res1_ext</span><span class="o">=</span><span class="n">rohub</span><span class="o">.</span><span class="n">resource_load</span><span class="p">(</span><span class="n">identifier</span><span class="o">=</span><span class="n">results</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="s2">&quot;identifier&quot;</span><span class="p">])</span>
+<span class="n">rese_file_url</span><span class="o">=</span><span class="s2">&quot;https://zenodo.org/record/5554786#.YYlWo9nMI-X&quot;</span>
+<span class="n">my_res1_ext</span><span class="o">.</span><span class="n">update_content</span><span class="p">(</span><span class="n">input_url</span><span class="o">=</span><span class="n">rese_file_url</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="retrieve-resource">
+<h3>Retrieve resource<a class="headerlink" href="#retrieve-resource" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file</span><span class="o">=</span><span class="n">my_res1</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="n">resource_filename</span><span class="o">=</span><span class="s2">&quot;myresource1.png&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Image</span>
+<span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="n">file</span><span class="p">)</span> 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_res2_ext</span><span class="o">=</span><span class="n">rohub</span><span class="o">.</span><span class="n">resource_load</span><span class="p">(</span><span class="n">identifier</span><span class="o">=</span><span class="n">results</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="s2">&quot;identifier&quot;</span><span class="p">])</span>
+<span class="n">my_res2_ext</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="n">resource_filename</span><span class="o">=</span><span class="s2">&quot;myres_ext2.json&quot;</span><span class="p">)</span>
+
+<span class="c1">#import json</span>
+<span class="c1">#with open(&quot;myres_ext2.json&quot;) as jsonFile:</span>
+<span class="c1">#    jsonObject = json.load(jsonFile)</span>
+<span class="c1">#    jsonFile.close()</span>
+<span class="c1">#jsonObject</span>
+
+<span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="s1">&#39;myres_ext2.json&#39;</span><span class="p">))</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;features&quot;</span><span class="p">])</span>
+<span class="nb">print</span> <span class="p">(</span><span class="n">df</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_res3_ext</span><span class="o">=</span><span class="n">rohub</span><span class="o">.</span><span class="n">resource_load</span><span class="p">(</span><span class="n">identifier</span><span class="o">=</span><span class="n">results</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="s2">&quot;identifier&quot;</span><span class="p">])</span>
+<span class="n">my_res3_ext</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="n">resource_filename</span><span class="o">=</span><span class="s2">&quot;myres_ext3.csv&quot;</span><span class="p">)</span>
+
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;myres_ext3.csv&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="assign-doi">
+<h3>Assign DOI<a class="headerlink" href="#assign-doi" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_res1_ext</span><span class="o">.</span><span class="n">assign_doi</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="utils">
+<h2>Utils<a class="headerlink" href="#utils" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="remove-ro">
+<h3>remove RO<a class="headerlink" href="#remove-ro" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">forked_ro</span><span class="o">.</span><span class="n">delete</span><span class="p">()</span>
+<span class="c1">#ro_id_to_delete=&quot;55a0fbe5-fde3-40cb-9ea0-1eacd3cda8d1&quot;</span>
+<span class="c1">#rohub.ros_delete(identifier=ro_id_to_delete)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="show-user-id">
+<h3>show user id<a class="headerlink" href="#show-user-id" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rohub</span><span class="o">.</span><span class="n">show_user_id</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="show-possible-values-for-ro-types-resources-types-templates-etc">
+<h3>show possible values for RO types, Resources types, templates, etc.<a class="headerlink" href="#show-possible-values-for-ro-types-resources-types-templates-etc" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rohub</span><span class="o">.</span><span class="n">list_valid_research_areas</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rohub</span><span class="o">.</span><span class="n">list_valid_ros_types</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rohub</span><span class="o">.</span><span class="n">list_valid_publication_services</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rohub</span><span class="o">.</span><span class="n">list_valid_resource_types</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rohub</span><span class="o">.</span><span class="n">list_valid_creation_modes</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rohub</span><span class="o">.</span><span class="n">list_valid_access_modes</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rohub</span><span class="o">.</span><span class="n">list_custom_licenses</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rohub</span><span class="o">.</span><span class="n">list_available_licenses</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rohub</span><span class="o">.</span><span class="n">show_valid_type_matching_for_ros</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="create-external-user">
+<h3>create external user<a class="headerlink" href="#create-external-user" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rohub</span><span class="o">.</span><span class="n">external_user_add</span><span class="p">(</span><span class="n">user_id</span><span class="o">=</span><span class="s2">&quot;https://orcid.org/0000-0003-3784-6651&quot;</span><span class="p">,</span> 
+                        <span class="n">display_name</span><span class="o">=</span><span class="s2">&quot;Nieves Pepito&quot;</span><span class="p">,</span> 
+                        <span class="n">email</span><span class="o">=</span><span class="s2">&quot;npepito@hotmail.com&quot;</span><span class="p">,</span>
+                        <span class="n">orcid_id</span><span class="o">=</span><span class="s2">&quot;0000-0003-3784-6651&quot;</span><span class="p">,</span>
+                        <span class="n">affiliation</span><span class="o">=</span><span class="s2">&quot;UNO-Recoletos&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="create-organization">
+<h3>create organization<a class="headerlink" href="#create-organization" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rohub</span><span class="o">.</span><span class="n">organization_add</span><span class="p">(</span><span class="n">organization_id</span><span class="o">=</span><span class="s2">&quot;https://ror.org/025cj6e44&quot;</span><span class="p">,</span>
+                       <span class="n">display_name</span><span class="o">=</span><span class="s2">&quot;Poznan Supercomputing and Networking Center&quot;</span><span class="p">,</span>
+                       <span class="n">email</span><span class="o">=</span><span class="s2">&quot;office@man.poznan.pl&quot;</span><span class="p">,</span>
+                       <span class="n">ror_identifier</span><span class="o">=</span><span class="s2">&quot;025cj6e44&quot;</span><span class="p">,</span>
+                       <span class="n">organization_url</span><span class="o">=</span><span class="s2">&quot;https://www.psnc.pl/&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="load-full-metadata">
+<h3>load full metadata<a class="headerlink" href="#load-full-metadata" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ro</span><span class="o">.</span><span class="n">load_full_metadata</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ro</span><span class="o">.</span><span class="n">show_full_metadata</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="rohub-library-version">
+<h3>rohub library version<a class="headerlink" href="#rohub-library-version" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rohub</span><span class="o">.</span><span class="n">version</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="set-evolution-setting">
+<h3>Set evolution setting<a class="headerlink" href="#set-evolution-setting" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#default 30</span>
+<span class="n">rohub</span><span class="o">.</span><span class="n">set_retries</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># default 2</span>
+<span class="n">rohub</span><span class="o">.</span><span class="n">set_sleep_time</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="add-annotation-general">
+<h3>add annotation general<a class="headerlink" href="#add-annotation-general" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ro</span><span class="o">.</span><span class="n">add_annotations</span><span class="p">(</span><span class="n">body_specification_json</span><span class="o">=</span><span class="n">geojson_as_text_point</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="remove-annotation">
+<h3>remove annotation<a class="headerlink" href="#remove-annotation" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">annot_id</span><span class="o">=</span><span class="s2">&quot;e8589553-40de-4e49-b966-204502ce3780&quot;</span>
+<span class="n">ro</span><span class="o">.</span><span class="n">delete_annotation</span><span class="p">(</span><span class="n">annotation_id</span><span class="o">=</span><span class="n">annot_id</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./rohub/notebooks"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="../setup.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">ROHUB service</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../../science/eosc-future.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">EOSC-Future demo</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          By Anne Fouilloux<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
