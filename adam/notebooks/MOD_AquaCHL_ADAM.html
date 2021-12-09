@@ -1,0 +1,1462 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Using ADAM-API to access MODIS Aqua CHL &#8212; Showcase Jupyter notebooks series</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="ROHUB service" href="../../rohub/setup.html" />
+    <link rel="prev" title="ADAM service" href="../setup.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/reliance-icon.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Showcase Jupyter notebooks series</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../welcome.html">
+   Welcome to RELIANCE showcase series
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  About
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../CONDUCT.html">
+   Code of Conduct
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../LICENSE.html">
+   LICENSE
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  ADAM service jupyter notebooks
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../setup.html">
+   ADAM service
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Using ADAM-API to access MODIS Aqua CHL
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  ROHUB service jupyter notebooks
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../rohub/setup.html">
+   ROHUB service
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../rohub/notebooks/README.html">
+     Jupyter Notebooks showcasing the RELIANCE services
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Scientific showcase series
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../science/eosc-future.html">
+   EOSC-Future demo
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../demo-eosc-future/README.html">
+     Demo for EOSC-Future
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../demo-eosc-future/RELIANCE-Datacube-featuring-EOSC_v0.2.html">
+     Using CAMS European air quality analysis from Copernicus Atmosphere Monitoring with RELIANCE services
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../demo-eosc-future/RELIANCE_v0.2-France.html">
+     Using CAMS European air quality analysis from Copernicus Atmosphere Monitoring with RELIANCE services
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../science/intro.html">
+   Notebooks from researchers
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../science/notebooks/CMIP6_hr_1985-2014.html">
+     Example with high-resolution CMIP6 models (~100 km) using Pangeo catalog
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/adam/notebooks/MOD_AquaCHL_ADAM.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/NordicESMHub/RELIANCE"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/NordicESMHub/RELIANCE/issues/new?title=Issue%20on%20page%20%2Fadam/notebooks/MOD_AquaCHL_ADAM.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/NordicESMHub/RELIANCE/main?urlpath=tree/content/adam/notebooks/MOD_AquaCHL_ADAM.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#authenticate-to-adam-platform-with-adam-api-key">
+   Authenticate to ADAM platform with ADAM API key
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#discover-mod-aqua-datasets">
+   Discover MOD_Aqua datasets
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#get-metadata-from-modis-aqua-chlorophylle-concentration">
+   Get metadata from Modis Aqua Chlorophylle Concentration
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#discover-and-select-products-from-a-dataset">
+   Discover and select products from a dataset
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#get-data-over-artic-region">
+     Get data over Artic region
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#search-data">
+       Search data
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#get-data">
+   Get data
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-analysis-and-visualization">
+   Data analysis and Visualization
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#unzip-data">
+     Unzip data
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#read-data-in-xarray">
+   Read data in xarray
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#visualization">
+   Visualization
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="using-adam-api-to-access-modis-aqua-chl">
+<h1>Using ADAM-API to access MODIS Aqua CHL<a class="headerlink" href="#using-adam-api-to-access-modis-aqua-chl" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p>you need to get an account to <a class="reference external" href="https://reliance.adamplatform.eu/">https://reliance.adamplatform.eu/</a> (use ORCID to authenticate) and key your ADAM API key</p></li>
+<li><p>make sure you save your ADAM API key in a file <code class="docutils literal notranslate"><span class="pre">$HOME/adam-key</span></code></p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip install adamapi
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Yellow">WARNING: The directory &#39;/home/jovyan/.cache/pip&#39; or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you may want sudo&#39;s -H flag.</span>
+Collecting adamapi
+  Downloading adamapi-2.0.11-py3-none-any.whl (14 kB)
+Requirement already satisfied: requests&gt;=2.22.0 in /srv/conda/envs/notebook/lib/python3.9/site-packages (from adamapi) (2.26.0)
+Requirement already satisfied: imageio in /srv/conda/envs/notebook/lib/python3.9/site-packages (from adamapi) (2.9.0)
+Requirement already satisfied: certifi&gt;=2017.4.17 in /srv/conda/envs/notebook/lib/python3.9/site-packages (from requests&gt;=2.22.0-&gt;adamapi) (2021.10.8)
+Requirement already satisfied: idna&lt;4,&gt;=2.5 in /srv/conda/envs/notebook/lib/python3.9/site-packages (from requests&gt;=2.22.0-&gt;adamapi) (3.1)
+Requirement already satisfied: urllib3&lt;1.27,&gt;=1.21.1 in /srv/conda/envs/notebook/lib/python3.9/site-packages (from requests&gt;=2.22.0-&gt;adamapi) (1.26.7)
+Requirement already satisfied: charset-normalizer~=2.0.0 in /srv/conda/envs/notebook/lib/python3.9/site-packages (from requests&gt;=2.22.0-&gt;adamapi) (2.0.0)
+Requirement already satisfied: numpy in /srv/conda/envs/notebook/lib/python3.9/site-packages (from imageio-&gt;adamapi) (1.20.0)
+Requirement already satisfied: pillow in /srv/conda/envs/notebook/lib/python3.9/site-packages (from imageio-&gt;adamapi) (8.4.0)
+Installing collected packages: adamapi
+Successfully installed adamapi-2.0.11
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip install cmocean
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Yellow">WARNING: The directory &#39;/home/jovyan/.cache/pip&#39; or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you may want sudo&#39;s -H flag.</span>
+Collecting cmocean
+  Downloading cmocean-2.0-py3-none-any.whl (223 kB)
+     |████████████████████████████████| 223 kB 5.5 MB/s eta 0:00:01
+?25hInstalling collected packages: cmocean
+Successfully installed cmocean-2.0
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">glob</span>
+<span class="kn">import</span> <span class="nn">pathlib</span>
+<span class="kn">import</span> <span class="nn">zipfile</span>
+<span class="kn">import</span> <span class="nn">adamapi</span> <span class="k">as</span> <span class="nn">adam</span>
+<span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+<span class="kn">import</span> <span class="nn">matplotlib</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">cartopy.crs</span> <span class="k">as</span> <span class="nn">ccrs</span>
+<span class="kn">import</span> <span class="nn">cmocean</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="authenticate-to-adam-platform-with-adam-api-key">
+<h2>Authenticate to ADAM platform with ADAM API key<a class="headerlink" href="#authenticate-to-adam-platform-with-adam-api-key" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">adam_key</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;HOME&#39;</span><span class="p">],</span><span class="s2">&quot;adam-key&quot;</span><span class="p">))</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">adam</span><span class="o">.</span><span class="n">Auth</span><span class="p">()</span>
+
+<span class="n">a</span><span class="o">.</span><span class="n">setKey</span><span class="p">(</span><span class="n">adam_key</span><span class="p">)</span>
+<span class="n">a</span><span class="o">.</span><span class="n">setAdamCore</span><span class="p">(</span><span class="s1">&#39;https://reliance.adamplatform.eu&#39;</span><span class="p">)</span>
+<span class="n">a</span><span class="o">.</span><span class="n">authorize</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;expires_at&#39;: &#39;2021-12-08T20:07:46.752Z&#39;,
+ &#39;access_token&#39;: &#39;a34db20c230447059c2cf7586c3e5d63&#39;,
+ &#39;refresh_token&#39;: &#39;17aba7b3192c4f27b47837e93449e4c7&#39;,
+ &#39;expires_in&#39;: 3600}
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="discover-mod-aqua-datasets">
+<h2>Discover MOD_Aqua datasets<a class="headerlink" href="#discover-mod-aqua-datasets" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>This step is useful to get the dataset identifier (unique for a given datacube)</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">discoverDasasets</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">search_name</span><span class="p">):</span>
+    <span class="n">datasets</span> <span class="o">=</span> <span class="n">adam</span><span class="o">.</span><span class="n">Datasets</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+    <span class="n">catalogue</span> <span class="o">=</span> <span class="n">datasets</span><span class="o">.</span><span class="n">getDatasets</span><span class="p">()</span>
+    <span class="c1">#Extracting the size of the catalogue</span>
+    <span class="n">total</span> <span class="o">=</span> <span class="n">catalogue</span><span class="p">[</span><span class="s1">&#39;properties&#39;</span><span class="p">][</span><span class="s1">&#39;totalResults&#39;</span><span class="p">]</span>
+    <span class="n">items</span> <span class="o">=</span> <span class="n">catalogue</span><span class="p">[</span><span class="s1">&#39;properties&#39;</span><span class="p">][</span><span class="s1">&#39;itemsPerPage&#39;</span><span class="p">]</span>
+    <span class="n">pages</span> <span class="o">=</span> <span class="n">total</span><span class="o">//</span><span class="n">items</span>
+    
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;----------------------------------------------------------------------&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\033</span><span class="s1">[1m&#39;</span> <span class="o">+</span> <span class="s1">&#39;List of available datasets:&#39;</span><span class="p">)</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;</span><span class="se">\033</span><span class="s1">[0m&#39;</span><span class="p">)</span>
+
+    <span class="c1">#Extracting the list of datasets across the whole catalogue</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">pages</span><span class="p">):</span>
+        <span class="n">page</span> <span class="o">=</span> <span class="n">datasets</span><span class="o">.</span><span class="n">getDatasets</span><span class="p">(</span><span class="n">page</span> <span class="o">=</span> <span class="n">i</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="n">page</span><span class="p">[</span><span class="s1">&#39;content&#39;</span><span class="p">]:</span> 
+            <span class="k">if</span> <span class="n">search_name</span> <span class="ow">in</span> <span class="n">element</span><span class="p">[</span><span class="s1">&#39;title&#39;</span><span class="p">]</span> <span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="n">element</span><span class="p">[</span><span class="s1">&#39;title&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\033</span><span class="s2">[1m&quot;</span> <span class="o">+</span> <span class="s2">&quot; --&gt; datasetId &quot;</span><span class="o">+</span> <span class="s2">&quot;</span><span class="se">\033</span><span class="s2">[0m&quot;</span> <span class="o">+</span> <span class="s2">&quot;= &quot;</span> <span class="o">+</span> <span class="n">element</span><span class="p">[</span><span class="s1">&#39;datasetId&#39;</span><span class="p">])</span>
+    <span class="k">return</span> <span class="n">datasets</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">datasets</span> <span class="o">=</span> <span class="n">discoverDasasets</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="s1">&#39;MOD_Aqua&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>----------------------------------------------------------------------
+<span class=" -Color -Color-Bold">List of available datasets:</span>
+
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="get-metadata-from-modis-aqua-chlorophylle-concentration">
+<h2>Get metadata from Modis Aqua Chlorophylle Concentration<a class="headerlink" href="#get-metadata-from-modis-aqua-chlorophylle-concentration" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">datasetID</span> <span class="o">=</span> <span class="s1">&#39;69618:MODh20chlMO_4km&#39;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\033</span><span class="s1">[1;34m&#39;</span> <span class="o">+</span> <span class="s1">&#39;Metadata of &#39;</span> <span class="o">+</span> <span class="n">datasetID</span> <span class="o">+</span> <span class="s1">&#39;:&#39;</span><span class="p">)</span>
+<span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;</span><span class="se">\033</span><span class="s1">[0;0m&#39;</span><span class="p">)</span>
+
+<span class="n">paged</span> <span class="o">=</span> <span class="n">datasets</span><span class="o">.</span><span class="n">getDatasets</span><span class="p">(</span><span class="n">datasetID</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">paged</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\033</span><span class="s2">[1m&quot;</span> <span class="o">+</span>  <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\033</span><span class="s2">[0m&quot;</span> <span class="o">+</span> <span class="s1">&#39;: &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold -Color-Bold-Blue">Metadata of 69618:MODh20chlMO_4km:</span>
+
+<span class=" -Color -Color-Bold">datasetId</span>: 69618:MODh20chlMO_4km
+<span class=" -Color -Color-Bold">creationDate</span>: 2018-12-01T00:10:01Z
+<span class=" -Color -Color-Bold">dataType</span>: Float32
+<span class=" -Color -Color-Bold">epsg</span>: 4326
+<span class=" -Color -Color-Bold">keywords</span>: [&#39;/processing_control/input_parameters/NC_GLOBAL#alt_thresh_lat=999&#39;, &#39;/processing_control/input_parameters/NC_GLOBAL#apply_pal=1&#39;, &#39;/processing_control/input_parameters/NC_GLOBAL#central_meridian=-999&#39;, &#39;/processing_control/input_parameters/NC_GLOBAL#deflate=4&#39;, &#39;/processing_control/input_parameters/NC_GLOBAL#east=180.000&#39;, &#39;/processing_control/input_parameters/NC_GLOBAL#fudge=1.0&#39;, &#39;/processing_control/input_parameters/NC_GLOBAL#full_latlon=yes&#39;, &#39;/processing_control/input_parameters/NC_GLOBAL#interp=area&#39;, &#39;/processing_control/input_parameters/NC_GLOBAL#land=$OCDATAROOT/common/landmask_GMT15ARC.nc&#39;, &#39;/processing_control/input_parameters/NC_GLOBAL#mask_land=no&#39;, &#39;/processing_control/input_parameters/NC_GLOBAL#north=90.000&#39;, &#39;/processing_control/input_parameters/NC_GLOBAL#num_cache=500&#39;, &#39;/processing_control/input_parameters/NC_GLOBAL#oformat=2&#39;, &#39;/processing_control/input_parameters/NC_GLOBAL#oformat2=png&#39;, &#39;/processing_control/input_parameters/NC_GLOBAL#product=chlor_a&#39;, &#39;/processing_control/input_parameters/NC_GLOBAL#product_rgb=rhos_645,rhos_555,rhos_469&#39;, &#39;/processing_control/input_parameters/NC_GLOBAL#projection=smi&#39;, &#39;/processing_control/input_parameters/NC_GLOBAL#quiet=false&#39;, &#39;/processing_control/input_parameters/NC_GLOBAL#resolution=4km&#39;, &#39;/processing_control/input_parameters/NC_GLOBAL#south=-90.000&#39;, &#39;/processing_control/input_parameters/NC_GLOBAL#suite=CHL&#39;, &#39;/processing_control/input_parameters/NC_GLOBAL#threshold=0&#39;, &#39;/processing_control/input_parameters/NC_GLOBAL#trimNSEW=yes&#39;, &#39;/processing_control/input_parameters/NC_GLOBAL#use_quality=yes&#39;, &#39;/processing_control/input_parameters/NC_GLOBAL#use_rgb=no&#39;, &#39;/processing_control/input_parameters/NC_GLOBAL#west=-180.000&#39;, &#39;/processing_control/NC_GLOBAL#l2_flag_names=ATMFAIL,LAND,HILT,HISATZEN,STRAYLIGHT,CLDICE,COCCOLITH,LOWLW,CHLWARN,CHLFAIL,NAVWARN,MAXAERITER,ATMWARN,HISOLZEN,NAVFAIL,FILTER,HIGLINT&#39;, &#39;/processing_control/NC_GLOBAL#software_name=l3mapgen&#39;, &#39;/processing_control/NC_GLOBAL#software_version=2.1.0-V2018.2.1&#39;, &#39;chlor_a#display_max=20&#39;, &#39;chlor_a#display_min=0.0099999998&#39;, &#39;chlor_a#display_scale=log&#39;, &#39;chlor_a#long_name=Chlorophyll Concentration, OCI Algorithm&#39;, &#39;chlor_a#reference=Hu, C., Lee Z., and Franz, B.A. (2012). Chlorophyll-a algorithms for oligotrophic oceans: A novel approach based on three-band reflectance difference, J. Geophys. Res., 117, C01011, doi:10.1029/2011JC007395.&#39;, &#39;chlor_a#standard_name=mass_concentration_of_chlorophyll_in_sea_water&#39;, &#39;chlor_a#units=mg m^-3&#39;, &#39;chlor_a#valid_max=100&#39;, &#39;chlor_a#valid_min=0.001&#39;, &#39;chlor_a#_FillValue=-32767&#39;, &#39;lat#long_name=Latitude&#39;, &#39;lat#standard_name=latitude&#39;, &#39;lat#units=degrees_north&#39;, &#39;lat#valid_max=90&#39;, &#39;lat#valid_min=-90&#39;, &#39;lat#_FillValue=-999&#39;, &#39;lon#long_name=Longitude&#39;, &#39;lon#standard_name=longitude&#39;, &#39;lon#units=degrees_east&#39;, &#39;lon#valid_max=180&#39;, &#39;lon#valid_min=-180&#39;, &#39;lon#_FillValue=-999&#39;, &#39;NC_GLOBAL#cdm_data_type=grid&#39;, &#39;NC_GLOBAL#Conventions=CF-1.6 ACDD-1.3&#39;, &#39;NC_GLOBAL#creator_email=data@oceancolor.gsfc.nasa.gov&#39;, &#39;NC_GLOBAL#creator_name=NASA/GSFC/OBPG&#39;, &#39;NC_GLOBAL#creator_url=http://oceandata.sci.gsfc.nasa.gov&#39;, &#39;NC_GLOBAL#data_bins=16635770&#39;, &#39;NC_GLOBAL#data_maximum=99.822014&#39;, &#39;NC_GLOBAL#data_minimum=0.0061450284&#39;, &#39;NC_GLOBAL#easternmost_longitude=180&#39;, &#39;NC_GLOBAL#end_orbit_number=88625&#39;, &#39;NC_GLOBAL#geospatial_lat_max=90&#39;, &#39;NC_GLOBAL#geospatial_lat_min=-90&#39;, &#39;NC_GLOBAL#geospatial_lat_resolution=4.6383123&#39;, &#39;NC_GLOBAL#geospatial_lat_units=degrees_north&#39;, &#39;NC_GLOBAL#geospatial_lon_max=180&#39;, &#39;NC_GLOBAL#geospatial_lon_min=-180&#39;, &#39;NC_GLOBAL#geospatial_lon_resolution=4.6383123&#39;, &#39;NC_GLOBAL#geospatial_lon_units=degrees_east&#39;, &#39;NC_GLOBAL#identifier_product_doi_authority=http://dx.doi.org&#39;, &#39;NC_GLOBAL#institution=NASA Goddard Space Flight Center, Ocean Ecology Laboratory, Ocean Biology Processing Group&#39;, &#39;NC_GLOBAL#instrument=MODIS&#39;, &#39;NC_GLOBAL#keywords=Earth Science &gt; Oceans &gt; Ocean Chemistry &gt; Pigments &gt; Chlorophyll; Earth Science &gt; Oceans &gt; Ocean Chemistry &gt; Chlorophyllr&#39;, &#39;NC_GLOBAL#keywords_vocabulary=NASA Global Change Master Directory (GCMD) Science Keywords&#39;, &#39;NC_GLOBAL#l2_flag_names=ATMFAIL,LAND,HILT,HISATZEN,STRAYLIGHT,CLDICE,COCCOLITH,LOWLW,CHLWARN,CHLFAIL,NAVWARN,MAXAERITER,ATMWARN,HISOLZEN,NAVFAIL,FILTER,HIGLINT&#39;, &#39;NC_GLOBAL#latitude_step=0.041666668&#39;, &#39;NC_GLOBAL#latitude_units=degrees_north&#39;, &#39;NC_GLOBAL#license=http://science.nasa.gov/earth-science/earth-science-data/data-information-policy/&#39;, &#39;NC_GLOBAL#longitude_step=0.041666668&#39;, &#39;NC_GLOBAL#longitude_units=degrees_east&#39;, &#39;NC_GLOBAL#map_projection=Equidistant Cylindrical&#39;, &#39;NC_GLOBAL#measure=Mean&#39;, &#39;NC_GLOBAL#naming_authority=gov.nasa.gsfc.sci.oceandata&#39;, &#39;NC_GLOBAL#northernmost_latitude=90&#39;, &#39;NC_GLOBAL#number_of_columns=8640&#39;, &#39;NC_GLOBAL#number_of_lines=4320&#39;, &#39;NC_GLOBAL#platform=Aqua&#39;, &#39;NC_GLOBAL#processing_level=L3 Mapped&#39;, &#39;NC_GLOBAL#processing_version=2018.0&#39;, &#39;NC_GLOBAL#project=Ocean Biology Processing Group (NASA/GSFC/OBPG)&#39;, &#39;NC_GLOBAL#publisher_email=data@oceancolor.gsfc.nasa.gov&#39;, &#39;NC_GLOBAL#publisher_name=NASA/GSFC/OBPG&#39;, &#39;NC_GLOBAL#publisher_url=http://oceandata.sci.gsfc.nasa.gov&#39;, &#39;NC_GLOBAL#southernmost_latitude=-90&#39;, &#39;NC_GLOBAL#spatialResolution=4.64 km&#39;, &#39;NC_GLOBAL#standard_name_vocabulary=CF Standard Name Table v36&#39;, &#39;NC_GLOBAL#start_orbit_number=88173&#39;, &#39;NC_GLOBAL#suggested_image_scaling_applied=No&#39;, &#39;NC_GLOBAL#suggested_image_scaling_maximum=20&#39;, &#39;NC_GLOBAL#suggested_image_scaling_minimum=0.0099999998&#39;, &#39;NC_GLOBAL#suggested_image_scaling_type=LOG&#39;, &#39;NC_GLOBAL#sw_point_latitude=-89.979164&#39;, &#39;NC_GLOBAL#sw_point_longitude=-179.97917&#39;, &#39;NC_GLOBAL#temporal_range=month&#39;, &#39;NC_GLOBAL#title=MODISA Level-3 Standard Mapped Image&#39;, &#39;NC_GLOBAL#westernmost_longitude=-180&#39;]
+<span class=" -Color -Color-Bold">license</span>: {&#39;documentationUrl&#39;: &#39;&#39;, &#39;dataProviderName&#39;: &#39;NASA&#39;, &#39;dataProviderUrl&#39;: &#39;&#39;, &#39;licenseId&#39;: &#39;&#39;, &#39;dataPolicy&#39;: &#39;&#39;, &#39;doi&#39;: &#39;&#39;, &#39;credits&#39;: &#39;&#39;}
+<span class=" -Color -Color-Bold">maxValue</span>: [99.99925994873]
+<span class=" -Color -Color-Bold">minValue</span>: [0.00099999993108213]
+<span class=" -Color -Color-Bold">noDataValue</span>: -32767
+<span class=" -Color -Color-Bold">numberOfRecords</span>: 183
+<span class=" -Color -Color-Bold">profile</span>: {&#39;profileSchema&#39;: &#39;eo_profile_schema.json&#39;, &#39;name&#39;: &#39;Earth Observation&#39;, &#39;mission&#39;: &#39;MODIS&#39;, &#39;sensor&#39;: &#39;MODIS&#39;, &#39;processingLevel&#39;: &#39;L3 Mapped&#39;, &#39;instrument&#39;: &#39;MODIS&#39;, &#39;platform&#39;: &#39;MOD/MYD&#39;}
+<span class=" -Color -Color-Bold">resolutionUnit</span>: degree
+<span class=" -Color -Color-Bold">temporalResolution</span>: Monthly
+<span class=" -Color -Color-Bold">unit</span>: mg m^-3
+<span class=" -Color -Color-Bold">unitDescription</span>: Temperature
+<span class=" -Color -Color-Bold">updateDate</span>: 2021-07-09T14:47:36Z
+<span class=" -Color -Color-Bold">geometry</span>: {&#39;type&#39;: &#39;Polygon&#39;, &#39;coordinates&#39;: [[[-180.0, -90.0], [180.0, -90.0], [180.0, 89.9999975], [-180.0, 89.9999975], [-180.0, -90.0]]]}
+<span class=" -Color -Color-Bold">resolutions</span>: [0.0416666678441787]
+<span class=" -Color -Color-Bold">anyText</span>: 4326,NASA,Daily,NASA
+<span class=" -Color -Color-Bold">applications</span>: [&#39;Marine&#39;]
+<span class=" -Color -Color-Bold">datasetManager</span>: govoni@meeo.it
+<span class=" -Color -Color-Bold">datasetManagerOrganisation</span>: meeo
+<span class=" -Color -Color-Bold">description</span>: MODIS Chlorophyll-a Concentration
+
+This algorithm returns the near-surface concentration of chlorophyll-a (chlor_a) in mg m-3, calculated using an empirical relationship derived from in situ measurements of chlor_a and remote sensing reflectances (Rrs) in the blue-to-green region of the visible spectrum. The implementation is contingent on the availability three or more sensor bands spanning the 440 - 670 nm spectral regime. The algorithm is applicable to all current ocean color sensors. The chlor_a product is included as part of the standard Level-2 OC product suite and the Level-3 CHL product suite.
+
+The current implementation for the default chlorophyll algorithm (chlor_a) employs the standard OC3/OC4 (OCx) band ratio algorithm merged with the color index (CI) of Hu et al. (2012). As described in that paper, this refinement is restricted to relatively clear water, and the general impact is to reduce artifacts and biases in clear-water chlorophyll retrievals due to residual glint, stray light, atmospheric correction errors, and white or spectrally-linear bias errors in Rrs. As implemented, the algorithm diverges slightly from what was published in Hu et al. (2012) in that the transition between CI and OCx now occurs at 0.15 &lt; CI &lt; 0.2 mg/m3 to ensure a smooth transition.
+<span class=" -Color -Color-Bold">title</span>: Ocean Color Data: Modis-aqua_chl-a (monthly)
+<span class=" -Color -Color-Bold">timeReferenceSystem</span>: UTC
+<span class=" -Color -Color-Bold">units</span>: mg m^-3
+<span class=" -Color -Color-Bold">unitsDescription</span>: Chlorophyll Concentration
+<span class=" -Color -Color-Bold">services</span>: [&#39;MWCS&#39;, &#39;ADAM&#39;, &#39;AdamApi&#39;]
+<span class=" -Color -Color-Bold">technicalManager</span>: govoni@meeo.it
+<span class=" -Color -Color-Bold">filtersEnabled</span>: {&#39;type&#39;: &#39;object&#39;, &#39;title&#39;: &#39;Dataset filters&#39;, &#39;properties&#39;: {&#39;startDate&#39;: {&#39;title&#39;: &#39;Start Date&#39;, &#39;type&#39;: &#39;string&#39;, &#39;format&#39;: &#39;date&#39;, &#39;text_rule&#39;: &#39;false&#39;, &#39;ops_only&#39;: &#39;false&#39;, &#39;math_rule&#39;: &#39;false&#39;, &#39;order_rule&#39;: &#39;false&#39;, &#39;pattern&#39;: &#39;^d{4}-[01]d-[0-3]d(T[0-2]d:[0-9]d:[0-9]dZ)?$&#39;}, &#39;endDate&#39;: {&#39;title&#39;: &#39;End Date&#39;, &#39;type&#39;: &#39;string&#39;, &#39;format&#39;: &#39;date&#39;, &#39;ops_only&#39;: &#39;false&#39;, &#39;text_rule&#39;: &#39;false&#39;, &#39;math_rule&#39;: &#39;false&#39;, &#39;order_rule&#39;: &#39;false&#39;, &#39;pattern&#39;: &#39;^d{4}-[01]d-[0-3]d(T[0-2]d:[0-9]d:[0-9]dZ)?$&#39;}}}
+<span class=" -Color -Color-Bold">starDate</span>: 2002-07-04T00:40:05Z
+<span class=" -Color -Color-Bold">endDate</span>: 2018-12-01T00:10:01Z
+<span class=" -Color -Color-Bold">accounting</span>: {&#39;unit&#39;: 0.0032}
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="discover-and-select-products-from-a-dataset">
+<h2>Discover and select products from a dataset<a class="headerlink" href="#discover-and-select-products-from-a-dataset" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>for a given time range and spatial coverage</p></li>
+</ul>
+<div class="section" id="get-data-over-artic-region">
+<h3>Get data over Artic region<a class="headerlink" href="#get-data-over-artic-region" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>The geometry field is extracted from a GeoJSON object , retrieving the value of the “feature” element.</p></li>
+</ul>
+<div class="section" id="search-data">
+<h4>Search data<a class="headerlink" href="#search-data" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>only print the first 10 products</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">adamapi</span> <span class="kn">import</span> <span class="n">Search</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The GeoJson object needs to be rearranged according to the counterclockwise winding order.This operation is executed in the next few lines to obtain a geometry that meets the requirements of the method. Geom_1 is the final result to be used in the discovery operation.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">geom_1</span> <span class="o">=</span> <span class="s2">&quot;{&#39;type&#39;: &#39;Polygon&#39;, &#39;coordinates&#39;: [[[-180, 90], [180, 90], [180, 60], [-180, 60], [-180, 90]]]}&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">start_date</span> <span class="o">=</span> <span class="s1">&#39;2003-01-01&#39;</span>
+<span class="n">end_date</span> <span class="o">=</span> <span class="s1">&#39;2003-12-31&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">search</span> <span class="o">=</span> <span class="n">Search</span><span class="p">(</span> <span class="n">a</span> <span class="p">)</span>
+<span class="n">results</span> <span class="o">=</span> <span class="n">search</span><span class="o">.</span><span class="n">getProducts</span><span class="p">(</span>
+    <span class="n">datasetID</span><span class="p">,</span> 
+    <span class="n">geometry</span><span class="o">=</span> <span class="n">geom_1</span><span class="p">,</span>
+    <span class="n">startDate</span> <span class="o">=</span> <span class="n">start_date</span><span class="p">,</span>
+    <span class="n">endDate</span> <span class="o">=</span> <span class="n">end_date</span>
+ <span class="p">)</span>
+
+<span class="c1"># Printing the results</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\033</span><span class="s1">[1m&#39;</span> <span class="o">+</span> <span class="s1">&#39;List of available products:&#39;</span><span class="p">)</span>
+<span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;</span><span class="se">\033</span><span class="s1">[0m&#39;</span><span class="p">)</span>
+<span class="n">count</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">results</span><span class="p">[</span><span class="s1">&#39;content&#39;</span><span class="p">]:</span>
+
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\033</span><span class="s2">[1;31;1m&quot;</span> <span class="o">+</span> <span class="s2">&quot;#&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">count</span><span class="p">))</span>
+        <span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;</span><span class="se">\033</span><span class="s1">[0m&#39;</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">i</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">k</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">+</span> <span class="s1">&#39;: &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">k</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
+        <span class="n">count</span> <span class="o">=</span> <span class="n">count</span><span class="o">+</span><span class="mi">1</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;------------------------------------&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">List of available products:</span>
+
+<span class=" -Color -Color-Bold -Color-Bold-Red">#1</span>
+
+_id: {&#39;$oid&#39;: &#39;60e85ffc6dfebc0806d0ec1e&#39;}
+datasetId: MODh20chlMO_4km
+productDate: 2003-12-01T00:05:00Z
+productId: NETCDF:&quot;/mnt/VOL100T/reliance/MODISA_L3m_CHL/2003/12/01/A20033352003365.L3m_MO_CHL_chlor_a_4km.nc&quot;:chlor_a
+band: 1
+bandDescription: mass_concentration_chlorophyll_concentration_in_sea_water
+geometry: {&#39;geometries&#39;: [{&#39;type&#39;: &#39;Polygon&#39;, &#39;coordinates&#39;: [[[-180, -90], [0.0, -90], [0.0, 89.9999975], [-180, 89.9999975], [-180, -90]]]}, {&#39;type&#39;: &#39;Polygon&#39;, &#39;coordinates&#39;: [[[0.0, -90], [180, -90], [180, 89.9999975], [0.0, 89.9999975], [0.0, -90]]]}], &#39;type&#39;: &#39;GeometryCollection&#39;}
+insertDate: 2021-07-09T14:41:00Z
+platform: A20
+status: Online
+------------------------------------
+<span class=" -Color -Color-Bold -Color-Bold-Red">#2</span>
+
+_id: {&#39;$oid&#39;: &#39;60e860146dfebc0806d0f073&#39;}
+datasetId: MODh20chlMO_4km
+productDate: 2003-11-01T00:00:00Z
+productId: NETCDF:&quot;/mnt/VOL100T/reliance/MODISA_L3m_CHL/2003/11/01/A20033052003334.L3m_MO_CHL_chlor_a_4km.nc&quot;:chlor_a
+band: 1
+bandDescription: mass_concentration_chlorophyll_concentration_in_sea_water
+geometry: {&#39;geometries&#39;: [{&#39;type&#39;: &#39;Polygon&#39;, &#39;coordinates&#39;: [[[-180, -90], [0.0, -90], [0.0, 89.9999975], [-180, 89.9999975], [-180, -90]]]}, {&#39;type&#39;: &#39;Polygon&#39;, &#39;coordinates&#39;: [[[0.0, -90], [180, -90], [180, 89.9999975], [0.0, 89.9999975], [0.0, -90]]]}], &#39;type&#39;: &#39;GeometryCollection&#39;}
+insertDate: 2021-07-09T14:41:23Z
+platform: A20
+status: Online
+------------------------------------
+<span class=" -Color -Color-Bold -Color-Bold-Red">#3</span>
+
+_id: {&#39;$oid&#39;: &#39;60e8602c6dfebc0806d0fbe4&#39;}
+datasetId: MODh20chlMO_4km
+productDate: 2003-10-01T00:30:01Z
+productId: NETCDF:&quot;/mnt/VOL100T/reliance/MODISA_L3m_CHL/2003/10/01/A20032742003304.L3m_MO_CHL_chlor_a_4km.nc&quot;:chlor_a
+band: 1
+bandDescription: mass_concentration_of_chlorophyll_in_sea_water
+geometry: {&#39;geometries&#39;: [{&#39;type&#39;: &#39;Polygon&#39;, &#39;coordinates&#39;: [[[-180, -90], [0.0, -90], [0.0, 89.9999975], [-180, 89.9999975], [-180, -90]]]}, {&#39;type&#39;: &#39;Polygon&#39;, &#39;coordinates&#39;: [[[0.0, -90], [180, -90], [180, 89.9999975], [0.0, 89.9999975], [0.0, -90]]]}], &#39;type&#39;: &#39;GeometryCollection&#39;}
+insertDate: 2021-07-09T14:41:48Z
+platform: A20
+status: Online
+------------------------------------
+<span class=" -Color -Color-Bold -Color-Bold-Red">#4</span>
+
+_id: {&#39;$oid&#39;: &#39;60e860436dfebc0806d10158&#39;}
+datasetId: MODh20chlMO_4km
+productDate: 2003-09-01T00:20:01Z
+productId: NETCDF:&quot;/mnt/VOL100T/reliance/MODISA_L3m_CHL/2003/09/01/A20032442003273.L3m_MO_CHL_chlor_a_4km.nc&quot;:chlor_a
+band: 1
+bandDescription: mass_concentration_chlorophyll_concentration_in_sea_water
+geometry: {&#39;geometries&#39;: [{&#39;type&#39;: &#39;Polygon&#39;, &#39;coordinates&#39;: [[[-180, -90], [0.0, -90], [0.0, 89.9999975], [-180, 89.9999975], [-180, -90]]]}, {&#39;type&#39;: &#39;Polygon&#39;, &#39;coordinates&#39;: [[[0.0, -90], [180, -90], [180, 89.9999975], [0.0, 89.9999975], [0.0, -90]]]}], &#39;type&#39;: &#39;GeometryCollection&#39;}
+insertDate: 2021-07-09T14:42:11Z
+platform: A20
+status: Online
+------------------------------------
+<span class=" -Color -Color-Bold -Color-Bold-Red">#5</span>
+
+_id: {&#39;$oid&#39;: &#39;60e8605b6dfebc0806d106b6&#39;}
+datasetId: MODh20chlMO_4km
+productDate: 2003-08-01T00:50:00Z
+productId: NETCDF:&quot;/mnt/VOL100T/reliance/MODISA_L3m_CHL/2003/08/01/A20032132003243.L3m_MO_CHL_chlor_a_4km.nc&quot;:chlor_a
+band: 1
+bandDescription: mass_concentration_chlorophyll_concentration_in_sea_water
+geometry: {&#39;geometries&#39;: [{&#39;type&#39;: &#39;Polygon&#39;, &#39;coordinates&#39;: [[[-180, -90], [0.0, -90], [0.0, 89.9999975], [-180, 89.9999975], [-180, -90]]]}, {&#39;type&#39;: &#39;Polygon&#39;, &#39;coordinates&#39;: [[[0.0, -90], [180, -90], [180, 89.9999975], [0.0, 89.9999975], [0.0, -90]]]}], &#39;type&#39;: &#39;GeometryCollection&#39;}
+insertDate: 2021-07-09T14:42:35Z
+platform: A20
+status: Online
+------------------------------------
+<span class=" -Color -Color-Bold -Color-Bold-Red">#6</span>
+
+_id: {&#39;$oid&#39;: &#39;60e860746dfebc0806d10d6c&#39;}
+datasetId: MODh20chlMO_4km
+productDate: 2003-07-01T00:10:01Z
+productId: NETCDF:&quot;/mnt/VOL100T/reliance/MODISA_L3m_CHL/2003/07/01/A20031822003212.L3m_MO_CHL_chlor_a_4km.nc&quot;:chlor_a
+band: 1
+bandDescription: mass_concentration_chlorophyll_concentration_in_sea_water
+geometry: {&#39;geometries&#39;: [{&#39;type&#39;: &#39;Polygon&#39;, &#39;coordinates&#39;: [[[-180, -90], [0.0, -90], [0.0, 89.9999975], [-180, 89.9999975], [-180, -90]]]}, {&#39;type&#39;: &#39;Polygon&#39;, &#39;coordinates&#39;: [[[0.0, -90], [180, -90], [180, 89.9999975], [0.0, 89.9999975], [0.0, -90]]]}], &#39;type&#39;: &#39;GeometryCollection&#39;}
+insertDate: 2021-07-09T14:43:00Z
+platform: A20
+status: Online
+------------------------------------
+<span class=" -Color -Color-Bold -Color-Bold-Red">#7</span>
+
+_id: {&#39;$oid&#39;: &#39;60e8608b6dfebc0806d11551&#39;}
+datasetId: MODh20chlMO_4km
+productDate: 2003-06-01T00:00:00Z
+productId: NETCDF:&quot;/mnt/VOL100T/reliance/MODISA_L3m_CHL/2003/06/01/A20031522003181.L3m_MO_CHL_chlor_a_4km.nc&quot;:chlor_a
+band: 1
+bandDescription: mass_concentration_chlorophyll_concentration_in_sea_water
+geometry: {&#39;geometries&#39;: [{&#39;type&#39;: &#39;Polygon&#39;, &#39;coordinates&#39;: [[[-180, -90], [0.0, -90], [0.0, 89.9999975], [-180, 89.9999975], [-180, -90]]]}, {&#39;type&#39;: &#39;Polygon&#39;, &#39;coordinates&#39;: [[[0.0, -90], [180, -90], [180, 89.9999975], [0.0, 89.9999975], [0.0, -90]]]}], &#39;type&#39;: &#39;GeometryCollection&#39;}
+insertDate: 2021-07-09T14:43:22Z
+platform: A20
+status: Online
+------------------------------------
+<span class=" -Color -Color-Bold -Color-Bold-Red">#8</span>
+
+_id: {&#39;$oid&#39;: &#39;60e860a26dfebc0806d11582&#39;}
+datasetId: MODh20chlMO_4km
+productDate: 2003-05-01T00:35:00Z
+productId: NETCDF:&quot;/mnt/VOL100T/reliance/MODISA_L3m_CHL/2003/05/01/A20031212003151.L3m_MO_CHL_chlor_a_4km.nc&quot;:chlor_a
+band: 1
+bandDescription: mass_concentration_chlorophyll_concentration_in_sea_water
+geometry: {&#39;geometries&#39;: [{&#39;type&#39;: &#39;Polygon&#39;, &#39;coordinates&#39;: [[[-180, -90], [0.0, -90], [0.0, 89.9999975], [-180, 89.9999975], [-180, -90]]]}, {&#39;type&#39;: &#39;Polygon&#39;, &#39;coordinates&#39;: [[[0.0, -90], [180, -90], [180, 89.9999975], [0.0, 89.9999975], [0.0, -90]]]}], &#39;type&#39;: &#39;GeometryCollection&#39;}
+insertDate: 2021-07-09T14:43:45Z
+platform: A20
+status: Online
+------------------------------------
+<span class=" -Color -Color-Bold -Color-Bold-Red">#9</span>
+
+_id: {&#39;$oid&#39;: &#39;60e860b96dfebc0806d1193c&#39;}
+datasetId: MODh20chlMO_4km
+productDate: 2003-04-01T00:25:01Z
+productId: NETCDF:&quot;/mnt/VOL100T/reliance/MODISA_L3m_CHL/2003/04/01/A20030912003120.L3m_MO_CHL_chlor_a_4km.nc&quot;:chlor_a
+band: 1
+bandDescription: mass_concentration_chlorophyll_concentration_in_sea_water
+geometry: {&#39;geometries&#39;: [{&#39;type&#39;: &#39;Polygon&#39;, &#39;coordinates&#39;: [[[-180, -90], [0.0, -90], [0.0, 89.9999975], [-180, 89.9999975], [-180, -90]]]}, {&#39;type&#39;: &#39;Polygon&#39;, &#39;coordinates&#39;: [[[0.0, -90], [180, -90], [180, 89.9999975], [0.0, 89.9999975], [0.0, -90]]]}], &#39;type&#39;: &#39;GeometryCollection&#39;}
+insertDate: 2021-07-09T14:44:09Z
+platform: A20
+status: Online
+------------------------------------
+<span class=" -Color -Color-Bold -Color-Bold-Red">#10</span>
+
+_id: {&#39;$oid&#39;: &#39;60e860d16dfebc0806d11e30&#39;}
+datasetId: MODh20chlMO_4km
+productDate: 2003-03-01T00:35:00Z
+productId: NETCDF:&quot;/mnt/VOL100T/reliance/MODISA_L3m_CHL/2003/03/01/A20030602003090.L3m_MO_CHL_chlor_a_4km.nc&quot;:chlor_a
+band: 1
+bandDescription: mass_concentration_chlorophyll_concentration_in_sea_water
+geometry: {&#39;geometries&#39;: [{&#39;type&#39;: &#39;Polygon&#39;, &#39;coordinates&#39;: [[[-180, -90], [0.0, -90], [0.0, 89.9999975], [-180, 89.9999975], [-180, -90]]]}, {&#39;type&#39;: &#39;Polygon&#39;, &#39;coordinates&#39;: [[[0.0, -90], [180, -90], [180, 89.9999975], [0.0, 89.9999975], [0.0, -90]]]}], &#39;type&#39;: &#39;GeometryCollection&#39;}
+insertDate: 2021-07-09T14:44:33Z
+platform: A20
+status: Online
+------------------------------------
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="get-data">
+<h2>Get data<a class="headerlink" href="#get-data" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>be aware that you alwasy get daily average from ADAM-API</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">getZipData</span><span class="p">(</span><span class="n">auth</span><span class="p">,</span> <span class="n">dataset_info</span><span class="p">):</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="n">pathlib</span><span class="o">.</span><span class="n">Path</span><span class="p">(</span><span class="n">pathlib</span><span class="o">.</span><span class="n">Path</span><span class="p">(</span><span class="n">dataset_info</span><span class="p">[</span><span class="s1">&#39;outputFname&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">stem</span><span class="p">)</span><span class="o">.</span><span class="n">exists</span><span class="p">()</span> <span class="ow">or</span> <span class="n">pathlib</span><span class="o">.</span><span class="n">Path</span><span class="p">(</span><span class="n">dataset_info</span><span class="p">[</span><span class="s1">&#39;outputFname&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">exists</span><span class="p">()):</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="n">adam</span><span class="o">.</span><span class="n">GetData</span><span class="p">(</span><span class="n">auth</span><span class="p">)</span>
+        <span class="n">image</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">getData</span><span class="p">(</span>
+        <span class="n">datasetId</span> <span class="o">=</span> <span class="n">dataset_info</span><span class="p">[</span><span class="s1">&#39;datasetID&#39;</span><span class="p">],</span>
+        <span class="n">startDate</span> <span class="o">=</span> <span class="n">dataset_info</span><span class="p">[</span><span class="s1">&#39;startDate&#39;</span><span class="p">],</span>
+        <span class="n">endDate</span> <span class="o">=</span> <span class="n">dataset_info</span><span class="p">[</span><span class="s1">&#39;endDate&#39;</span><span class="p">],</span>
+        <span class="n">geometry</span> <span class="o">=</span> <span class="n">dataset_info</span><span class="p">[</span><span class="s1">&#39;geometry&#39;</span><span class="p">],</span>
+        <span class="n">outputFname</span> <span class="o">=</span> <span class="n">dataset_info</span><span class="p">[</span><span class="s1">&#39;outputFname&#39;</span><span class="p">])</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%time</span>
+
+<span class="n">output_file</span> <span class="o">=</span> <span class="s1">&#39;./MOD_Aqua_mass_concentration_chlorophyll_concentration_in_sea_water_&#39;</span> <span class="o">+</span> <span class="n">start_date</span> <span class="o">+</span> <span class="s1">&#39;-&#39;</span> <span class="o">+</span> <span class="n">end_date</span> <span class="o">+</span> <span class="s1">&#39;.zip&#39;</span>
+
+<span class="n">datasetInfo</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;datasetID&#39;</span>   <span class="p">:</span> <span class="n">datasetID</span><span class="p">,</span>
+    <span class="s1">&#39;startDate&#39;</span>   <span class="p">:</span> <span class="n">start_date</span><span class="p">,</span>
+    <span class="s1">&#39;endDate&#39;</span>     <span class="p">:</span> <span class="n">end_date</span><span class="p">,</span>
+    <span class="s1">&#39;geometry&#39;</span>    <span class="p">:</span> <span class="n">geom_1</span><span class="p">,</span>
+    <span class="s1">&#39;outputFname&#39;</span> <span class="p">:</span> <span class="n">output_file</span>
+    <span class="p">}</span>
+<span class="n">getZipData</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">datasetInfo</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>./MOD_Aqua_mass_concentration_chlorophyll_concentration_in_sea_water_2003-01-01-2003-12-31.zip
+CPU times: user 4.15 s, sys: 148 ms, total: 4.29 s
+Wall time: 1min 7s
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="data-analysis-and-visualization">
+<h2>Data analysis and Visualization<a class="headerlink" href="#data-analysis-and-visualization" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="unzip-data">
+<h3>Unzip data<a class="headerlink" href="#unzip-data" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">unzipData</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+    <span class="k">with</span> <span class="n">zipfile</span><span class="o">.</span><span class="n">ZipFile</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">zip_ref</span><span class="p">:</span>
+        <span class="n">zip_ref</span><span class="o">.</span><span class="n">extractall</span><span class="p">(</span><span class="n">path</span> <span class="o">=</span> <span class="n">pathlib</span><span class="o">.</span><span class="n">Path</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span><span class="o">.</span><span class="n">stem</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="ow">not</span> <span class="n">pathlib</span><span class="o">.</span><span class="n">Path</span><span class="p">(</span><span class="n">pathlib</span><span class="o">.</span><span class="n">Path</span><span class="p">(</span><span class="n">output_file</span><span class="p">)</span><span class="o">.</span><span class="n">stem</span><span class="p">)</span><span class="o">.</span><span class="n">exists</span><span class="p">():</span>
+    <span class="n">unzipData</span><span class="p">(</span><span class="n">output_file</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="read-data-in-xarray">
+<h2>Read data in xarray<a class="headerlink" href="#read-data-in-xarray" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">paths_to_datetimeindex</span><span class="p">(</span><span class="n">paths</span><span class="p">):</span>
+    <span class="k">return</span>  <span class="p">[</span><span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">date</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;_&#39;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">],</span> <span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1">t</span><span class="si">%f</span><span class="s1">&#39;</span><span class="p">)</span> <span class="k">for</span> <span class="n">date</span> <span class="ow">in</span> <span class="n">paths</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">getData</span><span class="p">(</span><span class="n">dirtif</span><span class="p">,</span> <span class="n">varname</span><span class="p">):</span>
+    <span class="n">geotiff_list</span> <span class="o">=</span> <span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="n">dirtif</span><span class="p">)</span>
+    <span class="c1"># Create variable used for time axis</span>
+    <span class="n">time_var</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="s1">&#39;time&#39;</span><span class="p">,</span> <span class="n">paths_to_datetimeindex</span><span class="p">(</span><span class="n">geotiff_list</span><span class="p">))</span>
+    <span class="c1"># Load in and concatenate all individual GeoTIFFs</span>
+    <span class="n">geotiffs_da</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">xr</span><span class="o">.</span><span class="n">open_rasterio</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">parse_coordinates</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">geotiff_list</span><span class="p">],</span>
+                        <span class="n">dim</span><span class="o">=</span><span class="n">time_var</span><span class="p">)</span>
+    <span class="c1"># Covert our xarray.DataArray into a xarray.Dataset</span>
+    <span class="n">geotiffs_da</span> <span class="o">=</span> <span class="n">geotiffs_da</span><span class="o">.</span><span class="n">to_dataset</span><span class="p">(</span><span class="s1">&#39;band&#39;</span><span class="p">)</span>
+    <span class="c1"># Rename the dimensions to make it CF-convention compliant</span>
+    <span class="n">geotiffs_da</span> <span class="o">=</span> <span class="n">geotiffs_da</span><span class="o">.</span><span class="n">rename_dims</span><span class="p">({</span><span class="s1">&#39;y&#39;</span><span class="p">:</span> <span class="s1">&#39;latitude&#39;</span><span class="p">,</span> <span class="s1">&#39;x&#39;</span><span class="p">:</span><span class="s1">&#39;longitude&#39;</span><span class="p">})</span>
+    <span class="c1"># Rename the variable to a more useful name</span>
+    <span class="n">geotiffs_da</span> <span class="o">=</span> <span class="n">geotiffs_da</span><span class="o">.</span><span class="n">rename_vars</span><span class="p">({</span><span class="mi">1</span><span class="p">:</span> <span class="n">varname</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">:</span><span class="s1">&#39;latitude&#39;</span><span class="p">,</span> <span class="s1">&#39;x&#39;</span><span class="p">:</span><span class="s1">&#39;longitude&#39;</span><span class="p">})</span>
+    <span class="c1"># set attribute to variable</span>
+    <span class="n">geotiffs_da</span><span class="p">[</span><span class="n">varname</span><span class="p">]</span><span class="o">.</span><span class="n">attrs</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;units&#39;</span> <span class="p">:</span> <span class="n">geotiffs_da</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="n">varname</span> <span class="o">+</span> <span class="s1">&#39;#units&#39;</span><span class="p">],</span> <span class="s1">&#39;long_name&#39;</span> <span class="p">:</span> <span class="n">geotiffs_da</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="n">varname</span> <span class="o">+</span> <span class="s1">&#39;#long_name&#39;</span><span class="p">]}</span>
+    <span class="k">return</span> <span class="n">geotiffs_da</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">path_files</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">pathlib</span><span class="o">.</span><span class="n">Path</span><span class="p">(</span><span class="n">output_file</span><span class="p">)</span><span class="o">.</span><span class="n">stem</span><span class="p">,</span> <span class="s1">&#39;*.tif&#39;</span><span class="p">)</span>
+<span class="n">geotiff_ds</span> <span class="o">=</span> <span class="n">getData</span><span class="p">(</span><span class="n">path_files</span><span class="p">,</span> <span class="s1">&#39;chlor_a&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/data/jwd/main/035/876/35876205/tmp/ipykernel_5020/2431546948.py:6: DeprecationWarning: open_rasterio is Deprecated in favor of rioxarray. For information about transitioning, see: https://corteva.github.io/rioxarray/stable/getting_started/getting_started.html
+  geotiffs_da = xr.concat([xr.open_rasterio(i, parse_coordinates=True) for i in geotiff_list],
+/data/jwd/main/035/876/35876205/tmp/ipykernel_5020/2431546948.py:6: DeprecationWarning: open_rasterio is Deprecated in favor of rioxarray. For information about transitioning, see: https://corteva.github.io/rioxarray/stable/getting_started/getting_started.html
+  geotiffs_da = xr.concat([xr.open_rasterio(i, parse_coordinates=True) for i in geotiff_list],
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%time</span>
+<span class="n">geotiff_ds</span><span class="o">.</span><span class="n">load</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div><svg style="position: absolute; width: 0; height: 0; overflow: hidden">
+<defs>
+<symbol id="icon-database" viewBox="0 0 32 32">
+<path d="M16 0c-8.837 0-16 2.239-16 5v4c0 2.761 7.163 5 16 5s16-2.239 16-5v-4c0-2.761-7.163-5-16-5z"></path>
+<path d="M16 17c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+<path d="M16 26c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+</symbol>
+<symbol id="icon-file-text2" viewBox="0 0 32 32">
+<path d="M28.681 7.159c-0.694-0.947-1.662-2.053-2.724-3.116s-2.169-2.030-3.116-2.724c-1.612-1.182-2.393-1.319-2.841-1.319h-15.5c-1.378 0-2.5 1.121-2.5 2.5v27c0 1.378 1.122 2.5 2.5 2.5h23c1.378 0 2.5-1.122 2.5-2.5v-19.5c0-0.448-0.137-1.23-1.319-2.841zM24.543 5.457c0.959 0.959 1.712 1.825 2.268 2.543h-4.811v-4.811c0.718 0.556 1.584 1.309 2.543 2.268zM28 29.5c0 0.271-0.229 0.5-0.5 0.5h-23c-0.271 0-0.5-0.229-0.5-0.5v-27c0-0.271 0.229-0.5 0.5-0.5 0 0 15.499-0 15.5 0v7c0 0.552 0.448 1 1 1h7v19.5z"></path>
+<path d="M23 26h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 22h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 18h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+</symbol>
+</defs>
+</svg>
+<style>/* CSS stylesheet for displaying xarray objects in jupyterlab.
+ *
+ */
+
+:root {
+  --xr-font-color0: var(--jp-content-font-color0, rgba(0, 0, 0, 1));
+  --xr-font-color2: var(--jp-content-font-color2, rgba(0, 0, 0, 0.54));
+  --xr-font-color3: var(--jp-content-font-color3, rgba(0, 0, 0, 0.38));
+  --xr-border-color: var(--jp-border-color2, #e0e0e0);
+  --xr-disabled-color: var(--jp-layout-color3, #bdbdbd);
+  --xr-background-color: var(--jp-layout-color0, white);
+  --xr-background-color-row-even: var(--jp-layout-color1, white);
+  --xr-background-color-row-odd: var(--jp-layout-color2, #eeeeee);
+}
+
+html[theme=dark],
+body.vscode-dark {
+  --xr-font-color0: rgba(255, 255, 255, 1);
+  --xr-font-color2: rgba(255, 255, 255, 0.54);
+  --xr-font-color3: rgba(255, 255, 255, 0.38);
+  --xr-border-color: #1F1F1F;
+  --xr-disabled-color: #515151;
+  --xr-background-color: #111111;
+  --xr-background-color-row-even: #111111;
+  --xr-background-color-row-odd: #313131;
+}
+
+.xr-wrap {
+  display: block;
+  min-width: 300px;
+  max-width: 700px;
+}
+
+.xr-text-repr-fallback {
+  /* fallback to plain text repr when CSS is not injected (untrusted notebook) */
+  display: none;
+}
+
+.xr-header {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  margin-bottom: 4px;
+  border-bottom: solid 1px var(--xr-border-color);
+}
+
+.xr-header > div,
+.xr-header > ul {
+  display: inline;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.xr-obj-type,
+.xr-array-name {
+  margin-left: 2px;
+  margin-right: 10px;
+}
+
+.xr-obj-type {
+  color: var(--xr-font-color2);
+}
+
+.xr-sections {
+  padding-left: 0 !important;
+  display: grid;
+  grid-template-columns: 150px auto auto 1fr 20px 20px;
+}
+
+.xr-section-item {
+  display: contents;
+}
+
+.xr-section-item input {
+  display: none;
+}
+
+.xr-section-item input + label {
+  color: var(--xr-disabled-color);
+}
+
+.xr-section-item input:enabled + label {
+  cursor: pointer;
+  color: var(--xr-font-color2);
+}
+
+.xr-section-item input:enabled + label:hover {
+  color: var(--xr-font-color0);
+}
+
+.xr-section-summary {
+  grid-column: 1;
+  color: var(--xr-font-color2);
+  font-weight: 500;
+}
+
+.xr-section-summary > span {
+  display: inline-block;
+  padding-left: 0.5em;
+}
+
+.xr-section-summary-in:disabled + label {
+  color: var(--xr-font-color2);
+}
+
+.xr-section-summary-in + label:before {
+  display: inline-block;
+  content: '►';
+  font-size: 11px;
+  width: 15px;
+  text-align: center;
+}
+
+.xr-section-summary-in:disabled + label:before {
+  color: var(--xr-disabled-color);
+}
+
+.xr-section-summary-in:checked + label:before {
+  content: '▼';
+}
+
+.xr-section-summary-in:checked + label > span {
+  display: none;
+}
+
+.xr-section-summary,
+.xr-section-inline-details {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.xr-section-inline-details {
+  grid-column: 2 / -1;
+}
+
+.xr-section-details {
+  display: none;
+  grid-column: 1 / -1;
+  margin-bottom: 5px;
+}
+
+.xr-section-summary-in:checked ~ .xr-section-details {
+  display: contents;
+}
+
+.xr-array-wrap {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 20px auto;
+}
+
+.xr-array-wrap > label {
+  grid-column: 1;
+  vertical-align: top;
+}
+
+.xr-preview {
+  color: var(--xr-font-color3);
+}
+
+.xr-array-preview,
+.xr-array-data {
+  padding: 0 5px !important;
+  grid-column: 2;
+}
+
+.xr-array-data,
+.xr-array-in:checked ~ .xr-array-preview {
+  display: none;
+}
+
+.xr-array-in:checked ~ .xr-array-data,
+.xr-array-preview {
+  display: inline-block;
+}
+
+.xr-dim-list {
+  display: inline-block !important;
+  list-style: none;
+  padding: 0 !important;
+  margin: 0;
+}
+
+.xr-dim-list li {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+.xr-dim-list:before {
+  content: '(';
+}
+
+.xr-dim-list:after {
+  content: ')';
+}
+
+.xr-dim-list li:not(:last-child):after {
+  content: ',';
+  padding-right: 5px;
+}
+
+.xr-has-index {
+  font-weight: bold;
+}
+
+.xr-var-list,
+.xr-var-item {
+  display: contents;
+}
+
+.xr-var-item > div,
+.xr-var-item label,
+.xr-var-item > .xr-var-name span {
+  background-color: var(--xr-background-color-row-even);
+  margin-bottom: 0;
+}
+
+.xr-var-item > .xr-var-name:hover span {
+  padding-right: 5px;
+}
+
+.xr-var-list > li:nth-child(odd) > div,
+.xr-var-list > li:nth-child(odd) > label,
+.xr-var-list > li:nth-child(odd) > .xr-var-name span {
+  background-color: var(--xr-background-color-row-odd);
+}
+
+.xr-var-name {
+  grid-column: 1;
+}
+
+.xr-var-dims {
+  grid-column: 2;
+}
+
+.xr-var-dtype {
+  grid-column: 3;
+  text-align: right;
+  color: var(--xr-font-color2);
+}
+
+.xr-var-preview {
+  grid-column: 4;
+}
+
+.xr-var-name,
+.xr-var-dims,
+.xr-var-dtype,
+.xr-preview,
+.xr-attrs dt {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 10px;
+}
+
+.xr-var-name:hover,
+.xr-var-dims:hover,
+.xr-var-dtype:hover,
+.xr-attrs dt:hover {
+  overflow: visible;
+  width: auto;
+  z-index: 1;
+}
+
+.xr-var-attrs,
+.xr-var-data {
+  display: none;
+  background-color: var(--xr-background-color) !important;
+  padding-bottom: 5px !important;
+}
+
+.xr-var-attrs-in:checked ~ .xr-var-attrs,
+.xr-var-data-in:checked ~ .xr-var-data {
+  display: block;
+}
+
+.xr-var-data > table {
+  float: right;
+}
+
+.xr-var-name span,
+.xr-var-data,
+.xr-attrs {
+  padding-left: 25px !important;
+}
+
+.xr-attrs,
+.xr-var-attrs,
+.xr-var-data {
+  grid-column: 1 / -1;
+}
+
+dl.xr-attrs {
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 125px auto;
+}
+
+.xr-attrs dt,
+.xr-attrs dd {
+  padding: 0;
+  margin: 0;
+  float: left;
+  padding-right: 10px;
+  width: auto;
+}
+
+.xr-attrs dt {
+  font-weight: normal;
+  grid-column: 1;
+}
+
+.xr-attrs dt:hover span {
+  display: inline-block;
+  background: var(--xr-background-color);
+  padding-right: 10px;
+}
+
+.xr-attrs dd {
+  grid-column: 2;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.xr-icon-database,
+.xr-icon-file-text2 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 1em;
+  height: 1.5em !important;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+</style><pre class='xr-text-repr-fallback'>&lt;xarray.Dataset&gt;
+Dimensions:    (time: 11, latitude: 720, longitude: 8640)
+Coordinates:
+  * latitude   (latitude) float64 89.98 89.94 89.9 89.85 ... 60.1 60.06 60.02
+  * longitude  (longitude) float64 -180.0 -179.9 -179.9 ... 179.9 179.9 180.0
+  * time       (time) datetime64[ns] 2003-02-01 2003-03-01 ... 2003-12-01
+Data variables:
+    chlor_a    (time, latitude, longitude) float32 -3.277e+04 ... -3.277e+04
+Attributes: (12/128)
+    transform:                                                        (0.0416...
+    crs:                                                              +init=e...
+    res:                                                              (0.0416...
+    is_tiled:                                                         0
+    nodatavals:                                                       (-32767...
+    scales:                                                           (1.0,)
+    ...                                                               ...
+    NC_GLOBAL#temporal_range:                                         month
+    NC_GLOBAL#time_coverage_end:                                      2003-03...
+    NC_GLOBAL#time_coverage_start:                                    2003-02...
+    NC_GLOBAL#title:                                                  HMODISA...
+    NC_GLOBAL#westernmost_longitude:                                  -180
+    NC_GLOBAL#_lastModified:                                          2018-01...</pre><div class='xr-wrap' hidden><div class='xr-header'><div class='xr-obj-type'>xarray.Dataset</div></div><ul class='xr-sections'><li class='xr-section-item'><input id='section-86bc9085-0ec7-4161-8a9a-e28686992178' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-86bc9085-0ec7-4161-8a9a-e28686992178' class='xr-section-summary'  title='Expand/collapse section'>Dimensions:</label><div class='xr-section-inline-details'><ul class='xr-dim-list'><li><span class='xr-has-index'>time</span>: 11</li><li><span class='xr-has-index'>latitude</span>: 720</li><li><span class='xr-has-index'>longitude</span>: 8640</li></ul></div><div class='xr-section-details'></div></li><li class='xr-section-item'><input id='section-0f738a79-f047-4b55-a15b-f52ba965bbab' class='xr-section-summary-in' type='checkbox'  checked><label for='section-0f738a79-f047-4b55-a15b-f52ba965bbab' class='xr-section-summary' >Coordinates: <span>(3)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>latitude</span></div><div class='xr-var-dims'>(latitude)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>89.98 89.94 89.9 ... 60.06 60.02</div><input id='attrs-710f50c1-c487-4a1d-9ff1-8ab88a7385f0' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-710f50c1-c487-4a1d-9ff1-8ab88a7385f0' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-abc58db5-47d3-4d49-bf49-ab40cefcea9b' class='xr-var-data-in' type='checkbox'><label for='data-abc58db5-47d3-4d49-bf49-ab40cefcea9b' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([89.979164, 89.937497, 89.895831, ..., 60.104162, 60.062496, 60.020829])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>longitude</span></div><div class='xr-var-dims'>(longitude)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>-180.0 -179.9 ... 179.9 180.0</div><input id='attrs-6de61e2a-b8c6-44b0-aef6-12c01809e702' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-6de61e2a-b8c6-44b0-aef6-12c01809e702' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-9d84a1b4-db1c-41c0-bc8e-44c309256f5d' class='xr-var-data-in' type='checkbox'><label for='data-9d84a1b4-db1c-41c0-bc8e-44c309256f5d' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([-179.979172, -179.937505, -179.895838, ...,  179.895838,  179.937505,
+        179.979172])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>time</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>datetime64[ns]</div><div class='xr-var-preview xr-preview'>2003-02-01 ... 2003-12-01</div><input id='attrs-4e77b719-79e8-4c16-95f4-53b14fd6d64f' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-4e77b719-79e8-4c16-95f4-53b14fd6d64f' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-ea97bcc5-22a6-4e26-ab5e-db3e233eaf42' class='xr-var-data-in' type='checkbox'><label for='data-ea97bcc5-22a6-4e26-ab5e-db3e233eaf42' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([&#x27;2003-02-01T00:00:00.000000000&#x27;, &#x27;2003-03-01T00:00:00.000000000&#x27;,
+       &#x27;2003-04-01T00:00:00.000000000&#x27;, &#x27;2003-05-01T00:00:00.000000000&#x27;,
+       &#x27;2003-06-01T00:00:00.000000000&#x27;, &#x27;2003-07-01T00:00:00.000000000&#x27;,
+       &#x27;2003-08-01T00:00:00.000000000&#x27;, &#x27;2003-09-01T00:00:00.000000000&#x27;,
+       &#x27;2003-10-01T00:00:00.000000000&#x27;, &#x27;2003-11-01T00:00:00.000000000&#x27;,
+       &#x27;2003-12-01T00:00:00.000000000&#x27;], dtype=&#x27;datetime64[ns]&#x27;)</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-936cdfbe-ad74-4715-9342-657c4d41a9db' class='xr-section-summary-in' type='checkbox'  checked><label for='section-936cdfbe-ad74-4715-9342-657c4d41a9db' class='xr-section-summary' >Data variables: <span>(1)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span>chlor_a</span></div><div class='xr-var-dims'>(time, latitude, longitude)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>-3.277e+04 ... -3.277e+04</div><input id='attrs-58ecd575-d2fc-47e3-b9ee-a368f7db3742' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-58ecd575-d2fc-47e3-b9ee-a368f7db3742' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-ec1dacd1-bfbf-4102-a787-f12897bcc1f3' class='xr-var-data-in' type='checkbox'><label for='data-ec1dacd1-bfbf-4102-a787-f12897bcc1f3' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>mg m^-3</dd><dt><span>long_name :</span></dt><dd>Chlorophyll Concentration, OCI Algorithm</dd></dl></div><div class='xr-var-data'><pre>array([[[-3.2767000e+04, -3.2767000e+04, -3.2767000e+04, ...,
+         -3.2767000e+04, -3.2767000e+04, -3.2767000e+04],
+        [-3.2767000e+04, -3.2767000e+04, -3.2767000e+04, ...,
+         -3.2767000e+04, -3.2767000e+04, -3.2767000e+04],
+        [-3.2767000e+04, -3.2767000e+04, -3.2767000e+04, ...,
+         -3.2767000e+04, -3.2767000e+04, -3.2767000e+04],
+        ...,
+        [-3.2767000e+04, -3.2767000e+04, -3.2767000e+04, ...,
+         -3.2767000e+04, -3.2767000e+04, -3.2767000e+04],
+        [-3.2767000e+04, -3.2767000e+04, -3.2767000e+04, ...,
+         -3.2767000e+04, -3.2767000e+04, -3.2767000e+04],
+        [-3.2767000e+04, -3.2767000e+04, -3.2767000e+04, ...,
+         -3.2767000e+04, -3.2767000e+04, -3.2767000e+04]],
+
+       [[-3.2767000e+04, -3.2767000e+04, -3.2767000e+04, ...,
+         -3.2767000e+04, -3.2767000e+04, -3.2767000e+04],
+        [-3.2767000e+04, -3.2767000e+04, -3.2767000e+04, ...,
+         -3.2767000e+04, -3.2767000e+04, -3.2767000e+04],
+        [-3.2767000e+04, -3.2767000e+04, -3.2767000e+04, ...,
+         -3.2767000e+04, -3.2767000e+04, -3.2767000e+04],
+...
+        [-3.2767000e+04, -3.2767000e+04, -3.2767000e+04, ...,
+         -3.2767000e+04, -3.2767000e+04, -3.2767000e+04],
+        [-3.2767000e+04, -3.2767000e+04, -3.2767000e+04, ...,
+         -3.2767000e+04, -3.2767000e+04, -3.2767000e+04],
+        [-3.2767000e+04, -3.2767000e+04, -3.2767000e+04, ...,
+         -3.2767000e+04, -3.2767000e+04, -3.2767000e+04]],
+
+       [[-3.2767000e+04, -3.2767000e+04, -3.2767000e+04, ...,
+         -3.2767000e+04, -3.2767000e+04, -3.2767000e+04],
+        [-3.2767000e+04, -3.2767000e+04, -3.2767000e+04, ...,
+         -3.2767000e+04, -3.2767000e+04, -3.2767000e+04],
+        [-3.2767000e+04, -3.2767000e+04, -3.2767000e+04, ...,
+         -3.2767000e+04, -3.2767000e+04, -3.2767000e+04],
+        ...,
+        [-3.2767000e+04, -3.2767000e+04, -3.2767000e+04, ...,
+         -3.2767000e+04, -3.2767000e+04, -3.2767000e+04],
+        [-3.2767000e+04, -3.2767000e+04, -3.2767000e+04, ...,
+         -3.2767000e+04, -3.2767000e+04, -3.2767000e+04],
+        [-3.2767000e+04, -3.2767000e+04, -3.2767000e+04, ...,
+         -3.2767000e+04, -3.2767000e+04, -3.2767000e+04]]], dtype=float32)</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-baf10aac-9f64-4cc5-9f47-f188eff93fcb' class='xr-section-summary-in' type='checkbox'  ><label for='section-baf10aac-9f64-4cc5-9f47-f188eff93fcb' class='xr-section-summary' >Attributes: <span>(128)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>transform :</span></dt><dd>(0.0416666678441787, 0.0, -180.0000050868518, 0.0, -0.0416666690219633, 89.99999745804614)</dd><dt><span>crs :</span></dt><dd>+init=epsg:4326</dd><dt><span>res :</span></dt><dd>(0.0416666678441787, 0.0416666690219633)</dd><dt><span>is_tiled :</span></dt><dd>0</dd><dt><span>nodatavals :</span></dt><dd>(-32767.0,)</dd><dt><span>scales :</span></dt><dd>(1.0,)</dd><dt><span>offsets :</span></dt><dd>(0.0,)</dd><dt><span>/processing_control/input_parameters/NC_GLOBAL#alt_thresh_lat :</span></dt><dd>999</dd><dt><span>/processing_control/input_parameters/NC_GLOBAL#apply_pal :</span></dt><dd>1</dd><dt><span>/processing_control/input_parameters/NC_GLOBAL#central_meridian :</span></dt><dd>-999</dd><dt><span>/processing_control/input_parameters/NC_GLOBAL#deflate :</span></dt><dd>4</dd><dt><span>/processing_control/input_parameters/NC_GLOBAL#east :</span></dt><dd>180.000</dd><dt><span>/processing_control/input_parameters/NC_GLOBAL#fudge :</span></dt><dd>1.0</dd><dt><span>/processing_control/input_parameters/NC_GLOBAL#ifile :</span></dt><dd>A20030322003059.L3b_MO_CHL.nc</dd><dt><span>/processing_control/input_parameters/NC_GLOBAL#interp :</span></dt><dd>area</dd><dt><span>/processing_control/input_parameters/NC_GLOBAL#land :</span></dt><dd>$OCDATAROOT/common/landmask_GMT15ARC.nc</dd><dt><span>/processing_control/input_parameters/NC_GLOBAL#mask_land :</span></dt><dd>no</dd><dt><span>/processing_control/input_parameters/NC_GLOBAL#north :</span></dt><dd>90.000</dd><dt><span>/processing_control/input_parameters/NC_GLOBAL#num_cache :</span></dt><dd>500</dd><dt><span>/processing_control/input_parameters/NC_GLOBAL#ofile :</span></dt><dd>A20030322003059.L3m_MO_CHL_chlor_a_4km.nc</dd><dt><span>/processing_control/input_parameters/NC_GLOBAL#oformat :</span></dt><dd>2</dd><dt><span>/processing_control/input_parameters/NC_GLOBAL#oformat2 :</span></dt><dd>png</dd><dt><span>/processing_control/input_parameters/NC_GLOBAL#par :</span></dt><dd>A20030322003059.L3m_MO_CHL_chlor_a_4km.nc.param</dd><dt><span>/processing_control/input_parameters/NC_GLOBAL#product :</span></dt><dd>chlor_a</dd><dt><span>/processing_control/input_parameters/NC_GLOBAL#product_rgb :</span></dt><dd>rhos_645,rhos_555,rhos_469</dd><dt><span>/processing_control/input_parameters/NC_GLOBAL#projection :</span></dt><dd>smi</dd><dt><span>/processing_control/input_parameters/NC_GLOBAL#pversion :</span></dt><dd>2018.0</dd><dt><span>/processing_control/input_parameters/NC_GLOBAL#quiet :</span></dt><dd>false</dd><dt><span>/processing_control/input_parameters/NC_GLOBAL#resolution :</span></dt><dd>4km</dd><dt><span>/processing_control/input_parameters/NC_GLOBAL#south :</span></dt><dd>-90.000</dd><dt><span>/processing_control/input_parameters/NC_GLOBAL#suite :</span></dt><dd>CHL</dd><dt><span>/processing_control/input_parameters/NC_GLOBAL#threshold :</span></dt><dd>0</dd><dt><span>/processing_control/input_parameters/NC_GLOBAL#trimNSEW :</span></dt><dd>yes</dd><dt><span>/processing_control/input_parameters/NC_GLOBAL#use_quality :</span></dt><dd>yes</dd><dt><span>/processing_control/input_parameters/NC_GLOBAL#use_rgb :</span></dt><dd>no</dd><dt><span>/processing_control/input_parameters/NC_GLOBAL#west :</span></dt><dd>-180.000</dd><dt><span>/processing_control/NC_GLOBAL#l2_flag_names :</span></dt><dd>ATMFAIL,LAND,HILT,HISATZEN,STRAYLIGHT,CLDICE,COCCOLITH,LOWLW,CHLWARN,CHLFAIL,NAVWARN,MAXAERITER,ATMWARN,HISOLZEN,NAVFAIL,FILTER,HIGLINT</dd><dt><span>/processing_control/NC_GLOBAL#software_name :</span></dt><dd>l3mapgen</dd><dt><span>/processing_control/NC_GLOBAL#software_version :</span></dt><dd>2.0.0-V2017.0</dd><dt><span>/processing_control/NC_GLOBAL#source :</span></dt><dd>A20030322003059.L3b_MO_CHL.nc</dd><dt><span>AREA_OR_POINT :</span></dt><dd>Area</dd><dt><span>chlor_a#display_max :</span></dt><dd>20</dd><dt><span>chlor_a#display_min :</span></dt><dd>0.0099999998</dd><dt><span>chlor_a#display_scale :</span></dt><dd>log</dd><dt><span>chlor_a#keywords :</span></dt><dd>EARTH SCIENCE &gt; OCEANS &gt; OCEAN CHEMISTRY &gt; CHLOROPHYLL</dd><dt><span>chlor_a#long_name :</span></dt><dd>Chlorophyll Concentration, OCI Algorithm</dd><dt><span>chlor_a#reference :</span></dt><dd>Hu, C., Lee Z., and Franz, B.A. (2012). Chlorophyll-a algorithms for oligotrophic oceans: A novel approach based on three-band reflectance difference, J. Geophys. Res., 117, C01011, doi:10.1029/2011JC007395.</dd><dt><span>chlor_a#standard_name :</span></dt><dd>mass_concentration_chlorophyll_concentration_in_sea_water</dd><dt><span>chlor_a#units :</span></dt><dd>mg m^-3</dd><dt><span>chlor_a#valid_max :</span></dt><dd>100</dd><dt><span>chlor_a#valid_min :</span></dt><dd>0.001</dd><dt><span>chlor_a#_FillValue :</span></dt><dd>-32767</dd><dt><span>lat#long_name :</span></dt><dd>Latitude</dd><dt><span>lat#standard_name :</span></dt><dd>latitude</dd><dt><span>lat#units :</span></dt><dd>degrees_north</dd><dt><span>lat#valid_max :</span></dt><dd>90</dd><dt><span>lat#valid_min :</span></dt><dd>-90</dd><dt><span>lat#_FillValue :</span></dt><dd>-999</dd><dt><span>lon#long_name :</span></dt><dd>Longitude</dd><dt><span>lon#standard_name :</span></dt><dd>longitude</dd><dt><span>lon#units :</span></dt><dd>degrees_east</dd><dt><span>lon#valid_max :</span></dt><dd>180</dd><dt><span>lon#valid_min :</span></dt><dd>-180</dd><dt><span>lon#_FillValue :</span></dt><dd>-999</dd><dt><span>NC_GLOBAL#cdm_data_type :</span></dt><dd>grid</dd><dt><span>NC_GLOBAL#Conventions :</span></dt><dd>CF-1.6 ACDD-1.3</dd><dt><span>NC_GLOBAL#creator_email :</span></dt><dd>data@oceancolor.gsfc.nasa.gov</dd><dt><span>NC_GLOBAL#creator_name :</span></dt><dd>NASA/GSFC/OBPG</dd><dt><span>NC_GLOBAL#creator_url :</span></dt><dd>http://oceandata.sci.gsfc.nasa.gov</dd><dt><span>NC_GLOBAL#data_bins :</span></dt><dd>17780644</dd><dt><span>NC_GLOBAL#data_maximum :</span></dt><dd>99.401733</dd><dt><span>NC_GLOBAL#data_minimum :</span></dt><dd>0.0079426123</dd><dt><span>NC_GLOBAL#date_created :</span></dt><dd>2018-01-03T23:03:57.000Z</dd><dt><span>NC_GLOBAL#easternmost_longitude :</span></dt><dd>180</dd><dt><span>NC_GLOBAL#end_orbit_number :</span></dt><dd>4381</dd><dt><span>NC_GLOBAL#geospatial_lat_max :</span></dt><dd>90</dd><dt><span>NC_GLOBAL#geospatial_lat_min :</span></dt><dd>-90</dd><dt><span>NC_GLOBAL#geospatial_lat_resolution :</span></dt><dd>4.6383123</dd><dt><span>NC_GLOBAL#geospatial_lat_units :</span></dt><dd>degrees_north</dd><dt><span>NC_GLOBAL#geospatial_lon_max :</span></dt><dd>180</dd><dt><span>NC_GLOBAL#geospatial_lon_min :</span></dt><dd>-180</dd><dt><span>NC_GLOBAL#geospatial_lon_resolution :</span></dt><dd>4.6383123</dd><dt><span>NC_GLOBAL#geospatial_lon_units :</span></dt><dd>degrees_east</dd><dt><span>NC_GLOBAL#grid_mapping_name :</span></dt><dd>latitude_longitude</dd><dt><span>NC_GLOBAL#history :</span></dt><dd>l3mapgen par=A20030322003059.L3m_MO_CHL_chlor_a_4km.nc.param </dd><dt><span>NC_GLOBAL#id :</span></dt><dd>A20030322003059.L3b_MO_CHL.nc/L3/A20030322003059.L3b_MO_CHL.nc</dd><dt><span>NC_GLOBAL#identifier_product_doi :</span></dt><dd>10.5067/AQUA/MODIS/L3M/CHL/2018</dd><dt><span>NC_GLOBAL#identifier_product_doi_authority :</span></dt><dd>http://dx.doi.org</dd><dt><span>NC_GLOBAL#institution :</span></dt><dd>NASA Goddard Space Flight Center, Ocean Ecology Laboratory, Ocean Biology Processing Group</dd><dt><span>NC_GLOBAL#instrument :</span></dt><dd>MODIS</dd><dt><span>NC_GLOBAL#keywords :</span></dt><dd>Earth Science &gt; Oceans &gt; Ocean Chemistry &gt; Pigments &gt; Chlorophyll; Earth Science &gt; Oceans &gt; Ocean Chemistry &gt; Chlorophyllr</dd><dt><span>NC_GLOBAL#keywords_vocabulary :</span></dt><dd>NASA Global Change Master Directory (GCMD) Science Keywords</dd><dt><span>NC_GLOBAL#l2_flag_names :</span></dt><dd>ATMFAIL,LAND,HILT,HISATZEN,STRAYLIGHT,CLDICE,COCCOLITH,LOWLW,CHLWARN,CHLFAIL,NAVWARN,MAXAERITER,ATMWARN,HISOLZEN,NAVFAIL,FILTER,HIGLINT</dd><dt><span>NC_GLOBAL#latitude_step :</span></dt><dd>0.041666668</dd><dt><span>NC_GLOBAL#latitude_units :</span></dt><dd>degrees_north</dd><dt><span>NC_GLOBAL#license :</span></dt><dd>http://science.nasa.gov/earth-science/earth-science-data/data-information-policy/</dd><dt><span>NC_GLOBAL#longitude_step :</span></dt><dd>0.041666668</dd><dt><span>NC_GLOBAL#longitude_units :</span></dt><dd>degrees_east</dd><dt><span>NC_GLOBAL#map_projection :</span></dt><dd>Equidistant Cylindrical</dd><dt><span>NC_GLOBAL#measure :</span></dt><dd>Mean</dd><dt><span>NC_GLOBAL#naming_authority :</span></dt><dd>gov.nasa.gsfc.sci.oceandata</dd><dt><span>NC_GLOBAL#northernmost_latitude :</span></dt><dd>90</dd><dt><span>NC_GLOBAL#number_of_columns :</span></dt><dd>8640</dd><dt><span>NC_GLOBAL#number_of_lines :</span></dt><dd>4320</dd><dt><span>NC_GLOBAL#platform :</span></dt><dd>Aqua</dd><dt><span>NC_GLOBAL#processing_level :</span></dt><dd>L3 Mapped</dd><dt><span>NC_GLOBAL#processing_version :</span></dt><dd>2018.0</dd><dt><span>NC_GLOBAL#product_name :</span></dt><dd>A20030322003059.L3m_MO_CHL_chlor_a_4km.nc</dd><dt><span>NC_GLOBAL#project :</span></dt><dd>Ocean Biology Processing Group (NASA/GSFC/OBPG)</dd><dt><span>NC_GLOBAL#publisher_email :</span></dt><dd>data@oceancolor.gsfc.nasa.gov</dd><dt><span>NC_GLOBAL#publisher_name :</span></dt><dd>NASA/GSFC/OBPG</dd><dt><span>NC_GLOBAL#publisher_url :</span></dt><dd>http://oceandata.sci.gsfc.nasa.gov</dd><dt><span>NC_GLOBAL#southernmost_latitude :</span></dt><dd>-90</dd><dt><span>NC_GLOBAL#spatialResolution :</span></dt><dd>4.64 km</dd><dt><span>NC_GLOBAL#standard_name_vocabulary :</span></dt><dd>CF Standard Name Table v36</dd><dt><span>NC_GLOBAL#start_orbit_number :</span></dt><dd>3972</dd><dt><span>NC_GLOBAL#suggested_image_scaling_applied :</span></dt><dd>No</dd><dt><span>NC_GLOBAL#suggested_image_scaling_maximum :</span></dt><dd>20</dd><dt><span>NC_GLOBAL#suggested_image_scaling_minimum :</span></dt><dd>0.0099999998</dd><dt><span>NC_GLOBAL#suggested_image_scaling_type :</span></dt><dd>LOG</dd><dt><span>NC_GLOBAL#sw_point_latitude :</span></dt><dd>-89.979164</dd><dt><span>NC_GLOBAL#sw_point_longitude :</span></dt><dd>-179.97917</dd><dt><span>NC_GLOBAL#temporal_range :</span></dt><dd>month</dd><dt><span>NC_GLOBAL#time_coverage_end :</span></dt><dd>2003-03-01T02:35:00.000Z</dd><dt><span>NC_GLOBAL#time_coverage_start :</span></dt><dd>2003-02-01T00:10:01.000Z</dd><dt><span>NC_GLOBAL#title :</span></dt><dd>HMODISA Level-3 Standard Mapped Image</dd><dt><span>NC_GLOBAL#westernmost_longitude :</span></dt><dd>-180</dd><dt><span>NC_GLOBAL#_lastModified :</span></dt><dd>2018-01-03T23:03:57.000Z</dd></dl></div></li></ul></div></div></div></div>
+</div>
+</div>
+<div class="section" id="visualization">
+<h2>Visualization<a class="headerlink" href="#visualization" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%time</span>
+<span class="n">extent</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="mi">60</span><span class="p">,</span><span class="mi">75</span><span class="p">]</span>
+<span class="n">fig</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">17</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+<span class="c1"># Define the projection</span>
+<span class="n">crs</span><span class="o">=</span><span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">()</span>
+
+<span class="c1"># We&#39;re using cartopy and are plotting in Orthographic projection </span>
+<span class="c1"># (see documentation on cartopy)</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">projection</span><span class="o">=</span><span class="n">ccrs</span><span class="o">.</span><span class="n">Mercator</span><span class="p">(</span><span class="n">central_longitude</span><span class="o">=</span><span class="mf">12.0</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">coastlines</span><span class="p">(</span><span class="n">resolution</span><span class="o">=</span><span class="s1">&#39;10m&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_extent</span><span class="p">(</span><span class="n">extent</span><span class="p">,</span> <span class="n">crs</span><span class="o">=</span><span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">())</span>
+
+<span class="c1"># We need to project our data to the new Mercator projection and for this we use `transform`.</span>
+<span class="c1"># we set the original data projection in transform (here PlateCarree)</span>
+<span class="c1"># we only plot values greather than 0</span>
+<span class="n">img</span> <span class="o">=</span> <span class="n">geotiff_ds</span><span class="p">[</span><span class="s1">&#39;chlor_a&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">geotiff_ds</span><span class="p">[</span><span class="s1">&#39;chlor_a&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">transform</span><span class="o">=</span><span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">(),</span>  <span class="n">vmin</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">cmocean</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">algae</span><span class="p">)</span>  
+
+<span class="c1"># Title for plot</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Mass concentration chlorophyll concentration in sea water </span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span><span class="n">fontsize</span> <span class="o">=</span> <span class="mi">16</span><span class="p">,</span> <span class="n">fontweight</span> <span class="o">=</span> <span class="s1">&#39;bold&#39;</span><span class="p">,</span> <span class="n">pad</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;Mod_Aqua-chlor_ARCTIC.png&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/srv/conda/envs/notebook/lib/python3.9/site-packages/cartopy/crs.py:825: ShapelyDeprecationWarning: __len__ for multi-part geometries is deprecated and will be removed in Shapely 2.0. Check the length of the `geoms` property instead to get the  number of parts of a multi-part geometry.
+  if len(multi_line_string) &gt; 1:
+/srv/conda/envs/notebook/lib/python3.9/site-packages/cartopy/crs.py:877: ShapelyDeprecationWarning: Iteration over multi-part geometries is deprecated and will be removed in Shapely 2.0. Use the `geoms` property to access the constituent parts of a multi-part geometry.
+  for line in multi_line_string:
+/srv/conda/envs/notebook/lib/python3.9/site-packages/cartopy/crs.py:944: ShapelyDeprecationWarning: __len__ for multi-part geometries is deprecated and will be removed in Shapely 2.0. Check the length of the `geoms` property instead to get the  number of parts of a multi-part geometry.
+  if len(p_mline) &gt; 0:
+/srv/conda/envs/notebook/lib/python3.9/site-packages/cartopy/crs.py:836: ShapelyDeprecationWarning: __len__ for multi-part geometries is deprecated and will be removed in Shapely 2.0. Check the length of the `geoms` property instead to get the  number of parts of a multi-part geometry.
+  line_strings = list(multi_line_string)
+/srv/conda/envs/notebook/lib/python3.9/site-packages/cartopy/crs.py:836: ShapelyDeprecationWarning: Iteration over multi-part geometries is deprecated and will be removed in Shapely 2.0. Use the `geoms` property to access the constituent parts of a multi-part geometry.
+  line_strings = list(multi_line_string)
+/srv/conda/envs/notebook/lib/python3.9/site-packages/cartopy/crs.py:982: ShapelyDeprecationWarning: Iteration over multi-part geometries is deprecated and will be removed in Shapely 2.0. Use the `geoms` property to access the constituent parts of a multi-part geometry.
+  line_strings.extend(multi_line_string)
+/srv/conda/envs/notebook/lib/python3.9/site-packages/cartopy/crs.py:982: ShapelyDeprecationWarning: __len__ for multi-part geometries is deprecated and will be removed in Shapely 2.0. Check the length of the `geoms` property instead to get the  number of parts of a multi-part geometry.
+  line_strings.extend(multi_line_string)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>CPU times: user 35.2 s, sys: 515 ms, total: 35.7 s
+Wall time: 36 s
+</pre></div>
+</div>
+<img alt="../../_images/MOD_AquaCHL_ADAM_33_2.png" src="../../_images/MOD_AquaCHL_ADAM_33_2.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">geotiff_ds</span><span class="p">[</span><span class="s1">&#39;chlor_a&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">to_netcdf</span><span class="p">(</span><span class="s1">&#39;MOD_Aqua_Chl_arctic_2003.nc&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./adam/notebooks"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="../setup.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">ADAM service</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../../rohub/setup.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">ROHUB service</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          By Anne Fouilloux<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
