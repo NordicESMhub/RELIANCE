@@ -23,6 +23,9 @@ parts:
 
 - caption: Scientific showcase series
   chapters:
+  - file: science/eosc-future
+    sections:
+          - glob: demo-eosc-future/*
   - file: science/intro
     sections:
           - glob: science/notebooks/*
