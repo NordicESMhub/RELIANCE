@@ -588,6 +588,23 @@
      EGI DataHub initialization
     </a>
    </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#add-inputs-to-my-ro">
+   Add inputs to my RO
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#geojson-file-used-for-rertieving-data-from-adam-data-cube">
+     Geojson file used for rertieving data from ADAM data-cube
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#input-data-retrieved-from-adam-data-cube">
+     Input data retrieved from ADAM data-cube
+    </a>
+   </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#add-our-jupyter-notebook-to-our-ro">
      Add our Jupyter Notebook to our RO
@@ -632,14 +649,31 @@
      </li>
     </ul>
    </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#additional-metadata-for-the-ro">
+   Additional metadata for the RO
+  </a>
+  <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#add-geolocation-to-my-research-object">
      Add geolocation to my Research Object
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#publish-my-research-object-to-zenodo">
-     Publish my Research Object to Zenodo
+    <a class="reference internal nav-link" href="#export-to-ro-crate">
+     Export to RO-crate
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#take-a-snapshot-of-my-ro">
+     Take a snapshot of my RO
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#archive-and-publish-to-zenodo-optionally-assign-doi">
+     Archive and publish to Zenodo, optionally assign DOI
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -650,6 +684,11 @@
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#show-the-doi-and-get-the-link">
      Show the DOI and get the link
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#fork-and-reuse-existing-ro-to-create-derivative-work">
+     Fork and reuse existing RO to create derivative work
     </a>
    </li>
   </ul>
@@ -927,6 +966,23 @@
      EGI DataHub initialization
     </a>
    </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#add-inputs-to-my-ro">
+   Add inputs to my RO
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#geojson-file-used-for-rertieving-data-from-adam-data-cube">
+     Geojson file used for rertieving data from ADAM data-cube
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#input-data-retrieved-from-adam-data-cube">
+     Input data retrieved from ADAM data-cube
+    </a>
+   </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#add-our-jupyter-notebook-to-our-ro">
      Add our Jupyter Notebook to our RO
@@ -971,14 +1027,31 @@
      </li>
     </ul>
    </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#additional-metadata-for-the-ro">
+   Additional metadata for the RO
+  </a>
+  <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#add-geolocation-to-my-research-object">
      Add geolocation to my Research Object
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#publish-my-research-object-to-zenodo">
-     Publish my Research Object to Zenodo
+    <a class="reference internal nav-link" href="#export-to-ro-crate">
+     Export to RO-crate
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#take-a-snapshot-of-my-ro">
+     Take a snapshot of my RO
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#archive-and-publish-to-zenodo-optionally-assign-doi">
+     Archive and publish to Zenodo, optionally assign DOI
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -989,6 +1062,11 @@
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#show-the-doi-and-get-the-link">
      Show the DOI and get the link
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#fork-and-reuse-existing-ro-to-create-derivative-work">
+     Fork and reuse existing RO to create derivative work
     </a>
    </li>
   </ul>
@@ -1551,7 +1629,7 @@ The output of the <font color='blue'> <strong>getData</strong> </font> function 
     <span class="s1">&#39;startDate&#39;</span> <span class="p">:</span> <span class="n">year</span> <span class="o">+</span> <span class="s1">&#39;-09-01&#39;</span><span class="p">,</span>
     <span class="s1">&#39;endDate&#39;</span> <span class="p">:</span> <span class="n">year</span> <span class="o">+</span> <span class="s1">&#39;-09-30&#39;</span><span class="p">,</span>
     <span class="s1">&#39;geometry&#39;</span> <span class="p">:</span> <span class="n">geom_1</span><span class="p">,</span>
-    <span class="s1">&#39;outputFname&#39;</span> <span class="p">:</span> <span class="s1">&#39;./PM10_FR_ADAMAPI_&#39;</span> <span class="o">+</span> <span class="n">year</span> <span class="o">+</span> <span class="s1">&#39;.zip&#39;</span>
+    <span class="s1">&#39;outputFname&#39;</span> <span class="p">:</span> <span class="n">INPUT_DATA_DIR</span> <span class="o">+</span> <span class="s1">&#39;/PM10_FR_ADAMAPI_&#39;</span> <span class="o">+</span> <span class="n">year</span> <span class="o">+</span> <span class="s1">&#39;.zip&#39;</span>
     <span class="p">}</span>
     <span class="n">getZipData</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">datasetInfo</span><span class="p">)</span>
     
@@ -1594,7 +1672,7 @@ The output of the <font color='blue'> <strong>getData</strong> </font> function 
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">year</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;2019&#39;</span><span class="p">,</span> <span class="s1">&#39;2020&#39;</span><span class="p">,</span> <span class="s1">&#39;2021&#39;</span><span class="p">]:</span>
-    <span class="n">filename</span> <span class="o">=</span> <span class="s1">&#39;./PM10_FR_ADAMAPI_&#39;</span> <span class="o">+</span> <span class="n">year</span> <span class="o">+</span> <span class="s1">&#39;.zip&#39;</span>
+    <span class="n">filename</span> <span class="o">=</span> <span class="n">INPUT_DATA_DIR</span> <span class="o">+</span> <span class="s1">&#39;/PM10_FR_ADAMAPI_&#39;</span> <span class="o">+</span> <span class="n">year</span> <span class="o">+</span> <span class="s1">&#39;.zip&#39;</span>
     <span class="n">target_file</span> <span class="o">=</span> <span class="n">pathlib</span><span class="o">.</span><span class="n">Path</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">INPUT_DATA_DIR</span><span class="p">,</span> <span class="n">pathlib</span><span class="o">.</span><span class="n">Path</span><span class="p">(</span><span class="n">pathlib</span><span class="o">.</span><span class="n">Path</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span><span class="o">.</span><span class="n">stem</span><span class="p">)))</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="n">target_file</span><span class="o">.</span><span class="n">exists</span><span class="p">():</span>
         <span class="n">unzipData</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">INPUT_DATA_DIR</span><span class="p">)</span>
@@ -2934,7 +3012,7 @@ Note: you may need to restart the kernel to use updated packages.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Research Object was successfully created with id = e69c7106-ea0b-4244-a1ca-cb64d4eebf32
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Research Object was successfully created with id = b13d7b6a-66bf-40df-84c8-f9c88775b6c1
 </pre></div>
 </div>
 </div>
@@ -2949,18 +3027,18 @@ Note: you may need to restart the kernel to use updated packages.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;identifier&#39;: &#39;e69c7106-ea0b-4244-a1ca-cb64d4eebf32&#39;,
- &#39;shared_link&#39;: &#39;https://w3id.org/ro-id/e69c7106-ea0b-4244-a1ca-cb64d4eebf32&#39;,
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;identifier&#39;: &#39;b13d7b6a-66bf-40df-84c8-f9c88775b6c1&#39;,
+ &#39;shared_link&#39;: &#39;https://w3id.org/ro-id/b13d7b6a-66bf-40df-84c8-f9c88775b6c1&#39;,
  &#39;title&#39;: &#39;Jupyter notebook demonstrating the usage of CAMS European air quality analysis from Copernicus Atmosphere Monitoring with RELIANCE services&#39;,
  &#39;description&#39;: &#39;This Research Object demonstrates how to use CAMS European air quality analysis from Copernicus Atmosphere Monitoring with RELIANCE services and compute monthly map of PM10 over a given geographical area.&#39;,
  &#39;status&#39;: &#39;LIVE&#39;,
  &#39;access_mode&#39;: &#39;PUBLIC&#39;,
  &#39;type&#39;: &#39;Executable Research Object&#39;,
  &#39;template&#39;: &#39;Executable Research Object folders structure&#39;,
- &#39;created&#39;: &#39;2022-01-18T14:29:59.865308Z&#39;,
+ &#39;created&#39;: &#39;2022-01-18T18:28:05.432674Z&#39;,
  &#39;creator&#39;: &#39;annefou@geo.uio.no&#39;,
  &#39;modificator&#39;: None,
- &#39;modified&#39;: &#39;2022-01-18T14:30:00.184226Z&#39;,
+ &#39;modified&#39;: &#39;2022-01-18T18:28:05.736775Z&#39;,
  &#39;importer&#39;: None,
  &#39;research_areas&#39;: [&#39;Earth sciences&#39;],
  &#39;owner&#39;: &#39;annefou@geo.uio.no&#39;,
@@ -2974,7 +3052,7 @@ Note: you may need to restart the kernel to use updated packages.
  &#39;size&#39;: 0,
  &#39;creation_mode&#39;: &#39;MANUAL&#39;,
  &#39;doi&#39;: None,
- &#39;api_link&#39;: &#39;https://api.rohub.org/api/ros/e69c7106-ea0b-4244-a1ca-cb64d4eebf32/&#39;}
+ &#39;api_link&#39;: &#39;https://api.rohub.org/api/ros/b13d7b6a-66bf-40df-84c8-f9c88775b6c1/&#39;}
 </pre></div>
 </div>
 </div>
@@ -3226,174 +3304,7 @@ Agent: {&#39;org_id&#39;: &#39;http://www.uio.no/english/&#39;, &#39;display_nam
 <span class="n">funder_name</span><span class="o">=</span><span class="s2">&quot;European Commission&quot;</span>
 <span class="n">funder_doi</span><span class="o">=</span><span class="s2">&quot;10.13039/501100000781&quot;</span>
 
-<span class="n">ro</span><span class="o">.</span><span class="n">set_funding</span><span class="p">(</span><span class="n">grant_identifier</span><span class="o">=</span><span class="n">grant_id</span><span class="p">,</span> <span class="n">grant_name</span><span class="o">=</span><span class="n">grant_Name</span><span class="p">,</span> <span class="n">funder_name</span><span class="o">=</span><span class="n">funder_name</span><span class="p">,</span> <span class="n">grant_title</span><span class="o">=</span><span class="n">grant_title</span><span class="p">,</span> <span class="n">funder_doi</span><span class="o">=</span><span class="n">funder_doi</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ERROR:root:Internal Python error in the inspect module.
-Below is the traceback from this internal error.
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Http error occurred.
-Traceback (most recent call last):
-  File &quot;/opt/conda/lib/python3.8/site-packages/rohub/utils.py&quot;, line 179, in post_request
-    r.raise_for_status()
-  File &quot;/opt/conda/lib/python3.8/site-packages/requests/models.py&quot;, line 943, in raise_for_status
-    raise HTTPError(http_error_msg, response=self)
-requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://api.rohub.org/api/ros/e69c7106-ea0b-4244-a1ca-cb64d4eebf32/funding/
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File &quot;/opt/conda/lib/python3.8/site-packages/IPython/core/interactiveshell.py&quot;, line 3441, in run_code
-    exec(code_obj, self.user_global_ns, self.user_ns)
-  File &quot;&lt;ipython-input-143-a8976eb581c9&gt;&quot;, line 7, in &lt;module&gt;
-    ro.set_funding(grant_identifier=grant_id, grant_name=grant_Name, funder_name=funder_name, grant_title=grant_title, funder_doi=funder_doi)
-  File &quot;/opt/conda/lib/python3.8/site-packages/rohub/ResearchObject/ResearchObject.py&quot;, line 662, in set_funding
-    return rohub.ros_set_funding(identifier=self.identifier, grant_name=grant_name, funder_name=funder_name,
-  File &quot;/opt/conda/lib/python3.8/site-packages/rohub/rohub.py&quot;, line 1058, in ros_set_funding
-    r = utils.post_request(url=url, data=data)
-  File &quot;/opt/conda/lib/python3.8/site-packages/rohub/utils.py&quot;, line 182, in post_request
-    raise SystemExit(e.response.text)
-SystemExit: 
-&lt;!doctype html&gt;
-&lt;html lang=&quot;en&quot;&gt;
-&lt;head&gt;
-  &lt;title&gt;Not Found&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;h1&gt;Not Found&lt;/h1&gt;&lt;p&gt;The requested resource was not found on this server.&lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File &quot;/opt/conda/lib/python3.8/site-packages/IPython/core/ultratb.py&quot;, line 1101, in get_records
-    return _fixed_getinnerframes(etb, number_of_lines_of_context, tb_offset)
-  File &quot;/opt/conda/lib/python3.8/site-packages/IPython/core/ultratb.py&quot;, line 248, in wrapped
-    return f(*args, **kwargs)
-  File &quot;/opt/conda/lib/python3.8/site-packages/IPython/core/ultratb.py&quot;, line 281, in _fixed_getinnerframes
-    records = fix_frame_records_filenames(inspect.getinnerframes(etb, context))
-  File &quot;/opt/conda/lib/python3.8/inspect.py&quot;, line 1515, in getinnerframes
-    frameinfo = (tb.tb_frame,) + getframeinfo(tb, context)
-AttributeError: &#39;tuple&#39; object has no attribute &#39;tb_frame&#39;
-</pre></div>
-</div>
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">HTTPError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="nn">/opt/conda/lib/python3.8/site-packages/rohub/utils.py</span> in <span class="ni">post_request</span><span class="nt">(url, data)</span>
-<span class="g g-Whitespace">    </span><span class="mi">178</span>         <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="n">settings</span><span class="o">.</span><span class="n">TIMEOUT</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">179</span>         <span class="n">r</span><span class="o">.</span><span class="n">raise_for_status</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">180</span>     <span class="k">except</span> <span class="n">requests</span><span class="o">.</span><span class="n">exceptions</span><span class="o">.</span><span class="n">HTTPError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-
-<span class="nn">/opt/conda/lib/python3.8/site-packages/requests/models.py</span> in <span class="ni">raise_for_status</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">942</span>         <span class="k">if</span> <span class="n">http_error_msg</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">943</span>             <span class="k">raise</span> <span class="n">HTTPError</span><span class="p">(</span><span class="n">http_error_msg</span><span class="p">,</span> <span class="n">response</span><span class="o">=</span><span class="bp">self</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">944</span> 
-
-<span class="ne">HTTPError</span>: 404 Client Error: Not Found for url: https://api.rohub.org/api/ros/e69c7106-ea0b-4244-a1ca-cb64d4eebf32/funding/
-
-<span class="n">During</span> <span class="n">handling</span> <span class="n">of</span> <span class="n">the</span> <span class="n">above</span> <span class="n">exception</span><span class="p">,</span> <span class="n">another</span> <span class="n">exception</span> <span class="n">occurred</span><span class="p">:</span>
-
-<span class="ne">SystemExit</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
-    <span class="p">[</span><span class="o">...</span> <span class="n">skipping</span> <span class="n">hidden</span> <span class="mi">1</span> <span class="n">frame</span><span class="p">]</span>
-
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">143</span><span class="o">-</span><span class="n">a8976eb581c9</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span> 
-<span class="ne">----&gt; </span><span class="mi">7</span> <span class="n">ro</span><span class="o">.</span><span class="n">set_funding</span><span class="p">(</span><span class="n">grant_identifier</span><span class="o">=</span><span class="n">grant_id</span><span class="p">,</span> <span class="n">grant_name</span><span class="o">=</span><span class="n">grant_Name</span><span class="p">,</span> <span class="n">funder_name</span><span class="o">=</span><span class="n">funder_name</span><span class="p">,</span> <span class="n">grant_title</span><span class="o">=</span><span class="n">grant_title</span><span class="p">,</span> <span class="n">funder_doi</span><span class="o">=</span><span class="n">funder_doi</span><span class="p">)</span>
-
-<span class="nn">/opt/conda/lib/python3.8/site-packages/rohub/ResearchObject/ResearchObject.py</span> in <span class="ni">set_funding</span><span class="nt">(self, grant_identifier, grant_name, funder_name, grant_title, funder_doi)</span>
-<span class="g g-Whitespace">    </span><span class="mi">661</span>         <span class="sd">&quot;&quot;&quot;</span>
-<span class="ne">--&gt; </span><span class="mi">662</span><span class="sd">         return rohub.ros_set_funding(identifier=self.identifier, grant_name=grant_name, funder_name=funder_name,</span>
-<span class="g g-Whitespace">    </span><span class="mi">663</span><span class="sd">                                      grant_identifier=grant_identifier, grant_title=grant_title,</span>
-
-<span class="nn">/opt/conda/lib/python3.8/site-packages/rohub/rohub.py</span> in <span class="ni">ros_set_funding</span><span class="nt">(identifier, grant_identifier, grant_name, funder_name, grant_title, funder_doi)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1057</span><span class="sd">         data = {key: value for key, value in data.items() if value is not None}</span>
-<span class="ne">-&gt; </span><span class="mi">1058</span><span class="sd">         r = utils.post_request(url=url, data=data)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1059</span><span class="sd">         content = r.json()</span>
-
-<span class="nn">/opt/conda/lib/python3.8/site-packages/rohub/utils.py</span> in <span class="ni">post_request</span><span class="nt">(url, data)</span>
-<span class="g g-Whitespace">    </span><span class="mi">181</span><span class="sd">         print(&quot;Http error occurred.&quot;)</span>
-<span class="ne">--&gt; </span><span class="mi">182</span><span class="sd">         raise SystemExit(e.response.text)</span>
-<span class="g g-Whitespace">    </span><span class="mi">183</span><span class="sd">     except requests.exceptions.ConnectionError:</span>
-
-<span class="ne">SystemExit</span>: 
-<span class="sd">&lt;!doctype html&gt;</span>
-<span class="sd">&lt;html lang=&quot;en&quot;&gt;</span>
-<span class="sd">&lt;head&gt;</span>
-<span class="sd">  &lt;title&gt;Not Found&lt;/title&gt;</span>
-<span class="sd">&lt;/head&gt;</span>
-<span class="sd">&lt;body&gt;</span>
-<span class="sd">  &lt;h1&gt;Not Found&lt;/h1&gt;&lt;p&gt;The requested resource was not found on this server.&lt;/p&gt;</span>
-<span class="sd">&lt;/body&gt;</span>
-<span class="sd">&lt;/html&gt;</span>
-
-
-<span class="sd">During handling of the above exception, another exception occurred:</span>
-
-<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="sd">    [... skipping hidden 1 frame]</span>
-
-<span class="nn">/opt/conda/lib/python3.8/site-packages/IPython/core/interactiveshell.py</span> in <span class="ni">showtraceback</span><span class="nt">(self, exc_tuple, filename, tb_offset, exception_only, running_compiled_code)</span>
-<span class="g g-Whitespace">   </span><span class="mi">2052</span><span class="sd">                     stb = [&#39;An exception has occurred, use %tb to see &#39;</span>
-<span class="g g-Whitespace">   </span><span class="mi">2053</span><span class="sd">                            &#39;the full traceback.\n&#39;]</span>
-<span class="ne">-&gt; </span><span class="mi">2054</span><span class="sd">                     stb.extend(self.InteractiveTB.get_exception_only(etype,</span>
-<span class="g g-Whitespace">   </span><span class="mi">2055</span><span class="sd">                                                                      value))</span>
-<span class="g g-Whitespace">   </span><span class="mi">2056</span><span class="sd">                 else:</span>
-
-<span class="nn">/opt/conda/lib/python3.8/site-packages/IPython/core/ultratb.py</span> in <span class="ni">get_exception_only</span><span class="nt">(self, etype, value)</span>
-<span class="g g-Whitespace">    </span><span class="mi">752</span><span class="sd">         value : exception value</span>
-<span class="g g-Whitespace">    </span><span class="mi">753</span><span class="sd">         &quot;&quot;&quot;</span>
-<span class="ne">--&gt; </span><span class="mi">754</span>         <span class="k">return</span> <span class="n">ListTB</span><span class="o">.</span><span class="n">structured_traceback</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">etype</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">755</span> 
-<span class="g g-Whitespace">    </span><span class="mi">756</span>     <span class="k">def</span> <span class="nf">show_exception_only</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">etype</span><span class="p">,</span> <span class="n">evalue</span><span class="p">):</span>
-
-<span class="nn">/opt/conda/lib/python3.8/site-packages/IPython/core/ultratb.py</span> in <span class="ni">structured_traceback</span><span class="nt">(self, etype, evalue, etb, tb_offset, context)</span>
-<span class="g g-Whitespace">    </span><span class="mi">627</span>             <span class="n">chained_exceptions_tb_offset</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="g g-Whitespace">    </span><span class="mi">628</span>             <span class="n">out_list</span> <span class="o">=</span> <span class="p">(</span>
-<span class="ne">--&gt; </span><span class="mi">629</span>                 <span class="bp">self</span><span class="o">.</span><span class="n">structured_traceback</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">630</span>                     <span class="n">etype</span><span class="p">,</span> <span class="n">evalue</span><span class="p">,</span> <span class="p">(</span><span class="n">etb</span><span class="p">,</span> <span class="n">chained_exc_ids</span><span class="p">),</span>
-<span class="g g-Whitespace">    </span><span class="mi">631</span>                     <span class="n">chained_exceptions_tb_offset</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span>
-
-<span class="nn">/opt/conda/lib/python3.8/site-packages/IPython/core/ultratb.py</span> in <span class="ni">structured_traceback</span><span class="nt">(self, etype, value, tb, tb_offset, number_of_lines_of_context)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1365</span>         <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1366</span>             <span class="bp">self</span><span class="o">.</span><span class="n">tb</span> <span class="o">=</span> <span class="n">tb</span>
-<span class="ne">-&gt; </span><span class="mi">1367</span>         <span class="k">return</span> <span class="n">FormattedTB</span><span class="o">.</span><span class="n">structured_traceback</span><span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">1368</span>             <span class="bp">self</span><span class="p">,</span> <span class="n">etype</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">tb</span><span class="p">,</span> <span class="n">tb_offset</span><span class="p">,</span> <span class="n">number_of_lines_of_context</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1369</span> 
-
-<span class="nn">/opt/conda/lib/python3.8/site-packages/IPython/core/ultratb.py</span> in <span class="ni">structured_traceback</span><span class="nt">(self, etype, value, tb, tb_offset, number_of_lines_of_context)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1265</span>         <span class="k">if</span> <span class="n">mode</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">verbose_modes</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1266</span>             <span class="c1"># Verbose modes need a full traceback</span>
-<span class="ne">-&gt; </span><span class="mi">1267</span>             <span class="k">return</span> <span class="n">VerboseTB</span><span class="o">.</span><span class="n">structured_traceback</span><span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">1268</span>                 <span class="bp">self</span><span class="p">,</span> <span class="n">etype</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">tb</span><span class="p">,</span> <span class="n">tb_offset</span><span class="p">,</span> <span class="n">number_of_lines_of_context</span>
-<span class="g g-Whitespace">   </span><span class="mi">1269</span>             <span class="p">)</span>
-
-<span class="nn">/opt/conda/lib/python3.8/site-packages/IPython/core/ultratb.py</span> in <span class="ni">structured_traceback</span><span class="nt">(self, etype, evalue, etb, tb_offset, number_of_lines_of_context)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1122</span>         <span class="sd">&quot;&quot;&quot;Return a nice text document describing the traceback.&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">   </span><span class="mi">1123</span> 
-<span class="ne">-&gt; </span><span class="mi">1124</span>         <span class="n">formatted_exception</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">format_exception_as_a_whole</span><span class="p">(</span><span class="n">etype</span><span class="p">,</span> <span class="n">evalue</span><span class="p">,</span> <span class="n">etb</span><span class="p">,</span> <span class="n">number_of_lines_of_context</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1125</span>                                                                <span class="n">tb_offset</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1126</span> 
-
-<span class="nn">/opt/conda/lib/python3.8/site-packages/IPython/core/ultratb.py</span> in <span class="ni">format_exception_as_a_whole</span><span class="nt">(self, etype, evalue, etb, number_of_lines_of_context, tb_offset)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1080</span> 
-<span class="g g-Whitespace">   </span><span class="mi">1081</span> 
-<span class="ne">-&gt; </span><span class="mi">1082</span>         <span class="n">last_unique</span><span class="p">,</span> <span class="n">recursion_repeat</span> <span class="o">=</span> <span class="n">find_recursion</span><span class="p">(</span><span class="n">orig_etype</span><span class="p">,</span> <span class="n">evalue</span><span class="p">,</span> <span class="n">records</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1083</span> 
-<span class="g g-Whitespace">   </span><span class="mi">1084</span>         <span class="n">frames</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">format_records</span><span class="p">(</span><span class="n">records</span><span class="p">,</span> <span class="n">last_unique</span><span class="p">,</span> <span class="n">recursion_repeat</span><span class="p">)</span>
-
-<span class="nn">/opt/conda/lib/python3.8/site-packages/IPython/core/ultratb.py</span> in <span class="ni">find_recursion</span><span class="nt">(etype, value, records)</span>
-<span class="g g-Whitespace">    </span><span class="mi">380</span>     <span class="c1"># first frame (from in to out) that looks different.</span>
-<span class="g g-Whitespace">    </span><span class="mi">381</span>     <span class="k">if</span> <span class="ow">not</span> <span class="n">is_recursion_error</span><span class="p">(</span><span class="n">etype</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">records</span><span class="p">):</span>
-<span class="ne">--&gt; </span><span class="mi">382</span>         <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="n">records</span><span class="p">),</span> <span class="mi">0</span>
-<span class="g g-Whitespace">    </span><span class="mi">383</span> 
-<span class="g g-Whitespace">    </span><span class="mi">384</span>     <span class="c1"># Select filename, lineno, func_name to track frames with</span>
-
-<span class="ne">TypeError</span>: object of type &#39;NoneType&#39; has no len()
+<span class="c1">#ro.set_funding(grant_identifier=grant_id, grant_name=grant_Name, funder_name=funder_name, grant_title=grant_title, funder_doi=funder_doi)</span>
 </pre></div>
 </div>
 </div>
@@ -3487,42 +3398,42 @@ AttributeError: &#39;tuple&#39; object has no attribute &#39;tb_frame&#39;
   <tbody>
     <tr>
       <th>0</th>
-      <td>ee38220a-5438-4487-9852-795aa056a8ae</td>
+      <td>e107aafc-acee-4e2e-b211-e3d2ff81affe</td>
       <td>biblio</td>
       <td>None</td>
       <td>annefou@geo.uio.no</td>
-      <td>2022-01-18T14:30:00.322884+0000</td>
-      <td>2022-01-18T14:30:00.324974+0000</td>
+      <td>2022-01-18T18:28:05.875544+0000</td>
+      <td>2022-01-18T18:28:05.876593+0000</td>
       <td>biblio</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>96d1df6b-6c4e-4ddc-b708-934bc454d510</td>
+      <td>e7994c37-86b7-4072-a06f-71825b41181a</td>
       <td>input</td>
       <td>None</td>
       <td>annefou@geo.uio.no</td>
-      <td>2022-01-18T14:30:00.323164+0000</td>
-      <td>2022-01-18T14:30:00.325216+0000</td>
+      <td>2022-01-18T18:28:05.875693+0000</td>
+      <td>2022-01-18T18:28:05.876703+0000</td>
       <td>input</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>5298c50a-799e-4d7f-a838-1be32b1bfde4</td>
+      <td>ab50dbb5-4132-4d6d-a19d-c31372e941e2</td>
       <td>output</td>
       <td>None</td>
       <td>annefou@geo.uio.no</td>
-      <td>2022-01-18T14:30:00.323409+0000</td>
-      <td>2022-01-18T14:30:00.325432+0000</td>
+      <td>2022-01-18T18:28:05.875783+0000</td>
+      <td>2022-01-18T18:28:05.876770+0000</td>
       <td>output</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>500909cd-a4fa-47e1-9395-7545a992b5de</td>
+      <td>da2feea4-1c97-49c0-ab7d-85f5f3344399</td>
       <td>tool</td>
       <td>None</td>
       <td>annefou@geo.uio.no</td>
-      <td>2022-01-18T14:30:00.323578+0000</td>
-      <td>2022-01-18T14:30:00.325582+0000</td>
+      <td>2022-01-18T18:28:05.875864+0000</td>
+      <td>2022-01-18T18:28:05.876832+0000</td>
       <td>tool</td>
     </tr>
   </tbody>
@@ -3548,10 +3459,10 @@ AttributeError: &#39;tuple&#39; object has no attribute &#39;tb_frame&#39;
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Resource was successfully created with id = f3b4a27c-d51f-458d-b218-d4ef59191158
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Resource was successfully created with id = 759450a8-3a93-4fea-a270-3c5d6187aee3
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Resource(identifier=f3b4a27c-d51f-458d-b218-d4ef59191158, post_request=False)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Resource(identifier=759450a8-3a93-4fea-a270-3c5d6187aee3, post_request=False)
 </pre></div>
 </div>
 </div>
@@ -3682,6 +3593,70 @@ AttributeError: &#39;tuple&#39; object has no attribute &#39;tb_frame&#39;
 </div>
 </div>
 </div>
+</div>
+<div class="section" id="add-inputs-to-my-ro">
+<h2>Add inputs to my RO<a class="headerlink" href="#add-inputs-to-my-ro" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>I used ADAM to retrieve relevant data but to avoid my collaborators to re-download input data, I will be sharing what I retrieved from the data cube.</p></li>
+</ul>
+<div class="section" id="geojson-file-used-for-rertieving-data-from-adam-data-cube">
+<h3>Geojson file used for rertieving data from ADAM data-cube<a class="headerlink" href="#geojson-file-used-for-rertieving-data-from-adam-data-cube" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">shared_input_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">INPUT_DATA_DIR</span><span class="p">,</span> <span class="s1">&#39;fra.geo.json&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">shared_input_path</span><span class="p">)</span>
+<span class="n">res_file_url</span> <span class="o">=</span> <span class="n">egi_datahub_getlink</span><span class="p">(</span><span class="n">DATAHUB_TOKEN</span><span class="p">,</span> <span class="n">shared_input_path</span><span class="p">)</span>
+<span class="n">res_type</span> <span class="o">=</span> <span class="s2">&quot;Dataset&quot;</span>
+<span class="n">res_title</span> <span class="o">=</span> <span class="s2">&quot;Geojson for France&quot;</span>
+<span class="n">res_description</span> <span class="o">=</span> <span class="s2">&quot;Geojson file used for retrieving data from the ADAM platform over France&quot;</span>
+<span class="n">res_folder</span> <span class="o">=</span> <span class="n">myfolders</span><span class="p">[</span><span class="n">myfolders</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;input&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;identifier&#39;</span><span class="p">]</span>
+<span class="n">ro</span><span class="o">.</span><span class="n">add_external_resource</span><span class="p">(</span><span class="n">res_type</span><span class="o">=</span><span class="n">res_type</span><span class="p">,</span> <span class="n">url</span><span class="o">=</span><span class="n">res_file_url</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="n">res_title</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="n">res_description</span><span class="p">,</span> <span class="n">folder</span><span class="o">=</span><span class="n">res_folder</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/jovyan/datahub/Reliance/Climate/input/fra.geo.json
+https://cesnet-oneprovider-01.datahub.egi.eu/api/v3/oneprovider/files/Reliance/Climate/input/fra.geo.json
+Resource was successfully created with id = 39998d72-f5b0-4288-be3c-33685ea5157b
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Resource(identifier=39998d72-f5b0-4288-be3c-33685ea5157b, post_request=False)
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="input-data-retrieved-from-adam-data-cube">
+<h3>Input data retrieved from ADAM data-cube<a class="headerlink" href="#input-data-retrieved-from-adam-data-cube" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">year</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;2019&#39;</span><span class="p">,</span> <span class="s1">&#39;2020&#39;</span><span class="p">,</span> <span class="s1">&#39;2021&#39;</span><span class="p">]:</span>
+    <span class="n">shared_input_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">INPUT_DATA_DIR</span><span class="p">,</span> <span class="s1">&#39;PM10_FR_ADAMAPI_&#39;</span> <span class="o">+</span> <span class="n">year</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">shared_input_path</span><span class="p">)</span>
+    <span class="n">res_file_url</span> <span class="o">=</span> <span class="n">egi_datahub_getlink</span><span class="p">(</span><span class="n">DATAHUB_TOKEN</span><span class="p">,</span> <span class="n">shared_input_path</span><span class="p">)</span>
+    <span class="n">res_type</span> <span class="o">=</span> <span class="s2">&quot;Data Cube Product&quot;</span>
+    <span class="n">res_title</span> <span class="o">=</span> <span class="s2">&quot;Data-Cube from ADAM platform over France in September &quot;</span> <span class="o">+</span> <span class="n">year</span>
+    <span class="n">res_description</span> <span class="o">=</span> <span class="s2">&quot;This dataset is a data-Cube retrieved from the ADAM platform over France in September &quot;</span> <span class="o">+</span> <span class="n">year</span>
+    <span class="n">res_folder</span> <span class="o">=</span> <span class="n">myfolders</span><span class="p">[</span><span class="n">myfolders</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;input&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;identifier&#39;</span><span class="p">]</span>
+    <span class="n">ro</span><span class="o">.</span><span class="n">add_external_resource</span><span class="p">(</span><span class="n">res_type</span><span class="o">=</span><span class="n">res_type</span><span class="p">,</span> <span class="n">url</span><span class="o">=</span><span class="n">res_file_url</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="n">res_title</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="n">res_description</span><span class="p">,</span> <span class="n">folder</span><span class="o">=</span><span class="n">res_folder</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/jovyan/datahub/Reliance/Climate/input/PM10_FR_ADAMAPI_2019
+https://cesnet-oneprovider-01.datahub.egi.eu/api/v3/oneprovider/files/Reliance/Climate/input/PM10_FR_ADAMAPI_2019
+Resource was successfully created with id = 0a5aac29-0ec5-4ebf-aacb-e68970f7bfff
+/home/jovyan/datahub/Reliance/Climate/input/PM10_FR_ADAMAPI_2020
+https://cesnet-oneprovider-01.datahub.egi.eu/api/v3/oneprovider/files/Reliance/Climate/input/PM10_FR_ADAMAPI_2020
+Resource was successfully created with id = 0e1c4d37-1802-483a-beea-de120ed93c67
+/home/jovyan/datahub/Reliance/Climate/input/PM10_FR_ADAMAPI_2021
+https://cesnet-oneprovider-01.datahub.egi.eu/api/v3/oneprovider/files/Reliance/Climate/input/PM10_FR_ADAMAPI_2021
+Resource was successfully created with id = ee5f9da0-4885-4cbc-bb57-c202f110c412
+</pre></div>
+</div>
+</div>
+</div>
+</div>
 <div class="section" id="add-our-jupyter-notebook-to-our-ro">
 <h3>Add our Jupyter Notebook to our RO<a class="headerlink" href="#add-our-jupyter-notebook-to-our-ro" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
@@ -3745,47 +3720,10 @@ AttributeError: &#39;tuple&#39; object has no attribute &#39;tb_frame&#39;
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>https://cesnet-oneprovider-01.datahub.egi.eu/api/v3/oneprovider/files/Reliance/Climate/tool/RELIANCE_v0.2-France.ipynb
-Token is no longer valid! Use login function to generate a new one!
+Resource was successfully created with id = 4fe02379-adae-4606-ba4f-287a4f81d287
 </pre></div>
 </div>
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
-<span class="nn">/opt/conda/lib/python3.8/site-packages/IPython/core/formatters.py</span> in <span class="ni">__call__</span><span class="nt">(self, obj)</span>
-<span class="g g-Whitespace">    </span><span class="mi">700</span>                 <span class="n">type_pprinters</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">type_printers</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">701</span>                 <span class="n">deferred_pprinters</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">deferred_printers</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">702</span>             <span class="n">printer</span><span class="o">.</span><span class="n">pretty</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">703</span>             <span class="n">printer</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">704</span>             <span class="k">return</span> <span class="n">stream</span><span class="o">.</span><span class="n">getvalue</span><span class="p">()</span>
-
-<span class="nn">/opt/conda/lib/python3.8/site-packages/IPython/lib/pretty.py</span> in <span class="ni">pretty</span><span class="nt">(self, obj)</span>
-<span class="g g-Whitespace">    </span><span class="mi">392</span>                         <span class="k">if</span> <span class="bp">cls</span> <span class="ow">is</span> <span class="ow">not</span> <span class="nb">object</span> \
-<span class="g g-Whitespace">    </span><span class="mi">393</span>                                 <span class="ow">and</span> <span class="n">callable</span><span class="p">(</span><span class="bp">cls</span><span class="o">.</span><span class="vm">__dict__</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;__repr__&#39;</span><span class="p">)):</span>
-<span class="ne">--&gt; </span><span class="mi">394</span>                             <span class="k">return</span> <span class="n">_repr_pprint</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="bp">self</span><span class="p">,</span> <span class="n">cycle</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">395</span> 
-<span class="g g-Whitespace">    </span><span class="mi">396</span>             <span class="k">return</span> <span class="n">_default_pprint</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="bp">self</span><span class="p">,</span> <span class="n">cycle</span><span class="p">)</span>
-
-<span class="nn">/opt/conda/lib/python3.8/site-packages/IPython/lib/pretty.py</span> in <span class="ni">_repr_pprint</span><span class="nt">(obj, p, cycle)</span>
-<span class="g g-Whitespace">    </span><span class="mi">698</span>     <span class="sd">&quot;&quot;&quot;A pprint that just redirects to the normal repr function.&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">699</span>     <span class="c1"># Find newlines and replace them with p.break_()</span>
-<span class="ne">--&gt; </span><span class="mi">700</span>     <span class="n">output</span> <span class="o">=</span> <span class="nb">repr</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">701</span>     <span class="n">lines</span> <span class="o">=</span> <span class="n">output</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">702</span>     <span class="k">with</span> <span class="n">p</span><span class="o">.</span><span class="n">group</span><span class="p">():</span>
-
-<span class="nn">/opt/conda/lib/python3.8/site-packages/rohub/Resource/Resource.py</span> in <span class="ni">__repr__</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">     </span><span class="mi">92</span> 
-<span class="g g-Whitespace">     </span><span class="mi">93</span>     <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="ne">---&gt; </span><span class="mi">94</span>         <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;Resource(identifier=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">identifier</span><span class="si">}</span><span class="s2">, post_request=False)&quot;</span>
-<span class="g g-Whitespace">     </span><span class="mi">95</span> 
-<span class="g g-Whitespace">     </span><span class="mi">96</span>     <span class="c1">###############################################################################</span>
-
-<span class="nn">/opt/conda/lib/python3.8/site-packages/rohub/Resource/Resource.py</span> in <span class="ni">identifier</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">143</span>     <span class="nd">@property</span>
-<span class="g g-Whitespace">    </span><span class="mi">144</span>     <span class="k">def</span> <span class="nf">identifier</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="ne">--&gt; </span><span class="mi">145</span>         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__identifier</span>
-<span class="g g-Whitespace">    </span><span class="mi">146</span> 
-<span class="g g-Whitespace">    </span><span class="mi">147</span>     <span class="nd">@identifier</span><span class="o">.</span><span class="n">setter</span>
-
-<span class="ne">AttributeError</span>: &#39;Resource&#39; object has no attribute &#39;_Resource__identifier&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Resource(identifier=4fe02379-adae-4606-ba4f-287a4f81d287, post_request=False)
 </pre></div>
 </div>
 </div>
@@ -3809,10 +3747,10 @@ Token is no longer valid! Use login function to generate a new one!
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/jovyan/datahub/Reliance/Climate/output/PM10_september_FR_2019-2021.png
 https://cesnet-oneprovider-01.datahub.egi.eu/api/v3/oneprovider/files/Reliance/Climate/output/PM10_september_FR_2019-2021.png
-Resource was successfully created with id = 91101e5c-3cd3-49de-bd0e-818544778d70
+Resource was successfully created with id = 81a79803-e68c-49e8-92ef-e31ac47040d2
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Resource(identifier=91101e5c-3cd3-49de-bd0e-818544778d70, post_request=False)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Resource(identifier=81a79803-e68c-49e8-92ef-e31ac47040d2, post_request=False)
 </pre></div>
 </div>
 </div>
@@ -3833,10 +3771,10 @@ Resource was successfully created with id = 91101e5c-3cd3-49de-bd0e-818544778d70
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>https://cesnet-oneprovider-01.datahub.egi.eu/api/v3/oneprovider/files/Reliance/Climate/output/PM10_september_FR_2021-09-15.png
-Resource was successfully created with id = 60517477-1c8c-4c60-8a53-55a04a4b1d0a
+Resource was successfully created with id = de7387fe-96e1-4945-afdd-87d7055f5399
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Resource(identifier=60517477-1c8c-4c60-8a53-55a04a4b1d0a, post_request=False)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Resource(identifier=de7387fe-96e1-4945-afdd-87d7055f5399, post_request=False)
 </pre></div>
 </div>
 </div>
@@ -3857,10 +3795,10 @@ Resource was successfully created with id = 60517477-1c8c-4c60-8a53-55a04a4b1d0a
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>https://cesnet-oneprovider-01.datahub.egi.eu/api/v3/oneprovider/files/Reliance/Climate/output/timeseries_paris_september2021.csv
-Resource was successfully created with id = 801c966d-3c93-481b-bf29-0db8fc393964
+Resource was successfully created with id = 030e5afa-283e-43f0-b572-01b60c65c6ca
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Resource(identifier=801c966d-3c93-481b-bf29-0db8fc393964, post_request=False)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Resource(identifier=030e5afa-283e-43f0-b572-01b60c65c6ca, post_request=False)
 </pre></div>
 </div>
 </div>
@@ -3881,18 +3819,50 @@ Resource was successfully created with id = 801c966d-3c93-481b-bf29-0db8fc393964
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>https://cesnet-oneprovider-01.datahub.egi.eu/api/v3/oneprovider/files/Reliance/Climate/output/PM10_september_FR_2019-2021.nc
-Resource was successfully created with id = a4739109-ba7d-40c8-85be-76c0ac12bf33
+Resource was successfully created with id = 9c8e8af4-6999-43d3-ad00-0c482ec7384b
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Resource(identifier=a4739109-ba7d-40c8-85be-76c0ac12bf33, post_request=False)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Resource(identifier=9c8e8af4-6999-43d3-ad00-0c482ec7384b, post_request=False)
 </pre></div>
 </div>
 </div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="additional-metadata-for-the-ro">
+<h2>Additional metadata for the RO<a class="headerlink" href="#additional-metadata-for-the-ro" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#ro.add_annotations(&quot;EOSC Jupyter Notebook&quot;)</span>
+<span class="c1">#ro.add_annotations(&quot;Pangeo Notebook&quot;)</span>
+</pre></div>
 </div>
 </div>
 </div>
 <div class="section" id="add-geolocation-to-my-research-object">
 <h3>Add geolocation to my Research Object<a class="headerlink" href="#add-geolocation-to-my-research-object" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>We need to transform our geojson file to geojson-ld</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">geojson_ld_file</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">INPUT_DATA_DIR</span><span class="p">,</span> <span class="s1">&#39;fra.geo-ld.json&#39;</span><span class="p">)</span>
+<span class="n">bkfile</span> <span class="o">=</span> <span class="n">geojson_ld_file</span> <span class="o">+</span> <span class="s1">&#39;.bak&#39;</span>
+<span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">bkfile</span><span class="p">):</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">bkfile</span><span class="p">)</span>
+<span class="n">os</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">geojson_ld_file</span><span class="p">,</span> <span class="n">bkfile</span><span class="p">)</span>
+<span class="n">shutil</span><span class="o">.</span><span class="n">copy2</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">INPUT_DATA_DIR</span><span class="p">,</span> <span class="s1">&#39;fra.geo.json&#39;</span><span class="p">),</span> <span class="n">geojson_ld_file</span><span class="p">)</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">geojson_ld_file</span> <span class="p">,</span> <span class="s1">&#39;r+&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+    <span class="n">data</span><span class="p">[</span><span class="s1">&#39;@context&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span> <span class="s2">&quot;geojson&quot;</span><span class="p">:</span> <span class="s2">&quot;https://purl.org/geojson/vocab#&quot;</span> <span class="p">}</span> 
+    <span class="n">f</span><span class="o">.</span><span class="n">seek</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>        
+    <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">f</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">truncate</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">geolocation_file_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">INPUT_DATA_DIR</span><span class="p">,</span> <span class="s1">&#39;fra.geo-ld.json&#39;</span><span class="p">)</span> 
@@ -3901,199 +3871,63 @@ Resource was successfully created with id = a4739109-ba7d-40c8-85be-76c0ac12bf33
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ERROR:root:Internal Python error in the inspect module.
-Below is the traceback from this internal error.
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Http error occurred.
-Traceback (most recent call last):
-  File &quot;/opt/conda/lib/python3.8/site-packages/rohub/utils.py&quot;, line 179, in post_request
-    r.raise_for_status()
-  File &quot;/opt/conda/lib/python3.8/site-packages/requests/models.py&quot;, line 943, in raise_for_status
-    raise HTTPError(http_error_msg, response=self)
-requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: https://api.rohub.org/api/ros/e69c7106-ea0b-4244-a1ca-cb64d4eebf32/geolocation/
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File &quot;/opt/conda/lib/python3.8/site-packages/IPython/core/interactiveshell.py&quot;, line 3441, in run_code
-    exec(code_obj, self.user_global_ns, self.user_ns)
-  File &quot;&lt;ipython-input-167-a1fdfdeec5b8&gt;&quot;, line 2, in &lt;module&gt;
-    ro.add_geolocation(body_specification_json=geolocation_file_path)
-  File &quot;/opt/conda/lib/python3.8/site-packages/rohub/ResearchObject/ResearchObject.py&quot;, line 516, in add_geolocation
-    self.geolocation_response_content = rohub.ros_add_geolocation(identifier=self.identifier,
-  File &quot;/opt/conda/lib/python3.8/site-packages/rohub/rohub.py&quot;, line 771, in ros_add_geolocation
-    r = utils.post_request(url=url, data=data)
-  File &quot;/opt/conda/lib/python3.8/site-packages/rohub/utils.py&quot;, line 182, in post_request
-    raise SystemExit(e.response.text)
-SystemExit: {&quot;detail&quot;:&quot;body_specification_json doesn&#39;t contain valid GEOJSON-LD document text&quot;}
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File &quot;/opt/conda/lib/python3.8/site-packages/IPython/core/ultratb.py&quot;, line 1101, in get_records
-    return _fixed_getinnerframes(etb, number_of_lines_of_context, tb_offset)
-  File &quot;/opt/conda/lib/python3.8/site-packages/IPython/core/ultratb.py&quot;, line 248, in wrapped
-    return f(*args, **kwargs)
-  File &quot;/opt/conda/lib/python3.8/site-packages/IPython/core/ultratb.py&quot;, line 281, in _fixed_getinnerframes
-    records = fix_frame_records_filenames(inspect.getinnerframes(etb, context))
-  File &quot;/opt/conda/lib/python3.8/inspect.py&quot;, line 1515, in getinnerframes
-    frameinfo = (tb.tb_frame,) + getframeinfo(tb, context)
-AttributeError: &#39;tuple&#39; object has no attribute &#39;tb_frame&#39;
-</pre></div>
-</div>
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">HTTPError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="nn">/opt/conda/lib/python3.8/site-packages/rohub/utils.py</span> in <span class="ni">post_request</span><span class="nt">(url, data)</span>
-<span class="g g-Whitespace">    </span><span class="mi">178</span>         <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="n">settings</span><span class="o">.</span><span class="n">TIMEOUT</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">179</span>         <span class="n">r</span><span class="o">.</span><span class="n">raise_for_status</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">180</span>     <span class="k">except</span> <span class="n">requests</span><span class="o">.</span><span class="n">exceptions</span><span class="o">.</span><span class="n">HTTPError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-
-<span class="nn">/opt/conda/lib/python3.8/site-packages/requests/models.py</span> in <span class="ni">raise_for_status</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">942</span>         <span class="k">if</span> <span class="n">http_error_msg</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">943</span>             <span class="k">raise</span> <span class="n">HTTPError</span><span class="p">(</span><span class="n">http_error_msg</span><span class="p">,</span> <span class="n">response</span><span class="o">=</span><span class="bp">self</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">944</span> 
-
-<span class="ne">HTTPError</span>: 400 Client Error: Bad Request for url: https://api.rohub.org/api/ros/e69c7106-ea0b-4244-a1ca-cb64d4eebf32/geolocation/
-
-<span class="n">During</span> <span class="n">handling</span> <span class="n">of</span> <span class="n">the</span> <span class="n">above</span> <span class="n">exception</span><span class="p">,</span> <span class="n">another</span> <span class="n">exception</span> <span class="n">occurred</span><span class="p">:</span>
-
-<span class="ne">SystemExit</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
-    <span class="p">[</span><span class="o">...</span> <span class="n">skipping</span> <span class="n">hidden</span> <span class="mi">1</span> <span class="n">frame</span><span class="p">]</span>
-
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">167</span><span class="o">-</span><span class="n">a1fdfdeec5b8</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">geolocation_file_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">INPUT_DATA_DIR</span><span class="p">,</span> <span class="s1">&#39;fra.geo-ld.json&#39;</span><span class="p">)</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">ro</span><span class="o">.</span><span class="n">add_geolocation</span><span class="p">(</span><span class="n">body_specification_json</span><span class="o">=</span><span class="n">geolocation_file_path</span><span class="p">)</span>
-
-<span class="nn">/opt/conda/lib/python3.8/site-packages/rohub/ResearchObject/ResearchObject.py</span> in <span class="ni">add_geolocation</span><span class="nt">(self, body_specification_json)</span>
-<span class="g g-Whitespace">    </span><span class="mi">515</span>         <span class="sd">&quot;&quot;&quot;</span>
-<span class="ne">--&gt; </span><span class="mi">516</span><span class="sd">         self.geolocation_response_content = rohub.ros_add_geolocation(identifier=self.identifier,</span>
-<span class="g g-Whitespace">    </span><span class="mi">517</span><span class="sd">                                                                       body_specification_json=body_specification_json)</span>
-
-<span class="nn">/opt/conda/lib/python3.8/site-packages/rohub/rohub.py</span> in <span class="ni">ros_add_geolocation</span><span class="nt">(identifier, body_specification_json)</span>
-<span class="g g-Whitespace">    </span><span class="mi">770</span><span class="sd">         data = {key: value for key, value in data.items() if value is not None}</span>
-<span class="ne">--&gt; </span><span class="mi">771</span><span class="sd">         r = utils.post_request(url=url, data=data)</span>
-<span class="g g-Whitespace">    </span><span class="mi">772</span><span class="sd">         content = r.json()</span>
-
-<span class="nn">/opt/conda/lib/python3.8/site-packages/rohub/utils.py</span> in <span class="ni">post_request</span><span class="nt">(url, data)</span>
-<span class="g g-Whitespace">    </span><span class="mi">181</span><span class="sd">         print(&quot;Http error occurred.&quot;)</span>
-<span class="ne">--&gt; </span><span class="mi">182</span><span class="sd">         raise SystemExit(e.response.text)</span>
-<span class="g g-Whitespace">    </span><span class="mi">183</span><span class="sd">     except requests.exceptions.ConnectionError:</span>
-
-<span class="ne">SystemExit</span>: {&quot;detail&quot;:&quot;body_specification_json doesn&#39;t contain valid GEOJSON-LD document text&quot;}
-
-<span class="sd">During handling of the above exception, another exception occurred:</span>
-
-<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="sd">    [... skipping hidden 1 frame]</span>
-
-<span class="nn">/opt/conda/lib/python3.8/site-packages/IPython/core/interactiveshell.py</span> in <span class="ni">showtraceback</span><span class="nt">(self, exc_tuple, filename, tb_offset, exception_only, running_compiled_code)</span>
-<span class="g g-Whitespace">   </span><span class="mi">2052</span><span class="sd">                     stb = [&#39;An exception has occurred, use %tb to see &#39;</span>
-<span class="g g-Whitespace">   </span><span class="mi">2053</span><span class="sd">                            &#39;the full traceback.\n&#39;]</span>
-<span class="ne">-&gt; </span><span class="mi">2054</span><span class="sd">                     stb.extend(self.InteractiveTB.get_exception_only(etype,</span>
-<span class="g g-Whitespace">   </span><span class="mi">2055</span><span class="sd">                                                                      value))</span>
-<span class="g g-Whitespace">   </span><span class="mi">2056</span><span class="sd">                 else:</span>
-
-<span class="nn">/opt/conda/lib/python3.8/site-packages/IPython/core/ultratb.py</span> in <span class="ni">get_exception_only</span><span class="nt">(self, etype, value)</span>
-<span class="g g-Whitespace">    </span><span class="mi">752</span><span class="sd">         value : exception value</span>
-<span class="g g-Whitespace">    </span><span class="mi">753</span><span class="sd">         &quot;&quot;&quot;</span>
-<span class="ne">--&gt; </span><span class="mi">754</span>         <span class="k">return</span> <span class="n">ListTB</span><span class="o">.</span><span class="n">structured_traceback</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">etype</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">755</span> 
-<span class="g g-Whitespace">    </span><span class="mi">756</span>     <span class="k">def</span> <span class="nf">show_exception_only</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">etype</span><span class="p">,</span> <span class="n">evalue</span><span class="p">):</span>
-
-<span class="nn">/opt/conda/lib/python3.8/site-packages/IPython/core/ultratb.py</span> in <span class="ni">structured_traceback</span><span class="nt">(self, etype, evalue, etb, tb_offset, context)</span>
-<span class="g g-Whitespace">    </span><span class="mi">627</span>             <span class="n">chained_exceptions_tb_offset</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="g g-Whitespace">    </span><span class="mi">628</span>             <span class="n">out_list</span> <span class="o">=</span> <span class="p">(</span>
-<span class="ne">--&gt; </span><span class="mi">629</span>                 <span class="bp">self</span><span class="o">.</span><span class="n">structured_traceback</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">630</span>                     <span class="n">etype</span><span class="p">,</span> <span class="n">evalue</span><span class="p">,</span> <span class="p">(</span><span class="n">etb</span><span class="p">,</span> <span class="n">chained_exc_ids</span><span class="p">),</span>
-<span class="g g-Whitespace">    </span><span class="mi">631</span>                     <span class="n">chained_exceptions_tb_offset</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span>
-
-<span class="nn">/opt/conda/lib/python3.8/site-packages/IPython/core/ultratb.py</span> in <span class="ni">structured_traceback</span><span class="nt">(self, etype, value, tb, tb_offset, number_of_lines_of_context)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1365</span>         <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1366</span>             <span class="bp">self</span><span class="o">.</span><span class="n">tb</span> <span class="o">=</span> <span class="n">tb</span>
-<span class="ne">-&gt; </span><span class="mi">1367</span>         <span class="k">return</span> <span class="n">FormattedTB</span><span class="o">.</span><span class="n">structured_traceback</span><span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">1368</span>             <span class="bp">self</span><span class="p">,</span> <span class="n">etype</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">tb</span><span class="p">,</span> <span class="n">tb_offset</span><span class="p">,</span> <span class="n">number_of_lines_of_context</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1369</span> 
-
-<span class="nn">/opt/conda/lib/python3.8/site-packages/IPython/core/ultratb.py</span> in <span class="ni">structured_traceback</span><span class="nt">(self, etype, value, tb, tb_offset, number_of_lines_of_context)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1265</span>         <span class="k">if</span> <span class="n">mode</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">verbose_modes</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1266</span>             <span class="c1"># Verbose modes need a full traceback</span>
-<span class="ne">-&gt; </span><span class="mi">1267</span>             <span class="k">return</span> <span class="n">VerboseTB</span><span class="o">.</span><span class="n">structured_traceback</span><span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">1268</span>                 <span class="bp">self</span><span class="p">,</span> <span class="n">etype</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">tb</span><span class="p">,</span> <span class="n">tb_offset</span><span class="p">,</span> <span class="n">number_of_lines_of_context</span>
-<span class="g g-Whitespace">   </span><span class="mi">1269</span>             <span class="p">)</span>
-
-<span class="nn">/opt/conda/lib/python3.8/site-packages/IPython/core/ultratb.py</span> in <span class="ni">structured_traceback</span><span class="nt">(self, etype, evalue, etb, tb_offset, number_of_lines_of_context)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1122</span>         <span class="sd">&quot;&quot;&quot;Return a nice text document describing the traceback.&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">   </span><span class="mi">1123</span> 
-<span class="ne">-&gt; </span><span class="mi">1124</span>         <span class="n">formatted_exception</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">format_exception_as_a_whole</span><span class="p">(</span><span class="n">etype</span><span class="p">,</span> <span class="n">evalue</span><span class="p">,</span> <span class="n">etb</span><span class="p">,</span> <span class="n">number_of_lines_of_context</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1125</span>                                                                <span class="n">tb_offset</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1126</span> 
-
-<span class="nn">/opt/conda/lib/python3.8/site-packages/IPython/core/ultratb.py</span> in <span class="ni">format_exception_as_a_whole</span><span class="nt">(self, etype, evalue, etb, number_of_lines_of_context, tb_offset)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1080</span> 
-<span class="g g-Whitespace">   </span><span class="mi">1081</span> 
-<span class="ne">-&gt; </span><span class="mi">1082</span>         <span class="n">last_unique</span><span class="p">,</span> <span class="n">recursion_repeat</span> <span class="o">=</span> <span class="n">find_recursion</span><span class="p">(</span><span class="n">orig_etype</span><span class="p">,</span> <span class="n">evalue</span><span class="p">,</span> <span class="n">records</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1083</span> 
-<span class="g g-Whitespace">   </span><span class="mi">1084</span>         <span class="n">frames</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">format_records</span><span class="p">(</span><span class="n">records</span><span class="p">,</span> <span class="n">last_unique</span><span class="p">,</span> <span class="n">recursion_repeat</span><span class="p">)</span>
-
-<span class="nn">/opt/conda/lib/python3.8/site-packages/IPython/core/ultratb.py</span> in <span class="ni">find_recursion</span><span class="nt">(etype, value, records)</span>
-<span class="g g-Whitespace">    </span><span class="mi">380</span>     <span class="c1"># first frame (from in to out) that looks different.</span>
-<span class="g g-Whitespace">    </span><span class="mi">381</span>     <span class="k">if</span> <span class="ow">not</span> <span class="n">is_recursion_error</span><span class="p">(</span><span class="n">etype</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">records</span><span class="p">):</span>
-<span class="ne">--&gt; </span><span class="mi">382</span>         <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="n">records</span><span class="p">),</span> <span class="mi">0</span>
-<span class="g g-Whitespace">    </span><span class="mi">383</span> 
-<span class="g g-Whitespace">    </span><span class="mi">384</span>     <span class="c1"># Select filename, lineno, func_name to track frames with</span>
-
-<span class="ne">TypeError</span>: object of type &#39;NoneType&#39; has no len()
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[{&#39;identifier&#39;: &#39;4b10ec21-8232-4aee-b23d-ee9f37dce383&#39;,
+  &#39;name&#39;: &#39;annotations/4b10ec21-8232-4aee-b23d-ee9f37dce383&#39;,
+  &#39;filename&#39;: &#39;.ro/annotations/4b10ec21-8232-4aee-b23d-ee9f37dce383.ttl&#39;,
+  &#39;relation&#39;: False,
+  &#39;read_only&#39;: False,
+  &#39;target&#39;: &#39;b13d7b6a-66bf-40df-84c8-f9c88775b6c1&#39;,
+  &#39;ro&#39;: &#39;b13d7b6a-66bf-40df-84c8-f9c88775b6c1&#39;,
+  &#39;resources&#39;: [],
+  &#39;created&#39;: &#39;2022-01-18T18:30:45.529314+0000&#39;,
+  &#39;creator&#39;: &#39;annefou@geo.uio.no&#39;,
+  &#39;modificator&#39;: None,
+  &#39;modified&#39;: &#39;2022-01-18T18:30:45.529243+0000&#39;,
+  &#39;authors_credits&#39;: [&#39;annefou@geo.uio.no&#39;],
+  &#39;contributors_credits&#39;: [],
+  &#39;api_link&#39;: &#39;https://api.rohub.org/api/annotations/4b10ec21-8232-4aee-b23d-ee9f37dce383/&#39;}]
 </pre></div>
 </div>
 </div>
 </div>
+</div>
+<div class="section" id="export-to-ro-crate">
+<h3>Export to RO-crate<a class="headerlink" href="#export-to-ro-crate" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">geojson_as_text_point_python</span><span class="o">=</span> <span class="p">{</span>
-  <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="s2">&quot;geojson&quot;</span><span class="p">:</span> <span class="s2">&quot;https://purl.org/geojson/vocab#&quot;</span>
-  <span class="p">},</span>
-  <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Feature&quot;</span><span class="p">,</span>
-  <span class="s2">&quot;geometry&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Point&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;coordinates&quot;</span><span class="p">:</span> <span class="p">[</span> <span class="mf">38.0</span><span class="p">,</span> <span class="mf">38.0</span> <span class="p">]</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-
-<span class="n">ro</span><span class="o">.</span><span class="n">add_geolocation</span><span class="p">(</span><span class="n">body_specification_json</span><span class="o">=</span><span class="n">geojson_as_text_point_python</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ro</span><span class="o">.</span><span class="n">export_to_rocrate</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;climate_EU-CAMS_ro-crate&quot;</span><span class="p">,</span> <span class="n">use_format</span><span class="o">=</span><span class="s2">&quot;zip&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;identifier&#39;: &#39;555b2a74-6c0a-42b3-85b3-a1d822c20071&#39;,
- &#39;name&#39;: &#39;annotations/555b2a74-6c0a-42b3-85b3-a1d822c20071&#39;,
- &#39;filename&#39;: &#39;.ro/annotations/555b2a74-6c0a-42b3-85b3-a1d822c20071.ttl&#39;,
- &#39;relation&#39;: False,
- &#39;read_only&#39;: False,
- &#39;target&#39;: &#39;e69c7106-ea0b-4244-a1ca-cb64d4eebf32&#39;,
- &#39;ro&#39;: &#39;e69c7106-ea0b-4244-a1ca-cb64d4eebf32&#39;,
- &#39;resources&#39;: [],
- &#39;created&#39;: &#39;2022-01-18T14:37:36.140491+0000&#39;,
- &#39;creator&#39;: &#39;annefou@geo.uio.no&#39;,
- &#39;modificator&#39;: None,
- &#39;modified&#39;: &#39;2022-01-18T14:37:36.140413+0000&#39;,
- &#39;authors_credits&#39;: [&#39;annefou@geo.uio.no&#39;],
- &#39;contributors_credits&#39;: [],
- &#39;api_link&#39;: &#39;https://api.rohub.org/api/annotations/555b2a74-6c0a-42b3-85b3-a1d822c20071/&#39;}
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>File was successfully downloaded.
 </pre></div>
 </div>
 </div>
 </div>
 </div>
-<div class="section" id="publish-my-research-object-to-zenodo">
-<h3>Publish my Research Object to Zenodo<a class="headerlink" href="#publish-my-research-object-to-zenodo" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li><p>Take a snapshot and publis my RO to zenodo</p></li>
-</ul>
+<div class="section" id="take-a-snapshot-of-my-ro">
+<h3>Take a snapshot of my RO<a class="headerlink" href="#take-a-snapshot-of-my-ro" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">snapshot_id</span><span class="o">=</span><span class="n">ro</span><span class="o">.</span><span class="n">snapshot</span><span class="p">(</span><span class="n">publication_services</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Zenodo&quot;</span><span class="p">])</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">snapshot_id</span><span class="o">=</span><span class="n">ro</span><span class="o">.</span><span class="n">snapshot</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Trying to confirm status of the job. It can take a while...
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="archive-and-publish-to-zenodo-optionally-assign-doi">
+<h3>Archive and publish to Zenodo, optionally assign DOI<a class="headerlink" href="#archive-and-publish-to-zenodo-optionally-assign-doi" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">snapshot_title</span><span class="o">=</span><span class="s2">&quot;Jupyter Notebook Analysing the Air quality during Covid-19 pandemic using Copernicus Atmosphere Monitoring Service&quot;</span>
+<span class="n">snapshot_id_pub</span><span class="o">=</span><span class="n">ro</span><span class="o">.</span><span class="n">snapshot</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="n">snapshot_title</span><span class="p">,</span> <span class="n">create_doi</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">publication_services</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Zenodo&quot;</span><span class="p">])</span>
+<span class="n">snapshot_id_pub</span>
 </pre></div>
 </div>
 </div>
@@ -4114,6 +3948,18 @@ AttributeError: &#39;tuple&#39; object has no attribute &#39;tb_frame&#39;
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">published_ro</span><span class="o">.</span><span class="n">show_publication</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="fork-and-reuse-existing-ro-to-create-derivative-work">
+<h3>Fork and reuse existing RO to create derivative work<a class="headerlink" href="#fork-and-reuse-existing-ro-to-create-derivative-work" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fork_id</span><span class="o">=</span><span class="n">ro</span><span class="o">.</span><span class="n">fork</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;Forked Jupyter Notebook to analyze  the Air quality during Covid-19 pandemic using Copernicus Atmosphere Monitoring Servic&quot;</span><span class="p">)</span>
+<span class="n">forked_ro</span> <span class="o">=</span> <span class="n">rohub</span><span class="o">.</span><span class="n">ros_load</span><span class="p">(</span><span class="n">identifier</span><span class="o">=</span><span class="n">fork_id</span><span class="p">)</span>
+<span class="n">forked_ro</span><span class="o">.</span><span class="n">show_metadata</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
