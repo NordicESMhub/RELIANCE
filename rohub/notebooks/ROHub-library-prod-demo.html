@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Install library if not present &#8212; Showcase Jupyter notebooks series</title>
+    <title>Example to use Rohub from Jupyter notebook &#8212; Showcase Jupyter notebooks series</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet">
   <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -160,7 +160,7 @@
   <ul class="current">
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     Install library if not present
+     Example to use Rohub from Jupyter notebook
     </a>
    </li>
    <li class="toctree-l2">
@@ -340,290 +340,258 @@
             </div>
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#install-library-if-not-present">
    Install library if not present
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#import-library">
    Import library
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#authenticate">
    Authenticate
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#ro-methods">
    RO methods
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#create-new-ro">
      Create new RO
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#find-ros">
      Find ROs
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#list-my-ros">
      List my ROs
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#load-ro">
      Load RO
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#show-basic-metadata">
      Show basic metadata
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#add-modify-basic-metadata">
      Add/modify basic metadata
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#list-ro-folders">
      List RO Folders
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#aggregate-resource-internal">
      Aggregate resource (internal)
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#aggregate-resouce-external">
      Aggregate resouce (external)
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#list-ro-resources">
      List RO resources
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#add-geolocation">
      Add geolocation
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#export-to-ro-crate">
      Export to RO-crate
     </a>
    </li>
   </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#add-authors-contributors-publishers-copyrightholders">
    Add authors/contributors/publishers/copyrightHolders
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#list-users">
      List users
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#add-authors-contributors">
      Add authors/contributors
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#list-organizations">
      List organizations
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#add-publisher-copyright-holder">
      Add publisher/copyright holder
     </a>
    </li>
   </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#add-ro-license">
    Add RO license
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#list-available-pre-defined-licenses">
      list available pre-defined licenses
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#set-license">
      set license
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#create-custom-license">
-     create custom license
-    </a>
-   </li>
   </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#add-ro-funding-information">
    Add RO Funding information
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#list-predefined-funders">
      list predefined funders
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#set-funding">
      set funding
     </a>
    </li>
   </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#ro-evolution">
    RO Evolution
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#create-simple-snapshot-archive">
      Create simple snapshot/archive
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#create-snapshot-archive-optionally-assign-doi-publish-it-in-zenodo">
      Create snapshot/archive, optionally assign DOI + publish it in Zenodo
     </a>
     <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
+     <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#load-published-snapshot-archive-and-list-zenodo-id-doi">
        Load published snapshot/archive and list zenodo id/doi
       </a>
      </li>
     </ul>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#create-snapshot-archive-optionally-assign-doi-publish-it-in-b2share">
      Create snapshot/archive, optionally assign DOI + publish it in B2Share
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#load-published-snapshot-archive-and-list-b2share-id-doi">
-       Load published snapshot/archive and list b2share id/doi
-      </a>
-     </li>
-    </ul>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#fork-existing-ro-to-reuse-it-for-my-own-purposes">
      Fork existing RO to reuse it for my own purposes
     </a>
    </li>
   </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#resource-methods">
    Resource methods
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#load-resource">
      Load resource
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#id1">
      show basic metadata
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#add-modify-metadata">
      Add/modify metadata
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#modify-content-internal-resource">
      Modify content (internal resource)
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#modify-content-external-resource">
      Modify content (external resource)
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#retrieve-resource">
      Retrieve resource
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#assign-doi">
      Assign DOI
     </a>
    </li>
   </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#utils">
    Utils
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#remove-ro">
      remove RO
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#show-user-id">
      show user id
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#show-possible-values-for-ro-types-resources-types-templates-etc">
      show possible values for RO types, Resources types, templates, etc.
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#create-external-user">
-     create external user
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#create-organization">
-     create organization
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#load-full-metadata">
      load full metadata
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#rohub-library-version">
      rohub library version
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#set-evolution-setting">
      Set evolution setting
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#add-annotation-general">
-     add annotation general
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#remove-annotation">
-     remove annotation
     </a>
    </li>
   </ul>
@@ -638,7 +606,7 @@
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Install library if not present</h1>
+                <h1>Example to use Rohub from Jupyter notebook</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -648,290 +616,258 @@
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#install-library-if-not-present">
    Install library if not present
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#import-library">
    Import library
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#authenticate">
    Authenticate
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#ro-methods">
    RO methods
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#create-new-ro">
      Create new RO
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#find-ros">
      Find ROs
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#list-my-ros">
      List my ROs
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#load-ro">
      Load RO
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#show-basic-metadata">
      Show basic metadata
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#add-modify-basic-metadata">
      Add/modify basic metadata
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#list-ro-folders">
      List RO Folders
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#aggregate-resource-internal">
      Aggregate resource (internal)
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#aggregate-resouce-external">
      Aggregate resouce (external)
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#list-ro-resources">
      List RO resources
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#add-geolocation">
      Add geolocation
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#export-to-ro-crate">
      Export to RO-crate
     </a>
    </li>
   </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#add-authors-contributors-publishers-copyrightholders">
    Add authors/contributors/publishers/copyrightHolders
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#list-users">
      List users
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#add-authors-contributors">
      Add authors/contributors
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#list-organizations">
      List organizations
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#add-publisher-copyright-holder">
      Add publisher/copyright holder
     </a>
    </li>
   </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#add-ro-license">
    Add RO license
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#list-available-pre-defined-licenses">
      list available pre-defined licenses
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#set-license">
      set license
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#create-custom-license">
-     create custom license
-    </a>
-   </li>
   </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#add-ro-funding-information">
    Add RO Funding information
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#list-predefined-funders">
      list predefined funders
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#set-funding">
      set funding
     </a>
    </li>
   </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#ro-evolution">
    RO Evolution
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#create-simple-snapshot-archive">
      Create simple snapshot/archive
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#create-snapshot-archive-optionally-assign-doi-publish-it-in-zenodo">
      Create snapshot/archive, optionally assign DOI + publish it in Zenodo
     </a>
     <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
+     <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#load-published-snapshot-archive-and-list-zenodo-id-doi">
        Load published snapshot/archive and list zenodo id/doi
       </a>
      </li>
     </ul>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#create-snapshot-archive-optionally-assign-doi-publish-it-in-b2share">
      Create snapshot/archive, optionally assign DOI + publish it in B2Share
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#load-published-snapshot-archive-and-list-b2share-id-doi">
-       Load published snapshot/archive and list b2share id/doi
-      </a>
-     </li>
-    </ul>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#fork-existing-ro-to-reuse-it-for-my-own-purposes">
      Fork existing RO to reuse it for my own purposes
     </a>
    </li>
   </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#resource-methods">
    Resource methods
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#load-resource">
      Load resource
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#id1">
      show basic metadata
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#add-modify-metadata">
      Add/modify metadata
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#modify-content-internal-resource">
      Modify content (internal resource)
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#modify-content-external-resource">
      Modify content (external resource)
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#retrieve-resource">
      Retrieve resource
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#assign-doi">
      Assign DOI
     </a>
    </li>
   </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#utils">
    Utils
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#remove-ro">
      remove RO
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#show-user-id">
      show user id
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#show-possible-values-for-ro-types-resources-types-templates-etc">
      show possible values for RO types, Resources types, templates, etc.
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#create-external-user">
-     create external user
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#create-organization">
-     create organization
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#load-full-metadata">
      load full metadata
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#rohub-library-version">
      rohub library version
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#set-evolution-setting">
      Set evolution setting
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#add-annotation-general">
-     add annotation general
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#remove-annotation">
-     remove annotation
     </a>
    </li>
   </ul>
@@ -945,18 +881,36 @@
             
               <div>
                 
-  <div class="section" id="install-library-if-not-present">
-<h1>Install library if not present<a class="headerlink" href="#install-library-if-not-present" title="Permalink to this headline">¶</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="example-to-use-rohub-from-jupyter-notebook">
+<h1>Example to use Rohub from Jupyter notebook<a class="headerlink" href="#example-to-use-rohub-from-jupyter-notebook" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="install-library-if-not-present">
+<h2>Install library if not present<a class="headerlink" href="#install-library-if-not-present" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">rohub</span>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: rohub in /opt/conda/lib/python3.8/site-packages (1.0.2)
+Requirement already satisfied: requests in /opt/conda/lib/python3.8/site-packages (from rohub) (2.25.1)
+Requirement already satisfied: pandas in /opt/conda/lib/python3.8/site-packages (from rohub) (1.2.4)
+Requirement already satisfied: python-dateutil&gt;=2.7.3 in /opt/conda/lib/python3.8/site-packages (from pandas-&gt;rohub) (2.8.1)
+Requirement already satisfied: pytz&gt;=2017.3 in /opt/conda/lib/python3.8/site-packages (from pandas-&gt;rohub) (2021.1)
+Requirement already satisfied: numpy&gt;=1.16.5 in /opt/conda/lib/python3.8/site-packages (from pandas-&gt;rohub) (1.19.5)
+Requirement already satisfied: six&gt;=1.5 in /opt/conda/lib/python3.8/site-packages (from python-dateutil&gt;=2.7.3-&gt;pandas-&gt;rohub) (1.15.0)
+Requirement already satisfied: urllib3&lt;1.27,&gt;=1.21.1 in /opt/conda/lib/python3.8/site-packages (from requests-&gt;rohub) (1.26.4)
+Requirement already satisfied: idna&lt;3,&gt;=2.5 in /opt/conda/lib/python3.8/site-packages (from requests-&gt;rohub) (2.10)
+Requirement already satisfied: certifi&gt;=2017.4.17 in /opt/conda/lib/python3.8/site-packages (from requests-&gt;rohub) (2021.10.8)
+Requirement already satisfied: chardet&lt;5,&gt;=3.0.2 in /opt/conda/lib/python3.8/site-packages (from requests-&gt;rohub) (4.0.0)
+Note: you may need to restart the kernel to use updated packages.
+</pre></div>
+</div>
+</div>
 </div>
 </div>
 <div class="section" id="import-library">
-<h1>Import library<a class="headerlink" href="#import-library" title="Permalink to this headline">¶</a></h1>
+<h2>Import library<a class="headerlink" href="#import-library" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">rohub</span>
@@ -966,50 +920,206 @@
 </div>
 </div>
 <div class="section" id="authenticate">
-<h1>Authenticate<a class="headerlink" href="#authenticate" title="Permalink to this headline">¶</a></h1>
+<h2>Authenticate<a class="headerlink" href="#authenticate" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>you need to create two files in /home/jovyan</p></li>
+<li><p>rohub-user: contains your rohub username</p></li>
+<li><p>rohub-pwd: add your password in this file</p></li>
+</ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rohub_user</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;/home/jovyan/files/rohub-user&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()</span>
-<span class="n">rohub_pwd</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;/home/jovyan/files/rohub-pwd&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rohub_user</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;/home/jovyan/rohub-user&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()</span>
+<span class="n">rohub_pwd</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;/home/jovyan/rohub-pwd&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()</span>
 <span class="n">rohub</span><span class="o">.</span><span class="n">login</span><span class="p">(</span><span class="n">username</span><span class="o">=</span><span class="n">rohub_user</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="n">rohub_pwd</span><span class="p">)</span>
-<span class="c1">#rohub_client_id = open(&quot;/home/jovyan/files/rohub-client_id&quot;).read().rstrip()</span>
-<span class="c1">#rohub_client_secret = open(&quot;/home/jovyan/files/rohub-client_secret&quot;).read().rstrip()</span>
+<span class="c1">#rohub_client_id = open(&quot;/home/jovyan/rohub-client_id&quot;).read().rstrip()</span>
+<span class="c1">#rohub_client_secret = open(&quot;/home/jovyan/rohub-client_secret&quot;).read().rstrip()</span>
 <span class="c1">#rohub.login(client_id=rohub_client_id, client_secret=rohub_client_secret)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Logged successfully as annefou@geo.uio.no.
 </pre></div>
 </div>
 </div>
 </div>
 </div>
 <div class="section" id="ro-methods">
-<h1>RO methods<a class="headerlink" href="#ro-methods" title="Permalink to this headline">¶</a></h1>
+<h2>RO methods<a class="headerlink" href="#ro-methods" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="create-new-ro">
-<h2>Create new RO<a class="headerlink" href="#create-new-ro" title="Permalink to this headline">¶</a></h2>
+<h3>Create new RO<a class="headerlink" href="#create-new-ro" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ro_title</span><span class="o">=</span><span class="s2">&quot;8th December - Copernicus Atmosphere Monitoring Service Data Cube Research Object&quot;</span>
 <span class="n">ro_research_areas</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Earth sciences&quot;</span><span class="p">]</span>
 <span class="n">ro_description</span><span class="o">=</span><span class="s2">&quot;This Research Object demonstrate how to compute monthly map of PM10 over your country&quot;</span>
 <span class="n">ro_ros_type</span><span class="o">=</span><span class="s2">&quot;Data-centric Research Object&quot;</span>
-<span class="n">ro_ros_template</span><span class="o">=</span><span class="s2">&quot;Data Centric Research Object folders structure&quot;</span>
 
-<span class="n">ro</span> <span class="o">=</span> <span class="n">rohub</span><span class="o">.</span><span class="n">ros_create</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="n">ro_title</span><span class="p">,</span> <span class="n">research_areas</span><span class="o">=</span><span class="n">ro_research_areas</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="n">ro_description</span><span class="p">,</span> <span class="n">ros_type</span><span class="o">=</span><span class="n">ro_ros_type</span><span class="p">,</span> <span class="n">template</span><span class="o">=</span><span class="n">ro_ros_template</span><span class="p">)</span>
+<span class="n">ro</span> <span class="o">=</span> <span class="n">rohub</span><span class="o">.</span><span class="n">ros_create</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="n">ro_title</span><span class="p">,</span> <span class="n">research_areas</span><span class="o">=</span><span class="n">ro_research_areas</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="n">ro_description</span><span class="p">,</span> <span class="n">ros_type</span><span class="o">=</span><span class="n">ro_ros_type</span><span class="p">,</span> <span class="n">use_template</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Research Object was successfully created with id = 08d413f9-e434-4d50-a7ee-39b034f40ae0
 </pre></div>
 </div>
 </div>
 </div>
 </div>
 <div class="section" id="find-ros">
-<h2>Find ROs<a class="headerlink" href="#find-ros" title="Permalink to this headline">¶</a></h2>
+<h3>Find ROs<a class="headerlink" href="#find-ros" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rohub</span><span class="o">.</span><span class="n">ros_find</span><span class="p">(</span><span class="n">search</span><span class="o">=</span><span class="s2">&quot;December&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>identifier</th>
+      <th>title</th>
+      <th>description</th>
+      <th>type</th>
+      <th>research_areas</th>
+      <th>status</th>
+      <th>created_on</th>
+      <th>created_by</th>
+      <th>modified_on</th>
+      <th>access_mode</th>
+      <th>owner</th>
+      <th>shared_link</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>08d413f9-e434-4d50-a7ee-39b034f40ae0</td>
+      <td>8th December - Copernicus Atmosphere Monitorin...</td>
+      <td>This Research Object demonstrate how to comput...</td>
+      <td>Data-centric Research Object</td>
+      <td>[Earth sciences]</td>
+      <td>LIVE</td>
+      <td>2022-01-23T11:25:52.956418+00:00</td>
+      <td>annefou@geo.uio.no</td>
+      <td>2022-01-23T11:25:53.472305+00:00</td>
+      <td>PUBLIC</td>
+      <td>annefou@geo.uio.no</td>
+      <td>https://w3id.org/ro-id/08d413f9-e434-4d50-a7ee...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>629b2be8-2457-44e9-bf8f-8aaba3fde6a8</td>
+      <td>Changes in black carbon emissions over Europe ...</td>
+      <td>Following the emergence of the severe acute re...</td>
+      <td>Bibliography-centric Research Object</td>
+      <td>[Ecology, Meteorology]</td>
+      <td>LIVE</td>
+      <td>2021-12-10T09:59:37.625454+00:00</td>
+      <td>service-account-generation-service</td>
+      <td>2021-12-10T09:59:38.215213+00:00</td>
+      <td>PUBLIC</td>
+      <td>service-account-generation-service</td>
+      <td>https://w3id.org/ro-id/629b2be8-2457-44e9-bf8f...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>6440c36b-44c8-48c5-9a2a-a3c47de70c8a</td>
+      <td>Copernicus Atmosphere Monitoring Service Data ...</td>
+      <td>This Research Object demonstrate how to comput...</td>
+      <td>Data-centric Research Object</td>
+      <td>[Earth sciences]</td>
+      <td>SNAPSHOT</td>
+      <td>2021-12-09T15:24:35.287031+00:00</td>
+      <td>rpalma@man.poznan.pl</td>
+      <td>2021-12-09T15:24:46.466543+00:00</td>
+      <td>PUBLIC</td>
+      <td>rpalma@man.poznan.pl</td>
+      <td>https://w3id.org/ro-id/6440c36b-44c8-48c5-9a2a...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>57cf76e1-2179-4650-b48b-b5990dca86c1</td>
+      <td>Copernicus Atmosphere Monitoring Service Data ...</td>
+      <td>This Research Object demonstrate how to comput...</td>
+      <td>Data-centric Research Object</td>
+      <td>[Earth sciences]</td>
+      <td>SNAPSHOT</td>
+      <td>2021-12-09T15:20:19.561661+00:00</td>
+      <td>rpalma@man.poznan.pl</td>
+      <td>2021-12-09T15:20:30.133737+00:00</td>
+      <td>PUBLIC</td>
+      <td>rpalma@man.poznan.pl</td>
+      <td>https://w3id.org/ro-id/57cf76e1-2179-4650-b48b...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>a08ddcb2-ae5f-40ba-b1b6-c64dd2e4d68c</td>
+      <td>Copernicus Atmosphere Monitoring Service Data ...</td>
+      <td>This Research Object demonstrate how to comput...</td>
+      <td>Data-centric Research Object</td>
+      <td>[Earth sciences]</td>
+      <td>SNAPSHOT</td>
+      <td>2021-12-09T15:19:07.190287+00:00</td>
+      <td>rpalma@man.poznan.pl</td>
+      <td>2021-12-09T15:19:24.584005+00:00</td>
+      <td>PUBLIC</td>
+      <td>rpalma@man.poznan.pl</td>
+      <td>https://w3id.org/ro-id/a08ddcb2-ae5f-40ba-b1b6...</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>c737f695-6715-4916-8bef-8fc0ce879760</td>
+      <td>Copernicus Atmosphere Monitoring Service Data ...</td>
+      <td>This Research Object demonstrate how to comput...</td>
+      <td>Data-centric Research Object</td>
+      <td>[Earth sciences]</td>
+      <td>SNAPSHOT</td>
+      <td>2021-12-08T22:04:42.703330+00:00</td>
+      <td>rpalma@man.poznan.pl</td>
+      <td>2021-12-08T22:05:13.391015+00:00</td>
+      <td>PUBLIC</td>
+      <td>rpalma@man.poznan.pl</td>
+      <td>https://w3id.org/ro-id/c737f695-6715-4916-8bef...</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>abebc0e7-87b6-4ed5-8a0e-9b71dc30e333</td>
+      <td>Copernicus Atmosphere Monitoring Service Data ...</td>
+      <td>This Research Object demonstrate how to comput...</td>
+      <td>Data-centric Research Object</td>
+      <td>[Earth sciences]</td>
+      <td>SNAPSHOT</td>
+      <td>2021-12-08T22:01:17.734019+00:00</td>
+      <td>rpalma@man.poznan.pl</td>
+      <td>2021-12-08T22:01:44.739807+00:00</td>
+      <td>PUBLIC</td>
+      <td>rpalma@man.poznan.pl</td>
+      <td>https://w3id.org/ro-id/abebc0e7-87b6-4ed5-8a0e...</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 </div>
 <div class="section" id="list-my-ros">
-<h2>List my ROs<a class="headerlink" href="#list-my-ros" title="Permalink to this headline">¶</a></h2>
+<h3>List my ROs<a class="headerlink" href="#list-my-ros" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">myros</span><span class="o">=</span><span class="n">rohub</span><span class="o">.</span><span class="n">list_my_ros</span><span class="p">()</span>
@@ -1017,10 +1127,137 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>identifier</th>
+      <th>title</th>
+      <th>description</th>
+      <th>type</th>
+      <th>research_areas</th>
+      <th>status</th>
+      <th>created_on</th>
+      <th>created_by</th>
+      <th>modified_on</th>
+      <th>access_mode</th>
+      <th>owner</th>
+      <th>shared_link</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>08d413f9-e434-4d50-a7ee-39b034f40ae0</td>
+      <td>8th December - Copernicus Atmosphere Monitorin...</td>
+      <td>This Research Object demonstrate how to comput...</td>
+      <td>Data-centric Research Object</td>
+      <td>[Earth sciences]</td>
+      <td>LIVE</td>
+      <td>2022-01-23T11:25:52.956418+00:00</td>
+      <td>annefou@geo.uio.no</td>
+      <td>2022-01-23T11:25:53.472305+00:00</td>
+      <td>PUBLIC</td>
+      <td>annefou@geo.uio.no</td>
+      <td>https://w3id.org/ro-id/08d413f9-e434-4d50-a7ee...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>03961876-c21f-4384-966e-1413adf58477</td>
+      <td>Jupyter notebook demonstrating the usage of CA...</td>
+      <td>This Research Object demonstrates how to use C...</td>
+      <td>Executable Research Object</td>
+      <td>[Earth sciences]</td>
+      <td>SNAPSHOT</td>
+      <td>2022-01-18T19:06:48.630028+00:00</td>
+      <td>annefou@geo.uio.no</td>
+      <td>2022-01-18T19:06:57.061094+00:00</td>
+      <td>PUBLIC</td>
+      <td>annefou@geo.uio.no</td>
+      <td>https://w3id.org/ro-id/03961876-c21f-4384-966e...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0d5a0619-14d5-4b45-b925-a9432684f76a</td>
+      <td>Jupyter notebook demonstrating the usage of CA...</td>
+      <td>This Research Object demonstrates how to use C...</td>
+      <td>Executable Research Object</td>
+      <td>[Earth sciences]</td>
+      <td>SNAPSHOT</td>
+      <td>2022-01-18T18:30:54.174269+00:00</td>
+      <td>annefou@geo.uio.no</td>
+      <td>2022-01-18T18:31:03.342744+00:00</td>
+      <td>PUBLIC</td>
+      <td>annefou@geo.uio.no</td>
+      <td>https://w3id.org/ro-id/0d5a0619-14d5-4b45-b925...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>d767e6c3-6cfd-4e68-a989-0b4cbe9236b5</td>
+      <td>Identification of sources of pollution events ...</td>
+      <td>Trajectory model (backwards) such as FLEXPART ...</td>
+      <td>Executable Research Object</td>
+      <td>[Applied sciences, Meteorology]</td>
+      <td>LIVE</td>
+      <td>2021-12-20T11:33:30.052359+00:00</td>
+      <td>annefou@geo.uio.no</td>
+      <td>2021-12-20T11:33:30.812716+00:00</td>
+      <td>PUBLIC</td>
+      <td>annefou@geo.uio.no</td>
+      <td>https://w3id.org/ro-id/d767e6c3-6cfd-4e68-a989...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5f2e7ab8-8122-41b3-8d53-060e09855fa7</td>
+      <td>Jupyter notebook comparing CAMS and air qualit...</td>
+      <td>Compare CAMS analysis with available observati...</td>
+      <td>Executable Research Object</td>
+      <td>[Applied sciences, Meteorology]</td>
+      <td>LIVE</td>
+      <td>2021-12-20T11:28:59.678934+00:00</td>
+      <td>annefou@geo.uio.no</td>
+      <td>2021-12-20T11:29:00.402870+00:00</td>
+      <td>PUBLIC</td>
+      <td>annefou@geo.uio.no</td>
+      <td>https://w3id.org/ro-id/5f2e7ab8-8122-41b3-8d53...</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>53aa90bf-c593-4e6d-923f-d4711ac4b0e1</td>
+      <td>Impact of the Covid-19 Lockdown on Air quality...</td>
+      <td>The COVID-19 pandemic has led to significant r...</td>
+      <td>Executable Research Object</td>
+      <td>[Applied sciences, Meteorology]</td>
+      <td>LIVE</td>
+      <td>2021-12-19T21:18:33.231894+00:00</td>
+      <td>annefou@geo.uio.no</td>
+      <td>2021-12-19T21:18:33.990652+00:00</td>
+      <td>PUBLIC</td>
+      <td>annefou@geo.uio.no</td>
+      <td>https://w3id.org/ro-id/53aa90bf-c593-4e6d-923f...</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 </div>
 <div class="section" id="load-ro">
-<h2>Load RO<a class="headerlink" href="#load-ro" title="Permalink to this headline">¶</a></h2>
+<h3>Load RO<a class="headerlink" href="#load-ro" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ro_id</span><span class="o">=</span><span class="n">myros</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="s2">&quot;identifier&quot;</span><span class="p">]</span>
@@ -1028,20 +1265,55 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Research Object was successfully loaded with id = 08d413f9-e434-4d50-a7ee-39b034f40ae0
+</pre></div>
+</div>
+</div>
 </div>
 </div>
 <div class="section" id="show-basic-metadata">
-<h2>Show basic metadata<a class="headerlink" href="#show-basic-metadata" title="Permalink to this headline">¶</a></h2>
+<h3>Show basic metadata<a class="headerlink" href="#show-basic-metadata" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ro</span><span class="o">.</span><span class="n">show_metadata</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;identifier&#39;: &#39;08d413f9-e434-4d50-a7ee-39b034f40ae0&#39;,
+ &#39;shared_link&#39;: &#39;https://w3id.org/ro-id/08d413f9-e434-4d50-a7ee-39b034f40ae0&#39;,
+ &#39;title&#39;: &#39;8th December - Copernicus Atmosphere Monitoring Service Data Cube Research Object&#39;,
+ &#39;description&#39;: &#39;This Research Object demonstrate how to compute monthly map of PM10 over your country&#39;,
+ &#39;status&#39;: &#39;LIVE&#39;,
+ &#39;access_mode&#39;: &#39;PUBLIC&#39;,
+ &#39;type&#39;: &#39;Data-centric Research Object&#39;,
+ &#39;template&#39;: &#39;Data Centric Research Object folders structure&#39;,
+ &#39;created&#39;: &#39;2022-01-23T11:25:52.956418Z&#39;,
+ &#39;creator&#39;: &#39;annefou@geo.uio.no&#39;,
+ &#39;modificator&#39;: None,
+ &#39;modified&#39;: &#39;2022-01-23T11:25:53.139282Z&#39;,
+ &#39;importer&#39;: None,
+ &#39;research_areas&#39;: [&#39;Earth sciences&#39;],
+ &#39;owner&#39;: &#39;annefou@geo.uio.no&#39;,
+ &#39;editors&#39;: [],
+ &#39;readers&#39;: [],
+ &#39;rating&#39;: &#39;0.00&#39;,
+ &#39;number_of_ratings&#39;: 0,
+ &#39;number_of_likes&#39;: 0,
+ &#39;number_of_dislikes&#39;: 0,
+ &#39;quality&#39;: 0,
+ &#39;size&#39;: 0,
+ &#39;creation_mode&#39;: &#39;MANUAL&#39;,
+ &#39;doi&#39;: None,
+ &#39;api_link&#39;: &#39;https://api.rohub.org/api/ros/08d413f9-e434-4d50-a7ee-39b034f40ae0/&#39;}
+</pre></div>
+</div>
+</div>
 </div>
 </div>
 <div class="section" id="add-modify-basic-metadata">
-<h2>Add/modify basic metadata<a class="headerlink" href="#add-modify-basic-metadata" title="Permalink to this headline">¶</a></h2>
+<h3>Add/modify basic metadata<a class="headerlink" href="#add-modify-basic-metadata" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ro</span><span class="o">.</span><span class="n">description</span><span class="o">=</span><span class="s2">&quot;This Research Object demonstrate how to compute monthly map of PM10 over your country - modified&quot;</span>
@@ -1050,10 +1322,40 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;identifier&#39;: &#39;08d413f9-e434-4d50-a7ee-39b034f40ae0&#39;,
+ &#39;shared_link&#39;: &#39;https://w3id.org/ro-id/08d413f9-e434-4d50-a7ee-39b034f40ae0&#39;,
+ &#39;title&#39;: &#39;8th December - Copernicus Atmosphere Monitoring Service Data Cube Research Object&#39;,
+ &#39;description&#39;: &#39;This Research Object demonstrate how to compute monthly map of PM10 over your country - modified&#39;,
+ &#39;status&#39;: &#39;LIVE&#39;,
+ &#39;access_mode&#39;: &#39;PUBLIC&#39;,
+ &#39;type&#39;: &#39;Data-centric Research Object&#39;,
+ &#39;template&#39;: &#39;Data Centric Research Object folders structure&#39;,
+ &#39;created&#39;: &#39;2022-01-23T11:25:52.956418Z&#39;,
+ &#39;creator&#39;: &#39;annefou@geo.uio.no&#39;,
+ &#39;modificator&#39;: &#39;annefou@geo.uio.no&#39;,
+ &#39;modified&#39;: &#39;2022-01-23T11:26:18.302214Z&#39;,
+ &#39;importer&#39;: None,
+ &#39;research_areas&#39;: [&#39;Earth sciences&#39;],
+ &#39;owner&#39;: &#39;annefou@geo.uio.no&#39;,
+ &#39;editors&#39;: [&#39;annefou@geo.uio.no&#39;, &#39;dario.stelitano@ingv.it&#39;],
+ &#39;readers&#39;: [],
+ &#39;rating&#39;: &#39;0.00&#39;,
+ &#39;number_of_ratings&#39;: 0,
+ &#39;number_of_likes&#39;: 0,
+ &#39;number_of_dislikes&#39;: 0,
+ &#39;quality&#39;: 0,
+ &#39;size&#39;: 0,
+ &#39;creation_mode&#39;: &#39;MANUAL&#39;,
+ &#39;doi&#39;: None,
+ &#39;api_link&#39;: &#39;https://api.rohub.org/api/ros/08d413f9-e434-4d50-a7ee-39b034f40ae0/&#39;}
+</pre></div>
+</div>
+</div>
 </div>
 </div>
 <div class="section" id="list-ro-folders">
-<h2>List RO Folders<a class="headerlink" href="#list-ro-folders" title="Permalink to this headline">¶</a></h2>
+<h3>List RO Folders<a class="headerlink" href="#list-ro-folders" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">myfolders</span> <span class="o">=</span> <span class="n">ro</span><span class="o">.</span><span class="n">list_folders</span><span class="p">()</span>
@@ -1061,14 +1363,86 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>identifier</th>
+      <th>name</th>
+      <th>description</th>
+      <th>creator</th>
+      <th>created_on</th>
+      <th>modified_on</th>
+      <th>path</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>f189a6b8-c273-4ba2-bc76-4abbdb0aa36f</td>
+      <td>biblio</td>
+      <td>None</td>
+      <td>annefou@geo.uio.no</td>
+      <td>2022-01-23T11:25:53.961646+0000</td>
+      <td>2022-01-23T11:25:53.963704+0000</td>
+      <td>biblio</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>afd2f5c3-d1f5-4ba5-ace2-e6a033520c91</td>
+      <td>data</td>
+      <td>None</td>
+      <td>annefou@geo.uio.no</td>
+      <td>2022-01-23T11:25:53.961987+0000</td>
+      <td>2022-01-23T11:25:53.963847+0000</td>
+      <td>data</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>7fe6b63e-2635-47f9-b75f-e93c80a1cee0</td>
+      <td>metadata</td>
+      <td>None</td>
+      <td>annefou@geo.uio.no</td>
+      <td>2022-01-23T11:25:53.962242+0000</td>
+      <td>2022-01-23T11:25:53.964010+0000</td>
+      <td>metadata</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>c4460626-996b-48db-81f6-b98c0bf90904</td>
+      <td>raw data</td>
+      <td>None</td>
+      <td>annefou@geo.uio.no</td>
+      <td>2022-01-23T11:25:53.962473+0000</td>
+      <td>2022-01-23T11:25:53.964195+0000</td>
+      <td>raw data</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 </div>
 <div class="section" id="aggregate-resource-internal">
-<h2>Aggregate resource (internal)<a class="headerlink" href="#aggregate-resource-internal" title="Permalink to this headline">¶</a></h2>
+<h3>Aggregate resource (internal)<a class="headerlink" href="#aggregate-resource-internal" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">resi_res_type</span><span class="o">=</span><span class="s2">&quot;Sketch&quot;</span>
-<span class="n">resi_file_path</span><span class="o">=</span><span class="s2">&quot;/home/jovyan/files/flow-dcro.png&quot;</span>
+<span class="n">resi_file_path</span><span class="o">=</span><span class="s2">&quot;flow-dcro.png&quot;</span>
 <span class="n">resi_title</span><span class="o">=</span><span class="s2">&quot;Flow to compute monthly map&quot;</span>
 <span class="n">resi_folder</span><span class="o">=</span><span class="n">myfolders</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="s2">&quot;identifier&quot;</span><span class="p">]</span>
 
@@ -1076,10 +1450,15 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Resource was successfully created with id = be4c5800-9058-4d43-967c-1b233da92d17
+</pre></div>
+</div>
+</div>
 </div>
 </div>
 <div class="section" id="aggregate-resouce-external">
-<h2>Aggregate resouce (external)<a class="headerlink" href="#aggregate-resouce-external" title="Permalink to this headline">¶</a></h2>
+<h3>Aggregate resouce (external)<a class="headerlink" href="#aggregate-resouce-external" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rese_res_type</span><span class="o">=</span><span class="s2">&quot;Data Cube Collection&quot;</span>
@@ -1087,7 +1466,15 @@
 <span class="n">rese_title</span><span class="o">=</span><span class="s2">&quot;EU_CAMS_SURFACE_PM10_G&quot;</span>
 <span class="n">rese_description</span><span class="o">=</span><span class="s2">&quot;This dataset provides daily air quality analyses and forecasts for Europe.</span><span class="se">\n\n</span><span class="s2">CAMS produces specific daily air quality analyses and forecasts for the European domain at significantly higher spatial resolution (0.1 degrees, approx. 10km) than is available from the global analyses and forecasts. The production is based on an ensemble of nine air quality forecasting systems across Europe. A median ensemble is calculated from individual outputs, since ensemble products yield on average better performance than the individual model products. The spread between the nine models are used to provide an estimate of the forecast uncertainty. The analysis combines model data with observations provided by the European Environment Agency (EEA) into a complete and consistent dataset using various data assimilation techniques depending upon the air-quality forecasting system used. In parallel, air quality forecasts are produced once a day for the next four days. Both the analysis and the forecast are available at hourly time steps at seven height levels.</span><span class="se">\n\n</span><span class="s2">Note that only nitrogen monoxide, nitrogen dioxide, sulphur dioxide, ozone, PM2.5, PM10 and dust are regularly validated against in situ observations, and therefore forecasts of all other variables are unvalidated and should be considered experimental.&quot;</span>
 
-<span class="n">ro</span><span class="o">.</span><span class="n">add_external_resource</span><span class="p">(</span><span class="n">res_type</span><span class="o">=</span><span class="n">rese_res_type</span><span class="p">,</span> <span class="n">url</span><span class="o">=</span><span class="n">rese_file_url</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="n">rese_title</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span> <span class="n">rese_description</span><span class="p">)</span>
+<span class="n">ro</span><span class="o">.</span><span class="n">add_external_resource</span><span class="p">(</span><span class="n">res_type</span><span class="o">=</span><span class="n">rese_res_type</span><span class="p">,</span> <span class="n">input_url</span><span class="o">=</span><span class="n">rese_file_url</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="n">rese_title</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span> <span class="n">rese_description</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Resource was successfully created with id = 37598c0b-952e-45d9-8cdf-d306fc98230a
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Resource(identifier=37598c0b-952e-45d9-8cdf-d306fc98230a, post_request=False)
 </pre></div>
 </div>
 </div>
@@ -1099,7 +1486,15 @@
 <span class="n">rese_title</span><span class="o">=</span><span class="s2">&quot;Daily PM10 concentration&quot;</span>
 <span class="n">rese_description</span><span class="o">=</span><span class="s2">&quot;Daily PM10 concentration for 1st September 2018 over Europe&quot;</span>
 
-<span class="n">ro</span><span class="o">.</span><span class="n">add_external_resource</span><span class="p">(</span><span class="n">res_type</span><span class="o">=</span><span class="n">rese_res_type</span><span class="p">,</span> <span class="n">url</span><span class="o">=</span><span class="n">rese_file_url</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="n">rese_title</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span> <span class="n">rese_description</span><span class="p">)</span>
+<span class="n">ro</span><span class="o">.</span><span class="n">add_external_resource</span><span class="p">(</span><span class="n">res_type</span><span class="o">=</span><span class="n">rese_res_type</span><span class="p">,</span> <span class="n">input_url</span><span class="o">=</span><span class="n">rese_file_url</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="n">rese_title</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span> <span class="n">rese_description</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Resource was successfully created with id = 8e0adfcf-57d5-4c55-9185-dc7a3b1b7e41
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Resource(identifier=8e0adfcf-57d5-4c55-9185-dc7a3b1b7e41, post_request=False)
 </pre></div>
 </div>
 </div>
@@ -1111,7 +1506,15 @@
 <span class="n">rese_title</span><span class="o">=</span><span class="s2">&quot;Index of daily PM10 concentration for September 1st 2018&quot;</span>
 <span class="n">rese_description</span><span class="o">=</span><span class="s2">&quot;List of hourly PM10 concentration data for September 1st 2018 over Europe&quot;</span>
 
-<span class="n">ro</span><span class="o">.</span><span class="n">add_external_resource</span><span class="p">(</span><span class="n">res_type</span><span class="o">=</span><span class="n">rese_res_type</span><span class="p">,</span> <span class="n">url</span><span class="o">=</span><span class="n">rese_file_url</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="n">rese_title</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="n">rese_description</span><span class="p">)</span>
+<span class="n">ro</span><span class="o">.</span><span class="n">add_external_resource</span><span class="p">(</span><span class="n">res_type</span><span class="o">=</span><span class="n">rese_res_type</span><span class="p">,</span> <span class="n">input_url</span><span class="o">=</span><span class="n">rese_file_url</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="n">rese_title</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="n">rese_description</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Resource was successfully created with id = deba9c23-b217-48db-a38a-6d766751919f
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Resource(identifier=deba9c23-b217-48db-a38a-6d766751919f, post_request=False)
 </pre></div>
 </div>
 </div>
@@ -1123,7 +1526,12 @@
 <span class="n">rese_title</span><span class="o">=</span><span class="s2">&quot;Jupter Notebook of CAMS European air quality analysis from Copernicus Atmosphere Monitoring with RELIANCE services&quot;</span>
 <span class="n">rese_description</span><span class="o">=</span><span class="s2">&quot;Jupyter Notebook for discovering, accessing and processing RELIANCE data cube, and creating a Research Object with results, and finally publish it in Zenodo&quot;</span>
 
-<span class="n">my_res_ext0</span><span class="o">=</span><span class="n">ro</span><span class="o">.</span><span class="n">add_external_resource</span><span class="p">(</span><span class="n">res_type</span><span class="o">=</span><span class="n">rese_res_type</span><span class="p">,</span> <span class="n">url</span><span class="o">=</span><span class="n">rese_file_url</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="n">rese_title</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="n">rese_description</span><span class="p">)</span>
+<span class="n">my_res_ext0</span><span class="o">=</span><span class="n">ro</span><span class="o">.</span><span class="n">add_external_resource</span><span class="p">(</span><span class="n">res_type</span><span class="o">=</span><span class="n">rese_res_type</span><span class="p">,</span> <span class="n">input_url</span><span class="o">=</span><span class="n">rese_file_url</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="n">rese_title</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="n">rese_description</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Resource was successfully created with id = d4642d82-a03a-497b-98cf-9339cffcb09a
 </pre></div>
 </div>
 </div>
@@ -1135,24 +1543,174 @@
 <span class="n">rese_title</span><span class="o">=</span><span class="s2">&quot;Catch data from Norway&quot;</span>
 <span class="n">rese_description</span><span class="o">=</span><span class="s2">&quot;Catch data records sample from 2019&quot;</span>
 
-<span class="n">my_res_ext1</span><span class="o">=</span><span class="n">ro</span><span class="o">.</span><span class="n">add_external_resource</span><span class="p">(</span><span class="n">res_type</span><span class="o">=</span><span class="n">rese_res_type</span><span class="p">,</span> <span class="n">url</span><span class="o">=</span><span class="n">rese_file_url</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="n">rese_title</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="n">rese_description</span><span class="p">)</span>
+<span class="n">my_res_ext1</span><span class="o">=</span><span class="n">ro</span><span class="o">.</span><span class="n">add_external_resource</span><span class="p">(</span><span class="n">res_type</span><span class="o">=</span><span class="n">rese_res_type</span><span class="p">,</span> <span class="n">input_url</span><span class="o">=</span><span class="n">rese_file_url</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="n">rese_title</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="n">rese_description</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Resource was successfully created with id = 1a23e779-20c8-4a49-bf1d-33a44b07bb1b
 </pre></div>
 </div>
 </div>
 </div>
 </div>
 <div class="section" id="list-ro-resources">
-<h2>List RO resources<a class="headerlink" href="#list-ro-resources" title="Permalink to this headline">¶</a></h2>
+<h3>List RO resources<a class="headerlink" href="#list-ro-resources" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ro</span><span class="o">.</span><span class="n">list_resources</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>identifier</th>
+      <th>type</th>
+      <th>source</th>
+      <th>title</th>
+      <th>description</th>
+      <th>url</th>
+      <th>name</th>
+      <th>path</th>
+      <th>size</th>
+      <th>creator</th>
+      <th>created_on</th>
+      <th>modified_on</th>
+      <th>download_url</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1a23e779-20c8-4a49-bf1d-33a44b07bb1b</td>
+      <td>Dataset</td>
+      <td>external</td>
+      <td>Catch data from Norway</td>
+      <td>Catch data records sample from 2019</td>
+      <td>https://box.psnc.pl/f/d90a0e1e0d/?raw=1</td>
+      <td>Catch data from Norway</td>
+      <td>https://box.psnc.pl/f/d90a0e1e0d/?raw=1</td>
+      <td>NaN</td>
+      <td>annefou@geo.uio.no</td>
+      <td>2022-01-23T11:26:45.692570+0000</td>
+      <td>2022-01-23T11:26:45.693196+0000</td>
+      <td>https://box.psnc.pl/f/d90a0e1e0d/?raw=1</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>37598c0b-952e-45d9-8cdf-d306fc98230a</td>
+      <td>Data Cube Collection</td>
+      <td>external</td>
+      <td>EU_CAMS_SURFACE_PM10_G</td>
+      <td>This dataset provides daily air quality analys...</td>
+      <td>https://reliance-das.adamplatform.eu/opensearc...</td>
+      <td>EU_CAMS_SURFACE_PM10_G</td>
+      <td>https://reliance-das.adamplatform.eu/opensearc...</td>
+      <td>NaN</td>
+      <td>annefou@geo.uio.no</td>
+      <td>2022-01-23T11:26:34.948551+0000</td>
+      <td>2022-01-23T11:26:34.949461+0000</td>
+      <td>https://reliance-das.adamplatform.eu/opensearc...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>deba9c23-b217-48db-a38a-6d766751919f</td>
+      <td>Data Cube Product</td>
+      <td>external</td>
+      <td>Index of daily PM10 concentration for Septembe...</td>
+      <td>List of hourly PM10 concentration data for Sep...</td>
+      <td>https://reliance-das.adamplatform.eu/opensearc...</td>
+      <td>Index of daily PM10 concentration for Septembe...</td>
+      <td>https://reliance-das.adamplatform.eu/opensearc...</td>
+      <td>NaN</td>
+      <td>annefou@geo.uio.no</td>
+      <td>2022-01-23T11:26:41.805590+0000</td>
+      <td>2022-01-23T11:26:41.806154+0000</td>
+      <td>https://reliance-das.adamplatform.eu/opensearc...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>8e0adfcf-57d5-4c55-9185-dc7a3b1b7e41</td>
+      <td>Result</td>
+      <td>external</td>
+      <td>Daily PM10 concentration</td>
+      <td>Daily PM10 concentration for 1st September 201...</td>
+      <td>https://reliance-das.adamplatform.eu/wcs?servi...</td>
+      <td>Daily PM10 concentration</td>
+      <td>https://reliance-das.adamplatform.eu/wcs?servi...</td>
+      <td>NaN</td>
+      <td>annefou@geo.uio.no</td>
+      <td>2022-01-23T11:26:39.261026+0000</td>
+      <td>2022-01-23T11:26:39.261828+0000</td>
+      <td>https://reliance-das.adamplatform.eu/wcs?servi...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>d4642d82-a03a-497b-98cf-9339cffcb09a</td>
+      <td>Jupyter Notebook</td>
+      <td>external</td>
+      <td>Jupter Notebook of CAMS European air quality a...</td>
+      <td>Jupyter Notebook for discovering, accessing an...</td>
+      <td>https://zenodo.org/record/5554786#.YYlWo9nMI-Q</td>
+      <td>Jupter Notebook of CAMS European air quality a...</td>
+      <td>https://zenodo.org/record/5554786#.YYlWo9nMI-Q</td>
+      <td>NaN</td>
+      <td>annefou@geo.uio.no</td>
+      <td>2022-01-23T11:26:43.290547+0000</td>
+      <td>2022-01-23T11:26:43.291617+0000</td>
+      <td>https://zenodo.org/record/5554786#.YYlWo9nMI-Q</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>be4c5800-9058-4d43-967c-1b233da92d17</td>
+      <td>Sketch</td>
+      <td>internal</td>
+      <td>Flow to compute monthly map</td>
+      <td>None</td>
+      <td>None</td>
+      <td>Flow to compute monthly map</td>
+      <td>biblio/flow-dcro.png</td>
+      <td>73394.0</td>
+      <td>annefou@geo.uio.no</td>
+      <td>2022-01-23T11:26:29.793829+0000</td>
+      <td>2022-01-23T11:26:29.794852+0000</td>
+      <td>https://api.rohub.org/api/resources/be4c5800-9...</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 </div>
 <div class="section" id="add-geolocation">
-<h2>Add geolocation<a class="headerlink" href="#add-geolocation" title="Permalink to this headline">¶</a></h2>
+<h3>Add geolocation<a class="headerlink" href="#add-geolocation" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>You can add a geojson ld file or directly its content here</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ro</span><span class="o">.</span><span class="n">add_geolocation</span><span class="p">(</span><span class="n">body_specification_json</span><span class="o">=</span><span class="s2">&quot;/home/jovyan/ROHub-API/files/EuropeBOX.geojson&quot;</span><span class="p">)</span>
+<span class="n">ro</span><span class="o">.</span><span class="n">add_geolocation</span><span class="p">(</span><span class="n">body_specification_json</span><span class="o">=</span><span class="s2">&quot;/home/jovyan/ROHub-API/files/fra.geo-ld.json&quot;</span><span class="p">)</span>
+<span class="n">ro</span><span class="o">.</span><span class="n">add_geolocation</span><span class="p">(</span><span class="n">body_specification_json</span><span class="o">=</span><span class="s2">&quot;/home/jovyan/ROHub-API/files/geojson-test-simple_mp.json&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>In the example below, we direcly add the content (one single location)</p></li>
+</ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">geojson_as_text_point_python</span><span class="o">=</span> <span class="p">{</span>
@@ -1170,19 +1728,30 @@
 </pre></div>
 </div>
 </div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#ro.add_geolocation(body_specification_json=&quot;/home/jovyan/ROHub-API/files/EuropeBOX.geojson&quot;)</span>
-<span class="c1">#ro.add_geolocation(body_specification_json=&quot;/home/jovyan/ROHub-API/files/fra.geo-ld.json&quot;)</span>
-<span class="c1">#ro.add_geolocation(body_specification_json=&quot;/home/jovyan/ROHub-API/files/geojson-test-simple_mp.json&quot;)</span>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;identifier&#39;: &#39;7681649b-adf0-4b15-a5f3-8f6c88230347&#39;,
+ &#39;shared_link&#39;: &#39;https://w3id.org/ro-id/08d413f9-e434-4d50-a7ee-39b034f40ae0/annotations/7681649b-adf0-4b15-a5f3-8f6c88230347&#39;,
+ &#39;name&#39;: &#39;annotations/7681649b-adf0-4b15-a5f3-8f6c88230347&#39;,
+ &#39;filename&#39;: &#39;.ro/annotations/7681649b-adf0-4b15-a5f3-8f6c88230347.ttl&#39;,
+ &#39;relation&#39;: False,
+ &#39;read_only&#39;: False,
+ &#39;target&#39;: &#39;08d413f9-e434-4d50-a7ee-39b034f40ae0&#39;,
+ &#39;ro&#39;: &#39;08d413f9-e434-4d50-a7ee-39b034f40ae0&#39;,
+ &#39;resources&#39;: [],
+ &#39;created&#39;: &#39;2022-01-23T11:26:54.788958+0000&#39;,
+ &#39;creator&#39;: &#39;annefou@geo.uio.no&#39;,
+ &#39;modificator&#39;: None,
+ &#39;modified&#39;: &#39;2022-01-23T11:26:54.788837+0000&#39;,
+ &#39;authors_credits&#39;: [&#39;annefou@geo.uio.no&#39;],
+ &#39;contributors_credits&#39;: [],
+ &#39;api_link&#39;: &#39;https://api.rohub.org/api/annotations/7681649b-adf0-4b15-a5f3-8f6c88230347/&#39;}
 </pre></div>
 </div>
 </div>
 </div>
 </div>
 <div class="section" id="export-to-ro-crate">
-<h2>Export to RO-crate<a class="headerlink" href="#export-to-ro-crate" title="Permalink to this headline">¶</a></h2>
+<h3>Export to RO-crate<a class="headerlink" href="#export-to-ro-crate" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#ro.export_to_rocrate(filename=&quot;my-ro-crate&quot;)</span>
@@ -1190,13 +1759,18 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>File was successfully downloaded.
+</pre></div>
+</div>
+</div>
 </div>
 </div>
 </div>
 <div class="section" id="add-authors-contributors-publishers-copyrightholders">
-<h1>Add authors/contributors/publishers/copyrightHolders<a class="headerlink" href="#add-authors-contributors-publishers-copyrightholders" title="Permalink to this headline">¶</a></h1>
+<h2>Add authors/contributors/publishers/copyrightHolders<a class="headerlink" href="#add-authors-contributors-publishers-copyrightholders" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="list-users">
-<h2>List users<a class="headerlink" href="#list-users" title="Permalink to this headline">¶</a></h2>
+<h3>List users<a class="headerlink" href="#list-users" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">usernames</span><span class="o">=</span><span class="n">rohub</span><span class="o">.</span><span class="n">users_find</span><span class="p">(</span><span class="n">search</span><span class="o">=</span><span class="s2">&quot;Anne&quot;</span><span class="p">)</span>
@@ -1204,11 +1778,60 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>identifier</th>
+      <th>username</th>
+      <th>display_name</th>
+      <th>affiliation</th>
+      <th>description</th>
+      <th>areas_of_interest</th>
+      <th>orcid_identifier</th>
+      <th>external</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>62277187-0f2e-4320-a6b0-7fe467f1b1c1</td>
+      <td>annefou@geo.uio.no</td>
+      <td>Anne Fouilloux</td>
+      <td>Nordic e-Infrastructure Collaboration (NeIC)</td>
+      <td>Research Software Engineer</td>
+      <td>Weather and Climate Science</td>
+      <td>0000-0002-1784-2920</td>
+      <td>False</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">user_id_anne</span><span class="o">=</span><span class="n">usernames</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="s2">&quot;username&quot;</span><span class="p">]</span>
 <span class="n">user_id_anne</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;annefou@geo.uio.no&#39;
 </pre></div>
 </div>
 </div>
@@ -1220,6 +1843,46 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>identifier</th>
+      <th>username</th>
+      <th>display_name</th>
+      <th>affiliation</th>
+      <th>orcid_identifier</th>
+      <th>external</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>c62bf5a8-72ff-45e3-a92a-7ba9f5a06e0e</td>
+      <td>https://orcid.org/0000-0003-3784-6651</td>
+      <td>Nieves Pepito</td>
+      <td>UNO-Recoletos</td>
+      <td>0000-0003-3784-6651</td>
+      <td>True</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1228,14 +1891,41 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;https://orcid.org/0000-0003-3784-6651&#39;
+</pre></div>
+</div>
+</div>
 </div>
 </div>
 <div class="section" id="add-authors-contributors">
-<h2>Add authors/contributors<a class="headerlink" href="#add-authors-contributors" title="Permalink to this headline">¶</a></h2>
+<h3>Add authors/contributors<a class="headerlink" href="#add-authors-contributors" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ro</span><span class="o">.</span><span class="n">set_authors</span><span class="p">(</span><span class="n">agents</span><span class="o">=</span><span class="p">[</span><span class="n">user_id_anne</span><span class="p">,</span><span class="n">user_id_nieves</span><span class="p">])</span>
 <span class="c1">#ro.set_authors(agents=[&quot;dontdoit@lochness.uk&quot;])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Agent: annefou@geo.uio.no recognized in the system.
+Agent: https://orcid.org/0000-0003-3784-6651 recognized in the system.
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[{&#39;identifier&#39;: &#39;62277187-0f2e-4320-a6b0-7fe467f1b1c1&#39;,
+  &#39;username&#39;: &#39;annefou@geo.uio.no&#39;,
+  &#39;name&#39;: &#39;annefou@geo.uio.no&#39;,
+  &#39;type&#39;: &#39;RohubUser&#39;,
+  &#39;display_name&#39;: &#39;Anne Fouilloux&#39;,
+  &#39;orcid_identifier&#39;: &#39;0000-0002-1784-2920&#39;,
+  &#39;affiliation&#39;: &#39;Nordic e-Infrastructure Collaboration (NeIC)&#39;},
+ {&#39;identifier&#39;: &#39;c62bf5a8-72ff-45e3-a92a-7ba9f5a06e0e&#39;,
+  &#39;username&#39;: &#39;https://orcid.org/0000-0003-3784-6651&#39;,
+  &#39;name&#39;: &#39;https://orcid.org/0000-0003-3784-6651&#39;,
+  &#39;type&#39;: &#39;ExternalUser&#39;,
+  &#39;display_name&#39;: &#39;Nieves Pepito&#39;,
+  &#39;orcid_identifier&#39;: &#39;0000-0003-3784-6651&#39;,
+  &#39;affiliation&#39;: &#39;UNO-Recoletos&#39;}]
 </pre></div>
 </div>
 </div>
@@ -1250,10 +1940,24 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Agent: {&#39;user_id&#39;: &#39;rapnonexist_3@hotmail.com&#39;, &#39;display_name&#39;: &#39;Pepito Bato&#39;, &#39;email&#39;: &#39;example3@hotmail.com&#39;, &#39;orcid_id&#39;: &#39;0000-0002-8316-3192&#39;, &#39;affiliation&#39;: &#39;PCSS&#39;} recognized in the system.
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[{&#39;identifier&#39;: &#39;b1acadbf-fdfa-49c3-b9e2-86d1ae6a93c3&#39;,
+  &#39;username&#39;: &#39;https://orcid.org/0000-0002-8316-3192&#39;,
+  &#39;name&#39;: &#39;https://orcid.org/0000-0002-8316-3192&#39;,
+  &#39;type&#39;: &#39;ExternalUser&#39;,
+  &#39;display_name&#39;: &#39;Pepito Bato&#39;,
+  &#39;orcid_identifier&#39;: &#39;0000-0002-8316-3192&#39;,
+  &#39;affiliation&#39;: &#39;PCSS&#39;}]
+</pre></div>
+</div>
+</div>
 </div>
 </div>
 <div class="section" id="list-organizations">
-<h2>List organizations<a class="headerlink" href="#list-organizations" title="Permalink to this headline">¶</a></h2>
+<h3>List organizations<a class="headerlink" href="#list-organizations" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">organizations</span><span class="o">=</span><span class="n">rohub</span><span class="o">.</span><span class="n">organizations_find</span><span class="p">(</span><span class="n">search</span><span class="o">=</span><span class="s2">&quot;poznan&quot;</span><span class="p">)</span>
@@ -1261,25 +1965,88 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>identifier</th>
+      <th>organization_id</th>
+      <th>display_name</th>
+      <th>email</th>
+      <th>url</th>
+      <th>ror_identifier</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>64ec5402-1171-42f6-b9dd-6fa901ca9724</td>
+      <td>https://ror.org/025cj6e44</td>
+      <td>Poznan Supercomputing and Networking Center</td>
+      <td>office@man.poznan.pl</td>
+      <td>https://www.psnc.pl/</td>
+      <td>025cj6e44</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 </div>
 <div class="section" id="add-publisher-copyright-holder">
-<h2>Add publisher/copyright holder<a class="headerlink" href="#add-publisher-copyright-holder" title="Permalink to this headline">¶</a></h2>
+<h3>Add publisher/copyright holder<a class="headerlink" href="#add-publisher-copyright-holder" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ro</span><span class="o">.</span><span class="n">set_publishers</span><span class="p">(</span><span class="n">agents</span><span class="o">=</span><span class="p">[</span><span class="n">organizations</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="s2">&quot;organization_id&quot;</span><span class="p">]])</span>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Agent: https://ror.org/025cj6e44 recognized in the system.
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[{&#39;identifier&#39;: &#39;64ec5402-1171-42f6-b9dd-6fa901ca9724&#39;,
+  &#39;username&#39;: &#39;https://ror.org/025cj6e44&#39;,
+  &#39;name&#39;: &#39;https://ror.org/025cj6e44&#39;,
+  &#39;type&#39;: &#39;Organization&#39;,
+  &#39;display_name&#39;: &#39;Poznan Supercomputing and Networking Center&#39;}]
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ro</span><span class="o">.</span><span class="n">set_copyright_holders</span><span class="p">(</span><span class="n">agents</span><span class="o">=</span><span class="p">[{</span><span class="s2">&quot;org_id&quot;</span><span class="p">:</span><span class="s2">&quot;neworg_1@example.org&quot;</span><span class="p">,</span> 
-                                  <span class="s2">&quot;display_name&quot;</span><span class="p">:</span> <span class="s2">&quot;Example Org 1&quot;</span><span class="p">,</span> 
-                                  <span class="s2">&quot;email&quot;</span><span class="p">:</span><span class="s2">&quot;neworg1@example.org&quot;</span><span class="p">,</span>
-                                  <span class="s2">&quot;ror_identifier&quot;</span><span class="p">:</span><span class="s2">&quot;abcd123&quot;</span><span class="p">,</span>
-                                  <span class="s2">&quot;organization_url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://neworg1.example.org&quot;</span><span class="p">}])</span>
-<span class="c1">#ro.set_copyright_holders(agents=[{&quot;dontexist&quot;}])</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ro</span><span class="o">.</span><span class="n">set_copyright_holders</span><span class="p">(</span><span class="n">agents</span><span class="o">=</span><span class="p">[{</span><span class="s2">&quot;org_id&quot;</span><span class="p">:</span><span class="s2">&quot;https://neic.no/&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;display_name&quot;</span><span class="p">:</span> <span class="s2">&quot;Nordic e-Infrastructure Collaboration&quot;</span><span class="p">,</span> 
+                     <span class="s2">&quot;agent_type&quot;</span><span class="p">:</span> <span class="s2">&quot;organization&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;ror_identifier&quot;</span><span class="p">:</span><span class="s2">&quot;04jcwf484&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;organization_url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://neic.no/&quot;</span><span class="p">}])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Agent: {&#39;org_id&#39;: &#39;https://neic.no/&#39;, &#39;display_name&#39;: &#39;Nordic e-Infrastructure Collaboration&#39;, &#39;agent_type&#39;: &#39;organization&#39;, &#39;ror_identifier&#39;: &#39;04jcwf484&#39;, &#39;organization_url&#39;: &#39;https://neic.no/&#39;} recognized in the system.
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[{&#39;identifier&#39;: &#39;fbd9bdcf-4a1d-4ae8-9a90-6b9ec5a3b8b2&#39;,
+  &#39;username&#39;: &#39;https://ror.org/04jcwf484&#39;,
+  &#39;name&#39;: &#39;https://ror.org/04jcwf484&#39;,
+  &#39;type&#39;: &#39;Organization&#39;,
+  &#39;display_name&#39;: &#39;Nordic e-Infrastructure Collaboration&#39;}]
 </pre></div>
 </div>
 </div>
@@ -1287,38 +2054,546 @@
 </div>
 </div>
 <div class="section" id="add-ro-license">
-<h1>Add RO license<a class="headerlink" href="#add-ro-license" title="Permalink to this headline">¶</a></h1>
+<h2>Add RO license<a class="headerlink" href="#add-ro-license" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="list-available-pre-defined-licenses">
-<h2>list available pre-defined licenses<a class="headerlink" href="#list-available-pre-defined-licenses" title="Permalink to this headline">¶</a></h2>
+<h3>list available pre-defined licenses<a class="headerlink" href="#list-available-pre-defined-licenses" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rohub</span><span class="o">.</span><span class="n">list_available_licenses</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;0BSD&#39;,
+ &#39;AAL&#39;,
+ &#39;ADSL&#39;,
+ &#39;AFL-1.1&#39;,
+ &#39;AFL-1.2&#39;,
+ &#39;AFL-2.0&#39;,
+ &#39;AFL-2.1&#39;,
+ &#39;AFL-3.0&#39;,
+ &#39;AGPL-1.0&#39;,
+ &#39;AGPL-1.0-only&#39;,
+ &#39;AGPL-1.0-or-later&#39;,
+ &#39;AGPL-3.0&#39;,
+ &#39;AGPL-3.0-only&#39;,
+ &#39;AGPL-3.0-or-later&#39;,
+ &#39;AMDPLPA&#39;,
+ &#39;AML&#39;,
+ &#39;AMPAS&#39;,
+ &#39;ANTLR-PD&#39;,
+ &#39;ANTLR-PD-fallback&#39;,
+ &#39;APAFML&#39;,
+ &#39;APL-1.0&#39;,
+ &#39;APSL-1.0&#39;,
+ &#39;APSL-1.1&#39;,
+ &#39;APSL-1.2&#39;,
+ &#39;APSL-2.0&#39;,
+ &#39;Abstyles&#39;,
+ &#39;Adobe-2006&#39;,
+ &#39;Adobe-Glyph&#39;,
+ &#39;Afmparse&#39;,
+ &#39;Against-DRM&#39;,
+ &#39;Aladdin&#39;,
+ &#39;Apache-1.0&#39;,
+ &#39;Apache-1.1&#39;,
+ &#39;Apache-2.0&#39;,
+ &#39;Artistic-1.0&#39;,
+ &#39;Artistic-1.0-Perl&#39;,
+ &#39;Artistic-1.0-cl8&#39;,
+ &#39;Artistic-2.0&#39;,
+ &#39;BSD-1-Clause&#39;,
+ &#39;BSD-2-Clause&#39;,
+ &#39;BSD-2-Clause-FreeBSD&#39;,
+ &#39;BSD-2-Clause-NetBSD&#39;,
+ &#39;BSD-2-Clause-Patent&#39;,
+ &#39;BSD-2-Clause-Views&#39;,
+ &#39;BSD-3-Clause&#39;,
+ &#39;BSD-3-Clause-Attribution&#39;,
+ &#39;BSD-3-Clause-Clear&#39;,
+ &#39;BSD-3-Clause-LBNL&#39;,
+ &#39;BSD-3-Clause-Modification&#39;,
+ &#39;BSD-3-Clause-No-Military-License&#39;,
+ &#39;BSD-3-Clause-No-Nuclear-License&#39;,
+ &#39;BSD-3-Clause-No-Nuclear-License-2014&#39;,
+ &#39;BSD-3-Clause-No-Nuclear-Warranty&#39;,
+ &#39;BSD-3-Clause-Open-MPI&#39;,
+ &#39;BSD-4-Clause&#39;,
+ &#39;BSD-4-Clause-Shortened&#39;,
+ &#39;BSD-4-Clause-UC&#39;,
+ &#39;BSD-Protection&#39;,
+ &#39;BSD-Source-Code&#39;,
+ &#39;BSL-1.0&#39;,
+ &#39;BUSL-1.1&#39;,
+ &#39;Bahyph&#39;,
+ &#39;Barr&#39;,
+ &#39;Beerware&#39;,
+ &#39;BitTorrent-1.0&#39;,
+ &#39;BitTorrent-1.1&#39;,
+ &#39;BlueOak-1.0.0&#39;,
+ &#39;Borceux&#39;,
+ &#39;C-UDA-1.0&#39;,
+ &#39;CAL-1.0&#39;,
+ &#39;CAL-1.0-Combined-Work-Exception&#39;,
+ &#39;CATOSL-1.1&#39;,
+ &#39;CC-BY-1.0&#39;,
+ &#39;CC-BY-2.0&#39;,
+ &#39;CC-BY-2.5&#39;,
+ &#39;CC-BY-2.5-AU&#39;,
+ &#39;CC-BY-3.0&#39;,
+ &#39;CC-BY-3.0-AT&#39;,
+ &#39;CC-BY-3.0-DE&#39;,
+ &#39;CC-BY-3.0-NL&#39;,
+ &#39;CC-BY-3.0-US&#39;,
+ &#39;CC-BY-4.0&#39;,
+ &#39;CC-BY-NC-1.0&#39;,
+ &#39;CC-BY-NC-2.0&#39;,
+ &#39;CC-BY-NC-2.5&#39;,
+ &#39;CC-BY-NC-3.0&#39;,
+ &#39;CC-BY-NC-3.0-DE&#39;,
+ &#39;CC-BY-NC-4.0&#39;,
+ &#39;CC-BY-NC-ND-1.0&#39;,
+ &#39;CC-BY-NC-ND-2.0&#39;,
+ &#39;CC-BY-NC-ND-2.5&#39;,
+ &#39;CC-BY-NC-ND-3.0&#39;,
+ &#39;CC-BY-NC-ND-3.0-DE&#39;,
+ &#39;CC-BY-NC-ND-3.0-IGO&#39;,
+ &#39;CC-BY-NC-ND-4.0&#39;,
+ &#39;CC-BY-NC-SA-1.0&#39;,
+ &#39;CC-BY-NC-SA-2.0&#39;,
+ &#39;CC-BY-NC-SA-2.0-FR&#39;,
+ &#39;CC-BY-NC-SA-2.0-UK&#39;,
+ &#39;CC-BY-NC-SA-2.5&#39;,
+ &#39;CC-BY-NC-SA-3.0&#39;,
+ &#39;CC-BY-NC-SA-3.0-DE&#39;,
+ &#39;CC-BY-NC-SA-3.0-IGO&#39;,
+ &#39;CC-BY-NC-SA-4.0&#39;,
+ &#39;CC-BY-ND-1.0&#39;,
+ &#39;CC-BY-ND-2.0&#39;,
+ &#39;CC-BY-ND-2.5&#39;,
+ &#39;CC-BY-ND-3.0&#39;,
+ &#39;CC-BY-ND-3.0-DE&#39;,
+ &#39;CC-BY-ND-4.0&#39;,
+ &#39;CC-BY-SA-1.0&#39;,
+ &#39;CC-BY-SA-2.0&#39;,
+ &#39;CC-BY-SA-2.0-UK&#39;,
+ &#39;CC-BY-SA-2.1-JP&#39;,
+ &#39;CC-BY-SA-2.5&#39;,
+ &#39;CC-BY-SA-3.0&#39;,
+ &#39;CC-BY-SA-3.0-AT&#39;,
+ &#39;CC-BY-SA-3.0-DE&#39;,
+ &#39;CC-BY-SA-4.0&#39;,
+ &#39;CC-PDDC&#39;,
+ &#39;CC0-1.0&#39;,
+ &#39;CDDL-1.0&#39;,
+ &#39;CDDL-1.1&#39;,
+ &#39;CDL-1.0&#39;,
+ &#39;CDLA-Permissive-1.0&#39;,
+ &#39;CDLA-Permissive-2.0&#39;,
+ &#39;CDLA-Sharing-1.0&#39;,
+ &#39;CECILL-1.0&#39;,
+ &#39;CECILL-1.1&#39;,
+ &#39;CECILL-2.0&#39;,
+ &#39;CECILL-2.1&#39;,
+ &#39;CECILL-B&#39;,
+ &#39;CECILL-C&#39;,
+ &#39;CERN-OHL-1.1&#39;,
+ &#39;CERN-OHL-1.2&#39;,
+ &#39;CERN-OHL-P-2.0&#39;,
+ &#39;CERN-OHL-S-2.0&#39;,
+ &#39;CERN-OHL-W-2.0&#39;,
+ &#39;CNRI-Jython&#39;,
+ &#39;CNRI-Python&#39;,
+ &#39;CNRI-Python-GPL-Compatible&#39;,
+ &#39;CPAL-1.0&#39;,
+ &#39;CPL-1.0&#39;,
+ &#39;CPOL-1.02&#39;,
+ &#39;CUA-OPL-1.0&#39;,
+ &#39;Caldera&#39;,
+ &#39;ClArtistic&#39;,
+ &#39;Condor-1.1&#39;,
+ &#39;Crossword&#39;,
+ &#39;CrystalStacker&#39;,
+ &#39;Cube&#39;,
+ &#39;D-FSL-1.0&#39;,
+ &#39;DOC&#39;,
+ &#39;DRL-1.0&#39;,
+ &#39;DSDP&#39;,
+ &#39;DSL&#39;,
+ &#39;Dotseqn&#39;,
+ &#39;ECL-1.0&#39;,
+ &#39;ECL-2.0&#39;,
+ &#39;EFL-1.0&#39;,
+ &#39;EFL-2.0&#39;,
+ &#39;EPICS&#39;,
+ &#39;EPL-1.0&#39;,
+ &#39;EPL-2.0&#39;,
+ &#39;EUDatagrid&#39;,
+ &#39;EUPL-1.0&#39;,
+ &#39;EUPL-1.1&#39;,
+ &#39;EUPL-1.2&#39;,
+ &#39;Entessa&#39;,
+ &#39;ErlPL-1.1&#39;,
+ &#39;Eurosym&#39;,
+ &#39;FAL-1.3&#39;,
+ &#39;FSFAP&#39;,
+ &#39;FSFUL&#39;,
+ &#39;FSFULLR&#39;,
+ &#39;FTL&#39;,
+ &#39;Fair&#39;,
+ &#39;Frameworx-1.0&#39;,
+ &#39;FreeBSD-DOC&#39;,
+ &#39;FreeImage&#39;,
+ &#39;GD&#39;,
+ &#39;GFDL-1.1&#39;,
+ &#39;GFDL-1.1-invariants-only&#39;,
+ &#39;GFDL-1.1-invariants-or-later&#39;,
+ &#39;GFDL-1.1-no-invariants-only&#39;,
+ &#39;GFDL-1.1-no-invariants-or-later&#39;,
+ &#39;GFDL-1.1-only&#39;,
+ &#39;GFDL-1.1-or-later&#39;,
+ &#39;GFDL-1.2&#39;,
+ &#39;GFDL-1.2-invariants-only&#39;,
+ &#39;GFDL-1.2-invariants-or-later&#39;,
+ &#39;GFDL-1.2-no-invariants-only&#39;,
+ &#39;GFDL-1.2-no-invariants-or-later&#39;,
+ &#39;GFDL-1.2-only&#39;,
+ &#39;GFDL-1.2-or-later&#39;,
+ &#39;GFDL-1.3&#39;,
+ &#39;GFDL-1.3-invariants-only&#39;,
+ &#39;GFDL-1.3-invariants-or-later&#39;,
+ &#39;GFDL-1.3-no-cover-texts-no-invariant-sections&#39;,
+ &#39;GFDL-1.3-no-invariants-only&#39;,
+ &#39;GFDL-1.3-no-invariants-or-later&#39;,
+ &#39;GFDL-1.3-only&#39;,
+ &#39;GFDL-1.3-or-later&#39;,
+ &#39;GL2PS&#39;,
+ &#39;GLWTPL&#39;,
+ &#39;GPL-1.0&#39;,
+ &#39;GPL-1.0+&#39;,
+ &#39;GPL-1.0-only&#39;,
+ &#39;GPL-1.0-or-later&#39;,
+ &#39;GPL-2.0&#39;,
+ &#39;GPL-2.0+&#39;,
+ &#39;GPL-2.0-only&#39;,
+ &#39;GPL-2.0-or-later&#39;,
+ &#39;GPL-2.0-with-GCC-exception&#39;,
+ &#39;GPL-2.0-with-autoconf-exception&#39;,
+ &#39;GPL-2.0-with-bison-exception&#39;,
+ &#39;GPL-2.0-with-classpath-exception&#39;,
+ &#39;GPL-2.0-with-font-exception&#39;,
+ &#39;GPL-3.0&#39;,
+ &#39;GPL-3.0+&#39;,
+ &#39;GPL-3.0-only&#39;,
+ &#39;GPL-3.0-or-later&#39;,
+ &#39;GPL-3.0-with-GCC-exception&#39;,
+ &#39;GPL-3.0-with-autoconf-exception&#39;,
+ &#39;Giftware&#39;,
+ &#39;Glide&#39;,
+ &#39;Glulxe&#39;,
+ &#39;HPND&#39;,
+ &#39;HPND-sell-variant&#39;,
+ &#39;HTMLTIDY&#39;,
+ &#39;HaskellReport&#39;,
+ &#39;Hippocratic-2.1&#39;,
+ &#39;IBM-pibs&#39;,
+ &#39;ICU&#39;,
+ &#39;IJG&#39;,
+ &#39;IPA&#39;,
+ &#39;IPL-1.0&#39;,
+ &#39;ISC&#39;,
+ &#39;ImageMagick&#39;,
+ &#39;Imlib2&#39;,
+ &#39;Info-ZIP&#39;,
+ &#39;Intel&#39;,
+ &#39;Intel-ACPI&#39;,
+ &#39;Interbase-1.0&#39;,
+ &#39;JPNIC&#39;,
+ &#39;JSON&#39;,
+ &#39;JasPer-2.0&#39;,
+ &#39;LAL-1.2&#39;,
+ &#39;LAL-1.3&#39;,
+ &#39;LGPL-2.0&#39;,
+ &#39;LGPL-2.0+&#39;,
+ &#39;LGPL-2.0-only&#39;,
+ &#39;LGPL-2.0-or-later&#39;,
+ &#39;LGPL-2.1&#39;,
+ &#39;LGPL-2.1+&#39;,
+ &#39;LGPL-2.1-only&#39;,
+ &#39;LGPL-2.1-or-later&#39;,
+ &#39;LGPL-3.0&#39;,
+ &#39;LGPL-3.0+&#39;,
+ &#39;LGPL-3.0-only&#39;,
+ &#39;LGPL-3.0-or-later&#39;,
+ &#39;LGPLLR&#39;,
+ &#39;LO-FR-2.0&#39;,
+ &#39;LPL-1.0&#39;,
+ &#39;LPL-1.02&#39;,
+ &#39;LPPL-1.0&#39;,
+ &#39;LPPL-1.1&#39;,
+ &#39;LPPL-1.2&#39;,
+ &#39;LPPL-1.3a&#39;,
+ &#39;LPPL-1.3c&#39;,
+ &#39;Latex2e&#39;,
+ &#39;Leptonica&#39;,
+ &#39;LiLiQ-P-1.1&#39;,
+ &#39;LiLiQ-R-1.1&#39;,
+ &#39;LiLiQ-Rplus-1.1&#39;,
+ &#39;Libpng&#39;,
+ &#39;Linux-OpenIB&#39;,
+ &#39;MIT&#39;,
+ &#39;MIT-0&#39;,
+ &#39;MIT-CMU&#39;,
+ &#39;MIT-Modern-Variant&#39;,
+ &#39;MIT-advertising&#39;,
+ &#39;MIT-enna&#39;,
+ &#39;MIT-feh&#39;,
+ &#39;MIT-open-group&#39;,
+ &#39;MITNFA&#39;,
+ &#39;MPL-1.0&#39;,
+ &#39;MPL-1.1&#39;,
+ &#39;MPL-2.0&#39;,
+ &#39;MPL-2.0-no-copyleft-exception&#39;,
+ &#39;MS-PL&#39;,
+ &#39;MS-RL&#39;,
+ &#39;MTLL&#39;,
+ &#39;MakeIndex&#39;,
+ &#39;MirOS&#39;,
+ &#39;Motosoto&#39;,
+ &#39;MulanPSL-1.0&#39;,
+ &#39;MulanPSL-2.0&#39;,
+ &#39;Multics&#39;,
+ &#39;Mup&#39;,
+ &#39;NAIST-2003&#39;,
+ &#39;NASA-1.3&#39;,
+ &#39;NBPL-1.0&#39;,
+ &#39;NCGL-UK-2.0&#39;,
+ &#39;NCSA&#39;,
+ &#39;NGPL&#39;,
+ &#39;NIST-PD&#39;,
+ &#39;NIST-PD-fallback&#39;,
+ &#39;NLOD-1.0&#39;,
+ &#39;NLOD-2.0&#39;,
+ &#39;NLPL&#39;,
+ &#39;NOSL&#39;,
+ &#39;NPL-1.0&#39;,
+ &#39;NPL-1.1&#39;,
+ &#39;NPOSL-3.0&#39;,
+ &#39;NRL&#39;,
+ &#39;NTP&#39;,
+ &#39;NTP-0&#39;,
+ &#39;Naumen&#39;,
+ &#39;Net-SNMP&#39;,
+ &#39;NetCDF&#39;,
+ &#39;Newsletr&#39;,
+ &#39;Nokia&#39;,
+ &#39;Noweb&#39;,
+ &#39;Nunit&#39;,
+ &#39;O-UDA-1.0&#39;,
+ &#39;OCCT-PL&#39;,
+ &#39;OCLC-2.0&#39;,
+ &#39;ODC-By-1.0&#39;,
+ &#39;ODC-PDDL-1.0&#39;,
+ &#39;ODbL-1.0&#39;,
+ &#39;OFL-1.0&#39;,
+ &#39;OFL-1.0-RFN&#39;,
+ &#39;OFL-1.0-no-RFN&#39;,
+ &#39;OFL-1.1&#39;,
+ &#39;OFL-1.1-RFN&#39;,
+ &#39;OFL-1.1-no-RFN&#39;,
+ &#39;OGC-1.0&#39;,
+ &#39;OGDL-Taiwan-1.0&#39;,
+ &#39;OGL-Canada-2.0&#39;,
+ &#39;OGL-UK-1.0&#39;,
+ &#39;OGL-UK-2.0&#39;,
+ &#39;OGL-UK-3.0&#39;,
+ &#39;OGTSL&#39;,
+ &#39;OLDAP-1.1&#39;,
+ &#39;OLDAP-1.2&#39;,
+ &#39;OLDAP-1.3&#39;,
+ &#39;OLDAP-1.4&#39;,
+ &#39;OLDAP-2.0&#39;,
+ &#39;OLDAP-2.0.1&#39;,
+ &#39;OLDAP-2.1&#39;,
+ &#39;OLDAP-2.2&#39;,
+ &#39;OLDAP-2.2.1&#39;,
+ &#39;OLDAP-2.2.2&#39;,
+ &#39;OLDAP-2.3&#39;,
+ &#39;OLDAP-2.4&#39;,
+ &#39;OLDAP-2.5&#39;,
+ &#39;OLDAP-2.6&#39;,
+ &#39;OLDAP-2.7&#39;,
+ &#39;OLDAP-2.8&#39;,
+ &#39;OML&#39;,
+ &#39;OPL-1.0&#39;,
+ &#39;OPUBL-1.0&#39;,
+ &#39;OSET-PL-2.1&#39;,
+ &#39;OSL-1.0&#39;,
+ &#39;OSL-1.1&#39;,
+ &#39;OSL-2.0&#39;,
+ &#39;OSL-2.1&#39;,
+ &#39;OSL-3.0&#39;,
+ &#39;OpenSSL&#39;,
+ &#39;PDDL-1.0&#39;,
+ &#39;PHP-3.0&#39;,
+ &#39;PHP-3.01&#39;,
+ &#39;PSF-2.0&#39;,
+ &#39;Parity-6.0.0&#39;,
+ &#39;Parity-7.0.0&#39;,
+ &#39;Plexus&#39;,
+ &#39;PolyForm-Noncommercial-1.0.0&#39;,
+ &#39;PolyForm-Small-Business-1.0.0&#39;,
+ &#39;PostgreSQL&#39;,
+ &#39;Python-2.0&#39;,
+ &#39;QPL-1.0&#39;,
+ &#39;Qhull&#39;,
+ &#39;RHeCos-1.1&#39;,
+ &#39;RPL-1.1&#39;,
+ &#39;RPL-1.5&#39;,
+ &#39;RPSL-1.0&#39;,
+ &#39;RSA-MD&#39;,
+ &#39;RSCPL&#39;,
+ &#39;Rdisc&#39;,
+ &#39;Ruby&#39;,
+ &#39;SAX-PD&#39;,
+ &#39;SCEA&#39;,
+ &#39;SGI-B-1.0&#39;,
+ &#39;SGI-B-1.1&#39;,
+ &#39;SGI-B-2.0&#39;,
+ &#39;SHL-0.5&#39;,
+ &#39;SHL-0.51&#39;,
+ &#39;SISSL&#39;,
+ &#39;SISSL-1.2&#39;,
+ &#39;SMLNJ&#39;,
+ &#39;SMPPL&#39;,
+ &#39;SNIA&#39;,
+ &#39;SPL-1.0&#39;,
+ &#39;SSH-OpenSSH&#39;,
+ &#39;SSH-short&#39;,
+ &#39;SSPL-1.0&#39;,
+ &#39;SWL&#39;,
+ &#39;Saxpath&#39;,
+ &#39;Sendmail&#39;,
+ &#39;Sendmail-8.23&#39;,
+ &#39;SimPL-2.0&#39;,
+ &#39;Sleepycat&#39;,
+ &#39;Spencer-86&#39;,
+ &#39;Spencer-94&#39;,
+ &#39;Spencer-99&#39;,
+ &#39;StandardML-NJ&#39;,
+ &#39;SugarCRM-1.1.3&#39;,
+ &#39;TAPR-OHL-1.0&#39;,
+ &#39;TCL&#39;,
+ &#39;TCP-wrappers&#39;,
+ &#39;TMate&#39;,
+ &#39;TORQUE-1.1&#39;,
+ &#39;TOSL&#39;,
+ &#39;TU-Berlin-1.0&#39;,
+ &#39;TU-Berlin-2.0&#39;,
+ &#39;UCL-1.0&#39;,
+ &#39;UPL-1.0&#39;,
+ &#39;Unicode-DFS-2015&#39;,
+ &#39;Unicode-DFS-2016&#39;,
+ &#39;Unicode-TOU&#39;,
+ &#39;Unlicense&#39;,
+ &#39;VOSTROM&#39;,
+ &#39;VSL-1.0&#39;,
+ &#39;Vim&#39;,
+ &#39;W3C&#39;,
+ &#39;W3C-19980720&#39;,
+ &#39;W3C-20150513&#39;,
+ &#39;WTFPL&#39;,
+ &#39;Watcom-1.0&#39;,
+ &#39;Wsuipa&#39;,
+ &#39;X11&#39;,
+ &#39;XFree86-1.1&#39;,
+ &#39;XSkat&#39;,
+ &#39;Xerox&#39;,
+ &#39;Xnet&#39;,
+ &#39;YPL-1.0&#39;,
+ &#39;YPL-1.1&#39;,
+ &#39;ZPL-1.1&#39;,
+ &#39;ZPL-2.0&#39;,
+ &#39;ZPL-2.1&#39;,
+ &#39;Zed&#39;,
+ &#39;Zend-2.0&#39;,
+ &#39;Zimbra-1.3&#39;,
+ &#39;Zimbra-1.4&#39;,
+ &#39;Zlib&#39;,
+ &#39;acme-cc&#39;,
+ &#39;blessing&#39;,
+ &#39;bsd-license&#39;,
+ &#39;bzip2-1.0.5&#39;,
+ &#39;bzip2-1.0.6&#39;,
+ &#39;canada-crown&#39;,
+ &#39;cc-nc&#39;,
+ &#39;copyleft-next-0.3.0&#39;,
+ &#39;copyleft-next-0.3.1&#39;,
+ &#39;curl&#39;,
+ &#39;diffmark&#39;,
+ &#39;dli-model-use&#39;,
+ &#39;dvipdfm&#39;,
+ &#39;eCos-2.0&#39;,
+ &#39;eGenix&#39;,
+ &#39;etalab-2.0&#39;,
+ &#39;eurofound&#39;,
+ &#39;gSOAP-1.3b&#39;,
+ &#39;geo-no-fee-unrestricted&#39;,
+ &#39;geogratis&#39;,
+ &#39;gnuplot&#39;,
+ &#39;hesa-withrights&#39;,
+ &#39;iMatix&#39;,
+ &#39;jabber-osl&#39;,
+ &#39;libpng-2.0&#39;,
+ &#39;libselinux-1.0&#39;,
+ &#39;libtiff&#39;,
+ &#39;localauth-withrights&#39;,
+ &#39;lucent-plan9&#39;,
+ &#39;met-office-cp&#39;,
+ &#39;mitre&#39;,
+ &#39;mpich2&#39;,
+ &#39;my-example-license1&#39;,
+ &#39;notspecified&#39;,
+ &#39;other-at&#39;,
+ &#39;other-closed&#39;,
+ &#39;other-nc&#39;,
+ &#39;other-open&#39;,
+ &#39;other-pd&#39;,
+ &#39;psfrag&#39;,
+ &#39;psutils&#39;,
+ &#39;ukclickusepsi&#39;,
+ &#39;ukcrown&#39;,
+ &#39;ukcrown-withrights&#39;,
+ &#39;ukpsi&#39;,
+ &#39;user-jsim&#39;,
+ &#39;wxWindows&#39;,
+ &#39;xinetd&#39;,
+ &#39;xpp&#39;,
+ &#39;zenodo-freetoread-1.0&#39;,
+ &#39;zlib-acknowledgement&#39;]
+</pre></div>
+</div>
+</div>
 </div>
 </div>
 <div class="section" id="set-license">
-<h2>set license<a class="headerlink" href="#set-license" title="Permalink to this headline">¶</a></h2>
+<h3>set license<a class="headerlink" href="#set-license" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ro</span><span class="o">.</span><span class="n">set_license</span><span class="p">(</span><span class="n">license_id</span><span class="o">=</span><span class="n">rohub</span><span class="o">.</span><span class="n">list_available_licenses</span><span class="p">()[</span><span class="mi">0</span><span class="p">])</span> 
 </pre></div>
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="create-custom-license">
-<h2>create custom license<a class="headerlink" href="#create-custom-license" title="Permalink to this headline">¶</a></h2>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">license_identifier</span><span class="o">=</span><span class="s2">&quot;acme-cc&quot;</span>
-<span class="n">license_title</span><span class="o">=</span><span class="s2">&quot;ACME Inc. Commercial License&quot;</span>
-<span class="n">license_status</span><span class="o">=</span><span class="s2">&quot;active&quot;</span>
-<span class="n">license_url</span><span class="o">=</span><span class="s2">&quot;http://www.acme.org/licence-commercial&quot;</span>
-
-<span class="n">rohub</span><span class="o">.</span><span class="n">add_custom_license</span><span class="p">(</span><span class="n">identifier</span><span class="o">=</span><span class="n">license_identifier</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="n">license_title</span><span class="p">,</span>
-    <span class="n">status</span><span class="o">=</span><span class="n">license_status</span><span class="p">,</span> <span class="n">license_url</span><span class="o">=</span><span class="n">license_url</span><span class="p">)</span>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;identifier&#39;: &#39;0BSD&#39;,
+ &#39;title&#39;: &#39;BSD Zero Clause License&#39;,
+ &#39;description&#39;: &#39;BSD Zero Clause License&#39;,
+ &#39;created&#39;: &#39;2018-11-22T14:50:27.019476+00:00&#39;,
+ &#39;updated&#39;: &#39;2021-10-07T08:21:24.882291+00:00&#39;,
+ &#39;creator&#39;: None,
+ &#39;status&#39;: &#39;active&#39;,
+ &#39;url&#39;: &#39;http://landley.net/toybox/license.html&#39;,
+ &#39;custom&#39;: False}
 </pre></div>
 </div>
 </div>
@@ -1329,6 +2604,11 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;active&#39;, &#39;retired&#39;]
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1336,23 +2616,199 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[{&#39;identifier&#39;: &#39;acme-cc&#39;,
+  &#39;title&#39;: &#39;ACME Inc. Commercial License&#39;,
+  &#39;description&#39;: None,
+  &#39;status&#39;: &#39;active&#39;,
+  &#39;url&#39;: &#39;http://www.acme.org/licence-commercial&#39;,
+  &#39;created&#39;: &#39;2021-12-09T13:54:10.927006Z&#39;,
+  &#39;updated&#39;: None,
+  &#39;creator&#39;: &#39;rpalma@man.poznan.pl&#39;,
+  &#39;api_link&#39;: &#39;https://api.rohub.org/api/custom-licenses/acme-cc/&#39;},
+ {&#39;identifier&#39;: &#39;my-example-license1&#39;,
+  &#39;title&#39;: &#39;My example license&#39;,
+  &#39;description&#39;: &#39;this is an example license&#39;,
+  &#39;status&#39;: &#39;active&#39;,
+  &#39;url&#39;: &#39;http://myexample.org/license&#39;,
+  &#39;created&#39;: &#39;2021-11-08T16:18:29.048012Z&#39;,
+  &#39;updated&#39;: None,
+  &#39;creator&#39;: &#39;rpalma@man.poznan.pl&#39;,
+  &#39;api_link&#39;: &#39;https://api.rohub.org/api/custom-licenses/my-example-license1/&#39;}]
+</pre></div>
+</div>
+</div>
 </div>
 </div>
 </div>
 <div class="section" id="add-ro-funding-information">
-<h1>Add RO Funding information<a class="headerlink" href="#add-ro-funding-information" title="Permalink to this headline">¶</a></h1>
+<h2>Add RO Funding information<a class="headerlink" href="#add-ro-funding-information" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="list-predefined-funders">
-<h2>list predefined funders<a class="headerlink" href="#list-predefined-funders" title="Permalink to this headline">¶</a></h2>
+<h3>list predefined funders<a class="headerlink" href="#list-predefined-funders" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rohub</span><span class="o">.</span><span class="n">zenodo_list_funders</span><span class="p">(</span><span class="n">number_of_results</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{1: {&#39;api_url&#39;: &#39;https://zenodo.org/api/funders/10.13039/501100010363&#39;,
+  &#39;acronym&#39;: [],
+  &#39;identifiers&#39;: {&#39;oaf&#39;: None},
+  &#39;name&#39;: &#39;Minister Erna Hamiltons Legat for Videnskab og Kunst&#39;,
+  &#39;doi&#39;: &#39;10.13039/501100010363&#39;},
+ 2: {&#39;api_url&#39;: &#39;https://zenodo.org/api/funders/10.13039/501100009192&#39;,
+  &#39;acronym&#39;: [],
+  &#39;identifiers&#39;: {&#39;oaf&#39;: None},
+  &#39;name&#39;: &#39;Alberta Innovates&#39;,
+  &#39;doi&#39;: &#39;10.13039/501100009192&#39;},
+ 3: {&#39;api_url&#39;: &#39;https://zenodo.org/api/funders/10.13039/100013028&#39;,
+  &#39;acronym&#39;: [],
+  &#39;identifiers&#39;: {&#39;oaf&#39;: None},
+  &#39;name&#39;: &#39;Frank McGraw Memorial Chair in Cancer Research&#39;,
+  &#39;doi&#39;: &#39;10.13039/100013028&#39;},
+ 4: {&#39;api_url&#39;: &#39;https://zenodo.org/api/funders/10.13039/501100009191&#39;,
+  &#39;acronym&#39;: [],
+  &#39;identifiers&#39;: {&#39;oaf&#39;: None},
+  &#39;name&#39;: &quot;Attorney-General&#39;s Department, Australian Government&quot;,
+  &#39;doi&#39;: &#39;10.13039/501100009191&#39;},
+ 5: {&#39;api_url&#39;: &#39;https://zenodo.org/api/funders/10.13039/100011344&#39;,
+  &#39;acronym&#39;: [],
+  &#39;identifiers&#39;: {&#39;oaf&#39;: None},
+  &#39;name&#39;: &#39;McDougall Trust&#39;,
+  &#39;doi&#39;: &#39;10.13039/100011344&#39;},
+ 6: {&#39;api_url&#39;: &#39;https://zenodo.org/api/funders/10.13039/501100009188&#39;,
+  &#39;acronym&#39;: [],
+  &#39;identifiers&#39;: {&#39;oaf&#39;: None},
+  &#39;name&#39;: &#39;Department of Agriculture and Water Resources, Australian Government&#39;,
+  &#39;doi&#39;: &#39;10.13039/501100009188&#39;},
+ 7: {&#39;api_url&#39;: &#39;https://zenodo.org/api/funders/10.13039/501100010362&#39;,
+  &#39;acronym&#39;: [],
+  &#39;identifiers&#39;: {&#39;oaf&#39;: None},
+  &#39;name&#39;: &#39;Medical Workshop&#39;,
+  &#39;doi&#39;: &#39;10.13039/501100010362&#39;},
+ 8: {&#39;api_url&#39;: &#39;https://zenodo.org/api/funders/10.13039/501100010361&#39;,
+  &#39;acronym&#39;: [],
+  &#39;identifiers&#39;: {&#39;oaf&#39;: None},
+  &#39;name&#39;: &#39;Max Fodgaard Fonden&#39;,
+  &#39;doi&#39;: &#39;10.13039/501100010361&#39;},
+ 9: {&#39;api_url&#39;: &#39;https://zenodo.org/api/funders/10.13039/100013013&#39;,
+  &#39;acronym&#39;: [],
+  &#39;identifiers&#39;: {&#39;oaf&#39;: None},
+  &#39;name&#39;: &#39;Target ALS&#39;,
+  &#39;doi&#39;: &#39;10.13039/100013013&#39;},
+ 10: {&#39;api_url&#39;: &#39;https://zenodo.org/api/funders/10.13039/501100009187&#39;,
+  &#39;acronym&#39;: [],
+  &#39;identifiers&#39;: {&#39;oaf&#39;: None},
+  &#39;name&#39;: &#39;Medical Research Foundation&#39;,
+  &#39;doi&#39;: &#39;10.13039/501100009187&#39;},
+ 11: {&#39;api_url&#39;: &#39;https://zenodo.org/api/funders/10.13039/501100010360&#39;,
+  &#39;acronym&#39;: [],
+  &#39;identifiers&#39;: {&#39;oaf&#39;: None},
+  &#39;name&#39;: &#39;Marie og M.B. Richters Fond&#39;,
+  &#39;doi&#39;: &#39;10.13039/501100010360&#39;},
+ 12: {&#39;api_url&#39;: &#39;https://zenodo.org/api/funders/10.13039/501100008134&#39;,
+  &#39;acronym&#39;: [],
+  &#39;identifiers&#39;: {&#39;oaf&#39;: None},
+  &#39;name&#39;: &#39;Office of the Royal Society&#39;,
+  &#39;doi&#39;: &#39;10.13039/501100008134&#39;},
+ 13: {&#39;api_url&#39;: &#39;https://zenodo.org/api/funders/10.13039/501100009163&#39;,
+  &#39;acronym&#39;: [],
+  &#39;identifiers&#39;: {&#39;oaf&#39;: None},
+  &#39;name&#39;: &#39;Centre of Latin American Studies, University of Cambridge&#39;,
+  &#39;doi&#39;: &#39;10.13039/501100009163&#39;},
+ 14: {&#39;api_url&#39;: &#39;https://zenodo.org/api/funders/10.13039/501100009158&#39;,
+  &#39;acronym&#39;: [],
+  &#39;identifiers&#39;: {&#39;oaf&#39;: None},
+  &#39;name&#39;: &#39;Kawasaki Medical School&#39;,
+  &#39;doi&#39;: &#39;10.13039/501100009158&#39;},
+ 15: {&#39;api_url&#39;: &#39;https://zenodo.org/api/funders/10.13039/501100009161&#39;,
+  &#39;acronym&#39;: [],
+  &#39;identifiers&#39;: {&#39;oaf&#39;: None},
+  &#39;name&#39;: &#39;Maurice and Vivienne Wohl Charitable Foundation&#39;,
+  &#39;doi&#39;: &#39;10.13039/501100009161&#39;},
+ 16: {&#39;api_url&#39;: &#39;https://zenodo.org/api/funders/10.13039/501100010357&#39;,
+  &#39;acronym&#39;: [],
+  &#39;identifiers&#39;: {&#39;oaf&#39;: None},
+  &#39;name&#39;: &#39;Ingeniør K. A. Rohde og hustrus Legat&#39;,
+  &#39;doi&#39;: &#39;10.13039/501100010357&#39;},
+ 17: {&#39;api_url&#39;: &#39;https://zenodo.org/api/funders/10.13039/501100009160&#39;,
+  &#39;acronym&#39;: [],
+  &#39;identifiers&#39;: {&#39;oaf&#39;: None},
+  &#39;name&#39;: &#39;Université Toulouse III - Paul Sabatier&#39;,
+  &#39;doi&#39;: &#39;10.13039/501100009160&#39;},
+ 18: {&#39;api_url&#39;: &#39;https://zenodo.org/api/funders/10.13039/501100010339&#39;,
+  &#39;acronym&#39;: [],
+  &#39;identifiers&#39;: {&#39;oaf&#39;: None},
+  &#39;name&#39;: &#39;Ingeniør Otto Christensens Fond&#39;,
+  &#39;doi&#39;: &#39;10.13039/501100010339&#39;},
+ 19: {&#39;api_url&#39;: &#39;https://zenodo.org/api/funders/10.13039/501100009156&#39;,
+  &#39;acronym&#39;: [],
+  &#39;identifiers&#39;: {&#39;oaf&#39;: None},
+  &#39;name&#39;: &#39;Nantong Science and Technology Bureau&#39;,
+  &#39;doi&#39;: &#39;10.13039/501100009156&#39;},
+ 20: {&#39;api_url&#39;: &#39;https://zenodo.org/api/funders/10.13039/501100010358&#39;,
+  &#39;acronym&#39;: [],
+  &#39;identifiers&#39;: {&#39;oaf&#39;: None},
+  &#39;name&#39;: &#39;KV Fonden&#39;,
+  &#39;doi&#39;: &#39;10.13039/501100010358&#39;},
+ 21: {&#39;api_url&#39;: &#39;https://zenodo.org/api/funders/10.13039/501100009153&#39;,
+  &#39;acronym&#39;: [],
+  &#39;identifiers&#39;: {&#39;oaf&#39;: None},
+  &#39;name&#39;: &#39;Fundación MEDINA&#39;,
+  &#39;doi&#39;: &#39;10.13039/501100009153&#39;},
+ 22: {&#39;api_url&#39;: &#39;https://zenodo.org/api/funders/10.13039/501100009159&#39;,
+  &#39;acronym&#39;: [],
+  &#39;identifiers&#39;: {&#39;oaf&#39;: None},
+  &#39;name&#39;: &#39;Lianyungang Science and Technology Bureau&#39;,
+  &#39;doi&#39;: &#39;10.13039/501100009159&#39;},
+ 23: {&#39;api_url&#39;: &#39;https://zenodo.org/api/funders/10.13039/501100010332&#39;,
+  &#39;acronym&#39;: [],
+  &#39;identifiers&#39;: {&#39;oaf&#39;: None},
+  &#39;name&#39;: &#39;Stichting Winckel-Sweep&#39;,
+  &#39;doi&#39;: &#39;10.13039/501100010332&#39;},
+ 24: {&#39;api_url&#39;: &#39;https://zenodo.org/api/funders/10.13039/501100010352&#39;,
+  &#39;acronym&#39;: [],
+  &#39;identifiers&#39;: {&#39;oaf&#39;: None},
+  &#39;name&#39;: &#39;Helen Rudes Fond&#39;,
+  &#39;doi&#39;: &#39;10.13039/501100010352&#39;},
+ 25: {&#39;api_url&#39;: &#39;https://zenodo.org/api/funders/10.13039/100011331&#39;,
+  &#39;acronym&#39;: [],
+  &#39;identifiers&#39;: {&#39;oaf&#39;: None},
+  &#39;name&#39;: &#39;Monique Weill-Caulier Trust&#39;,
+  &#39;doi&#39;: &#39;10.13039/100011331&#39;},
+ 26: {&#39;api_url&#39;: &#39;https://zenodo.org/api/funders/10.13039/501100009152&#39;,
+  &#39;acronym&#39;: [],
+  &#39;identifiers&#39;: {&#39;oaf&#39;: None},
+  &#39;name&#39;: &#39;Fundación Antoni de Gimbernat&#39;,
+  &#39;doi&#39;: &#39;10.13039/501100009152&#39;},
+ 27: {&#39;api_url&#39;: &#39;https://zenodo.org/api/funders/10.13039/501100009154&#39;,
+  &#39;acronym&#39;: [],
+  &#39;identifiers&#39;: {&#39;oaf&#39;: None},
+  &#39;name&#39;: &#39;Fundación Juan March&#39;,
+  &#39;doi&#39;: &#39;10.13039/501100009154&#39;},
+ 28: {&#39;api_url&#39;: &#39;https://zenodo.org/api/funders/10.13039/501100010350&#39;,
+  &#39;acronym&#39;: [],
+  &#39;identifiers&#39;: {&#39;oaf&#39;: None},
+  &#39;name&#39;: &#39;Grete og Sigurd Pedersens Fond&#39;,
+  &#39;doi&#39;: &#39;10.13039/501100010350&#39;},
+ 29: {&#39;api_url&#39;: &#39;https://zenodo.org/api/funders/10.13039/501100010351&#39;,
+  &#39;acronym&#39;: [],
+  &#39;identifiers&#39;: {&#39;oaf&#39;: None},
+  &#39;name&#39;: &#39;Grosserer M. Brogaard og Hustrus Mindefond&#39;,
+  &#39;doi&#39;: &#39;10.13039/501100010351&#39;},
+ 30: {&#39;api_url&#39;: &#39;https://zenodo.org/api/funders/10.13039/501100010349&#39;,
+  &#39;acronym&#39;: [],
+  &#39;identifiers&#39;: {&#39;oaf&#39;: None},
+  &#39;name&#39;: &#39;Friedrich Wilhelm Frank og hustru Angelina Franks Mindelegat&#39;,
+  &#39;doi&#39;: &#39;10.13039/501100010349&#39;}}
+</pre></div>
+</div>
+</div>
 </div>
 </div>
 <div class="section" id="set-funding">
-<h2>set funding<a class="headerlink" href="#set-funding" title="Permalink to this headline">¶</a></h2>
+<h3>set funding<a class="headerlink" href="#set-funding" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">grant_id</span><span class="o">=</span><span class="s2">&quot;101017502&quot;</span>
@@ -1361,8 +2817,13 @@
 <span class="n">funder_name</span><span class="o">=</span><span class="s2">&quot;European Commission&quot;</span>
 <span class="n">funder_doi</span><span class="o">=</span><span class="s2">&quot;10.13039/501100000781&quot;</span>
 
-<span class="n">ro</span><span class="o">.</span><span class="n">set_funding</span><span class="p">(</span><span class="n">grant_identifier</span><span class="o">=</span><span class="n">grant_id</span><span class="p">,</span> <span class="n">grant_name</span><span class="o">=</span><span class="n">grant_Name</span><span class="p">,</span> <span class="n">funder_name</span><span class="o">=</span><span class="n">funder_name</span><span class="p">,</span>
+<span class="n">ro</span><span class="o">.</span><span class="n">add_funding</span><span class="p">(</span><span class="n">grant_identifier</span><span class="o">=</span><span class="n">grant_id</span><span class="p">,</span> <span class="n">grant_name</span><span class="o">=</span><span class="n">grant_Name</span><span class="p">,</span> <span class="n">funder_name</span><span class="o">=</span><span class="n">funder_name</span><span class="p">,</span>
 <span class="n">grant_title</span><span class="o">=</span><span class="n">grant_title</span><span class="p">,</span> <span class="n">funder_doi</span><span class="o">=</span><span class="n">funder_doi</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;9f36e64f-ca72-4830-b694-8a895fcb5ce7&#39;
 </pre></div>
 </div>
 </div>
@@ -1370,37 +2831,49 @@
 </div>
 </div>
 <div class="section" id="ro-evolution">
-<h1>RO Evolution<a class="headerlink" href="#ro-evolution" title="Permalink to this headline">¶</a></h1>
+<h2>RO Evolution<a class="headerlink" href="#ro-evolution" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="create-simple-snapshot-archive">
-<h2>Create simple snapshot/archive<a class="headerlink" href="#create-simple-snapshot-archive" title="Permalink to this headline">¶</a></h2>
+<h3>Create simple snapshot/archive<a class="headerlink" href="#create-simple-snapshot-archive" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Uncomment the lines below if you really want to create a snapshot.</p></li>
+<li><p>We usually recommend to create snapshot of real scientific work, corresponding for instance at a milestone in your work.</p></li>
+</ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">snapshot_id</span><span class="o">=</span><span class="n">ro</span><span class="o">.</span><span class="n">snapshot</span><span class="p">()</span>
-<span class="n">snapshot_id</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># snapshot_id=ro.snapshot()</span>
+<span class="c1"># snapshot_id</span>
 </pre></div>
 </div>
 </div>
 </div>
 </div>
 <div class="section" id="create-snapshot-archive-optionally-assign-doi-publish-it-in-zenodo">
-<h2>Create snapshot/archive, optionally assign DOI + publish it in Zenodo<a class="headerlink" href="#create-snapshot-archive-optionally-assign-doi-publish-it-in-zenodo" title="Permalink to this headline">¶</a></h2>
+<h3>Create snapshot/archive, optionally assign DOI + publish it in Zenodo<a class="headerlink" href="#create-snapshot-archive-optionally-assign-doi-publish-it-in-zenodo" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">snapshot_title</span><span class="o">=</span><span class="s2">&quot;Copernicus Atmosphere Monitoring Service Data Cube RO December 8th - published v1&quot;</span>
-<span class="n">snapshot_id_pub</span><span class="o">=</span><span class="n">ro</span><span class="o">.</span><span class="n">snapshot</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="n">snapshot_title</span><span class="p">,</span> <span class="n">create_doi</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">publication_services</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Zenodo&quot;</span><span class="p">])</span>
-<span class="n">snapshot_id_pub</span>
-<span class="c1">#%snapshot_id=ro.snapshot(create_doi=True, publication_services=[&quot;Zenodo&quot;])</span>
-<span class="c1">#%snapshot_id=ro.snapshot(publication_services=[&quot;Zenodo&quot;])</span>
+<span class="c1"># Uncomment the line below to publish in zenodo and get a DOI</span>
+<span class="c1"># snapshot_id_pub=ro.snapshot(title=snapshot_title, create_doi=True, publication_services=[&quot;Zenodo&quot;])</span>
+<span class="c1">#snapshot_id_pub</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="section" id="load-published-snapshot-archive-and-list-zenodo-id-doi">
-<h3>Load published snapshot/archive and list zenodo id/doi<a class="headerlink" href="#load-published-snapshot-archive-and-list-zenodo-id-doi" title="Permalink to this headline">¶</a></h3>
+<h4>Load published snapshot/archive and list zenodo id/doi<a class="headerlink" href="#load-published-snapshot-archive-and-list-zenodo-id-doi" title="Permalink to this headline">¶</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">published_ro</span> <span class="o">=</span> <span class="n">rohub</span><span class="o">.</span><span class="n">ros_load</span><span class="p">(</span><span class="n">identifier</span><span class="o">=</span><span class="n">snapshot_id_pub</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">snapshot_id_pub</span> <span class="o">=</span> <span class="s1">&#39;57cf76e1-2179-4650-b48b-b5990dca86c1&#39;</span>
+<span class="n">published_ro</span> <span class="o">=</span> <span class="n">rohub</span><span class="o">.</span><span class="n">ros_load</span><span class="p">(</span><span class="n">identifier</span><span class="o">=</span><span class="n">snapshot_id_pub</span><span class="p">)</span>
 <span class="n">published_ro</span><span class="o">.</span><span class="n">list_publications</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Research Object was successfully loaded with id = 57cf76e1-2179-4650-b48b-b5990dca86c1
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[]
 </pre></div>
 </div>
 </div>
@@ -1408,30 +2881,20 @@
 </div>
 </div>
 <div class="section" id="create-snapshot-archive-optionally-assign-doi-publish-it-in-b2share">
-<h2>Create snapshot/archive, optionally assign DOI + publish it in B2Share<a class="headerlink" href="#create-snapshot-archive-optionally-assign-doi-publish-it-in-b2share" title="Permalink to this headline">¶</a></h2>
+<h3>Create snapshot/archive, optionally assign DOI + publish it in B2Share<a class="headerlink" href="#create-snapshot-archive-optionally-assign-doi-publish-it-in-b2share" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">snapshot_title</span><span class="o">=</span><span class="s2">&quot;Copernicus Atmosphere Monitoring Service Data Cube RO December 8th - published v2&quot;</span>
-<span class="n">snapshot_id_pub</span><span class="o">=</span><span class="n">ro</span><span class="o">.</span><span class="n">snapshot</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="n">snapshot_title</span><span class="p">,</span> <span class="n">create_doi</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">publication_services</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;B2SHARE&quot;</span><span class="p">])</span>
-<span class="n">snapshot_id_pub</span>
+<span class="c1"># Uncomment the two lines below to create a snapshot and publish it in B2SHARE</span>
+<span class="c1"># snapshot_id_pub=ro.snapshot(title=snapshot_title, create_doi=False, publication_services=[&quot;B2SHARE&quot;])</span>
+<span class="c1"># snapshot_id_pub</span>
 </pre></div>
-</div>
-</div>
-</div>
-<div class="section" id="load-published-snapshot-archive-and-list-b2share-id-doi">
-<h3>Load published snapshot/archive and list b2share id/doi<a class="headerlink" href="#load-published-snapshot-archive-and-list-b2share-id-doi" title="Permalink to this headline">¶</a></h3>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">published_ro</span> <span class="o">=</span> <span class="n">rohub</span><span class="o">.</span><span class="n">ros_load</span><span class="p">(</span><span class="n">identifier</span><span class="o">=</span><span class="n">snapshot_id_pub</span><span class="p">)</span>
-<span class="n">published_ro</span><span class="o">.</span><span class="n">list_publications</span><span class="p">()</span>
-</pre></div>
-</div>
 </div>
 </div>
 </div>
 </div>
 <div class="section" id="fork-existing-ro-to-reuse-it-for-my-own-purposes">
-<h2>Fork existing RO to reuse it for my own purposes<a class="headerlink" href="#fork-existing-ro-to-reuse-it-for-my-own-purposes" title="Permalink to this headline">¶</a></h2>
+<h3>Fork existing RO to reuse it for my own purposes<a class="headerlink" href="#fork-existing-ro-to-reuse-it-for-my-own-purposes" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fork_id</span><span class="o">=</span><span class="n">ro</span><span class="o">.</span><span class="n">fork</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;Forked Copernicus Atmosphere Monitoring Service Data Cube RO December 8th&quot;</span><span class="p">)</span>
@@ -1441,13 +2904,47 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Trying to confirm status of the job. It can take a while...
+Research Object was successfully loaded with id = 21116679-72c9-4751-8db1-82c558dfa879
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;identifier&#39;: &#39;21116679-72c9-4751-8db1-82c558dfa879&#39;,
+ &#39;shared_link&#39;: &#39;https://w3id.org/ro-id/21116679-72c9-4751-8db1-82c558dfa879&#39;,
+ &#39;title&#39;: &#39;Forked Copernicus Atmosphere Monitoring Service Data Cube RO December 8th&#39;,
+ &#39;description&#39;: &#39;This Research Object demonstrate how to compute monthly map of PM10 over your country - modified&#39;,
+ &#39;status&#39;: &#39;FORK&#39;,
+ &#39;access_mode&#39;: &#39;PUBLIC&#39;,
+ &#39;type&#39;: &#39;Data-centric Research Object&#39;,
+ &#39;template&#39;: &#39;Data Centric Research Object folders structure&#39;,
+ &#39;created&#39;: &#39;2022-01-23T11:25:52.956418Z&#39;,
+ &#39;creator&#39;: &#39;annefou@geo.uio.no&#39;,
+ &#39;modificator&#39;: None,
+ &#39;modified&#39;: &#39;2022-01-23T11:31:29.276408Z&#39;,
+ &#39;importer&#39;: None,
+ &#39;research_areas&#39;: [&#39;Earth sciences&#39;],
+ &#39;owner&#39;: &#39;annefou@geo.uio.no&#39;,
+ &#39;editors&#39;: [&#39;annefou@geo.uio.no&#39;, &#39;dario.stelitano@ingv.it&#39;],
+ &#39;readers&#39;: [],
+ &#39;rating&#39;: &#39;0.00&#39;,
+ &#39;number_of_ratings&#39;: 0,
+ &#39;number_of_likes&#39;: 0,
+ &#39;number_of_dislikes&#39;: 0,
+ &#39;quality&#39;: 0,
+ &#39;size&#39;: 0,
+ &#39;creation_mode&#39;: &#39;MANUAL&#39;,
+ &#39;doi&#39;: None,
+ &#39;api_link&#39;: &#39;https://api.rohub.org/api/ros/21116679-72c9-4751-8db1-82c558dfa879/&#39;}
+</pre></div>
+</div>
+</div>
 </div>
 </div>
 </div>
 <div class="section" id="resource-methods">
-<h1>Resource methods<a class="headerlink" href="#resource-methods" title="Permalink to this headline">¶</a></h1>
+<h2>Resource methods<a class="headerlink" href="#resource-methods" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="load-resource">
-<h2>Load resource<a class="headerlink" href="#load-resource" title="Permalink to this headline">¶</a></h2>
+<h3>Load resource<a class="headerlink" href="#load-resource" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">results</span><span class="o">=</span><span class="n">ro</span><span class="o">.</span><span class="n">list_resources</span><span class="p">()</span>
@@ -1455,6 +2952,140 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>identifier</th>
+      <th>type</th>
+      <th>source</th>
+      <th>title</th>
+      <th>description</th>
+      <th>url</th>
+      <th>name</th>
+      <th>path</th>
+      <th>size</th>
+      <th>creator</th>
+      <th>created_on</th>
+      <th>modified_on</th>
+      <th>download_url</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1a23e779-20c8-4a49-bf1d-33a44b07bb1b</td>
+      <td>Dataset</td>
+      <td>external</td>
+      <td>Catch data from Norway</td>
+      <td>Catch data records sample from 2019</td>
+      <td>https://box.psnc.pl/f/d90a0e1e0d/?raw=1</td>
+      <td>Catch data from Norway</td>
+      <td>https://box.psnc.pl/f/d90a0e1e0d/?raw=1</td>
+      <td>NaN</td>
+      <td>annefou@geo.uio.no</td>
+      <td>2022-01-23T11:26:45.692570+0000</td>
+      <td>2022-01-23T11:26:45.693196+0000</td>
+      <td>https://box.psnc.pl/f/d90a0e1e0d/?raw=1</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>37598c0b-952e-45d9-8cdf-d306fc98230a</td>
+      <td>Data Cube Collection</td>
+      <td>external</td>
+      <td>EU_CAMS_SURFACE_PM10_G</td>
+      <td>This dataset provides daily air quality analys...</td>
+      <td>https://reliance-das.adamplatform.eu/opensearc...</td>
+      <td>EU_CAMS_SURFACE_PM10_G</td>
+      <td>https://reliance-das.adamplatform.eu/opensearc...</td>
+      <td>NaN</td>
+      <td>annefou@geo.uio.no</td>
+      <td>2022-01-23T11:26:34.948551+0000</td>
+      <td>2022-01-23T11:26:34.949461+0000</td>
+      <td>https://reliance-das.adamplatform.eu/opensearc...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>deba9c23-b217-48db-a38a-6d766751919f</td>
+      <td>Data Cube Product</td>
+      <td>external</td>
+      <td>Index of daily PM10 concentration for Septembe...</td>
+      <td>List of hourly PM10 concentration data for Sep...</td>
+      <td>https://reliance-das.adamplatform.eu/opensearc...</td>
+      <td>Index of daily PM10 concentration for Septembe...</td>
+      <td>https://reliance-das.adamplatform.eu/opensearc...</td>
+      <td>NaN</td>
+      <td>annefou@geo.uio.no</td>
+      <td>2022-01-23T11:26:41.805590+0000</td>
+      <td>2022-01-23T11:26:41.806154+0000</td>
+      <td>https://reliance-das.adamplatform.eu/opensearc...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>8e0adfcf-57d5-4c55-9185-dc7a3b1b7e41</td>
+      <td>Result</td>
+      <td>external</td>
+      <td>Daily PM10 concentration</td>
+      <td>Daily PM10 concentration for 1st September 201...</td>
+      <td>https://reliance-das.adamplatform.eu/wcs?servi...</td>
+      <td>Daily PM10 concentration</td>
+      <td>https://reliance-das.adamplatform.eu/wcs?servi...</td>
+      <td>NaN</td>
+      <td>annefou@geo.uio.no</td>
+      <td>2022-01-23T11:26:39.261026+0000</td>
+      <td>2022-01-23T11:26:39.261828+0000</td>
+      <td>https://reliance-das.adamplatform.eu/wcs?servi...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>d4642d82-a03a-497b-98cf-9339cffcb09a</td>
+      <td>Jupyter Notebook</td>
+      <td>external</td>
+      <td>Jupter Notebook of CAMS European air quality a...</td>
+      <td>Jupyter Notebook for discovering, accessing an...</td>
+      <td>https://zenodo.org/record/5554786#.YYlWo9nMI-Q</td>
+      <td>Jupter Notebook of CAMS European air quality a...</td>
+      <td>https://zenodo.org/record/5554786#.YYlWo9nMI-Q</td>
+      <td>NaN</td>
+      <td>annefou@geo.uio.no</td>
+      <td>2022-01-23T11:26:43.290547+0000</td>
+      <td>2022-01-23T11:26:43.291617+0000</td>
+      <td>https://zenodo.org/record/5554786#.YYlWo9nMI-Q</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>be4c5800-9058-4d43-967c-1b233da92d17</td>
+      <td>Sketch</td>
+      <td>internal</td>
+      <td>Flow to compute monthly map</td>
+      <td>None</td>
+      <td>None</td>
+      <td>Flow to compute monthly map</td>
+      <td>biblio/flow-dcro.png</td>
+      <td>73394.0</td>
+      <td>annefou@geo.uio.no</td>
+      <td>2022-01-23T11:26:29.793829+0000</td>
+      <td>2022-01-23T11:26:29.794852+0000</td>
+      <td>https://api.rohub.org/api/resources/be4c5800-9...</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1462,20 +3093,42 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Resource was successfully loaded with id = be4c5800-9058-4d43-967c-1b233da92d17
+</pre></div>
+</div>
+</div>
 </div>
 </div>
 <div class="section" id="id1">
-<h2>show basic metadata<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<h3>show basic metadata<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_res1</span><span class="o">.</span><span class="n">show_metadata</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;identifier&#39;: &#39;be4c5800-9058-4d43-967c-1b233da92d17&#39;,
+ &#39;type&#39;: &#39;Sketch&#39;,
+ &#39;source&#39;: &#39;internal&#39;,
+ &#39;title&#39;: &#39;Flow to compute monthly map&#39;,
+ &#39;description&#39;: None,
+ &#39;url&#39;: None,
+ &#39;folder&#39;: &#39;f189a6b8-c273-4ba2-bc76-4abbdb0aa36f&#39;,
+ &#39;path&#39;: &#39;biblio/flow-dcro.png&#39;,
+ &#39;size&#39;: 73394,
+ &#39;creator&#39;: &#39;annefou@geo.uio.no&#39;,
+ &#39;created_on&#39;: &#39;2022-01-23T11:26:29.793829+0000&#39;,
+ &#39;modified_on&#39;: &#39;2022-01-23T11:26:29.794852+0000&#39;,
+ &#39;download_url&#39;: &#39;https://api.rohub.org/api/resources/be4c5800-9058-4d43-967c-1b233da92d17/download/&#39;}
+</pre></div>
+</div>
+</div>
 </div>
 </div>
 <div class="section" id="add-modify-metadata">
-<h2>Add/modify metadata<a class="headerlink" href="#add-modify-metadata" title="Permalink to this headline">¶</a></h2>
+<h3>Add/modify metadata<a class="headerlink" href="#add-modify-metadata" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_res1</span><span class="o">.</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;Flow to compute monthly map - updated&quot;</span>
@@ -1485,21 +3138,63 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;title&#39;: &#39;Flow to compute monthly map - updated&#39;,
+ &#39;folder&#39;: &#39;7fe6b63e-2635-47f9-b75f-e93c80a1cee0&#39;,
+ &#39;description&#39;: &#39;This resource has this description&#39;,
+ &#39;type&#39;: &#39;Sketch&#39;}
+</pre></div>
+</div>
+</div>
 </div>
 </div>
 <div class="section" id="modify-content-internal-resource">
-<h2>Modify content (internal resource)<a class="headerlink" href="#modify-content-internal-resource" title="Permalink to this headline">¶</a></h2>
+<h3>Modify content (internal resource)<a class="headerlink" href="#modify-content-internal-resource" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">resi_file_path</span><span class="o">=</span><span class="s2">&quot;/home/jovyan/files/Group 910.png&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">resi_file_path</span><span class="o">=</span><span class="s2">&quot;ro-explained.png&quot;</span>
 <span class="n">my_res1</span><span class="o">.</span><span class="n">update_content</span><span class="p">(</span><span class="n">file_path</span><span class="o">=</span><span class="n">resi_file_path</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;identifier&#39;: &#39;be4c5800-9058-4d43-967c-1b233da92d17&#39;,
+ &#39;shared_link&#39;: &#39;https://w3id.org/ro-id/08d413f9-e434-4d50-a7ee-39b034f40ae0/resources/be4c5800-9058-4d43-967c-1b233da92d17&#39;,
+ &#39;title&#39;: &#39;Flow to compute monthly map - updated&#39;,
+ &#39;folder&#39;: &#39;7fe6b63e-2635-47f9-b75f-e93c80a1cee0&#39;,
+ &#39;ros&#39;: [&#39;08d413f9-e434-4d50-a7ee-39b034f40ae0&#39;],
+ &#39;description&#39;: &#39;This resource has this description&#39;,
+ &#39;url&#39;: None,
+ &#39;name&#39;: &#39;Flow to compute monthly map - updated&#39;,
+ &#39;filename&#39;: &#39;ro-explained.png&#39;,
+ &#39;path&#39;: &#39;metadata/ro-explained.png&#39;,
+ &#39;size&#39;: 48346,
+ &#39;download_url&#39;: &#39;https://api.rohub.org/api/resources/be4c5800-9058-4d43-967c-1b233da92d17/download/&#39;,
+ &#39;type&#39;: &#39;Sketch&#39;,
+ &#39;created&#39;: &#39;2022-01-23T11:26:29.793829+0000&#39;,
+ &#39;creator&#39;: &#39;annefou@geo.uio.no&#39;,
+ &#39;modificator&#39;: &#39;annefou@geo.uio.no&#39;,
+ &#39;modified&#39;: &#39;2022-01-23T11:33:59.827890+0000&#39;,
+ &#39;created_on&#39;: &#39;2022-01-23T11:26:29.793829+0000&#39;,
+ &#39;created_by&#39;: &#39;annefou@geo.uio.no&#39;,
+ &#39;modified_on&#39;: &#39;2022-01-23T11:33:59.827890+0000&#39;,
+ &#39;modified_by&#39;: &#39;annefou@geo.uio.no&#39;,
+ &#39;original_created_on&#39;: None,
+ &#39;original_created_by&#39;: None,
+ &#39;original_creator_name&#39;: None,
+ &#39;authors_credits&#39;: [&#39;annefou@geo.uio.no&#39;],
+ &#39;contributors_credits&#39;: [],
+ &#39;shared&#39;: False,
+ &#39;doi&#39;: None,
+ &#39;read_only&#39;: False,
+ &#39;api_link&#39;: &#39;https://api.rohub.org/api/resources/be4c5800-9058-4d43-967c-1b233da92d17/&#39;}
 </pre></div>
 </div>
 </div>
 </div>
 </div>
 <div class="section" id="modify-content-external-resource">
-<h2>Modify content (external resource)<a class="headerlink" href="#modify-content-external-resource" title="Permalink to this headline">¶</a></h2>
+<h3>Modify content (external resource)<a class="headerlink" href="#modify-content-external-resource" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_res1_ext</span><span class="o">=</span><span class="n">rohub</span><span class="o">.</span><span class="n">resource_load</span><span class="p">(</span><span class="n">identifier</span><span class="o">=</span><span class="n">results</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="s2">&quot;identifier&quot;</span><span class="p">])</span>
@@ -1508,13 +3203,55 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Resource was successfully loaded with id = 8e0adfcf-57d5-4c55-9185-dc7a3b1b7e41
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;identifier&#39;: &#39;8e0adfcf-57d5-4c55-9185-dc7a3b1b7e41&#39;,
+ &#39;shared_link&#39;: &#39;https://w3id.org/ro-id/08d413f9-e434-4d50-a7ee-39b034f40ae0/resources/8e0adfcf-57d5-4c55-9185-dc7a3b1b7e41&#39;,
+ &#39;title&#39;: &#39;Daily PM10 concentration&#39;,
+ &#39;folder&#39;: None,
+ &#39;ros&#39;: [&#39;08d413f9-e434-4d50-a7ee-39b034f40ae0&#39;],
+ &#39;description&#39;: &#39;Daily PM10 concentration for 1st September 2018 over Europe&#39;,
+ &#39;url&#39;: &#39;https://zenodo.org/record/5554786#.YYlWo9nMI-X&#39;,
+ &#39;name&#39;: &#39;Daily PM10 concentration&#39;,
+ &#39;filename&#39;: None,
+ &#39;path&#39;: &#39;https://zenodo.org/record/5554786#.YYlWo9nMI-X&#39;,
+ &#39;size&#39;: None,
+ &#39;download_url&#39;: &#39;https://zenodo.org/record/5554786#.YYlWo9nMI-X&#39;,
+ &#39;type&#39;: &#39;Result&#39;,
+ &#39;created&#39;: &#39;2022-01-23T11:26:39.261026+0000&#39;,
+ &#39;creator&#39;: &#39;annefou@geo.uio.no&#39;,
+ &#39;modificator&#39;: &#39;annefou@geo.uio.no&#39;,
+ &#39;modified&#39;: &#39;2022-01-23T11:34:11.275740+0000&#39;,
+ &#39;created_on&#39;: &#39;2022-01-23T11:26:39.261026+0000&#39;,
+ &#39;created_by&#39;: &#39;annefou@geo.uio.no&#39;,
+ &#39;modified_on&#39;: &#39;2022-01-23T11:34:11.275740+0000&#39;,
+ &#39;modified_by&#39;: &#39;annefou@geo.uio.no&#39;,
+ &#39;original_created_on&#39;: None,
+ &#39;original_created_by&#39;: None,
+ &#39;original_creator_name&#39;: None,
+ &#39;authors_credits&#39;: [&#39;annefou@geo.uio.no&#39;],
+ &#39;contributors_credits&#39;: [],
+ &#39;shared&#39;: False,
+ &#39;doi&#39;: None,
+ &#39;read_only&#39;: False,
+ &#39;api_link&#39;: &#39;https://api.rohub.org/api/resources/8e0adfcf-57d5-4c55-9185-dc7a3b1b7e41/&#39;}
+</pre></div>
+</div>
+</div>
 </div>
 </div>
 <div class="section" id="retrieve-resource">
-<h2>Retrieve resource<a class="headerlink" href="#retrieve-resource" title="Permalink to this headline">¶</a></h2>
+<h3>Retrieve resource<a class="headerlink" href="#retrieve-resource" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file</span><span class="o">=</span><span class="n">my_res1</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="n">resource_filename</span><span class="o">=</span><span class="s2">&quot;myresource1.png&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>File was successfully downloaded.
 </pre></div>
 </div>
 </div>
@@ -1525,6 +3262,9 @@
 <span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="n">file</span><span class="p">)</span> 
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/ROHub-library-prod-demo_88_0.png" src="../../_images/ROHub-library-prod-demo_88_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1547,6 +3287,34 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Resource was successfully loaded with id = 37598c0b-952e-45d9-8cdf-d306fc98230a
+File was successfully downloaded.
+                datasetId          creationDate dataType  epsg keywords  \
+0  EU_CAMS_SURFACE_PM10_G  2021-07-12T02:00:00Z  Float32  4326       []   
+
+                                             license               maxDate  \
+0  {&#39;documentationUrl&#39;: &#39;&#39;, &#39;dataProviderName&#39;: &#39;...  2022-01-21T23:00:00Z   
+
+              maxValue               minDate                minValue  ...  \
+0  [2645.995849609375]  2018-07-12T00:00:00Z  [0.003789698239415884]  ...   
+
+                               endpoint ingestionInfo legend  \
+0  https://reliance-das.adamplatform.eu                   []   
+
+   pathToOriginalData project               services technicalManager  \
+0                          []  [MWCS, ADAM, AdamApi]   govoni@meeo.it   
+
+  _schemaValidity                                            pricing  \
+0            True  {&#39;nativeSource&#39;: {&#39;name&#39;: &#39;nfs&#39;, &#39;cost&#39;: 0.003...   
+
+                                      filtersEnabled  
+0  {&#39;type&#39;: &#39;object&#39;, &#39;title&#39;: &#39;Dataset filters&#39;,...  
+
+[1 rows x 47 columns]
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1558,13 +3326,67 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Resource was successfully loaded with id = deba9c23-b217-48db-a38a-6d766751919f
+File was successfully downloaded.
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>{"type":"FeatureCollection"</th>
+      <th>properties:{"id":"http://reliance-das.adamplatform.eu/opensearch/search?endDate=2018-09-01T23:59:59Z&amp;startDate=2018-09-01T00:00:00Z&amp;datasetId=EU_CAMS_SURFACE_PM10_G&amp;startIndex=0"</th>
+      <th>query:{"request":[{"endDate":"2018-09-01T23:59:59Z"</th>
+      <th>startDate:"2018-09-01T00:00:00Z"</th>
+      <th>datasetId:"EU_CAMS_SURFACE_PM10_G"}]}</th>
+      <th>itemsPerPage:"10"</th>
+      <th>Index:"0"</th>
+      <th>totalResults:24</th>
+      <th>links:[{"first":"http://reliance-das.adamplatform.eu/opensearch/search?endDate=2018-09-01T23:59:59Z&amp;startDate=2018-09-01T00:00:00Z&amp;datasetId=EU_CAMS_SURFACE_PM10_G&amp;maxRecords=10&amp;startIndex=0"}</th>
+      <th>{"next":"http://reliance-das.adamplatform.eu/opensearch/search?endDate=2018-09-01T23:59:59Z&amp;startDate=2018-09-01T00:00:00Z&amp;datasetId=EU_CAMS_SURFACE_PM10_G&amp;maxRecords=10&amp;startIndex=10"}</th>
+      <th>...</th>
+      <th>69.999996999999993363 ].18</th>
+      <th>[ -25.000012000000001677.18</th>
+      <th>69.999996999999993363 ].19</th>
+      <th>[ -25.000012000000001677.19</th>
+      <th>29.999997000000000469 ] ] ] } ].9</th>
+      <th>"type": "GeometryCollection" }.9</th>
+      <th>"insertDate": "2021-07-12T16:38:56Z".5</th>
+      <th>"productPath": "\/reliance\/CAMS\/GTIFF\/2018\/09\/01\/EU_CAMS_SURFACE_PM10_G_20180901090000.tif"</th>
+      <th>"source": "nfs:\/\/192.168.1.80:\/volume1\/VOL100T".9</th>
+      <th>"status": "Online" }]}</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
+<p>0 rows × 212 columns</p>
+</div></div></div>
 </div>
 </div>
 <div class="section" id="assign-doi">
-<h2>Assign DOI<a class="headerlink" href="#assign-doi" title="Permalink to this headline">¶</a></h2>
+<h3>Assign DOI<a class="headerlink" href="#assign-doi" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>uncomment if you want to assign a DOI. Please, bear in mind that DOI should only be assigned for “real” scientific work!</p></li>
+</ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_res1_ext</span><span class="o">.</span><span class="n">assign_doi</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># my_res1_ext.assign_doi()</span>
 </pre></div>
 </div>
 </div>
@@ -1572,9 +3394,9 @@
 </div>
 </div>
 <div class="section" id="utils">
-<h1>Utils<a class="headerlink" href="#utils" title="Permalink to this headline">¶</a></h1>
+<h2>Utils<a class="headerlink" href="#utils" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="remove-ro">
-<h2>remove RO<a class="headerlink" href="#remove-ro" title="Permalink to this headline">¶</a></h2>
+<h3>remove RO<a class="headerlink" href="#remove-ro" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">forked_ro</span><span class="o">.</span><span class="n">delete</span><span class="p">()</span>
@@ -1583,23 +3405,133 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Trying to confirm status of the job. It can take a while...
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;identifier&#39;: &#39;1442c3cc-eae4-4e26-bf56-75e7376320cd&#39;,
+ &#39;created_by&#39;: &#39;annefou@geo.uio.no&#39;,
+ &#39;created_on&#39;: &#39;2022-01-23T11:34:29.734163+0000&#39;,
+ &#39;started_on&#39;: &#39;2022-01-23T11:34:29.778191+0000&#39;,
+ &#39;finished_on&#39;: &#39;2022-01-23T11:34:32.876462+0000&#39;,
+ &#39;operation&#39;: &#39;RO_DELETE&#39;,
+ &#39;status&#39;: &#39;SUCCESS&#39;,
+ &#39;input&#39;: &#39;RO identifier for remove: 21116679-72c9-4751-8db1-82c558dfa879&#39;,
+ &#39;output&#39;: &#39;Task done successfully&#39;,
+ &#39;results&#39;: &#39;21116679-72c9-4751-8db1-82c558dfa879&#39;,
+ &#39;warnings&#39;: None,
+ &#39;execution&#39;: &#39;3.098271&#39;,
+ &#39;api_link&#39;: &#39;https://api.rohub.org/api/jobs/1442c3cc-eae4-4e26-bf56-75e7376320cd/&#39;}
+</pre></div>
+</div>
+</div>
 </div>
 </div>
 <div class="section" id="show-user-id">
-<h2>show user id<a class="headerlink" href="#show-user-id" title="Permalink to this headline">¶</a></h2>
+<h3>show user id<a class="headerlink" href="#show-user-id" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rohub</span><span class="o">.</span><span class="n">show_user_id</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;62277187-0f2e-4320-a6b0-7fe467f1b1c1&#39;
+</pre></div>
+</div>
+</div>
 </div>
 </div>
 <div class="section" id="show-possible-values-for-ro-types-resources-types-templates-etc">
-<h2>show possible values for RO types, Resources types, templates, etc.<a class="headerlink" href="#show-possible-values-for-ro-types-resources-types-templates-etc" title="Permalink to this headline">¶</a></h2>
+<h3>show possible values for RO types, Resources types, templates, etc.<a class="headerlink" href="#show-possible-values-for-ro-types-resources-types-templates-etc" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rohub</span><span class="o">.</span><span class="n">list_valid_research_areas</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Acoustics&#39;,
+ &#39;Aerodynamics&#39;,
+ &#39;Agronomy&#39;,
+ &#39;Analytical chemistry&#39;,
+ &#39;Applied sciences&#39;,
+ &#39;Astronautics&#39;,
+ &#39;Astronomy&#39;,
+ &#39;Atom&#39;,
+ &#39;Biochemistry&#39;,
+ &#39;Biology&#39;,
+ &#39;Biometrics&#39;,
+ &#39;Botany&#39;,
+ &#39;Cartography&#39;,
+ &#39;Chemistry&#39;,
+ &#39;Climatology&#39;,
+ &#39;Cosmology&#39;,
+ &#39;Cultural geography&#39;,
+ &#39;Cybernetics&#39;,
+ &#39;Cytology&#39;,
+ &#39;Earth observation&#39;,
+ &#39;Earth sciences&#39;,
+ &#39;Ecology&#39;,
+ &#39;Economic geography&#39;,
+ &#39;Electrochemistry&#39;,
+ &#39;Electronics&#39;,
+ &#39;Electrotechnology&#39;,
+ &#39;Embryo and foetus&#39;,
+ &#39;Environmental research&#39;,
+ &#39;Fundamental particle&#39;,
+ &#39;Genetics&#39;,
+ &#39;Geochemistry&#39;,
+ &#39;Geographical information system&#39;,
+ &#39;Geography&#39;,
+ &#39;Geology&#39;,
+ &#39;Geomorphology&#39;,
+ &#39;Geophysics&#39;,
+ &#39;Hazard science&#39;,
+ &#39;Histology&#39;,
+ &#39;Historical geography&#39;,
+ &#39;Human geography&#39;,
+ &#39;Hydrogeology&#39;,
+ &#39;Hydrology&#39;,
+ &#39;Industrial chemistry&#39;,
+ &#39;Information science&#39;,
+ &#39;Ionising radiation&#39;,
+ &#39;Laser physics&#39;,
+ &#39;Life sciences&#39;,
+ &#39;Mathematics&#39;,
+ &#39;Medical science&#39;,
+ &#39;Meteorology&#39;,
+ &#39;Metrology&#39;,
+ &#39;Microorganism&#39;,
+ &#39;Mineralogy&#39;,
+ &#39;Neurobiology&#39;,
+ &#39;Nuclear physics&#39;,
+ &#39;Oceanography&#39;,
+ &#39;Optics&#39;,
+ &#39;Parasitology&#39;,
+ &#39;Petrology&#39;,
+ &#39;Pharmacology&#39;,
+ &#39;Pharmacy&#39;,
+ &#39;Photochemistry&#39;,
+ &#39;Photographic industry&#39;,
+ &#39;Physical sciences&#39;,
+ &#39;Plasma physics&#39;,
+ &#39;Political geography&#39;,
+ &#39;Radiobiology&#39;,
+ &#39;Regional geography&#39;,
+ &#39;Sedimentology&#39;,
+ &#39;Seismology&#39;,
+ &#39;Social sciences&#39;,
+ &#39;Soil analysis&#39;,
+ &#39;Soil chemistry&#39;,
+ &#39;Soil science&#39;,
+ &#39;Soil type&#39;,
+ &#39;Space science&#39;,
+ &#39;Spectrometry&#39;,
+ &#39;Stem cell&#39;,
+ &#39;Thermodynamics&#39;,
+ &#39;Volcanology&#39;,
+ &#39;Zoology&#39;]
 </pre></div>
 </div>
 </div>
@@ -1610,10 +3542,27 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Basic Research Object&#39;,
+ &#39;Bibliography-centric Research Object&#39;,
+ &#39;Data-centric Research Object&#39;,
+ &#39;Executable Research Object&#39;,
+ &#39;Process-centric Research Object&#39;,
+ &#39;Service-centric Research Object&#39;,
+ &#39;Software-centric Research Object&#39;,
+ &#39;Workflow-centric Research Object&#39;]
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rohub</span><span class="o">.</span><span class="n">list_valid_publication_services</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;B2SHARE&#39;, &#39;ZENODO&#39;]
 </pre></div>
 </div>
 </div>
@@ -1624,10 +3573,64 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Beanshell Script&#39;,
+ &#39;Bibliographic Resource&#39;,
+ &#39;Command Line Tool&#39;,
+ &#39;Conclusion&#39;,
+ &#39;Dataset&#39;,
+ &#39;Document&#39;,
+ &#39;Example Run&#39;,
+ &#39;File&#39;,
+ &#39;Hypothesis&#39;,
+ &#39;Image&#39;,
+ &#39;Meeting Minutes&#39;,
+ &#39;Paper&#39;,
+ &#39;PROCESS&#39;,
+ &#39;Process Run&#39;,
+ &#39;Prospective Run&#39;,
+ &#39;Python Script&#39;,
+ &#39;REST Service&#39;,
+ &#39;R Script&#39;,
+ &#39;Research Question&#39;,
+ &#39;Result&#39;,
+ &#39;Result Generation Run&#39;,
+ &#39;SOAP Service&#39;,
+ &#39;Script&#39;,
+ &#39;Sketch&#39;,
+ &#39;Web Service&#39;,
+ &#39;Workflow&#39;,
+ &#39;Workflow Definition&#39;,
+ &#39;Workflow Run&#39;,
+ &#39;Data Cube Collection&#39;,
+ &#39;Data Cube Product&#39;,
+ &#39;Audio&#39;,
+ &#39;Computational workflow&#39;,
+ &#39;Course&#39;,
+ &#39;Creative work&#39;,
+ &#39;How to&#39;,
+ &#39;Jupyter Notebook&#39;,
+ &#39;Other&#39;,
+ &#39;Physical object&#39;,
+ &#39;Poster&#39;,
+ &#39;Presentation&#39;,
+ &#39;Publication&#39;,
+ &#39;Research Object&#39;,
+ &#39;Software&#39;,
+ &#39;Software source code&#39;,
+ &#39;Video&#39;]
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rohub</span><span class="o">.</span><span class="n">list_valid_creation_modes</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;MANUAL&#39;, &#39;IMPORTED&#39;, &#39;AUTOMATIC&#39;]
 </pre></div>
 </div>
 </div>
@@ -1638,10 +3641,37 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;PUBLIC&#39;, &#39;PRIVATE&#39;, &#39;OPEN&#39;]
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rohub</span><span class="o">.</span><span class="n">list_custom_licenses</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[{&#39;identifier&#39;: &#39;acme-cc&#39;,
+  &#39;title&#39;: &#39;ACME Inc. Commercial License&#39;,
+  &#39;description&#39;: None,
+  &#39;status&#39;: &#39;active&#39;,
+  &#39;url&#39;: &#39;http://www.acme.org/licence-commercial&#39;,
+  &#39;created&#39;: &#39;2021-12-09T13:54:10.927006Z&#39;,
+  &#39;updated&#39;: None,
+  &#39;creator&#39;: &#39;rpalma@man.poznan.pl&#39;,
+  &#39;api_link&#39;: &#39;https://api.rohub.org/api/custom-licenses/acme-cc/&#39;},
+ {&#39;identifier&#39;: &#39;my-example-license1&#39;,
+  &#39;title&#39;: &#39;My example license&#39;,
+  &#39;description&#39;: &#39;this is an example license&#39;,
+  &#39;status&#39;: &#39;active&#39;,
+  &#39;url&#39;: &#39;http://myexample.org/license&#39;,
+  &#39;created&#39;: &#39;2021-11-08T16:18:29.048012Z&#39;,
+  &#39;updated&#39;: None,
+  &#39;creator&#39;: &#39;rpalma@man.poznan.pl&#39;,
+  &#39;api_link&#39;: &#39;https://api.rohub.org/api/custom-licenses/my-example-license1/&#39;}]
 </pre></div>
 </div>
 </div>
@@ -1652,6 +3682,517 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;0BSD&#39;,
+ &#39;AAL&#39;,
+ &#39;ADSL&#39;,
+ &#39;AFL-1.1&#39;,
+ &#39;AFL-1.2&#39;,
+ &#39;AFL-2.0&#39;,
+ &#39;AFL-2.1&#39;,
+ &#39;AFL-3.0&#39;,
+ &#39;AGPL-1.0&#39;,
+ &#39;AGPL-1.0-only&#39;,
+ &#39;AGPL-1.0-or-later&#39;,
+ &#39;AGPL-3.0&#39;,
+ &#39;AGPL-3.0-only&#39;,
+ &#39;AGPL-3.0-or-later&#39;,
+ &#39;AMDPLPA&#39;,
+ &#39;AML&#39;,
+ &#39;AMPAS&#39;,
+ &#39;ANTLR-PD&#39;,
+ &#39;ANTLR-PD-fallback&#39;,
+ &#39;APAFML&#39;,
+ &#39;APL-1.0&#39;,
+ &#39;APSL-1.0&#39;,
+ &#39;APSL-1.1&#39;,
+ &#39;APSL-1.2&#39;,
+ &#39;APSL-2.0&#39;,
+ &#39;Abstyles&#39;,
+ &#39;Adobe-2006&#39;,
+ &#39;Adobe-Glyph&#39;,
+ &#39;Afmparse&#39;,
+ &#39;Against-DRM&#39;,
+ &#39;Aladdin&#39;,
+ &#39;Apache-1.0&#39;,
+ &#39;Apache-1.1&#39;,
+ &#39;Apache-2.0&#39;,
+ &#39;Artistic-1.0&#39;,
+ &#39;Artistic-1.0-Perl&#39;,
+ &#39;Artistic-1.0-cl8&#39;,
+ &#39;Artistic-2.0&#39;,
+ &#39;BSD-1-Clause&#39;,
+ &#39;BSD-2-Clause&#39;,
+ &#39;BSD-2-Clause-FreeBSD&#39;,
+ &#39;BSD-2-Clause-NetBSD&#39;,
+ &#39;BSD-2-Clause-Patent&#39;,
+ &#39;BSD-2-Clause-Views&#39;,
+ &#39;BSD-3-Clause&#39;,
+ &#39;BSD-3-Clause-Attribution&#39;,
+ &#39;BSD-3-Clause-Clear&#39;,
+ &#39;BSD-3-Clause-LBNL&#39;,
+ &#39;BSD-3-Clause-Modification&#39;,
+ &#39;BSD-3-Clause-No-Military-License&#39;,
+ &#39;BSD-3-Clause-No-Nuclear-License&#39;,
+ &#39;BSD-3-Clause-No-Nuclear-License-2014&#39;,
+ &#39;BSD-3-Clause-No-Nuclear-Warranty&#39;,
+ &#39;BSD-3-Clause-Open-MPI&#39;,
+ &#39;BSD-4-Clause&#39;,
+ &#39;BSD-4-Clause-Shortened&#39;,
+ &#39;BSD-4-Clause-UC&#39;,
+ &#39;BSD-Protection&#39;,
+ &#39;BSD-Source-Code&#39;,
+ &#39;BSL-1.0&#39;,
+ &#39;BUSL-1.1&#39;,
+ &#39;Bahyph&#39;,
+ &#39;Barr&#39;,
+ &#39;Beerware&#39;,
+ &#39;BitTorrent-1.0&#39;,
+ &#39;BitTorrent-1.1&#39;,
+ &#39;BlueOak-1.0.0&#39;,
+ &#39;Borceux&#39;,
+ &#39;C-UDA-1.0&#39;,
+ &#39;CAL-1.0&#39;,
+ &#39;CAL-1.0-Combined-Work-Exception&#39;,
+ &#39;CATOSL-1.1&#39;,
+ &#39;CC-BY-1.0&#39;,
+ &#39;CC-BY-2.0&#39;,
+ &#39;CC-BY-2.5&#39;,
+ &#39;CC-BY-2.5-AU&#39;,
+ &#39;CC-BY-3.0&#39;,
+ &#39;CC-BY-3.0-AT&#39;,
+ &#39;CC-BY-3.0-DE&#39;,
+ &#39;CC-BY-3.0-NL&#39;,
+ &#39;CC-BY-3.0-US&#39;,
+ &#39;CC-BY-4.0&#39;,
+ &#39;CC-BY-NC-1.0&#39;,
+ &#39;CC-BY-NC-2.0&#39;,
+ &#39;CC-BY-NC-2.5&#39;,
+ &#39;CC-BY-NC-3.0&#39;,
+ &#39;CC-BY-NC-3.0-DE&#39;,
+ &#39;CC-BY-NC-4.0&#39;,
+ &#39;CC-BY-NC-ND-1.0&#39;,
+ &#39;CC-BY-NC-ND-2.0&#39;,
+ &#39;CC-BY-NC-ND-2.5&#39;,
+ &#39;CC-BY-NC-ND-3.0&#39;,
+ &#39;CC-BY-NC-ND-3.0-DE&#39;,
+ &#39;CC-BY-NC-ND-3.0-IGO&#39;,
+ &#39;CC-BY-NC-ND-4.0&#39;,
+ &#39;CC-BY-NC-SA-1.0&#39;,
+ &#39;CC-BY-NC-SA-2.0&#39;,
+ &#39;CC-BY-NC-SA-2.0-FR&#39;,
+ &#39;CC-BY-NC-SA-2.0-UK&#39;,
+ &#39;CC-BY-NC-SA-2.5&#39;,
+ &#39;CC-BY-NC-SA-3.0&#39;,
+ &#39;CC-BY-NC-SA-3.0-DE&#39;,
+ &#39;CC-BY-NC-SA-3.0-IGO&#39;,
+ &#39;CC-BY-NC-SA-4.0&#39;,
+ &#39;CC-BY-ND-1.0&#39;,
+ &#39;CC-BY-ND-2.0&#39;,
+ &#39;CC-BY-ND-2.5&#39;,
+ &#39;CC-BY-ND-3.0&#39;,
+ &#39;CC-BY-ND-3.0-DE&#39;,
+ &#39;CC-BY-ND-4.0&#39;,
+ &#39;CC-BY-SA-1.0&#39;,
+ &#39;CC-BY-SA-2.0&#39;,
+ &#39;CC-BY-SA-2.0-UK&#39;,
+ &#39;CC-BY-SA-2.1-JP&#39;,
+ &#39;CC-BY-SA-2.5&#39;,
+ &#39;CC-BY-SA-3.0&#39;,
+ &#39;CC-BY-SA-3.0-AT&#39;,
+ &#39;CC-BY-SA-3.0-DE&#39;,
+ &#39;CC-BY-SA-4.0&#39;,
+ &#39;CC-PDDC&#39;,
+ &#39;CC0-1.0&#39;,
+ &#39;CDDL-1.0&#39;,
+ &#39;CDDL-1.1&#39;,
+ &#39;CDL-1.0&#39;,
+ &#39;CDLA-Permissive-1.0&#39;,
+ &#39;CDLA-Permissive-2.0&#39;,
+ &#39;CDLA-Sharing-1.0&#39;,
+ &#39;CECILL-1.0&#39;,
+ &#39;CECILL-1.1&#39;,
+ &#39;CECILL-2.0&#39;,
+ &#39;CECILL-2.1&#39;,
+ &#39;CECILL-B&#39;,
+ &#39;CECILL-C&#39;,
+ &#39;CERN-OHL-1.1&#39;,
+ &#39;CERN-OHL-1.2&#39;,
+ &#39;CERN-OHL-P-2.0&#39;,
+ &#39;CERN-OHL-S-2.0&#39;,
+ &#39;CERN-OHL-W-2.0&#39;,
+ &#39;CNRI-Jython&#39;,
+ &#39;CNRI-Python&#39;,
+ &#39;CNRI-Python-GPL-Compatible&#39;,
+ &#39;CPAL-1.0&#39;,
+ &#39;CPL-1.0&#39;,
+ &#39;CPOL-1.02&#39;,
+ &#39;CUA-OPL-1.0&#39;,
+ &#39;Caldera&#39;,
+ &#39;ClArtistic&#39;,
+ &#39;Condor-1.1&#39;,
+ &#39;Crossword&#39;,
+ &#39;CrystalStacker&#39;,
+ &#39;Cube&#39;,
+ &#39;D-FSL-1.0&#39;,
+ &#39;DOC&#39;,
+ &#39;DRL-1.0&#39;,
+ &#39;DSDP&#39;,
+ &#39;DSL&#39;,
+ &#39;Dotseqn&#39;,
+ &#39;ECL-1.0&#39;,
+ &#39;ECL-2.0&#39;,
+ &#39;EFL-1.0&#39;,
+ &#39;EFL-2.0&#39;,
+ &#39;EPICS&#39;,
+ &#39;EPL-1.0&#39;,
+ &#39;EPL-2.0&#39;,
+ &#39;EUDatagrid&#39;,
+ &#39;EUPL-1.0&#39;,
+ &#39;EUPL-1.1&#39;,
+ &#39;EUPL-1.2&#39;,
+ &#39;Entessa&#39;,
+ &#39;ErlPL-1.1&#39;,
+ &#39;Eurosym&#39;,
+ &#39;FAL-1.3&#39;,
+ &#39;FSFAP&#39;,
+ &#39;FSFUL&#39;,
+ &#39;FSFULLR&#39;,
+ &#39;FTL&#39;,
+ &#39;Fair&#39;,
+ &#39;Frameworx-1.0&#39;,
+ &#39;FreeBSD-DOC&#39;,
+ &#39;FreeImage&#39;,
+ &#39;GD&#39;,
+ &#39;GFDL-1.1&#39;,
+ &#39;GFDL-1.1-invariants-only&#39;,
+ &#39;GFDL-1.1-invariants-or-later&#39;,
+ &#39;GFDL-1.1-no-invariants-only&#39;,
+ &#39;GFDL-1.1-no-invariants-or-later&#39;,
+ &#39;GFDL-1.1-only&#39;,
+ &#39;GFDL-1.1-or-later&#39;,
+ &#39;GFDL-1.2&#39;,
+ &#39;GFDL-1.2-invariants-only&#39;,
+ &#39;GFDL-1.2-invariants-or-later&#39;,
+ &#39;GFDL-1.2-no-invariants-only&#39;,
+ &#39;GFDL-1.2-no-invariants-or-later&#39;,
+ &#39;GFDL-1.2-only&#39;,
+ &#39;GFDL-1.2-or-later&#39;,
+ &#39;GFDL-1.3&#39;,
+ &#39;GFDL-1.3-invariants-only&#39;,
+ &#39;GFDL-1.3-invariants-or-later&#39;,
+ &#39;GFDL-1.3-no-cover-texts-no-invariant-sections&#39;,
+ &#39;GFDL-1.3-no-invariants-only&#39;,
+ &#39;GFDL-1.3-no-invariants-or-later&#39;,
+ &#39;GFDL-1.3-only&#39;,
+ &#39;GFDL-1.3-or-later&#39;,
+ &#39;GL2PS&#39;,
+ &#39;GLWTPL&#39;,
+ &#39;GPL-1.0&#39;,
+ &#39;GPL-1.0+&#39;,
+ &#39;GPL-1.0-only&#39;,
+ &#39;GPL-1.0-or-later&#39;,
+ &#39;GPL-2.0&#39;,
+ &#39;GPL-2.0+&#39;,
+ &#39;GPL-2.0-only&#39;,
+ &#39;GPL-2.0-or-later&#39;,
+ &#39;GPL-2.0-with-GCC-exception&#39;,
+ &#39;GPL-2.0-with-autoconf-exception&#39;,
+ &#39;GPL-2.0-with-bison-exception&#39;,
+ &#39;GPL-2.0-with-classpath-exception&#39;,
+ &#39;GPL-2.0-with-font-exception&#39;,
+ &#39;GPL-3.0&#39;,
+ &#39;GPL-3.0+&#39;,
+ &#39;GPL-3.0-only&#39;,
+ &#39;GPL-3.0-or-later&#39;,
+ &#39;GPL-3.0-with-GCC-exception&#39;,
+ &#39;GPL-3.0-with-autoconf-exception&#39;,
+ &#39;Giftware&#39;,
+ &#39;Glide&#39;,
+ &#39;Glulxe&#39;,
+ &#39;HPND&#39;,
+ &#39;HPND-sell-variant&#39;,
+ &#39;HTMLTIDY&#39;,
+ &#39;HaskellReport&#39;,
+ &#39;Hippocratic-2.1&#39;,
+ &#39;IBM-pibs&#39;,
+ &#39;ICU&#39;,
+ &#39;IJG&#39;,
+ &#39;IPA&#39;,
+ &#39;IPL-1.0&#39;,
+ &#39;ISC&#39;,
+ &#39;ImageMagick&#39;,
+ &#39;Imlib2&#39;,
+ &#39;Info-ZIP&#39;,
+ &#39;Intel&#39;,
+ &#39;Intel-ACPI&#39;,
+ &#39;Interbase-1.0&#39;,
+ &#39;JPNIC&#39;,
+ &#39;JSON&#39;,
+ &#39;JasPer-2.0&#39;,
+ &#39;LAL-1.2&#39;,
+ &#39;LAL-1.3&#39;,
+ &#39;LGPL-2.0&#39;,
+ &#39;LGPL-2.0+&#39;,
+ &#39;LGPL-2.0-only&#39;,
+ &#39;LGPL-2.0-or-later&#39;,
+ &#39;LGPL-2.1&#39;,
+ &#39;LGPL-2.1+&#39;,
+ &#39;LGPL-2.1-only&#39;,
+ &#39;LGPL-2.1-or-later&#39;,
+ &#39;LGPL-3.0&#39;,
+ &#39;LGPL-3.0+&#39;,
+ &#39;LGPL-3.0-only&#39;,
+ &#39;LGPL-3.0-or-later&#39;,
+ &#39;LGPLLR&#39;,
+ &#39;LO-FR-2.0&#39;,
+ &#39;LPL-1.0&#39;,
+ &#39;LPL-1.02&#39;,
+ &#39;LPPL-1.0&#39;,
+ &#39;LPPL-1.1&#39;,
+ &#39;LPPL-1.2&#39;,
+ &#39;LPPL-1.3a&#39;,
+ &#39;LPPL-1.3c&#39;,
+ &#39;Latex2e&#39;,
+ &#39;Leptonica&#39;,
+ &#39;LiLiQ-P-1.1&#39;,
+ &#39;LiLiQ-R-1.1&#39;,
+ &#39;LiLiQ-Rplus-1.1&#39;,
+ &#39;Libpng&#39;,
+ &#39;Linux-OpenIB&#39;,
+ &#39;MIT&#39;,
+ &#39;MIT-0&#39;,
+ &#39;MIT-CMU&#39;,
+ &#39;MIT-Modern-Variant&#39;,
+ &#39;MIT-advertising&#39;,
+ &#39;MIT-enna&#39;,
+ &#39;MIT-feh&#39;,
+ &#39;MIT-open-group&#39;,
+ &#39;MITNFA&#39;,
+ &#39;MPL-1.0&#39;,
+ &#39;MPL-1.1&#39;,
+ &#39;MPL-2.0&#39;,
+ &#39;MPL-2.0-no-copyleft-exception&#39;,
+ &#39;MS-PL&#39;,
+ &#39;MS-RL&#39;,
+ &#39;MTLL&#39;,
+ &#39;MakeIndex&#39;,
+ &#39;MirOS&#39;,
+ &#39;Motosoto&#39;,
+ &#39;MulanPSL-1.0&#39;,
+ &#39;MulanPSL-2.0&#39;,
+ &#39;Multics&#39;,
+ &#39;Mup&#39;,
+ &#39;NAIST-2003&#39;,
+ &#39;NASA-1.3&#39;,
+ &#39;NBPL-1.0&#39;,
+ &#39;NCGL-UK-2.0&#39;,
+ &#39;NCSA&#39;,
+ &#39;NGPL&#39;,
+ &#39;NIST-PD&#39;,
+ &#39;NIST-PD-fallback&#39;,
+ &#39;NLOD-1.0&#39;,
+ &#39;NLOD-2.0&#39;,
+ &#39;NLPL&#39;,
+ &#39;NOSL&#39;,
+ &#39;NPL-1.0&#39;,
+ &#39;NPL-1.1&#39;,
+ &#39;NPOSL-3.0&#39;,
+ &#39;NRL&#39;,
+ &#39;NTP&#39;,
+ &#39;NTP-0&#39;,
+ &#39;Naumen&#39;,
+ &#39;Net-SNMP&#39;,
+ &#39;NetCDF&#39;,
+ &#39;Newsletr&#39;,
+ &#39;Nokia&#39;,
+ &#39;Noweb&#39;,
+ &#39;Nunit&#39;,
+ &#39;O-UDA-1.0&#39;,
+ &#39;OCCT-PL&#39;,
+ &#39;OCLC-2.0&#39;,
+ &#39;ODC-By-1.0&#39;,
+ &#39;ODC-PDDL-1.0&#39;,
+ &#39;ODbL-1.0&#39;,
+ &#39;OFL-1.0&#39;,
+ &#39;OFL-1.0-RFN&#39;,
+ &#39;OFL-1.0-no-RFN&#39;,
+ &#39;OFL-1.1&#39;,
+ &#39;OFL-1.1-RFN&#39;,
+ &#39;OFL-1.1-no-RFN&#39;,
+ &#39;OGC-1.0&#39;,
+ &#39;OGDL-Taiwan-1.0&#39;,
+ &#39;OGL-Canada-2.0&#39;,
+ &#39;OGL-UK-1.0&#39;,
+ &#39;OGL-UK-2.0&#39;,
+ &#39;OGL-UK-3.0&#39;,
+ &#39;OGTSL&#39;,
+ &#39;OLDAP-1.1&#39;,
+ &#39;OLDAP-1.2&#39;,
+ &#39;OLDAP-1.3&#39;,
+ &#39;OLDAP-1.4&#39;,
+ &#39;OLDAP-2.0&#39;,
+ &#39;OLDAP-2.0.1&#39;,
+ &#39;OLDAP-2.1&#39;,
+ &#39;OLDAP-2.2&#39;,
+ &#39;OLDAP-2.2.1&#39;,
+ &#39;OLDAP-2.2.2&#39;,
+ &#39;OLDAP-2.3&#39;,
+ &#39;OLDAP-2.4&#39;,
+ &#39;OLDAP-2.5&#39;,
+ &#39;OLDAP-2.6&#39;,
+ &#39;OLDAP-2.7&#39;,
+ &#39;OLDAP-2.8&#39;,
+ &#39;OML&#39;,
+ &#39;OPL-1.0&#39;,
+ &#39;OPUBL-1.0&#39;,
+ &#39;OSET-PL-2.1&#39;,
+ &#39;OSL-1.0&#39;,
+ &#39;OSL-1.1&#39;,
+ &#39;OSL-2.0&#39;,
+ &#39;OSL-2.1&#39;,
+ &#39;OSL-3.0&#39;,
+ &#39;OpenSSL&#39;,
+ &#39;PDDL-1.0&#39;,
+ &#39;PHP-3.0&#39;,
+ &#39;PHP-3.01&#39;,
+ &#39;PSF-2.0&#39;,
+ &#39;Parity-6.0.0&#39;,
+ &#39;Parity-7.0.0&#39;,
+ &#39;Plexus&#39;,
+ &#39;PolyForm-Noncommercial-1.0.0&#39;,
+ &#39;PolyForm-Small-Business-1.0.0&#39;,
+ &#39;PostgreSQL&#39;,
+ &#39;Python-2.0&#39;,
+ &#39;QPL-1.0&#39;,
+ &#39;Qhull&#39;,
+ &#39;RHeCos-1.1&#39;,
+ &#39;RPL-1.1&#39;,
+ &#39;RPL-1.5&#39;,
+ &#39;RPSL-1.0&#39;,
+ &#39;RSA-MD&#39;,
+ &#39;RSCPL&#39;,
+ &#39;Rdisc&#39;,
+ &#39;Ruby&#39;,
+ &#39;SAX-PD&#39;,
+ &#39;SCEA&#39;,
+ &#39;SGI-B-1.0&#39;,
+ &#39;SGI-B-1.1&#39;,
+ &#39;SGI-B-2.0&#39;,
+ &#39;SHL-0.5&#39;,
+ &#39;SHL-0.51&#39;,
+ &#39;SISSL&#39;,
+ &#39;SISSL-1.2&#39;,
+ &#39;SMLNJ&#39;,
+ &#39;SMPPL&#39;,
+ &#39;SNIA&#39;,
+ &#39;SPL-1.0&#39;,
+ &#39;SSH-OpenSSH&#39;,
+ &#39;SSH-short&#39;,
+ &#39;SSPL-1.0&#39;,
+ &#39;SWL&#39;,
+ &#39;Saxpath&#39;,
+ &#39;Sendmail&#39;,
+ &#39;Sendmail-8.23&#39;,
+ &#39;SimPL-2.0&#39;,
+ &#39;Sleepycat&#39;,
+ &#39;Spencer-86&#39;,
+ &#39;Spencer-94&#39;,
+ &#39;Spencer-99&#39;,
+ &#39;StandardML-NJ&#39;,
+ &#39;SugarCRM-1.1.3&#39;,
+ &#39;TAPR-OHL-1.0&#39;,
+ &#39;TCL&#39;,
+ &#39;TCP-wrappers&#39;,
+ &#39;TMate&#39;,
+ &#39;TORQUE-1.1&#39;,
+ &#39;TOSL&#39;,
+ &#39;TU-Berlin-1.0&#39;,
+ &#39;TU-Berlin-2.0&#39;,
+ &#39;UCL-1.0&#39;,
+ &#39;UPL-1.0&#39;,
+ &#39;Unicode-DFS-2015&#39;,
+ &#39;Unicode-DFS-2016&#39;,
+ &#39;Unicode-TOU&#39;,
+ &#39;Unlicense&#39;,
+ &#39;VOSTROM&#39;,
+ &#39;VSL-1.0&#39;,
+ &#39;Vim&#39;,
+ &#39;W3C&#39;,
+ &#39;W3C-19980720&#39;,
+ &#39;W3C-20150513&#39;,
+ &#39;WTFPL&#39;,
+ &#39;Watcom-1.0&#39;,
+ &#39;Wsuipa&#39;,
+ &#39;X11&#39;,
+ &#39;XFree86-1.1&#39;,
+ &#39;XSkat&#39;,
+ &#39;Xerox&#39;,
+ &#39;Xnet&#39;,
+ &#39;YPL-1.0&#39;,
+ &#39;YPL-1.1&#39;,
+ &#39;ZPL-1.1&#39;,
+ &#39;ZPL-2.0&#39;,
+ &#39;ZPL-2.1&#39;,
+ &#39;Zed&#39;,
+ &#39;Zend-2.0&#39;,
+ &#39;Zimbra-1.3&#39;,
+ &#39;Zimbra-1.4&#39;,
+ &#39;Zlib&#39;,
+ &#39;acme-cc&#39;,
+ &#39;blessing&#39;,
+ &#39;bsd-license&#39;,
+ &#39;bzip2-1.0.5&#39;,
+ &#39;bzip2-1.0.6&#39;,
+ &#39;canada-crown&#39;,
+ &#39;cc-nc&#39;,
+ &#39;copyleft-next-0.3.0&#39;,
+ &#39;copyleft-next-0.3.1&#39;,
+ &#39;curl&#39;,
+ &#39;diffmark&#39;,
+ &#39;dli-model-use&#39;,
+ &#39;dvipdfm&#39;,
+ &#39;eCos-2.0&#39;,
+ &#39;eGenix&#39;,
+ &#39;etalab-2.0&#39;,
+ &#39;eurofound&#39;,
+ &#39;gSOAP-1.3b&#39;,
+ &#39;geo-no-fee-unrestricted&#39;,
+ &#39;geogratis&#39;,
+ &#39;gnuplot&#39;,
+ &#39;hesa-withrights&#39;,
+ &#39;iMatix&#39;,
+ &#39;jabber-osl&#39;,
+ &#39;libpng-2.0&#39;,
+ &#39;libselinux-1.0&#39;,
+ &#39;libtiff&#39;,
+ &#39;localauth-withrights&#39;,
+ &#39;lucent-plan9&#39;,
+ &#39;met-office-cp&#39;,
+ &#39;mitre&#39;,
+ &#39;mpich2&#39;,
+ &#39;my-example-license1&#39;,
+ &#39;notspecified&#39;,
+ &#39;other-at&#39;,
+ &#39;other-closed&#39;,
+ &#39;other-nc&#39;,
+ &#39;other-open&#39;,
+ &#39;other-pd&#39;,
+ &#39;psfrag&#39;,
+ &#39;psutils&#39;,
+ &#39;ukclickusepsi&#39;,
+ &#39;ukcrown&#39;,
+ &#39;ukcrown-withrights&#39;,
+ &#39;ukpsi&#39;,
+ &#39;user-jsim&#39;,
+ &#39;wxWindows&#39;,
+ &#39;xinetd&#39;,
+ &#39;xpp&#39;,
+ &#39;zenodo-freetoread-1.0&#39;,
+ &#39;zlib-acknowledgement&#39;]
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1659,38 +4200,22 @@
 </pre></div>
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="create-external-user">
-<h2>create external user<a class="headerlink" href="#create-external-user" title="Permalink to this headline">¶</a></h2>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rohub</span><span class="o">.</span><span class="n">external_user_add</span><span class="p">(</span><span class="n">user_id</span><span class="o">=</span><span class="s2">&quot;https://orcid.org/0000-0003-3784-6651&quot;</span><span class="p">,</span> 
-                        <span class="n">display_name</span><span class="o">=</span><span class="s2">&quot;Nieves Pepito&quot;</span><span class="p">,</span> 
-                        <span class="n">email</span><span class="o">=</span><span class="s2">&quot;npepito@hotmail.com&quot;</span><span class="p">,</span>
-                        <span class="n">orcid_id</span><span class="o">=</span><span class="s2">&quot;0000-0003-3784-6651&quot;</span><span class="p">,</span>
-                        <span class="n">affiliation</span><span class="o">=</span><span class="s2">&quot;UNO-Recoletos&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="section" id="create-organization">
-<h2>create organization<a class="headerlink" href="#create-organization" title="Permalink to this headline">¶</a></h2>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rohub</span><span class="o">.</span><span class="n">organization_add</span><span class="p">(</span><span class="n">organization_id</span><span class="o">=</span><span class="s2">&quot;https://ror.org/025cj6e44&quot;</span><span class="p">,</span>
-                       <span class="n">display_name</span><span class="o">=</span><span class="s2">&quot;Poznan Supercomputing and Networking Center&quot;</span><span class="p">,</span>
-                       <span class="n">email</span><span class="o">=</span><span class="s2">&quot;office@man.poznan.pl&quot;</span><span class="p">,</span>
-                       <span class="n">ror_identifier</span><span class="o">=</span><span class="s2">&quot;025cj6e44&quot;</span><span class="p">,</span>
-                       <span class="n">organization_url</span><span class="o">=</span><span class="s2">&quot;https://www.psnc.pl/&quot;</span><span class="p">)</span>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;Basic Research Object&#39;: None,
+ &#39;Bibliography-centric Research Object&#39;: [&#39;Bibliography Centric Research Object folders structure&#39;],
+ &#39;Data-centric Research Object&#39;: [&#39;Data Centric Research Object folders structure&#39;],
+ &#39;Executable Research Object&#39;: [&#39;Executable Research Object folders structure&#39;],
+ &#39;Process-centric Research Object&#39;: None,
+ &#39;Service-centric Research Object&#39;: None,
+ &#39;Software-centric Research Object&#39;: None,
+ &#39;Workflow-centric Research Object&#39;: [&#39;Workflow Centric Research Object folders structure&#39;]}
 </pre></div>
 </div>
 </div>
 </div>
 </div>
 <div class="section" id="load-full-metadata">
-<h2>load full metadata<a class="headerlink" href="#load-full-metadata" title="Permalink to this headline">¶</a></h2>
+<h3>load full metadata<a class="headerlink" href="#load-full-metadata" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ro</span><span class="o">.</span><span class="n">load_full_metadata</span><span class="p">()</span>
@@ -1704,24 +4229,113 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;identifier&#39;: &#39;08d413f9-e434-4d50-a7ee-39b034f40ae0&#39;,
+ &#39;shared_link&#39;: &#39;https://w3id.org/ro-id/08d413f9-e434-4d50-a7ee-39b034f40ae0&#39;,
+ &#39;title&#39;: &#39;8th December - Copernicus Atmosphere Monitoring Service Data Cube Research Object&#39;,
+ &#39;description&#39;: &#39;This Research Object demonstrate how to compute monthly map of PM10 over your country - modified&#39;,
+ &#39;parent_ro&#39;: None,
+ &#39;type&#39;: &#39;Data-centric Research Object&#39;,
+ &#39;template&#39;: &#39;Data Centric Research Object folders structure&#39;,
+ &#39;created&#39;: &#39;2022-01-23T11:25:52.956418Z&#39;,
+ &#39;creator&#39;: &#39;annefou@geo.uio.no&#39;,
+ &#39;modificator&#39;: &#39;annefou@geo.uio.no&#39;,
+ &#39;modified&#39;: &#39;2022-01-23T11:34:11.800417Z&#39;,
+ &#39;importer&#39;: None,
+ &#39;imported&#39;: None,
+ &#39;snapshotted&#39;: None,
+ &#39;snapshooter&#39;: None,
+ &#39;forked&#39;: None,
+ &#39;forker&#39;: None,
+ &#39;archived&#39;: None,
+ &#39;archiver&#39;: None,
+ &#39;created_on&#39;: &#39;2022-01-23T11:25:52.956418+0000&#39;,
+ &#39;created_by&#39;: &#39;annefou@geo.uio.no&#39;,
+ &#39;modified_on&#39;: &#39;2022-01-23T11:31:31.590675+0000&#39;,
+ &#39;modified_by&#39;: &#39;annefou@geo.uio.no&#39;,
+ &#39;original_created_on&#39;: None,
+ &#39;original_created_by&#39;: None,
+ &#39;original_creator_name&#39;: None,
+ &#39;authors_credits&#39;: [&#39;annefou@geo.uio.no&#39;,
+  &#39;https://orcid.org/0000-0003-3784-6651&#39;],
+ &#39;contributors_credits&#39;: [&#39;https://orcid.org/0000-0002-8316-3192&#39;],
+ &#39;status&#39;: &#39;LIVE&#39;,
+ &#39;access_mode&#39;: &#39;PUBLIC&#39;,
+ &#39;owner&#39;: &#39;annefou@geo.uio.no&#39;,
+ &#39;editors&#39;: [&#39;annefou@geo.uio.no&#39;, &#39;dario.stelitano@ingv.it&#39;],
+ &#39;readers&#39;: [],
+ &#39;number_of_ratings&#39;: 0,
+ &#39;rating&#39;: &#39;0.00&#39;,
+ &#39;number_of_likes&#39;: 0,
+ &#39;number_of_dislikes&#39;: 0,
+ &#39;quality&#39;: 0,
+ &#39;quality_calculated_on&#39;: None,
+ &#39;number_of_resources&#39;: 6,
+ &#39;number_of_folders&#39;: 4,
+ &#39;number_of_annotations&#39;: 31,
+ &#39;number_of_all_aggregates&#39;: 41,
+ &#39;number_of_comments&#39;: 0,
+ &#39;number_of_snapshots&#39;: 0,
+ &#39;number_of_forks&#39;: 0,
+ &#39;number_of_archives&#39;: 0,
+ &#39;number_of_events&#39;: 48,
+ &#39;number_of_downloads&#39;: 1,
+ &#39;number_of_views&#39;: 1,
+ &#39;research_areas&#39;: [&#39;Earth sciences&#39;],
+ &#39;read_only&#39;: False,
+ &#39;creation_mode&#39;: &#39;MANUAL&#39;,
+ &#39;golden&#39;: False,
+ &#39;doi&#39;: None,
+ &#39;cite_as&#39;: &#39;Fouilloux, Anne, Nieves Pepito, and Pepito Bato. &quot;8th December - Copernicus Atmosphere Monitoring Service Data Cube Research Object.&quot; ROHub. Jan 23 ,2022. https://w3id.org/ro-id/08d413f9-e434-4d50-a7ee-39b034f40ae0.&#39;,
+ &#39;sketch&#39;: [&#39;https://api.rohub.org/api/resources/be4c5800-9058-4d43-967c-1b233da92d17/download/&#39;],
+ &#39;geolocation&#39;: True,
+ &#39;metadata&#39;: {&#39;keywords&#39;: [],
+  &#39;domains&#39;: [],
+  &#39;places&#39;: [],
+  &#39;organizations&#39;: [],
+  &#39;persons&#39;: [],
+  &#39;frequent_expressions&#39;: [],
+  &#39;concepts&#39;: []},
+ &#39;size&#39;: 59015,
+ &#39;user_liked&#39;: False,
+ &#39;user_disliked&#39;: False,
+ &#39;user_rate&#39;: 0,
+ &#39;license&#39;: &#39;0BSD&#39;,
+ &#39;funding&#39;: [],
+ &#39;community&#39;: [],
+ &#39;main_entity&#39;: [],
+ &#39;api_link&#39;: &#39;https://api.rohub.org/api/ros/08d413f9-e434-4d50-a7ee-39b034f40ae0/&#39;}
+</pre></div>
+</div>
+</div>
 </div>
 </div>
 <div class="section" id="rohub-library-version">
-<h2>rohub library version<a class="headerlink" href="#rohub-library-version" title="Permalink to this headline">¶</a></h2>
+<h3>rohub library version<a class="headerlink" href="#rohub-library-version" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rohub</span><span class="o">.</span><span class="n">version</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;You are currently using package v1.0.2.&#39;
+</pre></div>
+</div>
+</div>
 </div>
 </div>
 <div class="section" id="set-evolution-setting">
-<h2>Set evolution setting<a class="headerlink" href="#set-evolution-setting" title="Permalink to this headline">¶</a></h2>
+<h3>Set evolution setting<a class="headerlink" href="#set-evolution-setting" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#default 30</span>
 <span class="n">rohub</span><span class="o">.</span><span class="n">set_retries</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>number of retries is now changed to 50.
 </pre></div>
 </div>
 </div>
@@ -1733,25 +4347,10 @@
 </pre></div>
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="add-annotation-general">
-<h2>add annotation general<a class="headerlink" href="#add-annotation-general" title="Permalink to this headline">¶</a></h2>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ro</span><span class="o">.</span><span class="n">add_annotations</span><span class="p">(</span><span class="n">body_specification_json</span><span class="o">=</span><span class="n">geojson_as_text_point</span><span class="p">)</span>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>sleep_time is now changed to 5.
 </pre></div>
 </div>
-</div>
-</div>
-</div>
-<div class="section" id="remove-annotation">
-<h2>remove annotation<a class="headerlink" href="#remove-annotation" title="Permalink to this headline">¶</a></h2>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">annot_id</span><span class="o">=</span><span class="s2">&quot;e8589553-40de-4e49-b966-204502ce3780&quot;</span>
-<span class="n">ro</span><span class="o">.</span><span class="n">delete_annotation</span><span class="p">(</span><span class="n">annotation_id</span><span class="o">=</span><span class="n">annot_id</span><span class="p">)</span>
-</pre></div>
 </div>
 </div>
 </div>
