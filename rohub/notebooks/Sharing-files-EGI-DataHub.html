@@ -1,0 +1,877 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WORKING WITH EGI DATAHUB &#8212; Showcase Jupyter notebooks series</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="EOSC-Future demo" href="../../science/eosc-future.html" />
+    <link rel="prev" title="Install library if not present" href="ROHub-library-prod-demo.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/reliance-icon.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Showcase Jupyter notebooks series</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../welcome.html">
+   Welcome to RELIANCE showcase series
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  About
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../CONDUCT.html">
+   Code of Conduct
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../LICENSE.html">
+   LICENSE
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  ADAM service jupyter notebooks
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../adam/setup.html">
+   ADAM service
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../adam/notebooks/MOD_AquaCHL_ADAM.html">
+     Using ADAM-API to access MODIS Aqua CHL
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../adam/notebooks/UERRA_ADAM.html">
+     Using ADAM-API to access UERRA regional reanalysis
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  ROHUB service jupyter notebooks
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../setup.html">
+   ROHUB service
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="ROHub-library-prod-demo.html">
+     Install library if not present
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     WORKING WITH EGI DATAHUB
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Scientific showcase series
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../science/eosc-future.html">
+   EOSC-Future demo
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../demo-eosc-future/README.html">
+     Demo for EOSC-Future
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../demo-eosc-future/RELIANCE-Datacube-featuring-EOSC.html">
+     Using CAMS European air quality analysis from Copernicus Atmosphere Monitoring with RELIANCE services
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../demo-eosc-future/RELIANCE_France.html">
+     Using CAMS European air quality analysis from Copernicus Atmosphere Monitoring with RELIANCE services
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../science/intro.html">
+   Notebooks from researchers
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../science/notebooks/CMIP6_hr_1985-2014.html">
+     Example with high-resolution CMIP6 models (~100 km) using Pangeo catalog
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../science/notebooks/ERA5_1985-2014.html">
+     Example ERA5
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../science/notebooks/air_quality_lockdown.html">
+     Impact of the Covid-19 Lockdown on Air quality over Europe
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../science/notebooks/comparisons_with_air_quality_measurements.html">
+     Jupyter notebook comparing CAMS and air quality measurements
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/rohub/notebooks/Sharing-files-EGI-DataHub.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/NordicESMHub/RELIANCE"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/NordicESMHub/RELIANCE/issues/new?title=Issue%20on%20page%20%2Frohub/notebooks/Sharing-files-EGI-DataHub.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/NordicESMHub/RELIANCE/main?urlpath=tree/content/rohub/notebooks/Sharing-files-EGI-DataHub.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#get-egi-access-token">
+   GET EGI access token
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#get-datahub-token">
+   GET DATAHUB_TOKEN
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#list-my-datahub-tokens">
+     LIST MY DATAHUB TOKENS
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#get-token-details">
+     GET TOKEN DETAILS
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#display-all-spaces">
+   DISPLAY ALL SPACES
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#display-reliance-space-details">
+   DISPLAY RELIANCE SPACE DETAILS
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#display-reliance-space-contents">
+   DISPLAY RELIANCE SPACE CONTENTS
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#create-shared-link">
+   CREATE SHARED LINK
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#display-shared-link-details">
+   DISPLAY SHARED LINK DETAILS
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>WORKING WITH EGI DATAHUB</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#get-egi-access-token">
+   GET EGI access token
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#get-datahub-token">
+   GET DATAHUB_TOKEN
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#list-my-datahub-tokens">
+     LIST MY DATAHUB TOKENS
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#get-token-details">
+     GET TOKEN DETAILS
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#display-all-spaces">
+   DISPLAY ALL SPACES
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#display-reliance-space-details">
+   DISPLAY RELIANCE SPACE DETAILS
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#display-reliance-space-contents">
+   DISPLAY RELIANCE SPACE CONTENTS
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#create-shared-link">
+   CREATE SHARED LINK
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#display-shared-link-details">
+   DISPLAY SHARED LINK DETAILS
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="section" id="working-with-egi-datahub">
+<h1>WORKING WITH EGI DATAHUB<a class="headerlink" href="#working-with-egi-datahub" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="get-egi-access-token">
+<h2>GET EGI access token<a class="headerlink" href="#get-egi-access-token" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span><span class="o">,</span> <span class="nn">json</span>
+
+<span class="n">CLIENT_ID</span> <span class="o">=</span> <span class="s2">&quot;f33e824a-078d-497b-b700-25b0df7fc5b7&quot;</span>
+<span class="n">CLIENT_SECRET</span><span class="o">=</span> <span class="s2">&quot;B80vPK0LVbYuvwRj0Aexs8y0rKgk5XHwYRRq3BCr33ejj33385bzDVcPmSTUkqA2QjMiwWKJDTxvOou7yVV8EA&quot;</span>
+<span class="n">REFRESH_TOKEN</span><span class="o">=</span> <span class="s2">&quot;eyJhbGciOiJub25lIn0.eyJleHAiOjE2NzY1ODM2MTEsImp0aSI6IjFlZGFiOWYwLWJjMDktNDM5Mi05YWRkLTBiN2EwNDk3YmIyMSJ9.&quot;</span>
+<span class="c1"># Retrieving an OIDC token from Check-in</span>
+
+<span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s1">&#39;client_id&#39;</span><span class="p">:</span> <span class="n">CLIENT_ID</span><span class="p">,</span>
+  <span class="s1">&#39;client_secret&#39;</span><span class="p">:</span> <span class="n">CLIENT_SECRET</span><span class="p">,</span>
+  <span class="s1">&#39;refresh_token&#39;</span><span class="p">:</span> <span class="n">REFRESH_TOKEN</span><span class="p">,</span>
+  <span class="s1">&#39;scope&#39;</span><span class="p">:</span> <span class="s1">&#39;openid email profile&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;grant_type&#39;</span><span class="p">:</span> <span class="s1">&#39;refresh_token&#39;</span>
+<span class="p">}</span>
+
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s1">&#39;https://aai.egi.eu/oidc/token&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span> <span class="n">auth</span><span class="o">=</span><span class="p">(</span><span class="n">CLIENT_ID</span><span class="p">,</span> <span class="n">CLIENT_SECRET</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">(),</span> <span class="n">indent</span><span class="o">=</span><span class="mi">2</span><span class="p">))</span>
+<span class="n">rpalmaEGItoken</span><span class="o">=</span><span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s1">&#39;access_token&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{
+  &quot;access_token&quot;: &quot;eyJraWQiOiJvaWRjIiwiYWxnIjoiUlMyNTYifQ.eyJzdWIiOiI0NDJmOGI0ZGRiYzY0NjM0NGIwMzNmODFkNTM5NzUwMjFjZWZjYWUxNjEwMmNlMzM3ZGFlNmNiN2I0MGNlODg5QGVnaS5ldSIsImF6cCI6ImYzM2U4MjRhLTA3OGQtNDk3Yi1iNzAwLTI1YjBkZjdmYzViNyIsImlzcyI6Imh0dHBzOlwvXC9hYWkuZWdpLmV1XC9vaWRjXC8iLCJleHAiOjE2NDI1MTYwNzcsImlhdCI6MTY0MjUxMjQ3NywianRpIjoiOGNhNzAyNDgtMmM3MS00MThjLWJhOTUtYTg3MzQ3ODhjZGU4In0.B3p-zp8L-hxcVDoGco-kz8iEuwJtRYNW-aaI26YZYg382kaSU261R_Hy_GZ7x9KuMzx3fqxHMWu-z9sd-_mlE1WNTUZlq0i8zxXmxSeN009w4Usi6mXLAdsoNez8texTiQmeQrtk4rTfw9xi7tkj1QM7rIxSQiD_fYZKCCpEpe3TAm19zIuxZTqou9cP5u5vZ1piANwe6vzM8z6noMcutrUNtClGMvO6i-FsC3UpT1ngkkkhn_dagw1hCS1nDGQFuYju05cLRpHZVL9KQotGFZgySdzY1ShMJ-Iy8R24RFsd83bScxQFu22Vl1nHwiC_Bt_Dn9vpQ5P3_Hy7PpzaWg&quot;,
+  &quot;token_type&quot;: &quot;Bearer&quot;,
+  &quot;refresh_token&quot;: &quot;eyJhbGciOiJub25lIn0.eyJleHAiOjE2NzY1ODM2MTEsImp0aSI6IjFlZGFiOWYwLWJjMDktNDM5Mi05YWRkLTBiN2EwNDk3YmIyMSJ9.&quot;,
+  &quot;expires_in&quot;: 3599,
+  &quot;scope&quot;: &quot;openid profile email&quot;,
+  &quot;id_token&quot;: &quot;eyJraWQiOiJvaWRjIiwiYWxnIjoiUlMyNTYifQ.eyJzdWIiOiI0NDJmOGI0ZGRiYzY0NjM0NGIwMzNmODFkNTM5NzUwMjFjZWZjYWUxNjEwMmNlMzM3ZGFlNmNiN2I0MGNlODg5QGVnaS5ldSIsImF1ZCI6ImYzM2U4MjRhLTA3OGQtNDk3Yi1iNzAwLTI1YjBkZjdmYzViNyIsImtpZCI6Im9pZGMiLCJpc3MiOiJodHRwczpcL1wvYWFpLmVnaS5ldVwvb2lkY1wvIiwiZXhwIjoxNjQyNTEzMDc3LCJpYXQiOjE2NDI1MTI0NzcsIm5vbmNlIjoiMGE1NDk1NzczMzkzMmVjYWZiZWIwOTRiOTA0MzM2ZjAiLCJqdGkiOiJmNWIyZjNhYS1lNjg5LTRmZTItOTRmOS04NzJiM2FiZDBmNTcifQ.YGtI_4pXMF3POH5TC5Hb4kflg5KxmRcNDldy8GrkT8FYYZEALEJ8_fBbK8DyxJC4TDhdhK7GW9xPCbTmH7tMbnm17IMVqi1o7rlMnLF4yikAOkwzc8SyfXF-ns4jYxo3lOV-Ja1nnpsWY9vKU_L-tJSVV7k8_N-62ekITFCcrb8CE9mIrfa_s97WnXbx44TyGoxhuKoJZnNEvvLEghq9_ZU3IZWW4rHc0Ze1fkbBINYDghvYZUtbvzC9myCRL7NsAgQYvSmM8hrSIWuX34yNPMK8lIF8n7c-_MYo9-eXXqzN78dLIz1XRN7M6n514E-M3BjtObpIc9ly1arhkkF5DA&quot;
+}
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="get-datahub-token">
+<h2>GET DATAHUB_TOKEN<a class="headerlink" href="#get-datahub-token" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span><span class="o">,</span> <span class="nn">json</span>
+
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;X-Auth-Token&#39;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;egi:&quot;</span><span class="o">+</span><span class="n">rpalmaEGItoken</span><span class="p">,</span>
+    <span class="s1">&#39;Content-type&#39;</span><span class="p">:</span> <span class="s1">&#39;application/json&#39;</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="n">data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">({</span> 
+    <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;REST and CDMI access token4&#39;</span><span class="p">,</span> 
+    <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="p">{</span> 
+        <span class="s1">&#39;accessToken&#39;</span><span class="p">:</span> <span class="p">{}</span> 
+    <span class="p">},</span> 
+    <span class="s1">&#39;caveats&#39;</span><span class="p">:</span> <span class="p">[</span> <span class="p">{</span> 
+        <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;interface&#39;</span><span class="p">,</span> 
+        <span class="s1">&#39;interface&#39;</span><span class="p">:</span> <span class="s1">&#39;rest&#39;</span> 
+    <span class="p">}]</span> 
+<span class="p">})</span>
+<span class="c1">#data = &#39;{ &quot;name&quot;: &quot;REST and CDMI access token1&quot;, &quot;type&quot;: { &quot;accessToken&quot;: {} }, &quot;caveats&quot;: [ {  &quot;type&quot;: &quot;interface&quot;,  &quot;interface&quot;: &quot;rest&quot; } ] }&#39;</span>
+
+
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s1">&#39;https://datahub.egi.eu/api/v3/onezone/user/tokens/named&#39;</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">(),</span> <span class="n">indent</span><span class="o">=</span><span class="mi">2</span><span class="p">))</span>
+<span class="n">DATAHUB_TOKEN</span><span class="o">=</span><span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s1">&#39;token&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{
+  &quot;tokenId&quot;: &quot;b5872fbac406cd94c01447374e405e99ch65fd&quot;,
+  &quot;token&quot;: &quot;MDAxY2xvY2F00aW9uIGRhdGFodWIuZWdpLmV1CjAwNmJpZGVudGlmaWVyIDIvbm1kL3Vzci1mMDZmOWZmNDZjOWFjNGFhNjAyNDIwMmVmYmE5Mzc5MWNoOWFjNC9hY3QvYjU4NzJmYmFjNDA2Y2Q5NGMwMTQ00NzM3NGU00MDVlOTljaDY1ZmQKMDAxOWNpZCBpbnRlcmZhY2UgPSByZXN00CjAwMmZzaWduYXR1cmUgPNV8kTXszR5Vt2dF4Saa9cPcYJ7QswPeb9hm02u1MirgK&quot;
+}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="list-my-datahub-tokens">
+<h3>LIST MY DATAHUB TOKENS<a class="headerlink" href="#list-my-datahub-tokens" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span><span class="o">,</span> <span class="nn">json</span>
+
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;X-Auth-Token&#39;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;egi:&quot;</span><span class="o">+</span><span class="n">rpalmaEGItoken</span><span class="p">,</span>
+    <span class="s1">&#39;Content-type&#39;</span><span class="p">:</span> <span class="s1">&#39;application/json&#39;</span><span class="p">,</span>
+<span class="p">}</span>
+
+
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;https://datahub.egi.eu/api/v3/onezone/user/tokens/named&#39;</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">(),</span> <span class="n">indent</span><span class="o">=</span><span class="mi">2</span><span class="p">))</span>
+<span class="n">DATAHUB_TOKEN_ID</span><span class="o">=</span><span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s1">&#39;tokens&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{
+  &quot;tokens&quot;: [
+    &quot;7e7faae7b70ecbf38bc270e2a9cb9944chd88d&quot;,
+    &quot;0dff794b0579350af80e3d793d954847ch7b18&quot;,
+    &quot;1fc04058c560432487feb526844c2bd7ch5732&quot;,
+    &quot;b9b9725ad42e82ebf6f03aed731567e3ch387a&quot;,
+    &quot;b5872fbac406cd94c01447374e405e99ch65fd&quot;,
+    &quot;88530800c72623cfac9f3934f4134252chb30c&quot;,
+    &quot;d918f0ab8c4ce8fcc955af3769f1deffch50ed&quot;
+  ]
+}
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="get-token-details">
+<h3>GET TOKEN DETAILS<a class="headerlink" href="#get-token-details" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span><span class="o">,</span> <span class="nn">json</span>
+
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;X-Auth-Token&#39;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;egi:&quot;</span><span class="o">+</span><span class="n">rpalmaEGItoken</span><span class="p">,</span>
+    <span class="s1">&#39;Content-type&#39;</span><span class="p">:</span> <span class="s1">&#39;application/json&#39;</span><span class="p">,</span>
+<span class="p">}</span>
+
+
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;https://datahub.egi.eu/api/v3/onezone/tokens/named/&#39;</span><span class="o">+</span><span class="n">DATAHUB_TOKEN_ID</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">(),</span> <span class="n">indent</span><span class="o">=</span><span class="mi">2</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{
+  &quot;type&quot;: {
+    &quot;accessToken&quot;: {}
+  },
+  &quot;token&quot;: &quot;MDAxY2xvY2F00aW9uIGRhdGFodWIuZWdpLmV1CjAwNmJpZGVudGlmaWVyIDIvbm1kL3Vzci1mMDZmOWZmNDZjOWFjNGFhNjAyNDIwMmVmYmE5Mzc5MWNoOWFjNC9hY3QvN2U3ZmFhZTdiNzBlY2JmMzhiYzI3MGUyYTljYjk5NDRjaGQ4OGQKMDAxOWNpZCBpbnRlcmZhY2UgPSByZXN00CjAwMmZzaWduYXR1cmUg38z2je500yp4Qozca4zWT2Ok4az00ACBUqxhv2uuU76LIK&quot;,
+  &quot;subject&quot;: {
+    &quot;type&quot;: &quot;user&quot;,
+    &quot;id&quot;: &quot;f06f9ff46c9ac4aa6024202efba93791ch9ac4&quot;
+  },
+  &quot;revoked&quot;: false,
+  &quot;name&quot;: &quot;REST and CDMI access token&quot;,
+  &quot;metadata&quot;: {
+    &quot;custom&quot;: {},
+    &quot;creationTime&quot;: 1642457185
+  },
+  &quot;id&quot;: &quot;7e7faae7b70ecbf38bc270e2a9cb9944chd88d&quot;,
+  &quot;caveats&quot;: [
+    {
+      &quot;type&quot;: &quot;interface&quot;,
+      &quot;interface&quot;: &quot;rest&quot;
+    }
+  ]
+}
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="display-all-spaces">
+<h2>DISPLAY ALL SPACES<a class="headerlink" href="#display-all-spaces" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span><span class="o">,</span> <span class="nn">json</span>
+
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;X-Auth-Token&#39;</span><span class="p">:</span> <span class="n">DATAHUB_TOKEN</span>
+<span class="p">}</span>
+
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;https://datahub.egi.eu/api/v3/onezone/user/effective_spaces/&#39;</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">(),</span> <span class="n">indent</span><span class="o">=</span><span class="mi">2</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{
+  &quot;spaces&quot;: [
+    &quot;49c131369a88b0b9289b1b578cab7d6ech41aa&quot;,
+    &quot;51a1b62487f48b27c233746a148b821cch1e86&quot;,
+    &quot;725f4ab36cb26d0fbfc0c124c775efeechee49&quot;
+  ]
+}
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="display-reliance-space-details">
+<h2>DISPLAY RELIANCE SPACE DETAILS<a class="headerlink" href="#display-reliance-space-details" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span><span class="o">,</span> <span class="nn">json</span>
+
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;X-Auth-Token&#39;</span><span class="p">:</span> <span class="n">DATAHUB_TOKEN</span>
+<span class="p">}</span>
+
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;https://datahub.egi.eu/api/v3/onezone/spaces/725f4ab36cb26d0fbfc0c124c775efeechee49/&#39;</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span> 
+<span class="nb">print</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">(),</span> <span class="n">indent</span><span class="o">=</span><span class="mi">2</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{
+  &quot;spaceId&quot;: &quot;725f4ab36cb26d0fbfc0c124c775efeechee49&quot;,
+  &quot;providers&quot;: {
+    &quot;3886d8788dbbc4023ec5a9db13c813dech0454&quot;: 107374182400
+  },
+  &quot;name&quot;: &quot;Reliance&quot;,
+  &quot;creator&quot;: {
+    &quot;type&quot;: &quot;user&quot;,
+    &quot;id&quot;: &quot;aa81d77c217c52f3e4c0f79da0fedca0&quot;
+  },
+  &quot;creationTime&quot;: 1638521202
+}
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="display-reliance-space-contents">
+<h2>DISPLAY RELIANCE SPACE CONTENTS<a class="headerlink" href="#display-reliance-space-contents" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span><span class="o">,</span> <span class="nn">json</span>
+
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;X-Auth-Token&#39;</span><span class="p">:</span> <span class="n">DATAHUB_TOKEN</span>
+<span class="p">}</span>
+
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;https://cesnet-oneprovider-01.datahub.egi.eu/api/v3/oneprovider/files/Reliance/&#39;</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span> 
+<span class="c1">#response = requests.get(&#39;https://cesnet-oneprovider-01.datahub.egi.eu/api/v3/oneprovider/files/Reliance/Climate/output&#39;, headers=headers) </span>
+<span class="nb">print</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">(),</span> <span class="n">indent</span><span class="o">=</span><span class="mi">2</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[
+  {
+    &quot;path&quot;: &quot;/Reliance/.ipynb_checkpoints&quot;,
+    &quot;id&quot;: &quot;0000000000520DDF67756964233331663636353734623035346465343163643335613139633038393163643435636835616433233732356634616233366362323664306662666330633132346337373565666565636865653439&quot;
+  },
+  {
+    &quot;path&quot;: &quot;/Reliance/Climate&quot;,
+    &quot;id&quot;: &quot;00000000005271F567756964236631353639303132366433336538306631333766333435323162323366316435636832383661233732356634616233366362323664306662666330633132346337373565666565636865653439&quot;
+  },
+  {
+    &quot;path&quot;: &quot;/Reliance/Marine Monitoring &quot;,
+    &quot;id&quot;: &quot;000000000052610967756964233239353265643333313733666433323362373235383232656338356332383138636864343162233732356634616233366362323664306662666330633132346337373565666565636865653439&quot;
+  },
+  {
+    &quot;path&quot;: &quot;/Reliance/ROHub-sample-notebooks&quot;,
+    &quot;id&quot;: &quot;000000000052EB6F67756964233531333938313636373738656665643830303839623738323261333765326664636838363065233732356634616233366362323664306662666330633132346337373565666565636865653439&quot;
+  },
+  {
+    &quot;path&quot;: &quot;/Reliance/Snapshot-PTF-ML&quot;,
+    &quot;id&quot;: &quot;000000000052B3BF67756964236430623361653332323265336163666135646135326266373734383432336137636836643138233732356634616233366362323664306662666330633132346337373565666565636865653439&quot;
+  },
+  {
+    &quot;path&quot;: &quot;/Reliance/Soundscape&quot;,
+    &quot;id&quot;: &quot;000000000052647467756964233565616631613035636165383730646632636236646264613536653637376565636836326431233732356634616233366362323664306662666330633132346337373565666565636865653439&quot;
+  }
+]
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="create-shared-link">
+<h2>CREATE SHARED LINK<a class="headerlink" href="#create-shared-link" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span><span class="o">,</span> <span class="nn">json</span>
+
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;X-Auth-Token&#39;</span><span class="p">:</span> <span class="n">DATAHUB_TOKEN</span><span class="p">,</span>
+    <span class="s1">&#39;Content-Type&#39;</span><span class="p">:</span> <span class="s1">&#39;application/json&#39;</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="n">data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">({</span> 
+    <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;MySharedFileViaAPI.csv&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;fileId&#39;</span><span class="p">:</span> <span class="s1">&#39;000000000052B47167756964236666646366313562336564316562646463623530646666303262333366323161636837386566233732356634616233366362323664306662666330633132346337373565666565636865653439&#39;</span>
+    <span class="p">})</span>
+
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s1">&#39;https://cesnet-oneprovider-01.datahub.egi.eu/api/v3/oneprovider/shares&#39;</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">(),</span> <span class="n">indent</span><span class="o">=</span><span class="mi">2</span><span class="p">))</span>
+<span class="n">shareIdGenerated</span><span class="o">=</span><span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s1">&#39;shareId&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{
+  &quot;shareId&quot;: &quot;90c742cf185c699412b371e044c9b1afch1c6a&quot;
+}
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="display-shared-link-details">
+<h2>DISPLAY SHARED LINK DETAILS<a class="headerlink" href="#display-shared-link-details" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;X-Auth-Token&#39;</span><span class="p">:</span> <span class="n">DATAHUB_TOKEN</span>
+<span class="p">}</span>
+
+<span class="c1"># display files in space</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;https://cesnet-oneprovider-01.datahub.egi.eu/api/v3/oneprovider/shares/&#39;</span><span class="o">+</span><span class="n">shareIdGenerated</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span> 
+<span class="nb">print</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">(),</span> <span class="n">indent</span><span class="o">=</span><span class="mi">2</span><span class="p">))</span>
+<span class="n">publicURL</span><span class="o">=</span><span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s1">&#39;publicUrl&#39;</span><span class="p">]</span>
+<span class="n">contentURL</span><span class="o">=</span> <span class="s1">&#39;https://datahub.egi.eu/api/v3/onezone/shares/data/&#39;</span><span class="o">+</span><span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s1">&#39;rootFileId&#39;</span><span class="p">]</span><span class="o">+</span><span class="s1">&#39;/content&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{
+  &quot;spaceId&quot;: &quot;725f4ab36cb26d0fbfc0c124c775efeechee49&quot;,
+  &quot;shareId&quot;: &quot;90c742cf185c699412b371e044c9b1afch1c6a&quot;,
+  &quot;rootFileId&quot;: &quot;00000000007E09EC736861726547756964236666646366313562336564316562646463623530646666303262333366323161636837386566233732356634616233366362323664306662666330633132346337373565666565636865653439233930633734326366313835633639393431326233373165303434633962316166636831633661&quot;,
+  &quot;publicUrl&quot;: &quot;https://datahub.egi.eu/share/90c742cf185c699412b371e044c9b1afch1c6a&quot;,
+  &quot;publicRestUrl&quot;: &quot;https://datahub.egi.eu/api/v3/onezone/shares/90c742cf185c699412b371e044c9b1afch1c6a/public&quot;,
+  &quot;name&quot;: &quot;MySharedFileViaAPI_v2.csv&quot;,
+  &quot;handleId&quot;: null,
+  &quot;fileType&quot;: &quot;file&quot;,
+  &quot;description&quot;: &quot;&quot;
+}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">contentURL</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;https://datahub.egi.eu/api/v3/onezone/shares/data/00000000007E09EC736861726547756964236666646366313562336564316562646463623530646666303262333366323161636837386566233732356634616233366362323664306662666330633132346337373565666565636865653439233930633734326366313835633639393431326233373165303434633962316166636831633661/content&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./rohub/notebooks"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="ROHub-library-prod-demo.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Install library if not present</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../../science/eosc-future.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">EOSC-Future demo</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Anne Fouilloux<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

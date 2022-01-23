@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Example to use Rohub from Jupyter notebook &#8212; Showcase Jupyter notebooks series</title>
+    <title>Install library if not present &#8212; Showcase Jupyter notebooks series</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet">
   <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -51,7 +51,7 @@
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="EOSC-Future demo" href="../../science/eosc-future.html" />
+    <link rel="next" title="WORKING WITH EGI DATAHUB" href="Sharing-files-EGI-DataHub.html" />
     <link rel="prev" title="ROHUB service" href="../setup.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -160,7 +160,12 @@
   <ul class="current">
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     Example to use Rohub from Jupyter notebook
+     Install library if not present
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Sharing-files-EGI-DataHub.html">
+     WORKING WITH EGI DATAHUB
     </a>
    </li>
   </ul>
@@ -188,12 +193,12 @@
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../demo-eosc-future/RELIANCE-Datacube-featuring-EOSC_v0.2.html">
+    <a class="reference internal" href="../../demo-eosc-future/RELIANCE-Datacube-featuring-EOSC.html">
      Using CAMS European air quality analysis from Copernicus Atmosphere Monitoring with RELIANCE services
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../demo-eosc-future/RELIANCE_v0.2-France.html">
+    <a class="reference internal" href="../../demo-eosc-future/RELIANCE_France.html">
      Using CAMS European air quality analysis from Copernicus Atmosphere Monitoring with RELIANCE services
     </a>
    </li>
@@ -335,249 +340,288 @@
             </div>
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#install-library-if-not-present">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
    Install library if not present
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
+ <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#import-library">
    Import library
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
+ <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#authenticate">
    Authenticate
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
+ <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#ro-methods">
    RO methods
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#create-new-ro">
      Create new RO
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#find-ros">
      Find ROs
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#list-my-ros">
      List my ROs
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#load-ro">
      Load RO
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#show-basic-metadata">
      Show basic metadata
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#add-modify-basic-metadata">
      Add/modify basic metadata
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#list-ro-folders">
      List RO Folders
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#aggregate-resource-internal">
      Aggregate resource (internal)
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#aggregate-resouce-external">
      Aggregate resouce (external)
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#list-ro-resources">
      List RO resources
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#add-geolocation">
      Add geolocation
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#export-to-ro-crate">
      Export to RO-crate
     </a>
    </li>
   </ul>
  </li>
- <li class="toc-h2 nav-item toc-entry">
+ <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#add-authors-contributors-publishers-copyrightholders">
    Add authors/contributors/publishers/copyrightHolders
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#list-users">
      List users
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#add-authors-contributors">
      Add authors/contributors
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#list-organizations">
      List organizations
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#add-publisher-copyright-holder">
      Add publisher/copyright holder
     </a>
    </li>
   </ul>
  </li>
- <li class="toc-h2 nav-item toc-entry">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#add-ro-license">
+   Add RO license
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#list-available-pre-defined-licenses">
+     list available pre-defined licenses
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#set-license">
+     set license
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#create-custom-license">
+     create custom license
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#add-ro-funding-information">
+   Add RO Funding information
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#list-predefined-funders">
+     list predefined funders
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#set-funding">
+     set funding
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#ro-evolution">
    RO Evolution
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#create-simple-snapshot-archive">
      Create simple snapshot/archive
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#create-snapshot-archive-optionally-assign-doi-publish-it-in-zenodo">
      Create snapshot/archive, optionally assign DOI + publish it in Zenodo
     </a>
     <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
+     <li class="toc-h3 nav-item toc-entry">
       <a class="reference internal nav-link" href="#load-published-snapshot-archive-and-list-zenodo-id-doi">
        Load published snapshot/archive and list zenodo id/doi
       </a>
      </li>
     </ul>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#create-snapshot-archive-optionally-assign-doi-publish-it-in-b2share">
      Create snapshot/archive, optionally assign DOI + publish it in B2Share
     </a>
     <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
+     <li class="toc-h3 nav-item toc-entry">
       <a class="reference internal nav-link" href="#load-published-snapshot-archive-and-list-b2share-id-doi">
        Load published snapshot/archive and list b2share id/doi
       </a>
      </li>
     </ul>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#fork-existing-ro-to-reuse-it-for-my-own-purposes">
      Fork existing RO to reuse it for my own purposes
     </a>
    </li>
   </ul>
  </li>
- <li class="toc-h2 nav-item toc-entry">
+ <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#resource-methods">
    Resource methods
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#load-resource">
      Load resource
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#id1">
      show basic metadata
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#add-modify-metadata">
      Add/modify metadata
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#modify-content-internal-resource">
      Modify content (internal resource)
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#modify-content-external-resource">
      Modify content (external resource)
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#retrieve-resource">
      Retrieve resource
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#assign-doi">
      Assign DOI
     </a>
    </li>
   </ul>
  </li>
- <li class="toc-h2 nav-item toc-entry">
+ <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#utils">
    Utils
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#remove-ro">
      remove RO
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#show-user-id">
      show user id
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#show-possible-values-for-ro-types-resources-types-templates-etc">
      show possible values for RO types, Resources types, templates, etc.
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#create-external-user">
      create external user
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#create-organization">
      create organization
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#load-full-metadata">
      load full metadata
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#rohub-library-version">
      rohub library version
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#set-evolution-setting">
      Set evolution setting
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#add-annotation-general">
      add annotation general
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#remove-annotation">
      remove annotation
     </a>
@@ -594,7 +638,7 @@
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Example to use Rohub from Jupyter notebook</h1>
+                <h1>Install library if not present</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -604,249 +648,288 @@
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#install-library-if-not-present">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
    Install library if not present
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
+ <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#import-library">
    Import library
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
+ <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#authenticate">
    Authenticate
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
+ <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#ro-methods">
    RO methods
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#create-new-ro">
      Create new RO
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#find-ros">
      Find ROs
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#list-my-ros">
      List my ROs
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#load-ro">
      Load RO
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#show-basic-metadata">
      Show basic metadata
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#add-modify-basic-metadata">
      Add/modify basic metadata
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#list-ro-folders">
      List RO Folders
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#aggregate-resource-internal">
      Aggregate resource (internal)
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#aggregate-resouce-external">
      Aggregate resouce (external)
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#list-ro-resources">
      List RO resources
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#add-geolocation">
      Add geolocation
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#export-to-ro-crate">
      Export to RO-crate
     </a>
    </li>
   </ul>
  </li>
- <li class="toc-h2 nav-item toc-entry">
+ <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#add-authors-contributors-publishers-copyrightholders">
    Add authors/contributors/publishers/copyrightHolders
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#list-users">
      List users
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#add-authors-contributors">
      Add authors/contributors
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#list-organizations">
      List organizations
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#add-publisher-copyright-holder">
      Add publisher/copyright holder
     </a>
    </li>
   </ul>
  </li>
- <li class="toc-h2 nav-item toc-entry">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#add-ro-license">
+   Add RO license
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#list-available-pre-defined-licenses">
+     list available pre-defined licenses
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#set-license">
+     set license
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#create-custom-license">
+     create custom license
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#add-ro-funding-information">
+   Add RO Funding information
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#list-predefined-funders">
+     list predefined funders
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#set-funding">
+     set funding
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#ro-evolution">
    RO Evolution
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#create-simple-snapshot-archive">
      Create simple snapshot/archive
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#create-snapshot-archive-optionally-assign-doi-publish-it-in-zenodo">
      Create snapshot/archive, optionally assign DOI + publish it in Zenodo
     </a>
     <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
+     <li class="toc-h3 nav-item toc-entry">
       <a class="reference internal nav-link" href="#load-published-snapshot-archive-and-list-zenodo-id-doi">
        Load published snapshot/archive and list zenodo id/doi
       </a>
      </li>
     </ul>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#create-snapshot-archive-optionally-assign-doi-publish-it-in-b2share">
      Create snapshot/archive, optionally assign DOI + publish it in B2Share
     </a>
     <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
+     <li class="toc-h3 nav-item toc-entry">
       <a class="reference internal nav-link" href="#load-published-snapshot-archive-and-list-b2share-id-doi">
        Load published snapshot/archive and list b2share id/doi
       </a>
      </li>
     </ul>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#fork-existing-ro-to-reuse-it-for-my-own-purposes">
      Fork existing RO to reuse it for my own purposes
     </a>
    </li>
   </ul>
  </li>
- <li class="toc-h2 nav-item toc-entry">
+ <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#resource-methods">
    Resource methods
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#load-resource">
      Load resource
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#id1">
      show basic metadata
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#add-modify-metadata">
      Add/modify metadata
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#modify-content-internal-resource">
      Modify content (internal resource)
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#modify-content-external-resource">
      Modify content (external resource)
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#retrieve-resource">
      Retrieve resource
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#assign-doi">
      Assign DOI
     </a>
    </li>
   </ul>
  </li>
- <li class="toc-h2 nav-item toc-entry">
+ <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#utils">
    Utils
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#remove-ro">
      remove RO
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#show-user-id">
      show user id
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#show-possible-values-for-ro-types-resources-types-templates-etc">
      show possible values for RO types, Resources types, templates, etc.
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#create-external-user">
      create external user
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#create-organization">
      create organization
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#load-full-metadata">
      load full metadata
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#rohub-library-version">
      rohub library version
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#set-evolution-setting">
      Set evolution setting
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#add-annotation-general">
      add annotation general
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#remove-annotation">
      remove annotation
     </a>
@@ -862,20 +945,18 @@
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="example-to-use-rohub-from-jupyter-notebook">
-<h1>Example to use Rohub from Jupyter notebook<a class="headerlink" href="#example-to-use-rohub-from-jupyter-notebook" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="install-library-if-not-present">
-<h2>Install library if not present<a class="headerlink" href="#install-library-if-not-present" title="Permalink to this headline">¶</a></h2>
+  <div class="section" id="install-library-if-not-present">
+<h1>Install library if not present<a class="headerlink" href="#install-library-if-not-present" title="Permalink to this headline">¶</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip install rohub
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">rohub</span>
 </pre></div>
 </div>
 </div>
 </div>
 </div>
 <div class="section" id="import-library">
-<h2>Import library<a class="headerlink" href="#import-library" title="Permalink to this headline">¶</a></h2>
+<h1>Import library<a class="headerlink" href="#import-library" title="Permalink to this headline">¶</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">rohub</span>
@@ -885,22 +966,14 @@
 </div>
 </div>
 <div class="section" id="authenticate">
-<h2>Authenticate<a class="headerlink" href="#authenticate" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p>you need to create two files in /home/jovyan</p>
-<ul>
-<li><p>rohub-user: contains your rohub username</p></li>
-<li><p>rohub-pwd: add your password in this file</p></li>
-</ul>
-</li>
-</ul>
+<h1>Authenticate<a class="headerlink" href="#authenticate" title="Permalink to this headline">¶</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rohub_user</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;/home/jovyan/rohub-user&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()</span>
-<span class="n">rohub_pwd</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;/home/jovyan/rohub-pwd&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rohub_user</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;/home/jovyan/files/rohub-user&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()</span>
+<span class="n">rohub_pwd</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;/home/jovyan/files/rohub-pwd&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()</span>
 <span class="n">rohub</span><span class="o">.</span><span class="n">login</span><span class="p">(</span><span class="n">username</span><span class="o">=</span><span class="n">rohub_user</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="n">rohub_pwd</span><span class="p">)</span>
-<span class="c1">#rohub_client_id = open(&quot;/home/jovyan/rohub-client_id&quot;).read().rstrip()</span>
-<span class="c1">#rohub_client_secret = open(&quot;/home/jovyan/rohub-client_secret&quot;).read().rstrip()</span>
+<span class="c1">#rohub_client_id = open(&quot;/home/jovyan/files/rohub-client_id&quot;).read().rstrip()</span>
+<span class="c1">#rohub_client_secret = open(&quot;/home/jovyan/files/rohub-client_secret&quot;).read().rstrip()</span>
 <span class="c1">#rohub.login(client_id=rohub_client_id, client_secret=rohub_client_secret)</span>
 </pre></div>
 </div>
@@ -908,9 +981,9 @@
 </div>
 </div>
 <div class="section" id="ro-methods">
-<h2>RO methods<a class="headerlink" href="#ro-methods" title="Permalink to this headline">¶</a></h2>
+<h1>RO methods<a class="headerlink" href="#ro-methods" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="create-new-ro">
-<h3>Create new RO<a class="headerlink" href="#create-new-ro" title="Permalink to this headline">¶</a></h3>
+<h2>Create new RO<a class="headerlink" href="#create-new-ro" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ro_title</span><span class="o">=</span><span class="s2">&quot;8th December - Copernicus Atmosphere Monitoring Service Data Cube Research Object&quot;</span>
@@ -926,7 +999,7 @@
 </div>
 </div>
 <div class="section" id="find-ros">
-<h3>Find ROs<a class="headerlink" href="#find-ros" title="Permalink to this headline">¶</a></h3>
+<h2>Find ROs<a class="headerlink" href="#find-ros" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rohub</span><span class="o">.</span><span class="n">ros_find</span><span class="p">(</span><span class="n">search</span><span class="o">=</span><span class="s2">&quot;December&quot;</span><span class="p">)</span>
@@ -936,7 +1009,7 @@
 </div>
 </div>
 <div class="section" id="list-my-ros">
-<h3>List my ROs<a class="headerlink" href="#list-my-ros" title="Permalink to this headline">¶</a></h3>
+<h2>List my ROs<a class="headerlink" href="#list-my-ros" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">myros</span><span class="o">=</span><span class="n">rohub</span><span class="o">.</span><span class="n">list_my_ros</span><span class="p">()</span>
@@ -947,7 +1020,7 @@
 </div>
 </div>
 <div class="section" id="load-ro">
-<h3>Load RO<a class="headerlink" href="#load-ro" title="Permalink to this headline">¶</a></h3>
+<h2>Load RO<a class="headerlink" href="#load-ro" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ro_id</span><span class="o">=</span><span class="n">myros</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="s2">&quot;identifier&quot;</span><span class="p">]</span>
@@ -958,7 +1031,7 @@
 </div>
 </div>
 <div class="section" id="show-basic-metadata">
-<h3>Show basic metadata<a class="headerlink" href="#show-basic-metadata" title="Permalink to this headline">¶</a></h3>
+<h2>Show basic metadata<a class="headerlink" href="#show-basic-metadata" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ro</span><span class="o">.</span><span class="n">show_metadata</span><span class="p">()</span>
@@ -968,7 +1041,7 @@
 </div>
 </div>
 <div class="section" id="add-modify-basic-metadata">
-<h3>Add/modify basic metadata<a class="headerlink" href="#add-modify-basic-metadata" title="Permalink to this headline">¶</a></h3>
+<h2>Add/modify basic metadata<a class="headerlink" href="#add-modify-basic-metadata" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ro</span><span class="o">.</span><span class="n">description</span><span class="o">=</span><span class="s2">&quot;This Research Object demonstrate how to compute monthly map of PM10 over your country - modified&quot;</span>
@@ -980,7 +1053,7 @@
 </div>
 </div>
 <div class="section" id="list-ro-folders">
-<h3>List RO Folders<a class="headerlink" href="#list-ro-folders" title="Permalink to this headline">¶</a></h3>
+<h2>List RO Folders<a class="headerlink" href="#list-ro-folders" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">myfolders</span> <span class="o">=</span> <span class="n">ro</span><span class="o">.</span><span class="n">list_folders</span><span class="p">()</span>
@@ -991,7 +1064,7 @@
 </div>
 </div>
 <div class="section" id="aggregate-resource-internal">
-<h3>Aggregate resource (internal)<a class="headerlink" href="#aggregate-resource-internal" title="Permalink to this headline">¶</a></h3>
+<h2>Aggregate resource (internal)<a class="headerlink" href="#aggregate-resource-internal" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">resi_res_type</span><span class="o">=</span><span class="s2">&quot;Sketch&quot;</span>
@@ -1006,7 +1079,7 @@
 </div>
 </div>
 <div class="section" id="aggregate-resouce-external">
-<h3>Aggregate resouce (external)<a class="headerlink" href="#aggregate-resouce-external" title="Permalink to this headline">¶</a></h3>
+<h2>Aggregate resouce (external)<a class="headerlink" href="#aggregate-resouce-external" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rese_res_type</span><span class="o">=</span><span class="s2">&quot;Data Cube Collection&quot;</span>
@@ -1069,7 +1142,7 @@
 </div>
 </div>
 <div class="section" id="list-ro-resources">
-<h3>List RO resources<a class="headerlink" href="#list-ro-resources" title="Permalink to this headline">¶</a></h3>
+<h2>List RO resources<a class="headerlink" href="#list-ro-resources" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ro</span><span class="o">.</span><span class="n">list_resources</span><span class="p">()</span>
@@ -1079,7 +1152,7 @@
 </div>
 </div>
 <div class="section" id="add-geolocation">
-<h3>Add geolocation<a class="headerlink" href="#add-geolocation" title="Permalink to this headline">¶</a></h3>
+<h2>Add geolocation<a class="headerlink" href="#add-geolocation" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">geojson_as_text_point_python</span><span class="o">=</span> <span class="p">{</span>
@@ -1109,7 +1182,7 @@
 </div>
 </div>
 <div class="section" id="export-to-ro-crate">
-<h3>Export to RO-crate<a class="headerlink" href="#export-to-ro-crate" title="Permalink to this headline">¶</a></h3>
+<h2>Export to RO-crate<a class="headerlink" href="#export-to-ro-crate" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#ro.export_to_rocrate(filename=&quot;my-ro-crate&quot;)</span>
@@ -1121,9 +1194,9 @@
 </div>
 </div>
 <div class="section" id="add-authors-contributors-publishers-copyrightholders">
-<h2>Add authors/contributors/publishers/copyrightHolders<a class="headerlink" href="#add-authors-contributors-publishers-copyrightholders" title="Permalink to this headline">¶</a></h2>
+<h1>Add authors/contributors/publishers/copyrightHolders<a class="headerlink" href="#add-authors-contributors-publishers-copyrightholders" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="list-users">
-<h3>List users<a class="headerlink" href="#list-users" title="Permalink to this headline">¶</a></h3>
+<h2>List users<a class="headerlink" href="#list-users" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">usernames</span><span class="o">=</span><span class="n">rohub</span><span class="o">.</span><span class="n">users_find</span><span class="p">(</span><span class="n">search</span><span class="o">=</span><span class="s2">&quot;Anne&quot;</span><span class="p">)</span>
@@ -1158,7 +1231,7 @@
 </div>
 </div>
 <div class="section" id="add-authors-contributors">
-<h3>Add authors/contributors<a class="headerlink" href="#add-authors-contributors" title="Permalink to this headline">¶</a></h3>
+<h2>Add authors/contributors<a class="headerlink" href="#add-authors-contributors" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ro</span><span class="o">.</span><span class="n">set_authors</span><span class="p">(</span><span class="n">agents</span><span class="o">=</span><span class="p">[</span><span class="n">user_id_anne</span><span class="p">,</span><span class="n">user_id_nieves</span><span class="p">])</span>
@@ -1180,7 +1253,7 @@
 </div>
 </div>
 <div class="section" id="list-organizations">
-<h3>List organizations<a class="headerlink" href="#list-organizations" title="Permalink to this headline">¶</a></h3>
+<h2>List organizations<a class="headerlink" href="#list-organizations" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">organizations</span><span class="o">=</span><span class="n">rohub</span><span class="o">.</span><span class="n">organizations_find</span><span class="p">(</span><span class="n">search</span><span class="o">=</span><span class="s2">&quot;poznan&quot;</span><span class="p">)</span>
@@ -1191,7 +1264,7 @@
 </div>
 </div>
 <div class="section" id="add-publisher-copyright-holder">
-<h3>Add publisher/copyright holder<a class="headerlink" href="#add-publisher-copyright-holder" title="Permalink to this headline">¶</a></h3>
+<h2>Add publisher/copyright holder<a class="headerlink" href="#add-publisher-copyright-holder" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ro</span><span class="o">.</span><span class="n">set_publishers</span><span class="p">(</span><span class="n">agents</span><span class="o">=</span><span class="p">[</span><span class="n">organizations</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="s2">&quot;organization_id&quot;</span><span class="p">]])</span>
@@ -1213,10 +1286,93 @@
 </div>
 </div>
 </div>
+<div class="section" id="add-ro-license">
+<h1>Add RO license<a class="headerlink" href="#add-ro-license" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="list-available-pre-defined-licenses">
+<h2>list available pre-defined licenses<a class="headerlink" href="#list-available-pre-defined-licenses" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rohub</span><span class="o">.</span><span class="n">list_available_licenses</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="set-license">
+<h2>set license<a class="headerlink" href="#set-license" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ro</span><span class="o">.</span><span class="n">set_license</span><span class="p">(</span><span class="n">license_id</span><span class="o">=</span><span class="n">rohub</span><span class="o">.</span><span class="n">list_available_licenses</span><span class="p">()[</span><span class="mi">0</span><span class="p">])</span> 
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="create-custom-license">
+<h2>create custom license<a class="headerlink" href="#create-custom-license" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">license_identifier</span><span class="o">=</span><span class="s2">&quot;acme-cc&quot;</span>
+<span class="n">license_title</span><span class="o">=</span><span class="s2">&quot;ACME Inc. Commercial License&quot;</span>
+<span class="n">license_status</span><span class="o">=</span><span class="s2">&quot;active&quot;</span>
+<span class="n">license_url</span><span class="o">=</span><span class="s2">&quot;http://www.acme.org/licence-commercial&quot;</span>
+
+<span class="n">rohub</span><span class="o">.</span><span class="n">add_custom_license</span><span class="p">(</span><span class="n">identifier</span><span class="o">=</span><span class="n">license_identifier</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="n">license_title</span><span class="p">,</span>
+    <span class="n">status</span><span class="o">=</span><span class="n">license_status</span><span class="p">,</span> <span class="n">license_url</span><span class="o">=</span><span class="n">license_url</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rohub</span><span class="o">.</span><span class="n">list_valid_license_status</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rohub</span><span class="o">.</span><span class="n">list_custom_licenses</span><span class="p">()</span> 
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="add-ro-funding-information">
+<h1>Add RO Funding information<a class="headerlink" href="#add-ro-funding-information" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="list-predefined-funders">
+<h2>list predefined funders<a class="headerlink" href="#list-predefined-funders" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rohub</span><span class="o">.</span><span class="n">zenodo_list_funders</span><span class="p">(</span><span class="n">number_of_results</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="set-funding">
+<h2>set funding<a class="headerlink" href="#set-funding" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">grant_id</span><span class="o">=</span><span class="s2">&quot;101017502&quot;</span>
+<span class="n">grant_Name</span><span class="o">=</span><span class="s2">&quot;RELIANCE&quot;</span>
+<span class="n">grant_title</span><span class="o">=</span><span class="s2">&quot;Research Lifecycle Management for Earth Science Communities and Copernicus Users&quot;</span>
+<span class="n">funder_name</span><span class="o">=</span><span class="s2">&quot;European Commission&quot;</span>
+<span class="n">funder_doi</span><span class="o">=</span><span class="s2">&quot;10.13039/501100000781&quot;</span>
+
+<span class="n">ro</span><span class="o">.</span><span class="n">set_funding</span><span class="p">(</span><span class="n">grant_identifier</span><span class="o">=</span><span class="n">grant_id</span><span class="p">,</span> <span class="n">grant_name</span><span class="o">=</span><span class="n">grant_Name</span><span class="p">,</span> <span class="n">funder_name</span><span class="o">=</span><span class="n">funder_name</span><span class="p">,</span>
+<span class="n">grant_title</span><span class="o">=</span><span class="n">grant_title</span><span class="p">,</span> <span class="n">funder_doi</span><span class="o">=</span><span class="n">funder_doi</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
 <div class="section" id="ro-evolution">
-<h2>RO Evolution<a class="headerlink" href="#ro-evolution" title="Permalink to this headline">¶</a></h2>
+<h1>RO Evolution<a class="headerlink" href="#ro-evolution" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="create-simple-snapshot-archive">
-<h3>Create simple snapshot/archive<a class="headerlink" href="#create-simple-snapshot-archive" title="Permalink to this headline">¶</a></h3>
+<h2>Create simple snapshot/archive<a class="headerlink" href="#create-simple-snapshot-archive" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">snapshot_id</span><span class="o">=</span><span class="n">ro</span><span class="o">.</span><span class="n">snapshot</span><span class="p">()</span>
@@ -1227,7 +1383,7 @@
 </div>
 </div>
 <div class="section" id="create-snapshot-archive-optionally-assign-doi-publish-it-in-zenodo">
-<h3>Create snapshot/archive, optionally assign DOI + publish it in Zenodo<a class="headerlink" href="#create-snapshot-archive-optionally-assign-doi-publish-it-in-zenodo" title="Permalink to this headline">¶</a></h3>
+<h2>Create snapshot/archive, optionally assign DOI + publish it in Zenodo<a class="headerlink" href="#create-snapshot-archive-optionally-assign-doi-publish-it-in-zenodo" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">snapshot_title</span><span class="o">=</span><span class="s2">&quot;Copernicus Atmosphere Monitoring Service Data Cube RO December 8th - published v1&quot;</span>
@@ -1240,7 +1396,7 @@
 </div>
 </div>
 <div class="section" id="load-published-snapshot-archive-and-list-zenodo-id-doi">
-<h4>Load published snapshot/archive and list zenodo id/doi<a class="headerlink" href="#load-published-snapshot-archive-and-list-zenodo-id-doi" title="Permalink to this headline">¶</a></h4>
+<h3>Load published snapshot/archive and list zenodo id/doi<a class="headerlink" href="#load-published-snapshot-archive-and-list-zenodo-id-doi" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">published_ro</span> <span class="o">=</span> <span class="n">rohub</span><span class="o">.</span><span class="n">ros_load</span><span class="p">(</span><span class="n">identifier</span><span class="o">=</span><span class="n">snapshot_id_pub</span><span class="p">)</span>
@@ -1252,7 +1408,7 @@
 </div>
 </div>
 <div class="section" id="create-snapshot-archive-optionally-assign-doi-publish-it-in-b2share">
-<h3>Create snapshot/archive, optionally assign DOI + publish it in B2Share<a class="headerlink" href="#create-snapshot-archive-optionally-assign-doi-publish-it-in-b2share" title="Permalink to this headline">¶</a></h3>
+<h2>Create snapshot/archive, optionally assign DOI + publish it in B2Share<a class="headerlink" href="#create-snapshot-archive-optionally-assign-doi-publish-it-in-b2share" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">snapshot_title</span><span class="o">=</span><span class="s2">&quot;Copernicus Atmosphere Monitoring Service Data Cube RO December 8th - published v2&quot;</span>
@@ -1263,7 +1419,7 @@
 </div>
 </div>
 <div class="section" id="load-published-snapshot-archive-and-list-b2share-id-doi">
-<h4>Load published snapshot/archive and list b2share id/doi<a class="headerlink" href="#load-published-snapshot-archive-and-list-b2share-id-doi" title="Permalink to this headline">¶</a></h4>
+<h3>Load published snapshot/archive and list b2share id/doi<a class="headerlink" href="#load-published-snapshot-archive-and-list-b2share-id-doi" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">published_ro</span> <span class="o">=</span> <span class="n">rohub</span><span class="o">.</span><span class="n">ros_load</span><span class="p">(</span><span class="n">identifier</span><span class="o">=</span><span class="n">snapshot_id_pub</span><span class="p">)</span>
@@ -1275,7 +1431,7 @@
 </div>
 </div>
 <div class="section" id="fork-existing-ro-to-reuse-it-for-my-own-purposes">
-<h3>Fork existing RO to reuse it for my own purposes<a class="headerlink" href="#fork-existing-ro-to-reuse-it-for-my-own-purposes" title="Permalink to this headline">¶</a></h3>
+<h2>Fork existing RO to reuse it for my own purposes<a class="headerlink" href="#fork-existing-ro-to-reuse-it-for-my-own-purposes" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fork_id</span><span class="o">=</span><span class="n">ro</span><span class="o">.</span><span class="n">fork</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;Forked Copernicus Atmosphere Monitoring Service Data Cube RO December 8th&quot;</span><span class="p">)</span>
@@ -1289,9 +1445,9 @@
 </div>
 </div>
 <div class="section" id="resource-methods">
-<h2>Resource methods<a class="headerlink" href="#resource-methods" title="Permalink to this headline">¶</a></h2>
+<h1>Resource methods<a class="headerlink" href="#resource-methods" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="load-resource">
-<h3>Load resource<a class="headerlink" href="#load-resource" title="Permalink to this headline">¶</a></h3>
+<h2>Load resource<a class="headerlink" href="#load-resource" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">results</span><span class="o">=</span><span class="n">ro</span><span class="o">.</span><span class="n">list_resources</span><span class="p">()</span>
@@ -1309,7 +1465,7 @@
 </div>
 </div>
 <div class="section" id="id1">
-<h3>show basic metadata<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<h2>show basic metadata<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_res1</span><span class="o">.</span><span class="n">show_metadata</span><span class="p">()</span>
@@ -1319,7 +1475,7 @@
 </div>
 </div>
 <div class="section" id="add-modify-metadata">
-<h3>Add/modify metadata<a class="headerlink" href="#add-modify-metadata" title="Permalink to this headline">¶</a></h3>
+<h2>Add/modify metadata<a class="headerlink" href="#add-modify-metadata" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_res1</span><span class="o">.</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;Flow to compute monthly map - updated&quot;</span>
@@ -1332,7 +1488,7 @@
 </div>
 </div>
 <div class="section" id="modify-content-internal-resource">
-<h3>Modify content (internal resource)<a class="headerlink" href="#modify-content-internal-resource" title="Permalink to this headline">¶</a></h3>
+<h2>Modify content (internal resource)<a class="headerlink" href="#modify-content-internal-resource" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">resi_file_path</span><span class="o">=</span><span class="s2">&quot;/home/jovyan/files/Group 910.png&quot;</span>
@@ -1343,7 +1499,7 @@
 </div>
 </div>
 <div class="section" id="modify-content-external-resource">
-<h3>Modify content (external resource)<a class="headerlink" href="#modify-content-external-resource" title="Permalink to this headline">¶</a></h3>
+<h2>Modify content (external resource)<a class="headerlink" href="#modify-content-external-resource" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_res1_ext</span><span class="o">=</span><span class="n">rohub</span><span class="o">.</span><span class="n">resource_load</span><span class="p">(</span><span class="n">identifier</span><span class="o">=</span><span class="n">results</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="s2">&quot;identifier&quot;</span><span class="p">])</span>
@@ -1355,7 +1511,7 @@
 </div>
 </div>
 <div class="section" id="retrieve-resource">
-<h3>Retrieve resource<a class="headerlink" href="#retrieve-resource" title="Permalink to this headline">¶</a></h3>
+<h2>Retrieve resource<a class="headerlink" href="#retrieve-resource" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file</span><span class="o">=</span><span class="n">my_res1</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="n">resource_filename</span><span class="o">=</span><span class="s2">&quot;myresource1.png&quot;</span><span class="p">)</span>
@@ -1405,7 +1561,7 @@
 </div>
 </div>
 <div class="section" id="assign-doi">
-<h3>Assign DOI<a class="headerlink" href="#assign-doi" title="Permalink to this headline">¶</a></h3>
+<h2>Assign DOI<a class="headerlink" href="#assign-doi" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_res1_ext</span><span class="o">.</span><span class="n">assign_doi</span><span class="p">()</span>
@@ -1416,9 +1572,9 @@
 </div>
 </div>
 <div class="section" id="utils">
-<h2>Utils<a class="headerlink" href="#utils" title="Permalink to this headline">¶</a></h2>
+<h1>Utils<a class="headerlink" href="#utils" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="remove-ro">
-<h3>remove RO<a class="headerlink" href="#remove-ro" title="Permalink to this headline">¶</a></h3>
+<h2>remove RO<a class="headerlink" href="#remove-ro" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">forked_ro</span><span class="o">.</span><span class="n">delete</span><span class="p">()</span>
@@ -1430,7 +1586,7 @@
 </div>
 </div>
 <div class="section" id="show-user-id">
-<h3>show user id<a class="headerlink" href="#show-user-id" title="Permalink to this headline">¶</a></h3>
+<h2>show user id<a class="headerlink" href="#show-user-id" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rohub</span><span class="o">.</span><span class="n">show_user_id</span><span class="p">()</span>
@@ -1440,7 +1596,7 @@
 </div>
 </div>
 <div class="section" id="show-possible-values-for-ro-types-resources-types-templates-etc">
-<h3>show possible values for RO types, Resources types, templates, etc.<a class="headerlink" href="#show-possible-values-for-ro-types-resources-types-templates-etc" title="Permalink to this headline">¶</a></h3>
+<h2>show possible values for RO types, Resources types, templates, etc.<a class="headerlink" href="#show-possible-values-for-ro-types-resources-types-templates-etc" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rohub</span><span class="o">.</span><span class="n">list_valid_research_areas</span><span class="p">()</span>
@@ -1506,7 +1662,7 @@
 </div>
 </div>
 <div class="section" id="create-external-user">
-<h3>create external user<a class="headerlink" href="#create-external-user" title="Permalink to this headline">¶</a></h3>
+<h2>create external user<a class="headerlink" href="#create-external-user" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rohub</span><span class="o">.</span><span class="n">external_user_add</span><span class="p">(</span><span class="n">user_id</span><span class="o">=</span><span class="s2">&quot;https://orcid.org/0000-0003-3784-6651&quot;</span><span class="p">,</span> 
@@ -1520,7 +1676,7 @@
 </div>
 </div>
 <div class="section" id="create-organization">
-<h3>create organization<a class="headerlink" href="#create-organization" title="Permalink to this headline">¶</a></h3>
+<h2>create organization<a class="headerlink" href="#create-organization" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rohub</span><span class="o">.</span><span class="n">organization_add</span><span class="p">(</span><span class="n">organization_id</span><span class="o">=</span><span class="s2">&quot;https://ror.org/025cj6e44&quot;</span><span class="p">,</span>
@@ -1534,7 +1690,7 @@
 </div>
 </div>
 <div class="section" id="load-full-metadata">
-<h3>load full metadata<a class="headerlink" href="#load-full-metadata" title="Permalink to this headline">¶</a></h3>
+<h2>load full metadata<a class="headerlink" href="#load-full-metadata" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ro</span><span class="o">.</span><span class="n">load_full_metadata</span><span class="p">()</span>
@@ -1551,7 +1707,7 @@
 </div>
 </div>
 <div class="section" id="rohub-library-version">
-<h3>rohub library version<a class="headerlink" href="#rohub-library-version" title="Permalink to this headline">¶</a></h3>
+<h2>rohub library version<a class="headerlink" href="#rohub-library-version" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rohub</span><span class="o">.</span><span class="n">version</span><span class="p">()</span>
@@ -1561,7 +1717,7 @@
 </div>
 </div>
 <div class="section" id="set-evolution-setting">
-<h3>Set evolution setting<a class="headerlink" href="#set-evolution-setting" title="Permalink to this headline">¶</a></h3>
+<h2>Set evolution setting<a class="headerlink" href="#set-evolution-setting" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#default 30</span>
@@ -1580,7 +1736,7 @@
 </div>
 </div>
 <div class="section" id="add-annotation-general">
-<h3>add annotation general<a class="headerlink" href="#add-annotation-general" title="Permalink to this headline">¶</a></h3>
+<h2>add annotation general<a class="headerlink" href="#add-annotation-general" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ro</span><span class="o">.</span><span class="n">add_annotations</span><span class="p">(</span><span class="n">body_specification_json</span><span class="o">=</span><span class="n">geojson_as_text_point</span><span class="p">)</span>
@@ -1590,13 +1746,12 @@
 </div>
 </div>
 <div class="section" id="remove-annotation">
-<h3>remove annotation<a class="headerlink" href="#remove-annotation" title="Permalink to this headline">¶</a></h3>
+<h2>remove annotation<a class="headerlink" href="#remove-annotation" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">annot_id</span><span class="o">=</span><span class="s2">&quot;e8589553-40de-4e49-b966-204502ce3780&quot;</span>
 <span class="n">ro</span><span class="o">.</span><span class="n">delete_annotation</span><span class="p">(</span><span class="n">annotation_id</span><span class="o">=</span><span class="n">annot_id</span><span class="p">)</span>
 </pre></div>
-</div>
 </div>
 </div>
 </div>
@@ -1635,10 +1790,10 @@
             <p class="prev-next-title">ROHUB service</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../../science/eosc-future.html" title="next page">
+    <a class='right-next' id="next-link" href="Sharing-files-EGI-DataHub.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">EOSC-Future demo</p>
+        <p class="prev-next-title">WORKING WITH EGI DATAHUB</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
