@@ -37,21 +37,23 @@
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/togglebutton.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Impact of the Covid-19 Lockdown on Air quality over Europe" href="air_quality_lockdown.html" />
+    <link rel="next" title="Urban Heat Island effect in Fortaleza, Brazil" href="Urban-heat-island-ERA5-Land.html" />
     <link rel="prev" title="Example with high-resolution CMIP6 models (~100 km) using Pangeo catalog" href="CMIP6_hr_1985-2014.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -247,6 +249,11 @@
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
      Example ERA5
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Urban-heat-island-ERA5-Land.html">
+     Urban Heat Island effect in Fortaleza, Brazil
     </a>
    </li>
    <li class="toctree-l2">
@@ -847,10 +854,10 @@ file written: /scratch/franzihe/output/ERA5/monthly_means/1deg/Amon/sf_Amon_1deg
             <p class="prev-next-title">Example with high-resolution CMIP6 models (~100 km) using Pangeo catalog</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="air_quality_lockdown.html" title="next page">
+    <a class='right-next' id="next-link" href="Urban-heat-island-ERA5-Land.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Impact of the Covid-19 Lockdown on Air quality over Europe</p>
+        <p class="prev-next-title">Urban Heat Island effect in Fortaleza, Brazil</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

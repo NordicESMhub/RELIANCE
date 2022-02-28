@@ -1,0 +1,2429 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Urban Heat Island effect in Fortaleza, Brazil &#8212; Showcase Jupyter notebooks series</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Impact of the Covid-19 Lockdown on Air quality over Europe" href="air_quality_lockdown.html" />
+    <link rel="prev" title="Example ERA5" href="ERA5_1985-2014.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/reliance-icon.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Showcase Jupyter notebooks series</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../welcome.html">
+   Welcome to RELIANCE showcase series
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  About
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../CONDUCT.html">
+   Code of Conduct
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../LICENSE.html">
+   LICENSE
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  ADAM service jupyter notebooks
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../adam/setup.html">
+   ADAM service
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../adam/notebooks/MOD_AquaCHL_ADAM.html">
+     Using ADAM-API to access MODIS Aqua CHL
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../adam/notebooks/UERRA_ADAM.html">
+     Using ADAM-API to access UERRA regional reanalysis
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  ROHUB service jupyter notebooks
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../rohub/setup.html">
+   ROHUB service
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../rohub/notebooks/ROHub-library-prod-demo.html">
+     Example to use Rohub from Jupyter notebook
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../rohub/notebooks/Sharing-files-EGI-DataHub.html">
+     WORKING WITH EGI DATAHUB
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Scientific showcase series
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../eosc-future.html">
+   EOSC-Future demo
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../demo-eosc-future/README.html">
+     Demo for EOSC-Future
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../demo-eosc-future/RELIANCE-Datacube-featuring-EOSC.html">
+     Using CAMS European air quality analysis from Copernicus Atmosphere Monitoring with RELIANCE services
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../demo-eosc-future/RELIANCE_France_PM10.html">
+     PM10 over France with CAMS European air quality analysis using RELIANCE services
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../demo-eosc-future/RELIANCE_Italy_NO2.html">
+     NO2 over Italy with CAMS European air quality analysis using RELIANCE services
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../demo-eosc-future/RELIANCE_Norway-Viken_NO2.html">
+     NO2 over Viken &amp; Oslo (Norway) with CAMS European air quality analysis using RELIANCE services
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../demo-eosc-future/RELIANCE_Norway-Viken_PM10.html">
+     PM10 over Viken &amp; Oslo (Norway) with CAMS European air quality analysis using RELIANCE services
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../demo-eosc-future/RELIANCE_Norway-Viken_PM25.html">
+     PM2.5 over Viken &amp; Oslo (Norway) with CAMS European air quality analysis using RELIANCE services
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../demo-eosc-future/RELIANCE_Norway_PM10.html">
+     PM10 over Norway with CAMS European air quality analysis using RELIANCE services
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../intro.html">
+   Notebooks from researchers
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="CMIP6_hr_1985-2014.html">
+     Example with high-resolution CMIP6 models (~100 km) using Pangeo catalog
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ERA5_1985-2014.html">
+     Example ERA5
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Urban Heat Island effect in Fortaleza, Brazil
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="air_quality_lockdown.html">
+     Impact of the Covid-19 Lockdown on Air quality over Europe
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="comparisons_with_air_quality_measurements.html">
+     Jupyter notebook comparing CAMS and air quality measurements
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/science/notebooks/Urban-heat-island-ERA5-Land.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/NordicESMHub/RELIANCE"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/NordicESMHub/RELIANCE/issues/new?title=Issue%20on%20page%20%2Fscience/notebooks/Urban-heat-island-ERA5-Land.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/NordicESMHub/RELIANCE/main?urlpath=tree/content/science/notebooks/Urban-heat-island-ERA5-Land.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Urban Heat Island effect in Fortaleza, Brazil
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#table-of-contents">
+   Table of Contents
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction-a-id-introduction-a">
+   1. Introduction
+   <a id="introduction">
+   </a>
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-wrangling-a-id-data-wrangling-a">
+   2. Data Wrangling
+   <a id="data_wrangling">
+   </a>
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#initialization">
+     Initialization
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#choose-the-country-of-interest">
+       Choose the country of interest
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#geojson-for-selecting-data">
+       Geojson for selecting data
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#organize-my-data">
+     Organize my data
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#geojson-file-for-selecting-data-from-adam">
+       Geojson file for selecting data from ADAM
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#import-python-packages">
+     Import python packages
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#authentication-to-adam-platform-to-get-era5-land-2-meter-temperature-variable">
+     Authentication to ADAM-Platform to get ERA5-Land 2 meter Temperature variable
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#get-adam-key-from-a-local-file">
+       Get ADAM Key from a local file
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#access-to-product">
+       Access to Product
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#data-access">
+       Data Access
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#define-a-function-to-select-a-time-range-and-get-data">
+         Define a function to select a time range and get data
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#get-variable-of-interest-for-each-day-from-start-date-to-end-date">
+         Get variable of interest for each day from start_date to end_date
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#data-analysis-and-visualization-of-era5-land-2-meter-temperature-dataset">
+       Data Analysis and Visualization of ERA5-Land 2 meter Temperature Dataset
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#unzip-data">
+         Unzip data
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#read-data-and-analyze">
+         Read data and analyze
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#read-dataset-locally">
+       Read dataset locally
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#sites">
+       Sites
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Urban Heat Island effect in Fortaleza, Brazil</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Urban Heat Island effect in Fortaleza, Brazil
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#table-of-contents">
+   Table of Contents
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction-a-id-introduction-a">
+   1. Introduction
+   <a id="introduction">
+   </a>
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-wrangling-a-id-data-wrangling-a">
+   2. Data Wrangling
+   <a id="data_wrangling">
+   </a>
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#initialization">
+     Initialization
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#choose-the-country-of-interest">
+       Choose the country of interest
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#geojson-for-selecting-data">
+       Geojson for selecting data
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#organize-my-data">
+     Organize my data
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#geojson-file-for-selecting-data-from-adam">
+       Geojson file for selecting data from ADAM
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#import-python-packages">
+     Import python packages
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#authentication-to-adam-platform-to-get-era5-land-2-meter-temperature-variable">
+     Authentication to ADAM-Platform to get ERA5-Land 2 meter Temperature variable
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#get-adam-key-from-a-local-file">
+       Get ADAM Key from a local file
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#access-to-product">
+       Access to Product
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#data-access">
+       Data Access
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#define-a-function-to-select-a-time-range-and-get-data">
+         Define a function to select a time range and get data
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#get-variable-of-interest-for-each-day-from-start-date-to-end-date">
+         Get variable of interest for each day from start_date to end_date
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#data-analysis-and-visualization-of-era5-land-2-meter-temperature-dataset">
+       Data Analysis and Visualization of ERA5-Land 2 meter Temperature Dataset
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#unzip-data">
+         Unzip data
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#read-data-and-analyze">
+         Read data and analyze
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#read-dataset-locally">
+       Read dataset locally
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#sites">
+       Sites
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="urban-heat-island-effect-in-fortaleza-brazil">
+<h1>Urban Heat Island effect in Fortaleza, Brazil<a class="headerlink" href="#urban-heat-island-effect-in-fortaleza-brazil" title="Permalink to this headline">¶</a></h1>
+<p><svg version="1.1" width="16" height="16" class="octicon octicon-tag" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z"></path></svg>
+<span class="sphinx-bs badge badge-primary">urban-heat-island</span>
+<span class="sphinx-bs badge badge-secondary">ERA5-land</span></p>
+<p><a class="reference external" href="https://w3id.org/ro-id/21f214d9-214a-4abf-bd75-6e877a920276"><img alt="RoHub - FAIR Executable Research Object" src="https://img.shields.io/badge/RoHub-FAIR_Executable_Research_Object-2ea44f?logo=Open+Access&amp;logoColor=blue" /></a></p>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="table-of-contents">
+<h1>Table of Contents<a class="headerlink" href="#table-of-contents" title="Permalink to this headline">¶</a></h1>
+<ul>
+<li><a href="#introduction">1. Introduction</a></li>
+<li><a href="#data_wrangling">2. Data Wrangling</a></li>
+<li><a href="#exploratory">3. Exploratory Data Analysis</a></li>
+<li><a href="#conclusion">4. Conclusion</a></li>
+<li><a href="#references">5. References</a></li>
+</ul></div>
+<div class="tex2jax_ignore mathjax_ignore section" id="introduction-a-id-introduction-a">
+<h1>1. Introduction <a id='introduction'></a><a class="headerlink" href="#introduction-a-id-introduction-a" title="Permalink to this headline">¶</a></h1>
+<p>This work intends to demonstrate the occurrence of the urban heat island phenomenon over the city of Fortaleza (Brazil). We start with aggregating bibliography and other relevant documents/data (<a class="reference external" href="https://www.ecmwf.int/en/era5-land">ERA5-Land</a>). We access ERA5-Land from the <a class="reference external" href="https://reliance.adamplatform.eu/">RELIANCE datacube resources</a>, by using the functionalities provided in the Adam API.</p>
+<p><strong>Questions</strong></p>
+<ul class="simple">
+<li><p>Is it possible to quantify the existence of an Urban Heat Island Effect in Fortaleza (Brazil) with ERA5-Land?</p></li>
+<li><p>Is there any correlation with local measurements available?</p></li>
+<li><p>How has the situation changed over the last decades?</p></li>
+</ul>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="data-wrangling-a-id-data-wrangling-a">
+<h1>2. Data Wrangling <a id='data_wrangling'></a><a class="headerlink" href="#data-wrangling-a-id-data-wrangling-a" title="Permalink to this headline">¶</a></h1>
+<p>This study will compare 2 meter temperature from ERA5-Land from 3 different sites in the city of Fortaleza and its surroundings:</p>
+<ul class="simple">
+<li><p>MWS UFC: 3 44’ 20’’ S; 38 35’ 37’’ W</p></li>
+<li><p>AWS FOR 3 47’ 42’’ S; 38 33’ 30’’ W</p></li>
+<li><p>AWS SGA 3 39’ 83’’ S; 38 56’ 32’’ W</p></li>
+</ul>
+<div class="section" id="initialization">
+<h2>Initialization<a class="headerlink" href="#initialization" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Choose a country and add its name and country code</p></li>
+<li><p>Choose the variable to analyze (2M Temperature, etc.)</p></li>
+<li><p>Choose the area for your analysis</p></li>
+</ul>
+<div class="section" id="choose-the-country-of-interest">
+<h3>Choose the country of interest<a class="headerlink" href="#choose-the-country-of-interest" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">country_code</span> <span class="o">=</span> <span class="s1">&#39;BR&#39;</span> 
+<span class="n">country_fullname</span> <span class="o">=</span> <span class="s2">&quot;Brazil&quot;</span>
+<span class="n">variable_name</span> <span class="o">=</span> <span class="s1">&#39;2M_TEMPERATURE&#39;</span>
+<span class="n">variable_unit</span> <span class="o">=</span> <span class="s1">&#39;K&#39;</span>
+<span class="n">variable_long_name</span> <span class="o">=</span> <span class="s1">&#39;2m temperature&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="geojson-for-selecting-data">
+<h3>Geojson for selecting data<a class="headerlink" href="#geojson-for-selecting-data" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>The geometry field is extracted from a GeoJSON file, retrieving the value of the “feature” element.</p></li>
+<li><p>To create a geojson file for the area of interest, you can use <a class="reference external" href="https://geojson.io/">https://geojson.io/</a></p></li>
+<li><p>Then paste the result below in the geojson variable</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">geojson</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;{</span>
+<span class="s2">  &quot;type&quot;: &quot;FeatureCollection&quot;,</span>
+<span class="s2">  &quot;features&quot;: [</span>
+<span class="s2">    {</span>
+<span class="s2">      &quot;type&quot;: &quot;Feature&quot;,</span>
+<span class="s2">      &quot;properties&quot;: </span><span class="si">{}</span><span class="s2">,</span>
+<span class="s2">      &quot;geometry&quot;: {</span>
+<span class="s2">        &quot;type&quot;: &quot;Polygon&quot;,</span>
+<span class="s2">        &quot;coordinates&quot;: [</span>
+<span class="s2">          [</span>
+<span class="s2">            [</span>
+<span class="s2">              -39,</span>
+<span class="s2">              -4.48</span>
+<span class="s2">            ],</span>
+<span class="s2">            [</span>
+<span class="s2">              -38,</span>
+<span class="s2">              -4.48</span>
+<span class="s2">            ],</span>
+<span class="s2">            [</span>
+<span class="s2">              -38,</span>
+<span class="s2">              -3.39</span>
+<span class="s2">            ],</span>
+<span class="s2">            [</span>
+<span class="s2">              -39,</span>
+<span class="s2">              -3.39</span>
+<span class="s2">            ],</span>
+<span class="s2">            [</span>
+<span class="s2">              -39,</span>
+<span class="s2">              -4.48</span>
+<span class="s2">            ]</span>
+<span class="s2">          ]</span>
+<span class="s2">        ]</span>
+<span class="s2">      }</span>
+<span class="s2">    }</span>
+<span class="s2">  ]</span>
+<span class="s2">}&quot;&quot;&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="organize-my-data">
+<h2>Organize my data<a class="headerlink" href="#organize-my-data" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Define a prefix for my project (you may need to adjust it for your own usage on your infrastructure).</p>
+<ul>
+<li><p>input folder where all the data used as input to my Jupyter Notebook is stored (and eventually shared)</p></li>
+<li><p>output folder where all the results to keep are stored</p></li>
+<li><p>tool folder where all the tools, including this Jupyter Notebook will be copied for sharing</p></li>
+</ul>
+</li>
+<li><p>Create all corresponding folders</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">pathlib</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">PREFIX_PATH</span> <span class="o">=</span>  <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">&quot;HOME&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;/datahub/Reliance/&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">WORKDIR_FOLDER</span> <span class="o">=</span> <span class="n">PREFIX_PATH</span> <span class="o">+</span> <span class="s2">&quot;UHI-ERA5-Land&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;WORKDIR FOLDER: &quot;</span><span class="p">,</span> <span class="n">WORKDIR_FOLDER</span><span class="p">)</span>
+
+<span class="n">INPUT_DATA_DIR</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">WORKDIR_FOLDER</span><span class="p">,</span> <span class="s1">&#39;input&#39;</span><span class="p">)</span>
+<span class="n">OUTPUT_DATA_DIR</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">WORKDIR_FOLDER</span><span class="p">,</span> <span class="s1">&#39;output&#39;</span><span class="p">)</span>
+<span class="n">TOOL_DATA_DIR</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">WORKDIR_FOLDER</span><span class="p">,</span> <span class="s1">&#39;tool&#39;</span><span class="p">)</span>
+
+<span class="n">list_folders</span> <span class="o">=</span> <span class="p">[</span><span class="n">INPUT_DATA_DIR</span><span class="p">,</span> <span class="n">OUTPUT_DATA_DIR</span><span class="p">,</span> <span class="n">TOOL_DATA_DIR</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">folder</span> <span class="ow">in</span> <span class="n">list_folders</span><span class="p">:</span>
+    <span class="n">pathlib</span><span class="o">.</span><span class="n">Path</span><span class="p">(</span><span class="n">folder</span><span class="p">)</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">parents</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WORKDIR FOLDER:  /home/jovyan/datahub/Reliance/UHI-ERA5-Land
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="geojson-file-for-selecting-data-from-adam">
+<h3>Geojson file for selecting data from ADAM<a class="headerlink" href="#geojson-file-for-selecting-data-from-adam" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>We dissolve geojson in case we have more than one polygon and then save the results into a geojson file</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">geopandas</span> <span class="k">as</span> <span class="nn">gpd</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">local_path_geom</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">INPUT_DATA_DIR</span><span class="p">,</span> <span class="n">country_code</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">+</span> <span class="s1">&#39;.geo.json&#39;</span><span class="p">)</span>
+<span class="n">local_path_geom</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;/home/jovyan/datahub/Reliance/UHI-ERA5-Land/input/br.geo.json&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="n">pathlib</span><span class="o">.</span><span class="n">Path</span><span class="p">(</span><span class="n">local_path_geom</span><span class="p">)</span><span class="o">.</span><span class="n">exists</span><span class="p">()):</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">local_path_geom</span><span class="p">)</span>
+<span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">local_path_geom</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span>
+<span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">geojson</span><span class="p">)</span>
+<span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="n">local_path_geom</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">single_shape</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">dissolve</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="n">pathlib</span><span class="o">.</span><span class="n">Path</span><span class="p">(</span><span class="n">local_path_geom</span><span class="p">)</span><span class="o">.</span><span class="n">exists</span><span class="p">()):</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">local_path_geom</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">single_shape</span><span class="o">.</span><span class="n">to_file</span><span class="p">(</span><span class="n">local_path_geom</span><span class="p">,</span> <span class="n">driver</span><span class="o">=</span><span class="s1">&#39;GeoJSON&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="import-python-packages">
+<h2>Import python packages<a class="headerlink" href="#import-python-packages" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="authentication-to-adam-platform-to-get-era5-land-2-meter-temperature-variable">
+<h2>Authentication to ADAM-Platform to get ERA5-Land 2 meter Temperature variable<a class="headerlink" href="#authentication-to-adam-platform-to-get-era5-land-2-meter-temperature-variable" title="Permalink to this headline">¶</a></h2>
+<p>Get the data requried for the analysis. The following lines of code will show the personal Adam API-Key of the user and the endpoint currently in use, that provide access to the products in the related catalogue. At the end of the execution, if the authentication process is successfull the personal token and the expiration time should be returned as outputs.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">adamapi</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: adamapi in /opt/conda/lib/python3.8/site-packages (2.0.11)
+Requirement already satisfied: imageio in /opt/conda/lib/python3.8/site-packages (from adamapi) (2.9.0)
+Requirement already satisfied: requests&gt;=2.22.0 in /opt/conda/lib/python3.8/site-packages (from adamapi) (2.25.1)
+Requirement already satisfied: idna&lt;3,&gt;=2.5 in /opt/conda/lib/python3.8/site-packages (from requests&gt;=2.22.0-&gt;adamapi) (2.10)
+Requirement already satisfied: certifi&gt;=2017.4.17 in /opt/conda/lib/python3.8/site-packages (from requests&gt;=2.22.0-&gt;adamapi) (2021.10.8)
+Requirement already satisfied: urllib3&lt;1.27,&gt;=1.21.1 in /opt/conda/lib/python3.8/site-packages (from requests&gt;=2.22.0-&gt;adamapi) (1.26.4)
+Requirement already satisfied: chardet&lt;5,&gt;=3.0.2 in /opt/conda/lib/python3.8/site-packages (from requests&gt;=2.22.0-&gt;adamapi) (4.0.0)
+Requirement already satisfied: pillow in /opt/conda/lib/python3.8/site-packages (from imageio-&gt;adamapi) (8.1.2)
+Requirement already satisfied: numpy in /opt/conda/lib/python3.8/site-packages (from imageio-&gt;adamapi) (1.19.5)
+Note: you may need to restart the kernel to use updated packages.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="get-adam-key-from-a-local-file">
+<h3>Get ADAM Key from a local file<a class="headerlink" href="#get-adam-key-from-a-local-file" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>User would need to create this file to run the notebook.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">adam_key</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;HOME&#39;</span><span class="p">],</span><span class="s2">&quot;adam-key&quot;</span><span class="p">))</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">adamapi</span> <span class="k">as</span> <span class="nn">adam</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">adam</span><span class="o">.</span><span class="n">Auth</span><span class="p">()</span>
+<span class="n">a</span><span class="o">.</span><span class="n">setKey</span><span class="p">(</span><span class="n">adam_key</span><span class="p">)</span>
+<span class="n">a</span><span class="o">.</span><span class="n">setAdamCore</span><span class="p">(</span><span class="s1">&#39;https://reliance.adamplatform.eu&#39;</span><span class="p">)</span>
+<span class="n">a</span><span class="o">.</span><span class="n">authorize</span><span class="p">()</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;expires_at&#39;: &#39;2022-02-28T12:48:29.583Z&#39;,
+ &#39;access_token&#39;: &#39;0602a77c216948f09105623c28db6875&#39;,
+ &#39;refresh_token&#39;: &#39;9aa08c2019c042db82075b4ef18aa31e&#39;,
+ &#39;expires_in&#39;: 3600}
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="access-to-product">
+<h3>Access to Product<a class="headerlink" href="#access-to-product" title="Permalink to this headline">¶</a></h3>
+<p>The products discovery operation related to a specific dataset is implemented in the Adam API with the <font color='blue'> <strong>getProducts()</strong> </font> function. A combined <strong>spatial and temporal search</strong> can be requested by specifying the <font color='red'> <strong>datasetId</strong> </font> for the selected dataset, the <font color='red'> <strong>geometry</strong> </font> argument that specifies the <u>Area Of Interest</u>, and a temporal range defined by <code class="docutils literal notranslate"><span class="pre">startDate</span></code> and <code class="docutils literal notranslate"><span class="pre">endDate</span></code> . The geometry must <strong><u>always</u></strong> be defined by a <font color='red'> <strong>GeoJson object</strong> </font> that describes the polygon in the <strong><u>counterclockwise winding order</strong></u>. The optional arguments <code class="docutils literal notranslate"><span class="pre">startIndex</span></code> and <code class="docutils literal notranslate"><span class="pre">maxRecords</span></code> can set the list of the results returned as an output. The results of the search are displayed with their metadata and they are sorted starting from the most recent product.</p>
+</div>
+<div class="section" id="data-access">
+<h3>Data Access<a class="headerlink" href="#data-access" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">geojson_rewind</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: geojson_rewind in /opt/conda/lib/python3.8/site-packages (1.0.2)
+Note: you may need to restart the kernel to use updated packages.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">geojson_rewind</span> <span class="kn">import</span> <span class="n">rewind</span>
+<span class="kn">import</span> <span class="nn">json</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The GeoJson object needs to be rearranged according to the counterclockwise winding order. This operation is executed in the next few lines to obtain
+a geometry that meets the requirements of the method. <strong>Geom_1</strong> is the final result to be used in the discovery operation.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">local_path_geom</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">geom_dict</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+<span class="n">output</span> <span class="o">=</span> <span class="n">rewind</span><span class="p">(</span><span class="n">geom_dict</span><span class="p">)</span>    
+<span class="n">geom_1</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">geom_dict</span><span class="p">[</span><span class="s1">&#39;features&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;geometry&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">start_year</span> <span class="o">=</span> <span class="s1">&#39;2004&#39;</span>
+<span class="n">end_year</span> <span class="o">=</span> <span class="s1">&#39;2006&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>It is possible to access the data with the <font color='blue'> <strong>getData</strong> </font> function. Each product in the output list intersects the selected geometry and the following example shows how to access a specific product from the list of results obtained in the previous step. While the <font color='red'> <strong>datasetId</strong> </font> is always a mandatory parameter, for each data access request the <font color='blue'> <strong>getData</strong> </font> function needs only one of the following arguments: <font color='red'> <strong>geometry</strong> </font> or <font color='red'> <strong>productId</strong> </font>, that is the value of the <font color='blue'> <strong>_id</strong> </font> field in each product metadata. In the case of a <u><strong>spatial and temporal search</strong></u> the geometry must be provided to the function, together with the time range of interest.
+The output of the <font color='blue'> <strong>getData</strong> </font> function is <u>always</u> a <font color='red'> <strong>.zip</strong> </font> file containing the data retrieved with the data access request, providing the spatial <strong>subset</strong> of the product. The zip file will contain a geotiff file for each of the spatial subsets extracted in the selected time range.</p>
+<div class="section" id="define-a-function-to-select-a-time-range-and-get-data">
+<h4>Define a function to select a time range and get data<a class="headerlink" href="#define-a-function-to-select-a-time-range-and-get-data" title="Permalink to this headline">¶</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">getZipData</span><span class="p">(</span><span class="n">auth</span><span class="p">,</span> <span class="n">dataset_info</span><span class="p">):</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="n">pathlib</span><span class="o">.</span><span class="n">Path</span><span class="p">(</span><span class="n">pathlib</span><span class="o">.</span><span class="n">Path</span><span class="p">(</span><span class="n">dataset_info</span><span class="p">[</span><span class="s1">&#39;outputFname&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">stem</span><span class="p">)</span><span class="o">.</span><span class="n">exists</span><span class="p">()</span> <span class="ow">or</span> <span class="n">pathlib</span><span class="o">.</span><span class="n">Path</span><span class="p">(</span><span class="n">dataset_info</span><span class="p">[</span><span class="s1">&#39;outputFname&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">exists</span><span class="p">()):</span>
+        <span class="n">data</span><span class="o">=</span><span class="n">adam</span><span class="o">.</span><span class="n">GetData</span><span class="p">(</span><span class="n">auth</span><span class="p">)</span>
+        <span class="n">image</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">getData</span><span class="p">(</span>
+        <span class="n">datasetId</span> <span class="o">=</span> <span class="n">dataset_info</span><span class="p">[</span><span class="s1">&#39;datasetID&#39;</span><span class="p">],</span>
+        <span class="n">startDate</span> <span class="o">=</span> <span class="n">dataset_info</span><span class="p">[</span><span class="s1">&#39;startDate&#39;</span><span class="p">],</span>
+        <span class="n">endDate</span> <span class="o">=</span> <span class="n">dataset_info</span><span class="p">[</span><span class="s1">&#39;endDate&#39;</span><span class="p">],</span>
+        <span class="n">geometry</span> <span class="o">=</span> <span class="n">dataset_info</span><span class="p">[</span><span class="s1">&#39;geometry&#39;</span><span class="p">],</span>
+        <span class="n">outputFname</span> <span class="o">=</span> <span class="n">dataset_info</span><span class="p">[</span><span class="s1">&#39;outputFname&#39;</span><span class="p">])</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="get-variable-of-interest-for-each-day-from-start-date-to-end-date">
+<h4>Get variable of interest for each day from start_date to end_date<a class="headerlink" href="#get-variable-of-interest-for-each-day-from-start-date-to-end-date" title="Permalink to this headline">¶</a></h4>
+<p>This process can take a bit of time so be patient!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">clear_output</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">datasetID</span> <span class="o">=</span> <span class="s1">&#39;90866:ERA5_LAND_DAILY_2M_TEMPERATURE&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">start</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+
+<span class="k">for</span> <span class="n">year</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;2004&#39;</span><span class="p">,</span> <span class="s1">&#39;2005&#39;</span><span class="p">,</span> <span class="s1">&#39;2006&#39;</span><span class="p">]:</span>
+    <span class="n">datasetInfo</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;datasetID&#39;</span> <span class="p">:</span> <span class="n">datasetID</span><span class="p">,</span>
+    <span class="s1">&#39;startDate&#39;</span> <span class="p">:</span> <span class="n">year</span> <span class="o">+</span> <span class="s1">&#39;-02-01&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;endDate&#39;</span> <span class="p">:</span> <span class="n">year</span> <span class="o">+</span> <span class="s1">&#39;-05-31&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;geometry&#39;</span> <span class="p">:</span> <span class="n">geom_1</span><span class="p">,</span>
+    <span class="s1">&#39;outputFname&#39;</span> <span class="p">:</span> <span class="n">INPUT_DATA_DIR</span> <span class="o">+</span> <span class="s1">&#39;/&#39;</span> <span class="o">+</span> <span class="n">variable_name</span> <span class="o">+</span> <span class="s1">&#39;_&#39;</span> <span class="o">+</span> <span class="n">country_code</span> <span class="o">+</span> <span class="s1">&#39;_ADAMAPI_&#39;</span> <span class="o">+</span> <span class="n">year</span> <span class="o">+</span> <span class="s1">&#39;.zip&#39;</span>
+    <span class="p">}</span>
+    <span class="n">getZipData</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">datasetInfo</span><span class="p">)</span>
+    
+<span class="n">end</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+<span class="n">clear_output</span><span class="p">(</span><span class="n">wait</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">delta1</span> <span class="o">=</span> <span class="n">end</span> <span class="o">-</span> <span class="n">start</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\033</span><span class="s1">[1m&#39;</span><span class="o">+</span><span class="s1">&#39;Processing time: &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">delta1</span><span class="p">,</span><span class="mi">2</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">Processing time: 160.73</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="data-analysis-and-visualization-of-era5-land-2-meter-temperature-dataset">
+<h3>Data Analysis and Visualization of ERA5-Land 2 meter Temperature Dataset<a class="headerlink" href="#data-analysis-and-visualization-of-era5-land-2-meter-temperature-dataset" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="unzip-data">
+<h4>Unzip data<a class="headerlink" href="#unzip-data" title="Permalink to this headline">¶</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">zipfile</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">unzipData</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">out_prefix</span><span class="p">):</span>
+    <span class="k">with</span> <span class="n">zipfile</span><span class="o">.</span><span class="n">ZipFile</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">zip_ref</span><span class="p">:</span>
+        <span class="n">zip_ref</span><span class="o">.</span><span class="n">extractall</span><span class="p">(</span><span class="n">path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">out_prefix</span><span class="p">,</span> <span class="n">pathlib</span><span class="o">.</span><span class="n">Path</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span><span class="o">.</span><span class="n">stem</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">year</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;2004&#39;</span><span class="p">,</span> <span class="s1">&#39;2005&#39;</span><span class="p">,</span> <span class="s1">&#39;2006&#39;</span><span class="p">]:</span>
+    <span class="n">filename</span> <span class="o">=</span> <span class="n">INPUT_DATA_DIR</span> <span class="o">+</span> <span class="s1">&#39;/&#39;</span> <span class="o">+</span> <span class="n">variable_name</span> <span class="o">+</span> <span class="s1">&#39;_&#39;</span> <span class="o">+</span> <span class="n">country_code</span> <span class="o">+</span> <span class="s1">&#39;_ADAMAPI_&#39;</span> <span class="o">+</span> <span class="n">year</span> <span class="o">+</span> <span class="s1">&#39;.zip&#39;</span>
+    <span class="n">target_file</span> <span class="o">=</span> <span class="n">pathlib</span><span class="o">.</span><span class="n">Path</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">INPUT_DATA_DIR</span><span class="p">,</span> <span class="n">pathlib</span><span class="o">.</span><span class="n">Path</span><span class="p">(</span><span class="n">pathlib</span><span class="o">.</span><span class="n">Path</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span><span class="o">.</span><span class="n">stem</span><span class="p">)))</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">target_file</span><span class="o">.</span><span class="n">exists</span><span class="p">():</span>
+        <span class="n">unzipData</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">INPUT_DATA_DIR</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="read-data-and-analyze">
+<h4>Read data and analyze<a class="headerlink" href="#read-data-and-analyze" title="Permalink to this headline">¶</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
+<span class="kn">import</span> <span class="nn">glob</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">paths_to_datetimeindex</span><span class="p">(</span><span class="n">paths</span><span class="p">):</span>
+    <span class="k">return</span>  <span class="p">[</span><span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">date</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;_&#39;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">],</span> <span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1">t</span><span class="si">%f</span><span class="s1">&#39;</span><span class="p">)</span> <span class="k">for</span> <span class="n">date</span> <span class="ow">in</span> <span class="n">paths</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">getData</span><span class="p">(</span><span class="n">dirtif</span><span class="p">,</span> <span class="n">variable</span><span class="p">):</span>
+    <span class="n">geotiff_list</span> <span class="o">=</span> <span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="n">dirtif</span><span class="p">)</span>
+    <span class="c1"># Create variable used for time axis</span>
+    <span class="n">time_var</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="s1">&#39;time&#39;</span><span class="p">,</span> <span class="n">paths_to_datetimeindex</span><span class="p">(</span><span class="n">geotiff_list</span><span class="p">))</span>
+    <span class="c1"># Load in and concatenate all individual GeoTIFFs</span>
+    <span class="n">geotiffs_da</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">xr</span><span class="o">.</span><span class="n">open_rasterio</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">parse_coordinates</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">geotiff_list</span><span class="p">],</span>
+                        <span class="n">dim</span><span class="o">=</span><span class="n">time_var</span><span class="p">)</span>
+    <span class="c1"># Covert our xarray.DataArray into a xarray.Dataset</span>
+    <span class="n">geotiffs_da</span> <span class="o">=</span> <span class="n">geotiffs_da</span><span class="o">.</span><span class="n">to_dataset</span><span class="p">(</span><span class="s1">&#39;band&#39;</span><span class="p">)</span>
+    <span class="c1"># Rename the dimensions to make it CF-convention compliant</span>
+    <span class="n">geotiffs_da</span> <span class="o">=</span> <span class="n">geotiffs_da</span><span class="o">.</span><span class="n">rename_dims</span><span class="p">({</span><span class="s1">&#39;y&#39;</span><span class="p">:</span> <span class="s1">&#39;latitude&#39;</span><span class="p">,</span> <span class="s1">&#39;x&#39;</span><span class="p">:</span><span class="s1">&#39;longitude&#39;</span><span class="p">})</span>
+    <span class="c1"># Rename the variable to a more useful name</span>
+    <span class="n">geotiffs_da</span> <span class="o">=</span> <span class="n">geotiffs_da</span><span class="o">.</span><span class="n">rename_vars</span><span class="p">({</span><span class="mi">1</span><span class="p">:</span> <span class="n">variable</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">:</span><span class="s1">&#39;latitude&#39;</span><span class="p">,</span> <span class="s1">&#39;x&#39;</span><span class="p">:</span><span class="s1">&#39;longitude&#39;</span><span class="p">})</span>
+
+    <span class="k">return</span> <span class="n">geotiffs_da</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">geotiff_ds</span> <span class="o">=</span> <span class="n">getData</span><span class="p">(</span> <span class="n">INPUT_DATA_DIR</span> <span class="o">+</span> <span class="s1">&#39;/&#39;</span> <span class="o">+</span> <span class="n">variable_name</span> <span class="o">+</span> <span class="s1">&#39;_&#39;</span><span class="o">+</span> <span class="n">country_code</span> <span class="o">+</span> <span class="s1">&#39;_ADAMAPI_20*/*.tif&#39;</span><span class="p">,</span> <span class="n">variable_name</span><span class="p">)</span>
+<span class="n">geotiff_ds</span><span class="p">[</span><span class="n">variable_name</span><span class="p">]</span><span class="o">.</span><span class="n">attrs</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;units&#39;</span> <span class="p">:</span> <span class="n">variable_unit</span><span class="p">,</span> <span class="s1">&#39;long_name&#39;</span> <span class="p">:</span> <span class="n">variable_long_name</span> <span class="p">}</span>
+<span class="n">geotiff_ds</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div><svg style="position: absolute; width: 0; height: 0; overflow: hidden">
+<defs>
+<symbol id="icon-database" viewBox="0 0 32 32">
+<path d="M16 0c-8.837 0-16 2.239-16 5v4c0 2.761 7.163 5 16 5s16-2.239 16-5v-4c0-2.761-7.163-5-16-5z"></path>
+<path d="M16 17c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+<path d="M16 26c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+</symbol>
+<symbol id="icon-file-text2" viewBox="0 0 32 32">
+<path d="M28.681 7.159c-0.694-0.947-1.662-2.053-2.724-3.116s-2.169-2.030-3.116-2.724c-1.612-1.182-2.393-1.319-2.841-1.319h-15.5c-1.378 0-2.5 1.121-2.5 2.5v27c0 1.378 1.122 2.5 2.5 2.5h23c1.378 0 2.5-1.122 2.5-2.5v-19.5c0-0.448-0.137-1.23-1.319-2.841zM24.543 5.457c0.959 0.959 1.712 1.825 2.268 2.543h-4.811v-4.811c0.718 0.556 1.584 1.309 2.543 2.268zM28 29.5c0 0.271-0.229 0.5-0.5 0.5h-23c-0.271 0-0.5-0.229-0.5-0.5v-27c0-0.271 0.229-0.5 0.5-0.5 0 0 15.499-0 15.5 0v7c0 0.552 0.448 1 1 1h7v19.5z"></path>
+<path d="M23 26h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 22h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 18h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+</symbol>
+</defs>
+</svg>
+<style>/* CSS stylesheet for displaying xarray objects in jupyterlab.
+ *
+ */
+
+:root {
+  --xr-font-color0: var(--jp-content-font-color0, rgba(0, 0, 0, 1));
+  --xr-font-color2: var(--jp-content-font-color2, rgba(0, 0, 0, 0.54));
+  --xr-font-color3: var(--jp-content-font-color3, rgba(0, 0, 0, 0.38));
+  --xr-border-color: var(--jp-border-color2, #e0e0e0);
+  --xr-disabled-color: var(--jp-layout-color3, #bdbdbd);
+  --xr-background-color: var(--jp-layout-color0, white);
+  --xr-background-color-row-even: var(--jp-layout-color1, white);
+  --xr-background-color-row-odd: var(--jp-layout-color2, #eeeeee);
+}
+
+html[theme=dark],
+body.vscode-dark {
+  --xr-font-color0: rgba(255, 255, 255, 1);
+  --xr-font-color2: rgba(255, 255, 255, 0.54);
+  --xr-font-color3: rgba(255, 255, 255, 0.38);
+  --xr-border-color: #1F1F1F;
+  --xr-disabled-color: #515151;
+  --xr-background-color: #111111;
+  --xr-background-color-row-even: #111111;
+  --xr-background-color-row-odd: #313131;
+}
+
+.xr-wrap {
+  display: block;
+  min-width: 300px;
+  max-width: 700px;
+}
+
+.xr-text-repr-fallback {
+  /* fallback to plain text repr when CSS is not injected (untrusted notebook) */
+  display: none;
+}
+
+.xr-header {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  margin-bottom: 4px;
+  border-bottom: solid 1px var(--xr-border-color);
+}
+
+.xr-header > div,
+.xr-header > ul {
+  display: inline;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.xr-obj-type,
+.xr-array-name {
+  margin-left: 2px;
+  margin-right: 10px;
+}
+
+.xr-obj-type {
+  color: var(--xr-font-color2);
+}
+
+.xr-sections {
+  padding-left: 0 !important;
+  display: grid;
+  grid-template-columns: 150px auto auto 1fr 20px 20px;
+}
+
+.xr-section-item {
+  display: contents;
+}
+
+.xr-section-item input {
+  display: none;
+}
+
+.xr-section-item input + label {
+  color: var(--xr-disabled-color);
+}
+
+.xr-section-item input:enabled + label {
+  cursor: pointer;
+  color: var(--xr-font-color2);
+}
+
+.xr-section-item input:enabled + label:hover {
+  color: var(--xr-font-color0);
+}
+
+.xr-section-summary {
+  grid-column: 1;
+  color: var(--xr-font-color2);
+  font-weight: 500;
+}
+
+.xr-section-summary > span {
+  display: inline-block;
+  padding-left: 0.5em;
+}
+
+.xr-section-summary-in:disabled + label {
+  color: var(--xr-font-color2);
+}
+
+.xr-section-summary-in + label:before {
+  display: inline-block;
+  content: '►';
+  font-size: 11px;
+  width: 15px;
+  text-align: center;
+}
+
+.xr-section-summary-in:disabled + label:before {
+  color: var(--xr-disabled-color);
+}
+
+.xr-section-summary-in:checked + label:before {
+  content: '▼';
+}
+
+.xr-section-summary-in:checked + label > span {
+  display: none;
+}
+
+.xr-section-summary,
+.xr-section-inline-details {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.xr-section-inline-details {
+  grid-column: 2 / -1;
+}
+
+.xr-section-details {
+  display: none;
+  grid-column: 1 / -1;
+  margin-bottom: 5px;
+}
+
+.xr-section-summary-in:checked ~ .xr-section-details {
+  display: contents;
+}
+
+.xr-array-wrap {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 20px auto;
+}
+
+.xr-array-wrap > label {
+  grid-column: 1;
+  vertical-align: top;
+}
+
+.xr-preview {
+  color: var(--xr-font-color3);
+}
+
+.xr-array-preview,
+.xr-array-data {
+  padding: 0 5px !important;
+  grid-column: 2;
+}
+
+.xr-array-data,
+.xr-array-in:checked ~ .xr-array-preview {
+  display: none;
+}
+
+.xr-array-in:checked ~ .xr-array-data,
+.xr-array-preview {
+  display: inline-block;
+}
+
+.xr-dim-list {
+  display: inline-block !important;
+  list-style: none;
+  padding: 0 !important;
+  margin: 0;
+}
+
+.xr-dim-list li {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+.xr-dim-list:before {
+  content: '(';
+}
+
+.xr-dim-list:after {
+  content: ')';
+}
+
+.xr-dim-list li:not(:last-child):after {
+  content: ',';
+  padding-right: 5px;
+}
+
+.xr-has-index {
+  font-weight: bold;
+}
+
+.xr-var-list,
+.xr-var-item {
+  display: contents;
+}
+
+.xr-var-item > div,
+.xr-var-item label,
+.xr-var-item > .xr-var-name span {
+  background-color: var(--xr-background-color-row-even);
+  margin-bottom: 0;
+}
+
+.xr-var-item > .xr-var-name:hover span {
+  padding-right: 5px;
+}
+
+.xr-var-list > li:nth-child(odd) > div,
+.xr-var-list > li:nth-child(odd) > label,
+.xr-var-list > li:nth-child(odd) > .xr-var-name span {
+  background-color: var(--xr-background-color-row-odd);
+}
+
+.xr-var-name {
+  grid-column: 1;
+}
+
+.xr-var-dims {
+  grid-column: 2;
+}
+
+.xr-var-dtype {
+  grid-column: 3;
+  text-align: right;
+  color: var(--xr-font-color2);
+}
+
+.xr-var-preview {
+  grid-column: 4;
+}
+
+.xr-var-name,
+.xr-var-dims,
+.xr-var-dtype,
+.xr-preview,
+.xr-attrs dt {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 10px;
+}
+
+.xr-var-name:hover,
+.xr-var-dims:hover,
+.xr-var-dtype:hover,
+.xr-attrs dt:hover {
+  overflow: visible;
+  width: auto;
+  z-index: 1;
+}
+
+.xr-var-attrs,
+.xr-var-data {
+  display: none;
+  background-color: var(--xr-background-color) !important;
+  padding-bottom: 5px !important;
+}
+
+.xr-var-attrs-in:checked ~ .xr-var-attrs,
+.xr-var-data-in:checked ~ .xr-var-data {
+  display: block;
+}
+
+.xr-var-data > table {
+  float: right;
+}
+
+.xr-var-name span,
+.xr-var-data,
+.xr-attrs {
+  padding-left: 25px !important;
+}
+
+.xr-attrs,
+.xr-var-attrs,
+.xr-var-data {
+  grid-column: 1 / -1;
+}
+
+dl.xr-attrs {
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 125px auto;
+}
+
+.xr-attrs dt,
+.xr-attrs dd {
+  padding: 0;
+  margin: 0;
+  float: left;
+  padding-right: 10px;
+  width: auto;
+}
+
+.xr-attrs dt {
+  font-weight: normal;
+  grid-column: 1;
+}
+
+.xr-attrs dt:hover span {
+  display: inline-block;
+  background: var(--xr-background-color);
+  padding-right: 10px;
+}
+
+.xr-attrs dd {
+  grid-column: 2;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.xr-icon-database,
+.xr-icon-file-text2 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 1em;
+  height: 1.5em !important;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+</style><pre class='xr-text-repr-fallback'>&lt;xarray.Dataset&gt;
+Dimensions:         (time: 361, latitude: 12, longitude: 11)
+Coordinates:
+  * latitude        (latitude) float64 -3.4 -3.5 -3.6 -3.7 ... -4.3 -4.4 -4.5
+  * longitude       (longitude) float64 -39.0 -38.9 -38.8 ... -38.2 -38.1 -38.0
+  * time            (time) datetime64[ns] 2006-05-31 2006-05-30 ... 2004-02-01
+Data variables:
+    2M_TEMPERATURE  (time, latitude, longitude) float32 300.5 nan ... 0.0 0.0
+Attributes:
+    transform:      (0.099999998304, 0.0, -39.04999939135999, 0.0, -0.0999999...
+    crs:            +init=epsg:4326
+    res:            (0.099999998304, 0.0999999986435015)
+    is_tiled:       0
+    nodatavals:     (0.0,)
+    scales:         (1.0,)
+    offsets:        (0.0,)
+    AREA_OR_POINT:  Area</pre><div class='xr-wrap' hidden><div class='xr-header'><div class='xr-obj-type'>xarray.Dataset</div></div><ul class='xr-sections'><li class='xr-section-item'><input id='section-58049ebe-6f5f-4021-ba12-67a4980b3acf' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-58049ebe-6f5f-4021-ba12-67a4980b3acf' class='xr-section-summary'  title='Expand/collapse section'>Dimensions:</label><div class='xr-section-inline-details'><ul class='xr-dim-list'><li><span class='xr-has-index'>time</span>: 361</li><li><span class='xr-has-index'>latitude</span>: 12</li><li><span class='xr-has-index'>longitude</span>: 11</li></ul></div><div class='xr-section-details'></div></li><li class='xr-section-item'><input id='section-e2dfe005-db7b-4737-bc35-a337b85785b5' class='xr-section-summary-in' type='checkbox'  checked><label for='section-e2dfe005-db7b-4737-bc35-a337b85785b5' class='xr-section-summary' >Coordinates: <span>(3)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>latitude</span></div><div class='xr-var-dims'>(latitude)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>-3.4 -3.5 -3.6 ... -4.3 -4.4 -4.5</div><input id='attrs-22d6044a-68bc-4bdc-b242-a6443ef72358' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-22d6044a-68bc-4bdc-b242-a6443ef72358' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-6d7a9c00-b774-4201-a509-5de3968f63ac' class='xr-var-data-in' type='checkbox'><label for='data-6d7a9c00-b774-4201-a509-5de3968f63ac' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([-3.399999, -3.499999, -3.599999, -3.699999, -3.799999, -3.899999,
+       -3.999999, -4.099999, -4.199999, -4.299999, -4.399999, -4.499999])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>longitude</span></div><div class='xr-var-dims'>(longitude)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>-39.0 -38.9 -38.8 ... -38.1 -38.0</div><input id='attrs-aad9f319-d4f2-41d4-948f-5be76a5e81bb' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-aad9f319-d4f2-41d4-948f-5be76a5e81bb' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-53e6aea1-09ad-49f0-8a46-2fdb222bf5b3' class='xr-var-data-in' type='checkbox'><label for='data-53e6aea1-09ad-49f0-8a46-2fdb222bf5b3' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([-38.999999, -38.899999, -38.799999, -38.699999, -38.599999, -38.499999,
+       -38.399999, -38.299999, -38.199999, -38.099999, -37.999999])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>time</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>datetime64[ns]</div><div class='xr-var-preview xr-preview'>2006-05-31 ... 2004-02-01</div><input id='attrs-dc17613e-1e44-4092-a198-7b4394bb0d81' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-dc17613e-1e44-4092-a198-7b4394bb0d81' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-01f0e8b4-e9be-4975-b4a8-dd85a2f96061' class='xr-var-data-in' type='checkbox'><label for='data-01f0e8b4-e9be-4975-b4a8-dd85a2f96061' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([&#x27;2006-05-31T00:00:00.000000000&#x27;, &#x27;2006-05-30T00:00:00.000000000&#x27;,
+       &#x27;2006-05-29T00:00:00.000000000&#x27;, ..., &#x27;2004-02-03T00:00:00.000000000&#x27;,
+       &#x27;2004-02-02T00:00:00.000000000&#x27;, &#x27;2004-02-01T00:00:00.000000000&#x27;],
+      dtype=&#x27;datetime64[ns]&#x27;)</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-deb83368-236e-4289-a69f-67f4eddad3c2' class='xr-section-summary-in' type='checkbox'  checked><label for='section-deb83368-236e-4289-a69f-67f4eddad3c2' class='xr-section-summary' >Data variables: <span>(1)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span>2M_TEMPERATURE</span></div><div class='xr-var-dims'>(time, latitude, longitude)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>300.5 nan nan nan ... 0.0 0.0 0.0</div><input id='attrs-403fdad8-57c7-446e-8246-56d1be3ace6a' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-403fdad8-57c7-446e-8246-56d1be3ace6a' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-fe39a49a-0c9b-43e6-a810-1f9d0f3656cc' class='xr-var-data-in' type='checkbox'><label for='data-fe39a49a-0c9b-43e6-a810-1f9d0f3656cc' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>K</dd><dt><span>long_name :</span></dt><dd>2m temperature</dd></dl></div><div class='xr-var-data'><pre>array([[[300.49664,       nan,       nan, ...,       nan,       nan,
+           0.     ],
+        [300.3486 ,       nan,       nan, ...,       nan,       nan,
+           0.     ],
+        [300.11526, 300.22955, 300.37643, ...,       nan,       nan,
+           0.     ],
+        ...,
+        [296.18   , 296.55847, 297.82922, ..., 299.7611 , 300.08698,
+           0.     ],
+        [296.7994 , 297.7523 , 298.6772 , ..., 299.63922, 299.9673 ,
+           0.     ],
+        [  0.     ,   0.     ,   0.     , ...,   0.     ,   0.     ,
+           0.     ]],
+
+       [[300.3957 ,       nan,       nan, ...,       nan,       nan,
+           0.     ],
+        [300.3013 ,       nan,       nan, ...,       nan,       nan,
+           0.     ],
+        [300.14047, 300.20996, 300.31433, ...,       nan,       nan,
+           0.     ],
+...
+        [295.85675, 296.05475, 296.94882, ..., 298.1941 , 298.40802,
+           0.     ],
+        [296.3764 , 296.96112, 297.62833, ..., 298.2041 , 298.41046,
+           0.     ],
+        [  0.     ,   0.     ,   0.     , ...,   0.     ,   0.     ,
+           0.     ]],
+
+       [[298.8412 ,       nan,       nan, ...,       nan,       nan,
+           0.     ],
+        [298.79092,       nan,       nan, ...,       nan,       nan,
+           0.     ],
+        [298.8256 , 298.78882, 298.80072, ...,       nan,       nan,
+           0.     ],
+        ...,
+        [296.15308, 296.4076 , 297.2995 , ..., 298.6153 , 298.80106,
+           0.     ],
+        [296.51883, 297.1657 , 297.86975, ..., 298.6005 , 298.80087,
+           0.     ],
+        [  0.     ,   0.     ,   0.     , ...,   0.     ,   0.     ,
+           0.     ]]], dtype=float32)</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-2890f7f1-8890-493a-ab61-632bbc6de486' class='xr-section-summary-in' type='checkbox'  checked><label for='section-2890f7f1-8890-493a-ab61-632bbc6de486' class='xr-section-summary' >Attributes: <span>(8)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>transform :</span></dt><dd>(0.099999998304, 0.0, -39.04999939135999, 0.0, -0.0999999986435015, -3.3499987330304037)</dd><dt><span>crs :</span></dt><dd>+init=epsg:4326</dd><dt><span>res :</span></dt><dd>(0.099999998304, 0.0999999986435015)</dd><dt><span>is_tiled :</span></dt><dd>0</dd><dt><span>nodatavals :</span></dt><dd>(0.0,)</dd><dt><span>scales :</span></dt><dd>(1.0,)</dd><dt><span>offsets :</span></dt><dd>(0.0,)</dd><dt><span>AREA_OR_POINT :</span></dt><dd>Area</dd></dl></div></li></ul></div></div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">geotiff_ds</span><span class="o">.</span><span class="n">to_netcdf</span><span class="p">(</span><span class="n">OUTPUT_DATA_DIR</span> <span class="o">+</span> <span class="s1">&#39;/&#39;</span> <span class="o">+</span> <span class="n">variable_name</span> <span class="o">+</span> <span class="s1">&#39;_&#39;</span><span class="o">+</span> <span class="n">country_code</span> <span class="o">+</span> <span class="s1">&#39;_ADAMAPI.netcdf&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="read-dataset-locally">
+<h3>Read dataset locally<a class="headerlink" href="#read-dataset-locally" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">geotiff_ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">OUTPUT_DATA_DIR</span> <span class="o">+</span> <span class="s1">&#39;/&#39;</span> <span class="o">+</span> <span class="n">variable_name</span> <span class="o">+</span> <span class="s1">&#39;_&#39;</span><span class="o">+</span> <span class="n">country_code</span> <span class="o">+</span> <span class="s1">&#39;_ADAMAPI.netcdf&#39;</span><span class="p">)</span>
+<span class="n">geotiff_ds</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div><svg style="position: absolute; width: 0; height: 0; overflow: hidden">
+<defs>
+<symbol id="icon-database" viewBox="0 0 32 32">
+<path d="M16 0c-8.837 0-16 2.239-16 5v4c0 2.761 7.163 5 16 5s16-2.239 16-5v-4c0-2.761-7.163-5-16-5z"></path>
+<path d="M16 17c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+<path d="M16 26c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+</symbol>
+<symbol id="icon-file-text2" viewBox="0 0 32 32">
+<path d="M28.681 7.159c-0.694-0.947-1.662-2.053-2.724-3.116s-2.169-2.030-3.116-2.724c-1.612-1.182-2.393-1.319-2.841-1.319h-15.5c-1.378 0-2.5 1.121-2.5 2.5v27c0 1.378 1.122 2.5 2.5 2.5h23c1.378 0 2.5-1.122 2.5-2.5v-19.5c0-0.448-0.137-1.23-1.319-2.841zM24.543 5.457c0.959 0.959 1.712 1.825 2.268 2.543h-4.811v-4.811c0.718 0.556 1.584 1.309 2.543 2.268zM28 29.5c0 0.271-0.229 0.5-0.5 0.5h-23c-0.271 0-0.5-0.229-0.5-0.5v-27c0-0.271 0.229-0.5 0.5-0.5 0 0 15.499-0 15.5 0v7c0 0.552 0.448 1 1 1h7v19.5z"></path>
+<path d="M23 26h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 22h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 18h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+</symbol>
+</defs>
+</svg>
+<style>/* CSS stylesheet for displaying xarray objects in jupyterlab.
+ *
+ */
+
+:root {
+  --xr-font-color0: var(--jp-content-font-color0, rgba(0, 0, 0, 1));
+  --xr-font-color2: var(--jp-content-font-color2, rgba(0, 0, 0, 0.54));
+  --xr-font-color3: var(--jp-content-font-color3, rgba(0, 0, 0, 0.38));
+  --xr-border-color: var(--jp-border-color2, #e0e0e0);
+  --xr-disabled-color: var(--jp-layout-color3, #bdbdbd);
+  --xr-background-color: var(--jp-layout-color0, white);
+  --xr-background-color-row-even: var(--jp-layout-color1, white);
+  --xr-background-color-row-odd: var(--jp-layout-color2, #eeeeee);
+}
+
+html[theme=dark],
+body.vscode-dark {
+  --xr-font-color0: rgba(255, 255, 255, 1);
+  --xr-font-color2: rgba(255, 255, 255, 0.54);
+  --xr-font-color3: rgba(255, 255, 255, 0.38);
+  --xr-border-color: #1F1F1F;
+  --xr-disabled-color: #515151;
+  --xr-background-color: #111111;
+  --xr-background-color-row-even: #111111;
+  --xr-background-color-row-odd: #313131;
+}
+
+.xr-wrap {
+  display: block;
+  min-width: 300px;
+  max-width: 700px;
+}
+
+.xr-text-repr-fallback {
+  /* fallback to plain text repr when CSS is not injected (untrusted notebook) */
+  display: none;
+}
+
+.xr-header {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  margin-bottom: 4px;
+  border-bottom: solid 1px var(--xr-border-color);
+}
+
+.xr-header > div,
+.xr-header > ul {
+  display: inline;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.xr-obj-type,
+.xr-array-name {
+  margin-left: 2px;
+  margin-right: 10px;
+}
+
+.xr-obj-type {
+  color: var(--xr-font-color2);
+}
+
+.xr-sections {
+  padding-left: 0 !important;
+  display: grid;
+  grid-template-columns: 150px auto auto 1fr 20px 20px;
+}
+
+.xr-section-item {
+  display: contents;
+}
+
+.xr-section-item input {
+  display: none;
+}
+
+.xr-section-item input + label {
+  color: var(--xr-disabled-color);
+}
+
+.xr-section-item input:enabled + label {
+  cursor: pointer;
+  color: var(--xr-font-color2);
+}
+
+.xr-section-item input:enabled + label:hover {
+  color: var(--xr-font-color0);
+}
+
+.xr-section-summary {
+  grid-column: 1;
+  color: var(--xr-font-color2);
+  font-weight: 500;
+}
+
+.xr-section-summary > span {
+  display: inline-block;
+  padding-left: 0.5em;
+}
+
+.xr-section-summary-in:disabled + label {
+  color: var(--xr-font-color2);
+}
+
+.xr-section-summary-in + label:before {
+  display: inline-block;
+  content: '►';
+  font-size: 11px;
+  width: 15px;
+  text-align: center;
+}
+
+.xr-section-summary-in:disabled + label:before {
+  color: var(--xr-disabled-color);
+}
+
+.xr-section-summary-in:checked + label:before {
+  content: '▼';
+}
+
+.xr-section-summary-in:checked + label > span {
+  display: none;
+}
+
+.xr-section-summary,
+.xr-section-inline-details {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.xr-section-inline-details {
+  grid-column: 2 / -1;
+}
+
+.xr-section-details {
+  display: none;
+  grid-column: 1 / -1;
+  margin-bottom: 5px;
+}
+
+.xr-section-summary-in:checked ~ .xr-section-details {
+  display: contents;
+}
+
+.xr-array-wrap {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 20px auto;
+}
+
+.xr-array-wrap > label {
+  grid-column: 1;
+  vertical-align: top;
+}
+
+.xr-preview {
+  color: var(--xr-font-color3);
+}
+
+.xr-array-preview,
+.xr-array-data {
+  padding: 0 5px !important;
+  grid-column: 2;
+}
+
+.xr-array-data,
+.xr-array-in:checked ~ .xr-array-preview {
+  display: none;
+}
+
+.xr-array-in:checked ~ .xr-array-data,
+.xr-array-preview {
+  display: inline-block;
+}
+
+.xr-dim-list {
+  display: inline-block !important;
+  list-style: none;
+  padding: 0 !important;
+  margin: 0;
+}
+
+.xr-dim-list li {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+.xr-dim-list:before {
+  content: '(';
+}
+
+.xr-dim-list:after {
+  content: ')';
+}
+
+.xr-dim-list li:not(:last-child):after {
+  content: ',';
+  padding-right: 5px;
+}
+
+.xr-has-index {
+  font-weight: bold;
+}
+
+.xr-var-list,
+.xr-var-item {
+  display: contents;
+}
+
+.xr-var-item > div,
+.xr-var-item label,
+.xr-var-item > .xr-var-name span {
+  background-color: var(--xr-background-color-row-even);
+  margin-bottom: 0;
+}
+
+.xr-var-item > .xr-var-name:hover span {
+  padding-right: 5px;
+}
+
+.xr-var-list > li:nth-child(odd) > div,
+.xr-var-list > li:nth-child(odd) > label,
+.xr-var-list > li:nth-child(odd) > .xr-var-name span {
+  background-color: var(--xr-background-color-row-odd);
+}
+
+.xr-var-name {
+  grid-column: 1;
+}
+
+.xr-var-dims {
+  grid-column: 2;
+}
+
+.xr-var-dtype {
+  grid-column: 3;
+  text-align: right;
+  color: var(--xr-font-color2);
+}
+
+.xr-var-preview {
+  grid-column: 4;
+}
+
+.xr-var-name,
+.xr-var-dims,
+.xr-var-dtype,
+.xr-preview,
+.xr-attrs dt {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 10px;
+}
+
+.xr-var-name:hover,
+.xr-var-dims:hover,
+.xr-var-dtype:hover,
+.xr-attrs dt:hover {
+  overflow: visible;
+  width: auto;
+  z-index: 1;
+}
+
+.xr-var-attrs,
+.xr-var-data {
+  display: none;
+  background-color: var(--xr-background-color) !important;
+  padding-bottom: 5px !important;
+}
+
+.xr-var-attrs-in:checked ~ .xr-var-attrs,
+.xr-var-data-in:checked ~ .xr-var-data {
+  display: block;
+}
+
+.xr-var-data > table {
+  float: right;
+}
+
+.xr-var-name span,
+.xr-var-data,
+.xr-attrs {
+  padding-left: 25px !important;
+}
+
+.xr-attrs,
+.xr-var-attrs,
+.xr-var-data {
+  grid-column: 1 / -1;
+}
+
+dl.xr-attrs {
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 125px auto;
+}
+
+.xr-attrs dt,
+.xr-attrs dd {
+  padding: 0;
+  margin: 0;
+  float: left;
+  padding-right: 10px;
+  width: auto;
+}
+
+.xr-attrs dt {
+  font-weight: normal;
+  grid-column: 1;
+}
+
+.xr-attrs dt:hover span {
+  display: inline-block;
+  background: var(--xr-background-color);
+  padding-right: 10px;
+}
+
+.xr-attrs dd {
+  grid-column: 2;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.xr-icon-database,
+.xr-icon-file-text2 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 1em;
+  height: 1.5em !important;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+</style><pre class='xr-text-repr-fallback'>&lt;xarray.Dataset&gt;
+Dimensions:         (time: 361, latitude: 12, longitude: 11)
+Coordinates:
+  * latitude        (latitude) float64 -3.4 -3.5 -3.6 -3.7 ... -4.3 -4.4 -4.5
+  * longitude       (longitude) float64 -39.0 -38.9 -38.8 ... -38.2 -38.1 -38.0
+  * time            (time) datetime64[ns] 2006-05-31 2006-05-30 ... 2004-02-01
+Data variables:
+    2M_TEMPERATURE  (time, latitude, longitude) float32 300.5 nan ... 0.0 0.0
+Attributes:
+    transform:      [  0.1          0.         -39.04999939   0.          -0....
+    crs:            +init=epsg:4326
+    res:            [0.1 0.1]
+    is_tiled:       0
+    nodatavals:     0.0
+    scales:         1.0
+    offsets:        0.0
+    AREA_OR_POINT:  Area</pre><div class='xr-wrap' hidden><div class='xr-header'><div class='xr-obj-type'>xarray.Dataset</div></div><ul class='xr-sections'><li class='xr-section-item'><input id='section-4ea76f06-d56c-46c8-91c6-88290a534140' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-4ea76f06-d56c-46c8-91c6-88290a534140' class='xr-section-summary'  title='Expand/collapse section'>Dimensions:</label><div class='xr-section-inline-details'><ul class='xr-dim-list'><li><span class='xr-has-index'>time</span>: 361</li><li><span class='xr-has-index'>latitude</span>: 12</li><li><span class='xr-has-index'>longitude</span>: 11</li></ul></div><div class='xr-section-details'></div></li><li class='xr-section-item'><input id='section-4b8224d9-6e24-436b-b7d7-72c5ac14cc95' class='xr-section-summary-in' type='checkbox'  checked><label for='section-4b8224d9-6e24-436b-b7d7-72c5ac14cc95' class='xr-section-summary' >Coordinates: <span>(3)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>latitude</span></div><div class='xr-var-dims'>(latitude)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>-3.4 -3.5 -3.6 ... -4.3 -4.4 -4.5</div><input id='attrs-f61bb079-7930-4721-bfb0-4f5126e9190a' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-f61bb079-7930-4721-bfb0-4f5126e9190a' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-18e15bed-755c-45d0-8440-21730ee6388d' class='xr-var-data-in' type='checkbox'><label for='data-18e15bed-755c-45d0-8440-21730ee6388d' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([-3.399999, -3.499999, -3.599999, -3.699999, -3.799999, -3.899999,
+       -3.999999, -4.099999, -4.199999, -4.299999, -4.399999, -4.499999])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>longitude</span></div><div class='xr-var-dims'>(longitude)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>-39.0 -38.9 -38.8 ... -38.1 -38.0</div><input id='attrs-f551a980-0dd4-474c-ad3a-cc99338a86b6' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-f551a980-0dd4-474c-ad3a-cc99338a86b6' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-3ea354ff-8f9b-4f38-b8c9-cd5cecc1458f' class='xr-var-data-in' type='checkbox'><label for='data-3ea354ff-8f9b-4f38-b8c9-cd5cecc1458f' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([-38.999999, -38.899999, -38.799999, -38.699999, -38.599999, -38.499999,
+       -38.399999, -38.299999, -38.199999, -38.099999, -37.999999])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>time</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>datetime64[ns]</div><div class='xr-var-preview xr-preview'>2006-05-31 ... 2004-02-01</div><input id='attrs-bcf7fef8-7eee-4d1d-9a58-434bb4009fcf' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-bcf7fef8-7eee-4d1d-9a58-434bb4009fcf' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-32928021-ad62-4973-a812-aa55554104cd' class='xr-var-data-in' type='checkbox'><label for='data-32928021-ad62-4973-a812-aa55554104cd' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([&#x27;2006-05-31T00:00:00.000000000&#x27;, &#x27;2006-05-30T00:00:00.000000000&#x27;,
+       &#x27;2006-05-29T00:00:00.000000000&#x27;, ..., &#x27;2004-02-03T00:00:00.000000000&#x27;,
+       &#x27;2004-02-02T00:00:00.000000000&#x27;, &#x27;2004-02-01T00:00:00.000000000&#x27;],
+      dtype=&#x27;datetime64[ns]&#x27;)</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-db1a3875-6b61-4a82-9cda-e5319675df33' class='xr-section-summary-in' type='checkbox'  checked><label for='section-db1a3875-6b61-4a82-9cda-e5319675df33' class='xr-section-summary' >Data variables: <span>(1)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span>2M_TEMPERATURE</span></div><div class='xr-var-dims'>(time, latitude, longitude)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-65316201-d418-4ea7-9f8b-2eab0177374e' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-65316201-d418-4ea7-9f8b-2eab0177374e' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-234be854-e3b3-45ad-9547-edfdf099d0d9' class='xr-var-data-in' type='checkbox'><label for='data-234be854-e3b3-45ad-9547-edfdf099d0d9' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>K</dd><dt><span>long_name :</span></dt><dd>2m temperature</dd></dl></div><div class='xr-var-data'><pre>array([[[300.49664,       nan, ...,       nan,   0.     ],
+        [300.3486 ,       nan, ...,       nan,   0.     ],
+        ...,
+        [296.7994 , 297.7523 , ..., 299.9673 ,   0.     ],
+        [  0.     ,   0.     , ...,   0.     ,   0.     ]],
+
+       [[300.3957 ,       nan, ...,       nan,   0.     ],
+        [300.3013 ,       nan, ...,       nan,   0.     ],
+        ...,
+        [297.2068 , 297.98944, ..., 300.23526,   0.     ],
+        [  0.     ,   0.     , ...,   0.     ,   0.     ]],
+
+       ...,
+
+       [[298.30862,       nan, ...,       nan,   0.     ],
+        [298.2385 ,       nan, ...,       nan,   0.     ],
+        ...,
+        [296.3764 , 296.96112, ..., 298.41046,   0.     ],
+        [  0.     ,   0.     , ...,   0.     ,   0.     ]],
+
+       [[298.8412 ,       nan, ...,       nan,   0.     ],
+        [298.79092,       nan, ...,       nan,   0.     ],
+        ...,
+        [296.51883, 297.1657 , ..., 298.80087,   0.     ],
+        [  0.     ,   0.     , ...,   0.     ,   0.     ]]], dtype=float32)</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-9623cc9e-0f10-4b77-ad91-93ca23d37bfc' class='xr-section-summary-in' type='checkbox'  checked><label for='section-9623cc9e-0f10-4b77-ad91-93ca23d37bfc' class='xr-section-summary' >Attributes: <span>(8)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>transform :</span></dt><dd>[  0.1          0.         -39.04999939   0.          -0.1
+  -3.34999873]</dd><dt><span>crs :</span></dt><dd>+init=epsg:4326</dd><dt><span>res :</span></dt><dd>[0.1 0.1]</dd><dt><span>is_tiled :</span></dt><dd>0</dd><dt><span>nodatavals :</span></dt><dd>0.0</dd><dt><span>scales :</span></dt><dd>1.0</dd><dt><span>offsets :</span></dt><dd>0.0</dd><dt><span>AREA_OR_POINT :</span></dt><dd>Area</dd></dl></div></li></ul></div></div></div></div>
+</div>
+</div>
+<div class="section" id="sites">
+<h3>Sites<a class="headerlink" href="#sites" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>MWS UFC: 3 44’ 20’’ S; 38 35’ 37’’ W</p></li>
+<li><p>AWS FOR 3 47’ 42’’ S; 38 33’ 30’’ W</p></li>
+<li><p>AWS SGA 3 39’ 83’’ S; 38 56’ 32’’ W</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">aws_for</span> <span class="o">=</span> <span class="n">geotiff_ds</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">latitude</span><span class="o">=-</span><span class="mf">3.795</span><span class="p">,</span> <span class="n">longitude</span><span class="o">=-</span><span class="mf">38.5583</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s1">&#39;nearest&#39;</span><span class="p">)</span>
+<span class="n">aws_for</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div><svg style="position: absolute; width: 0; height: 0; overflow: hidden">
+<defs>
+<symbol id="icon-database" viewBox="0 0 32 32">
+<path d="M16 0c-8.837 0-16 2.239-16 5v4c0 2.761 7.163 5 16 5s16-2.239 16-5v-4c0-2.761-7.163-5-16-5z"></path>
+<path d="M16 17c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+<path d="M16 26c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+</symbol>
+<symbol id="icon-file-text2" viewBox="0 0 32 32">
+<path d="M28.681 7.159c-0.694-0.947-1.662-2.053-2.724-3.116s-2.169-2.030-3.116-2.724c-1.612-1.182-2.393-1.319-2.841-1.319h-15.5c-1.378 0-2.5 1.121-2.5 2.5v27c0 1.378 1.122 2.5 2.5 2.5h23c1.378 0 2.5-1.122 2.5-2.5v-19.5c0-0.448-0.137-1.23-1.319-2.841zM24.543 5.457c0.959 0.959 1.712 1.825 2.268 2.543h-4.811v-4.811c0.718 0.556 1.584 1.309 2.543 2.268zM28 29.5c0 0.271-0.229 0.5-0.5 0.5h-23c-0.271 0-0.5-0.229-0.5-0.5v-27c0-0.271 0.229-0.5 0.5-0.5 0 0 15.499-0 15.5 0v7c0 0.552 0.448 1 1 1h7v19.5z"></path>
+<path d="M23 26h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 22h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 18h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+</symbol>
+</defs>
+</svg>
+<style>/* CSS stylesheet for displaying xarray objects in jupyterlab.
+ *
+ */
+
+:root {
+  --xr-font-color0: var(--jp-content-font-color0, rgba(0, 0, 0, 1));
+  --xr-font-color2: var(--jp-content-font-color2, rgba(0, 0, 0, 0.54));
+  --xr-font-color3: var(--jp-content-font-color3, rgba(0, 0, 0, 0.38));
+  --xr-border-color: var(--jp-border-color2, #e0e0e0);
+  --xr-disabled-color: var(--jp-layout-color3, #bdbdbd);
+  --xr-background-color: var(--jp-layout-color0, white);
+  --xr-background-color-row-even: var(--jp-layout-color1, white);
+  --xr-background-color-row-odd: var(--jp-layout-color2, #eeeeee);
+}
+
+html[theme=dark],
+body.vscode-dark {
+  --xr-font-color0: rgba(255, 255, 255, 1);
+  --xr-font-color2: rgba(255, 255, 255, 0.54);
+  --xr-font-color3: rgba(255, 255, 255, 0.38);
+  --xr-border-color: #1F1F1F;
+  --xr-disabled-color: #515151;
+  --xr-background-color: #111111;
+  --xr-background-color-row-even: #111111;
+  --xr-background-color-row-odd: #313131;
+}
+
+.xr-wrap {
+  display: block;
+  min-width: 300px;
+  max-width: 700px;
+}
+
+.xr-text-repr-fallback {
+  /* fallback to plain text repr when CSS is not injected (untrusted notebook) */
+  display: none;
+}
+
+.xr-header {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  margin-bottom: 4px;
+  border-bottom: solid 1px var(--xr-border-color);
+}
+
+.xr-header > div,
+.xr-header > ul {
+  display: inline;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.xr-obj-type,
+.xr-array-name {
+  margin-left: 2px;
+  margin-right: 10px;
+}
+
+.xr-obj-type {
+  color: var(--xr-font-color2);
+}
+
+.xr-sections {
+  padding-left: 0 !important;
+  display: grid;
+  grid-template-columns: 150px auto auto 1fr 20px 20px;
+}
+
+.xr-section-item {
+  display: contents;
+}
+
+.xr-section-item input {
+  display: none;
+}
+
+.xr-section-item input + label {
+  color: var(--xr-disabled-color);
+}
+
+.xr-section-item input:enabled + label {
+  cursor: pointer;
+  color: var(--xr-font-color2);
+}
+
+.xr-section-item input:enabled + label:hover {
+  color: var(--xr-font-color0);
+}
+
+.xr-section-summary {
+  grid-column: 1;
+  color: var(--xr-font-color2);
+  font-weight: 500;
+}
+
+.xr-section-summary > span {
+  display: inline-block;
+  padding-left: 0.5em;
+}
+
+.xr-section-summary-in:disabled + label {
+  color: var(--xr-font-color2);
+}
+
+.xr-section-summary-in + label:before {
+  display: inline-block;
+  content: '►';
+  font-size: 11px;
+  width: 15px;
+  text-align: center;
+}
+
+.xr-section-summary-in:disabled + label:before {
+  color: var(--xr-disabled-color);
+}
+
+.xr-section-summary-in:checked + label:before {
+  content: '▼';
+}
+
+.xr-section-summary-in:checked + label > span {
+  display: none;
+}
+
+.xr-section-summary,
+.xr-section-inline-details {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.xr-section-inline-details {
+  grid-column: 2 / -1;
+}
+
+.xr-section-details {
+  display: none;
+  grid-column: 1 / -1;
+  margin-bottom: 5px;
+}
+
+.xr-section-summary-in:checked ~ .xr-section-details {
+  display: contents;
+}
+
+.xr-array-wrap {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 20px auto;
+}
+
+.xr-array-wrap > label {
+  grid-column: 1;
+  vertical-align: top;
+}
+
+.xr-preview {
+  color: var(--xr-font-color3);
+}
+
+.xr-array-preview,
+.xr-array-data {
+  padding: 0 5px !important;
+  grid-column: 2;
+}
+
+.xr-array-data,
+.xr-array-in:checked ~ .xr-array-preview {
+  display: none;
+}
+
+.xr-array-in:checked ~ .xr-array-data,
+.xr-array-preview {
+  display: inline-block;
+}
+
+.xr-dim-list {
+  display: inline-block !important;
+  list-style: none;
+  padding: 0 !important;
+  margin: 0;
+}
+
+.xr-dim-list li {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+.xr-dim-list:before {
+  content: '(';
+}
+
+.xr-dim-list:after {
+  content: ')';
+}
+
+.xr-dim-list li:not(:last-child):after {
+  content: ',';
+  padding-right: 5px;
+}
+
+.xr-has-index {
+  font-weight: bold;
+}
+
+.xr-var-list,
+.xr-var-item {
+  display: contents;
+}
+
+.xr-var-item > div,
+.xr-var-item label,
+.xr-var-item > .xr-var-name span {
+  background-color: var(--xr-background-color-row-even);
+  margin-bottom: 0;
+}
+
+.xr-var-item > .xr-var-name:hover span {
+  padding-right: 5px;
+}
+
+.xr-var-list > li:nth-child(odd) > div,
+.xr-var-list > li:nth-child(odd) > label,
+.xr-var-list > li:nth-child(odd) > .xr-var-name span {
+  background-color: var(--xr-background-color-row-odd);
+}
+
+.xr-var-name {
+  grid-column: 1;
+}
+
+.xr-var-dims {
+  grid-column: 2;
+}
+
+.xr-var-dtype {
+  grid-column: 3;
+  text-align: right;
+  color: var(--xr-font-color2);
+}
+
+.xr-var-preview {
+  grid-column: 4;
+}
+
+.xr-var-name,
+.xr-var-dims,
+.xr-var-dtype,
+.xr-preview,
+.xr-attrs dt {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 10px;
+}
+
+.xr-var-name:hover,
+.xr-var-dims:hover,
+.xr-var-dtype:hover,
+.xr-attrs dt:hover {
+  overflow: visible;
+  width: auto;
+  z-index: 1;
+}
+
+.xr-var-attrs,
+.xr-var-data {
+  display: none;
+  background-color: var(--xr-background-color) !important;
+  padding-bottom: 5px !important;
+}
+
+.xr-var-attrs-in:checked ~ .xr-var-attrs,
+.xr-var-data-in:checked ~ .xr-var-data {
+  display: block;
+}
+
+.xr-var-data > table {
+  float: right;
+}
+
+.xr-var-name span,
+.xr-var-data,
+.xr-attrs {
+  padding-left: 25px !important;
+}
+
+.xr-attrs,
+.xr-var-attrs,
+.xr-var-data {
+  grid-column: 1 / -1;
+}
+
+dl.xr-attrs {
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 125px auto;
+}
+
+.xr-attrs dt,
+.xr-attrs dd {
+  padding: 0;
+  margin: 0;
+  float: left;
+  padding-right: 10px;
+  width: auto;
+}
+
+.xr-attrs dt {
+  font-weight: normal;
+  grid-column: 1;
+}
+
+.xr-attrs dt:hover span {
+  display: inline-block;
+  background: var(--xr-background-color);
+  padding-right: 10px;
+}
+
+.xr-attrs dd {
+  grid-column: 2;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.xr-icon-database,
+.xr-icon-file-text2 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 1em;
+  height: 1.5em !important;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+</style><pre class='xr-text-repr-fallback'>&lt;xarray.Dataset&gt;
+Dimensions:         (time: 361)
+Coordinates:
+    latitude        float64 -3.8
+    longitude       float64 -38.6
+  * time            (time) datetime64[ns] 2006-05-31 2006-05-30 ... 2004-02-01
+Data variables:
+    2M_TEMPERATURE  (time) float32 299.9 299.9 299.0 298.7 ... 298.3 298.1 298.6
+Attributes:
+    transform:      [  0.1          0.         -39.04999939   0.          -0....
+    crs:            +init=epsg:4326
+    res:            [0.1 0.1]
+    is_tiled:       0
+    nodatavals:     0.0
+    scales:         1.0
+    offsets:        0.0
+    AREA_OR_POINT:  Area</pre><div class='xr-wrap' hidden><div class='xr-header'><div class='xr-obj-type'>xarray.Dataset</div></div><ul class='xr-sections'><li class='xr-section-item'><input id='section-f648717e-f151-4cca-a5a4-000918edd31b' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-f648717e-f151-4cca-a5a4-000918edd31b' class='xr-section-summary'  title='Expand/collapse section'>Dimensions:</label><div class='xr-section-inline-details'><ul class='xr-dim-list'><li><span class='xr-has-index'>time</span>: 361</li></ul></div><div class='xr-section-details'></div></li><li class='xr-section-item'><input id='section-bec21fde-5beb-44d2-9b72-8c9e1f8b61e9' class='xr-section-summary-in' type='checkbox'  checked><label for='section-bec21fde-5beb-44d2-9b72-8c9e1f8b61e9' class='xr-section-summary' >Coordinates: <span>(3)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span>latitude</span></div><div class='xr-var-dims'>()</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>-3.8</div><input id='attrs-571e8a79-325e-4709-81e2-e6ff3f2979b2' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-571e8a79-325e-4709-81e2-e6ff3f2979b2' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-e28c7ec6-e9a7-403a-b5d7-f0bb7b15af5d' class='xr-var-data-in' type='checkbox'><label for='data-e28c7ec6-e9a7-403a-b5d7-f0bb7b15af5d' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array(-3.79999873)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>longitude</span></div><div class='xr-var-dims'>()</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>-38.6</div><input id='attrs-67d20b9a-c838-4b30-8c0b-0acbf50f1b0b' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-67d20b9a-c838-4b30-8c0b-0acbf50f1b0b' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-4fc3bedc-d8ea-4cbd-89ee-3a9a3dd05927' class='xr-var-data-in' type='checkbox'><label for='data-4fc3bedc-d8ea-4cbd-89ee-3a9a3dd05927' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array(-38.5999994)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>time</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>datetime64[ns]</div><div class='xr-var-preview xr-preview'>2006-05-31 ... 2004-02-01</div><input id='attrs-df9cee7b-8b2c-4869-b4a3-f0a77f3d51d4' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-df9cee7b-8b2c-4869-b4a3-f0a77f3d51d4' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-afec4e9b-900f-4d9c-95f8-22bbba0fe83d' class='xr-var-data-in' type='checkbox'><label for='data-afec4e9b-900f-4d9c-95f8-22bbba0fe83d' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([&#x27;2006-05-31T00:00:00.000000000&#x27;, &#x27;2006-05-30T00:00:00.000000000&#x27;,
+       &#x27;2006-05-29T00:00:00.000000000&#x27;, ..., &#x27;2004-02-03T00:00:00.000000000&#x27;,
+       &#x27;2004-02-02T00:00:00.000000000&#x27;, &#x27;2004-02-01T00:00:00.000000000&#x27;],
+      dtype=&#x27;datetime64[ns]&#x27;)</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-13da0090-6c29-452a-bdc1-746852a4db5a' class='xr-section-summary-in' type='checkbox'  checked><label for='section-13da0090-6c29-452a-bdc1-746852a4db5a' class='xr-section-summary' >Data variables: <span>(1)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span>2M_TEMPERATURE</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>299.9 299.9 299.0 ... 298.1 298.6</div><input id='attrs-9ae36623-6faa-4487-9463-b4883594992f' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-9ae36623-6faa-4487-9463-b4883594992f' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-ebd3c042-aa4b-4efd-a514-35ac5e43bd46' class='xr-var-data-in' type='checkbox'><label for='data-ebd3c042-aa4b-4efd-a514-35ac5e43bd46' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>K</dd><dt><span>long_name :</span></dt><dd>2m temperature</dd></dl></div><div class='xr-var-data'><pre>array([299.86777, 299.9458 , 299.00946, ..., 298.27283, 298.14728, 298.6281 ],
+      dtype=float32)</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-d5015f0d-a601-4d1f-af11-7b9bb7c2febc' class='xr-section-summary-in' type='checkbox'  checked><label for='section-d5015f0d-a601-4d1f-af11-7b9bb7c2febc' class='xr-section-summary' >Attributes: <span>(8)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>transform :</span></dt><dd>[  0.1          0.         -39.04999939   0.          -0.1
+  -3.34999873]</dd><dt><span>crs :</span></dt><dd>+init=epsg:4326</dd><dt><span>res :</span></dt><dd>[0.1 0.1]</dd><dt><span>is_tiled :</span></dt><dd>0</dd><dt><span>nodatavals :</span></dt><dd>0.0</dd><dt><span>scales :</span></dt><dd>1.0</dd><dt><span>offsets :</span></dt><dd>0.0</dd><dt><span>AREA_OR_POINT :</span></dt><dd>Area</dd></dl></div></li></ul></div></div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="n">fig</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">25</span><span class="p">,</span><span class="mi">7</span><span class="p">))</span>
+<span class="k">for</span> <span class="n">year</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">2004</span><span class="p">,</span> <span class="mi">2005</span><span class="p">,</span> <span class="mi">2006</span><span class="p">]:</span>
+    <span class="n">aws_for</span><span class="p">[</span><span class="s1">&#39;2M_TEMPERATURE&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="n">aws_for</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">year</span><span class="o">.</span><span class="n">isin</span><span class="p">([</span><span class="n">year</span><span class="p">]))</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/Urban-heat-island-ERA5-Land_56_0.png" src="../../_images/Urban-heat-island-ERA5-Land_56_0.png" />
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./science/notebooks"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="ERA5_1985-2014.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Example ERA5</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="air_quality_lockdown.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Impact of the Covid-19 Lockdown on Air quality over Europe</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Anne Fouilloux<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
