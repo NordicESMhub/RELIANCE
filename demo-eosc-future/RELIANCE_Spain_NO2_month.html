@@ -1333,9 +1333,9 @@ Requirement already satisfied: python-dateutil&gt;=2.8.1 in /opt/conda/envs/cams
 Requirement already satisfied: pytz&gt;=2020.1 in /opt/conda/envs/cams/lib/python3.9/site-packages (from pandas-&gt;rohub) (2022.1)
 Requirement already satisfied: numpy&gt;=1.18.5 in /opt/conda/envs/cams/lib/python3.9/site-packages (from pandas-&gt;rohub) (1.21.6)
 Requirement already satisfied: charset-normalizer~=2.0.0 in /opt/conda/envs/cams/lib/python3.9/site-packages (from requests-&gt;rohub) (2.0.12)
-Requirement already satisfied: idna&lt;4,&gt;=2.5 in /opt/conda/envs/cams/lib/python3.9/site-packages (from requests-&gt;rohub) (3.3)
 Requirement already satisfied: certifi&gt;=2017.4.17 in /opt/conda/envs/cams/lib/python3.9/site-packages (from requests-&gt;rohub) (2021.10.8)
 Requirement already satisfied: urllib3&lt;1.27,&gt;=1.21.1 in /opt/conda/envs/cams/lib/python3.9/site-packages (from requests-&gt;rohub) (1.26.9)
+Requirement already satisfied: idna&lt;4,&gt;=2.5 in /opt/conda/envs/cams/lib/python3.9/site-packages (from requests-&gt;rohub) (3.3)
 Requirement already satisfied: six&gt;=1.5 in /opt/conda/envs/cams/lib/python3.9/site-packages (from python-dateutil&gt;=2.8.1-&gt;pandas-&gt;rohub) (1.16.0)
 Note: you may need to restart the kernel to use updated packages.
 </pre></div>
@@ -1422,9 +1422,9 @@ Note: you may need to restart the kernel to use updated packages.
 <span class="n">variable_name</span> <span class="o">=</span> <span class="s1">&#39;NO2&#39;</span>
 <span class="n">variable_unit</span> <span class="o">=</span> <span class="s1">&#39;µg m-3&#39;</span>
 <span class="n">variable_long_name</span> <span class="o">=</span> <span class="s1">&#39;Nitrogen Dioxide&#39;</span>
-<span class="n">month_name</span> <span class="o">=</span> <span class="s1">&#39;March&#39;</span>
-<span class="n">month_number</span> <span class="o">=</span> <span class="s1">&#39;03&#39;</span>
-<span class="n">month_nb_days</span> <span class="o">=</span> <span class="s1">&#39;31&#39;</span>
+<span class="n">month_name</span> <span class="o">=</span> <span class="s1">&#39;April&#39;</span>
+<span class="n">month_number</span> <span class="o">=</span> <span class="s1">&#39;04&#39;</span>
+<span class="n">month_nb_days</span> <span class="o">=</span> <span class="s1">&#39;30&#39;</span>
 </pre></div>
 </div>
 </div>
@@ -1455,7 +1455,7 @@ Note: you may need to restart the kernel to use updated packages.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WORKDIR FOLDER:  /home/jovyan/datahub/Reliance/Climate_ES_NO2_March
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WORKDIR FOLDER:  /home/jovyan/datahub/Reliance/Climate_ES_NO2_April
 </pre></div>
 </div>
 </div>
@@ -1501,7 +1501,7 @@ Note: you may need to restart the kernel to use updated packages.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;/home/jovyan/datahub/Reliance/Climate_ES_NO2_March/input/es.geo.json&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;/home/jovyan/datahub/Reliance/Climate_ES_NO2_April/input/es.geo.json&#39;
 </pre></div>
 </div>
 </div>
@@ -1576,13 +1576,13 @@ Note: you may need to restart the kernel to use updated packages.
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: adamapi in /opt/conda/envs/cams/lib/python3.9/site-packages (2.0.11)
 Requirement already satisfied: requests&gt;=2.22.0 in /opt/conda/envs/cams/lib/python3.9/site-packages (from adamapi) (2.27.1)
-Requirement already satisfied: imageio in /opt/conda/envs/cams/lib/python3.9/site-packages (from adamapi) (2.18.0)
-Requirement already satisfied: urllib3&lt;1.27,&gt;=1.21.1 in /opt/conda/envs/cams/lib/python3.9/site-packages (from requests&gt;=2.22.0-&gt;adamapi) (1.26.9)
-Requirement already satisfied: idna&lt;4,&gt;=2.5 in /opt/conda/envs/cams/lib/python3.9/site-packages (from requests&gt;=2.22.0-&gt;adamapi) (3.3)
-Requirement already satisfied: certifi&gt;=2017.4.17 in /opt/conda/envs/cams/lib/python3.9/site-packages (from requests&gt;=2.22.0-&gt;adamapi) (2021.10.8)
+Requirement already satisfied: imageio in /opt/conda/envs/cams/lib/python3.9/site-packages (from adamapi) (2.19.0)
 Requirement already satisfied: charset-normalizer~=2.0.0 in /opt/conda/envs/cams/lib/python3.9/site-packages (from requests&gt;=2.22.0-&gt;adamapi) (2.0.12)
-Requirement already satisfied: pillow&gt;=8.3.2 in /opt/conda/envs/cams/lib/python3.9/site-packages (from imageio-&gt;adamapi) (9.1.0)
+Requirement already satisfied: certifi&gt;=2017.4.17 in /opt/conda/envs/cams/lib/python3.9/site-packages (from requests&gt;=2.22.0-&gt;adamapi) (2021.10.8)
+Requirement already satisfied: idna&lt;4,&gt;=2.5 in /opt/conda/envs/cams/lib/python3.9/site-packages (from requests&gt;=2.22.0-&gt;adamapi) (3.3)
+Requirement already satisfied: urllib3&lt;1.27,&gt;=1.21.1 in /opt/conda/envs/cams/lib/python3.9/site-packages (from requests&gt;=2.22.0-&gt;adamapi) (1.26.9)
 Requirement already satisfied: numpy in /opt/conda/envs/cams/lib/python3.9/site-packages (from imageio-&gt;adamapi) (1.21.6)
+Requirement already satisfied: pillow&gt;=8.3.2 in /opt/conda/envs/cams/lib/python3.9/site-packages (from imageio-&gt;adamapi) (9.1.0)
 Note: you may need to restart the kernel to use updated packages.
 </pre></div>
 </div>
@@ -1607,9 +1607,9 @@ Note: you may need to restart the kernel to use updated packages.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;expires_at&#39;: &#39;2022-05-01T21:13:33.370Z&#39;,
- &#39;access_token&#39;: &#39;059132032d614608a8ab13916d25548e&#39;,
- &#39;refresh_token&#39;: &#39;02ec2cfced264681a1465de6c7bfd59d&#39;,
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;expires_at&#39;: &#39;2022-05-02T19:29:43.235Z&#39;,
+ &#39;access_token&#39;: &#39;d8b732829e164699b004aa7bfd81c18c&#39;,
+ &#39;refresh_token&#39;: &#39;1e3860681f2d41fbb2fbd21c523f8646&#39;,
  &#39;expires_in&#39;: 3600}
 </pre></div>
 </div>
@@ -1714,13 +1714,13 @@ CAMS European air quality forecasts: TEC --&gt; datasetId = 69631:EU_CAMS_SURFAC
 <span class=" -Color -Color-Bold">license</span>: {&#39;documentationUrl&#39;: &#39;&#39;, &#39;dataProviderName&#39;: &#39;ADS&#39;, &#39;dataProviderUrl&#39;: &#39;&#39;, &#39;licenseId&#39;: &#39;&#39;, &#39;dataPolicy&#39;: &#39;&#39;, &#39;doi&#39;: &#39;&#39;, &#39;credits&#39;: &#39;&#39;}
 <span class=" -Color -Color-Bold">maxValue</span>: [1.354510459350422e-07]
 <span class=" -Color -Color-Bold">minValue</span>: [0.0]
-<span class=" -Color -Color-Bold">numberOfRecords</span>: 132998
+<span class=" -Color -Color-Bold">numberOfRecords</span>: 133094
 <span class=" -Color -Color-Bold">profile</span>: {&#39;profileSchema&#39;: &#39;eo_profile_schema.json&#39;, &#39;name&#39;: &#39;Earth Observation&#39;, &#39;mission&#39;: &#39;CAMS&#39;, &#39;sensor&#39;: &#39;CAMS&#39;, &#39;processingLevel&#39;: &#39;forecast&#39;, &#39;instrument&#39;: &#39;&#39;, &#39;platform&#39;: &#39;&#39;}
 <span class=" -Color -Color-Bold">resolutionUnit</span>: degree
 <span class=" -Color -Color-Bold">temporalResolution</span>: Hourly
 <span class=" -Color -Color-Bold">unit</span>: 
 <span class=" -Color -Color-Bold">unitDescription</span>: 
-<span class=" -Color -Color-Bold">updateDate</span>: 2022-05-01T12:03:32Z
+<span class=" -Color -Color-Bold">updateDate</span>: 2022-05-02T12:03:31Z
 <span class=" -Color -Color-Bold">geometry</span>: {&#39;type&#39;: &#39;Polygon&#39;, &#39;coordinates&#39;: [[[-25.000012, 29.999997], [44.999988, 29.999997], [44.999988, 71.999997], [-25.000012, 71.999997], [-25.000012, 29.999997]]]}
 <span class=" -Color -Color-Bold">resolutions</span>: [0.1]
 <span class=" -Color -Color-Bold">anyText</span>: 4326,ESA,Daily,ESA
@@ -1738,7 +1738,7 @@ CAMS European air quality forecasts: TEC --&gt; datasetId = 69631:EU_CAMS_SURFAC
 <span class=" -Color -Color-Bold">filtersEnabled</span>: {&#39;type&#39;: &#39;object&#39;, &#39;title&#39;: &#39;Dataset filters&#39;, &#39;properties&#39;: {&#39;startDate&#39;: {&#39;title&#39;: &#39;Start Date&#39;, &#39;type&#39;: &#39;string&#39;, &#39;format&#39;: &#39;date&#39;, &#39;text_rule&#39;: &#39;false&#39;, &#39;ops_only&#39;: &#39;false&#39;, &#39;math_rule&#39;: &#39;false&#39;, &#39;order_rule&#39;: &#39;false&#39;, &#39;pattern&#39;: &#39;^d{4}-[01]d-[0-3]d(T[0-2]d:[0-9]d:[0-9]dZ)?$&#39;}, &#39;endDate&#39;: {&#39;title&#39;: &#39;End Date&#39;, &#39;type&#39;: &#39;string&#39;, &#39;format&#39;: &#39;date&#39;, &#39;ops_only&#39;: &#39;false&#39;, &#39;text_rule&#39;: &#39;false&#39;, &#39;math_rule&#39;: &#39;false&#39;, &#39;order_rule&#39;: &#39;false&#39;, &#39;pattern&#39;: &#39;^d{4}-[01]d-[0-3]d(T[0-2]d:[0-9]d:[0-9]dZ)?$&#39;}}}
 <span class=" -Color -Color-Bold">previews</span>: 
 <span class=" -Color -Color-Bold">starDate</span>: 2018-07-12T00:00:00Z
-<span class=" -Color -Color-Bold">endDate</span>: 2022-04-30T23:00:00Z
+<span class=" -Color -Color-Bold">endDate</span>: 2022-05-01T23:00:00Z
 <span class=" -Color -Color-Bold">accounting</span>: {&#39;unit&#39;: 0.0032}
 </pre></div>
 </div>
@@ -1825,113 +1825,113 @@ Below, we make a list of the first 10 available products for the 1st day of the 
 
 <span class=" -Color -Color-Bold -Color-Bold-Red">#1</span>
 
-_id: {&#39;$oid&#39;: &#39;60efc38a6dfebc080600e73b&#39;}
+_id: {&#39;$oid&#39;: &#39;60efc3a56dfebc080601071b&#39;}
 datasetId: EU_CAMS_SURFACE_NO2_G
-productDate: 2019-03-01T23:00:00Z
-productId: EU_CAMS_SURFACE_NO2_G_20190301230000.tif
+productDate: 2019-04-01T23:00:00Z
+productId: EU_CAMS_SURFACE_NO2_G_20190401230000.tif
 geometry: {&#39;geometries&#39;: [{&#39;type&#39;: &#39;Polygon&#39;, &#39;coordinates&#39;: [[[-25.000012, 29.999997], [44.999988, 29.999997], [44.999988, 69.999997], [-25.000012, 69.999997], [-25.000012, 29.999997]]]}], &#39;type&#39;: &#39;GeometryCollection&#39;}
-insertDate: 2021-07-15T05:11:38Z
+insertDate: 2021-07-15T05:12:05Z
 status: Online
-productLink: {&#39;tiff&#39;: &#39;https://reliance-das.adamplatform.eu/wcs?service=WCS&amp;version=2.0.0&amp;request=GetCoverage&amp;format=image/tiff&amp;coverageId=EU_CAMS_SURFACE_NO2_G&amp;_id=60efc38a6dfebc080600e73b&#39;, &#39;png&#39;: &#39;https://reliance-das.adamplatform.eu/wcs?service=WCS&amp;version=2.0.0&amp;request=GetCoverage&amp;format=image/png&amp;coverageId=EU_CAMS_SURFACE_NO2_G&amp;_id=60efc38a6dfebc080600e73b&#39;}
+productLink: {&#39;tiff&#39;: &#39;https://reliance-das.adamplatform.eu/wcs?service=WCS&amp;version=2.0.0&amp;request=GetCoverage&amp;format=image/tiff&amp;coverageId=EU_CAMS_SURFACE_NO2_G&amp;_id=60efc3a56dfebc080601071b&#39;, &#39;png&#39;: &#39;https://reliance-das.adamplatform.eu/wcs?service=WCS&amp;version=2.0.0&amp;request=GetCoverage&amp;format=image/png&amp;coverageId=EU_CAMS_SURFACE_NO2_G&amp;_id=60efc3a56dfebc080601071b&#39;}
 ------------------------------------
 <span class=" -Color -Color-Bold -Color-Bold-Red">#2</span>
 
-_id: {&#39;$oid&#39;: &#39;60efc38a6dfebc080600e735&#39;}
+_id: {&#39;$oid&#39;: &#39;60efc3a56dfebc0806010704&#39;}
 datasetId: EU_CAMS_SURFACE_NO2_G
-productDate: 2019-03-01T22:00:00Z
-productId: EU_CAMS_SURFACE_NO2_G_20190301220000.tif
+productDate: 2019-04-01T22:00:00Z
+productId: EU_CAMS_SURFACE_NO2_G_20190401220000.tif
 geometry: {&#39;geometries&#39;: [{&#39;type&#39;: &#39;Polygon&#39;, &#39;coordinates&#39;: [[[-25.000012, 29.999997], [44.999988, 29.999997], [44.999988, 69.999997], [-25.000012, 69.999997], [-25.000012, 29.999997]]]}], &#39;type&#39;: &#39;GeometryCollection&#39;}
-insertDate: 2021-07-15T05:11:38Z
+insertDate: 2021-07-15T05:12:05Z
 status: Online
-productLink: {&#39;tiff&#39;: &#39;https://reliance-das.adamplatform.eu/wcs?service=WCS&amp;version=2.0.0&amp;request=GetCoverage&amp;format=image/tiff&amp;coverageId=EU_CAMS_SURFACE_NO2_G&amp;_id=60efc38a6dfebc080600e735&#39;, &#39;png&#39;: &#39;https://reliance-das.adamplatform.eu/wcs?service=WCS&amp;version=2.0.0&amp;request=GetCoverage&amp;format=image/png&amp;coverageId=EU_CAMS_SURFACE_NO2_G&amp;_id=60efc38a6dfebc080600e735&#39;}
+productLink: {&#39;tiff&#39;: &#39;https://reliance-das.adamplatform.eu/wcs?service=WCS&amp;version=2.0.0&amp;request=GetCoverage&amp;format=image/tiff&amp;coverageId=EU_CAMS_SURFACE_NO2_G&amp;_id=60efc3a56dfebc0806010704&#39;, &#39;png&#39;: &#39;https://reliance-das.adamplatform.eu/wcs?service=WCS&amp;version=2.0.0&amp;request=GetCoverage&amp;format=image/png&amp;coverageId=EU_CAMS_SURFACE_NO2_G&amp;_id=60efc3a56dfebc0806010704&#39;}
 ------------------------------------
 <span class=" -Color -Color-Bold -Color-Bold-Red">#3</span>
 
-_id: {&#39;$oid&#39;: &#39;60efc38a6dfebc080600e738&#39;}
+_id: {&#39;$oid&#39;: &#39;60efc3a56dfebc08060106f7&#39;}
 datasetId: EU_CAMS_SURFACE_NO2_G
-productDate: 2019-03-01T21:00:00Z
-productId: EU_CAMS_SURFACE_NO2_G_20190301210000.tif
+productDate: 2019-04-01T21:00:00Z
+productId: EU_CAMS_SURFACE_NO2_G_20190401210000.tif
 geometry: {&#39;geometries&#39;: [{&#39;type&#39;: &#39;Polygon&#39;, &#39;coordinates&#39;: [[[-25.000012, 29.999997], [44.999988, 29.999997], [44.999988, 69.999997], [-25.000012, 69.999997], [-25.000012, 29.999997]]]}], &#39;type&#39;: &#39;GeometryCollection&#39;}
-insertDate: 2021-07-15T05:11:38Z
+insertDate: 2021-07-15T05:12:05Z
 status: Online
-productLink: {&#39;tiff&#39;: &#39;https://reliance-das.adamplatform.eu/wcs?service=WCS&amp;version=2.0.0&amp;request=GetCoverage&amp;format=image/tiff&amp;coverageId=EU_CAMS_SURFACE_NO2_G&amp;_id=60efc38a6dfebc080600e738&#39;, &#39;png&#39;: &#39;https://reliance-das.adamplatform.eu/wcs?service=WCS&amp;version=2.0.0&amp;request=GetCoverage&amp;format=image/png&amp;coverageId=EU_CAMS_SURFACE_NO2_G&amp;_id=60efc38a6dfebc080600e738&#39;}
+productLink: {&#39;tiff&#39;: &#39;https://reliance-das.adamplatform.eu/wcs?service=WCS&amp;version=2.0.0&amp;request=GetCoverage&amp;format=image/tiff&amp;coverageId=EU_CAMS_SURFACE_NO2_G&amp;_id=60efc3a56dfebc08060106f7&#39;, &#39;png&#39;: &#39;https://reliance-das.adamplatform.eu/wcs?service=WCS&amp;version=2.0.0&amp;request=GetCoverage&amp;format=image/png&amp;coverageId=EU_CAMS_SURFACE_NO2_G&amp;_id=60efc3a56dfebc08060106f7&#39;}
 ------------------------------------
 <span class=" -Color -Color-Bold -Color-Bold-Red">#4</span>
 
-_id: {&#39;$oid&#39;: &#39;60efc38a6dfebc080600e732&#39;}
+_id: {&#39;$oid&#39;: &#39;60efc3a56dfebc08060106e4&#39;}
 datasetId: EU_CAMS_SURFACE_NO2_G
-productDate: 2019-03-01T20:00:00Z
-productId: EU_CAMS_SURFACE_NO2_G_20190301200000.tif
+productDate: 2019-04-01T20:00:00Z
+productId: EU_CAMS_SURFACE_NO2_G_20190401200000.tif
 geometry: {&#39;geometries&#39;: [{&#39;type&#39;: &#39;Polygon&#39;, &#39;coordinates&#39;: [[[-25.000012, 29.999997], [44.999988, 29.999997], [44.999988, 69.999997], [-25.000012, 69.999997], [-25.000012, 29.999997]]]}], &#39;type&#39;: &#39;GeometryCollection&#39;}
-insertDate: 2021-07-15T05:11:38Z
+insertDate: 2021-07-15T05:12:05Z
 status: Online
-productLink: {&#39;tiff&#39;: &#39;https://reliance-das.adamplatform.eu/wcs?service=WCS&amp;version=2.0.0&amp;request=GetCoverage&amp;format=image/tiff&amp;coverageId=EU_CAMS_SURFACE_NO2_G&amp;_id=60efc38a6dfebc080600e732&#39;, &#39;png&#39;: &#39;https://reliance-das.adamplatform.eu/wcs?service=WCS&amp;version=2.0.0&amp;request=GetCoverage&amp;format=image/png&amp;coverageId=EU_CAMS_SURFACE_NO2_G&amp;_id=60efc38a6dfebc080600e732&#39;}
+productLink: {&#39;tiff&#39;: &#39;https://reliance-das.adamplatform.eu/wcs?service=WCS&amp;version=2.0.0&amp;request=GetCoverage&amp;format=image/tiff&amp;coverageId=EU_CAMS_SURFACE_NO2_G&amp;_id=60efc3a56dfebc08060106e4&#39;, &#39;png&#39;: &#39;https://reliance-das.adamplatform.eu/wcs?service=WCS&amp;version=2.0.0&amp;request=GetCoverage&amp;format=image/png&amp;coverageId=EU_CAMS_SURFACE_NO2_G&amp;_id=60efc3a56dfebc08060106e4&#39;}
 ------------------------------------
 <span class=" -Color -Color-Bold -Color-Bold-Red">#5</span>
 
-_id: {&#39;$oid&#39;: &#39;60efc38a6dfebc080600e72a&#39;}
+_id: {&#39;$oid&#39;: &#39;60efc3a56dfebc08060106c6&#39;}
 datasetId: EU_CAMS_SURFACE_NO2_G
-productDate: 2019-03-01T19:00:00Z
-productId: EU_CAMS_SURFACE_NO2_G_20190301190000.tif
+productDate: 2019-04-01T19:00:00Z
+productId: EU_CAMS_SURFACE_NO2_G_20190401190000.tif
 geometry: {&#39;geometries&#39;: [{&#39;type&#39;: &#39;Polygon&#39;, &#39;coordinates&#39;: [[[-25.000012, 29.999997], [44.999988, 29.999997], [44.999988, 69.999997], [-25.000012, 69.999997], [-25.000012, 29.999997]]]}], &#39;type&#39;: &#39;GeometryCollection&#39;}
-insertDate: 2021-07-15T05:11:38Z
+insertDate: 2021-07-15T05:12:05Z
 status: Online
-productLink: {&#39;tiff&#39;: &#39;https://reliance-das.adamplatform.eu/wcs?service=WCS&amp;version=2.0.0&amp;request=GetCoverage&amp;format=image/tiff&amp;coverageId=EU_CAMS_SURFACE_NO2_G&amp;_id=60efc38a6dfebc080600e72a&#39;, &#39;png&#39;: &#39;https://reliance-das.adamplatform.eu/wcs?service=WCS&amp;version=2.0.0&amp;request=GetCoverage&amp;format=image/png&amp;coverageId=EU_CAMS_SURFACE_NO2_G&amp;_id=60efc38a6dfebc080600e72a&#39;}
+productLink: {&#39;tiff&#39;: &#39;https://reliance-das.adamplatform.eu/wcs?service=WCS&amp;version=2.0.0&amp;request=GetCoverage&amp;format=image/tiff&amp;coverageId=EU_CAMS_SURFACE_NO2_G&amp;_id=60efc3a56dfebc08060106c6&#39;, &#39;png&#39;: &#39;https://reliance-das.adamplatform.eu/wcs?service=WCS&amp;version=2.0.0&amp;request=GetCoverage&amp;format=image/png&amp;coverageId=EU_CAMS_SURFACE_NO2_G&amp;_id=60efc3a56dfebc08060106c6&#39;}
 ------------------------------------
 <span class=" -Color -Color-Bold -Color-Bold-Red">#6</span>
 
-_id: {&#39;$oid&#39;: &#39;60efc38a6dfebc080600e72e&#39;}
+_id: {&#39;$oid&#39;: &#39;60efc3a56dfebc08060106ab&#39;}
 datasetId: EU_CAMS_SURFACE_NO2_G
-productDate: 2019-03-01T18:00:00Z
-productId: EU_CAMS_SURFACE_NO2_G_20190301180000.tif
+productDate: 2019-04-01T18:00:00Z
+productId: EU_CAMS_SURFACE_NO2_G_20190401180000.tif
 geometry: {&#39;geometries&#39;: [{&#39;type&#39;: &#39;Polygon&#39;, &#39;coordinates&#39;: [[[-25.000012, 29.999997], [44.999988, 29.999997], [44.999988, 69.999997], [-25.000012, 69.999997], [-25.000012, 29.999997]]]}], &#39;type&#39;: &#39;GeometryCollection&#39;}
-insertDate: 2021-07-15T05:11:38Z
+insertDate: 2021-07-15T05:12:05Z
 status: Online
-productLink: {&#39;tiff&#39;: &#39;https://reliance-das.adamplatform.eu/wcs?service=WCS&amp;version=2.0.0&amp;request=GetCoverage&amp;format=image/tiff&amp;coverageId=EU_CAMS_SURFACE_NO2_G&amp;_id=60efc38a6dfebc080600e72e&#39;, &#39;png&#39;: &#39;https://reliance-das.adamplatform.eu/wcs?service=WCS&amp;version=2.0.0&amp;request=GetCoverage&amp;format=image/png&amp;coverageId=EU_CAMS_SURFACE_NO2_G&amp;_id=60efc38a6dfebc080600e72e&#39;}
+productLink: {&#39;tiff&#39;: &#39;https://reliance-das.adamplatform.eu/wcs?service=WCS&amp;version=2.0.0&amp;request=GetCoverage&amp;format=image/tiff&amp;coverageId=EU_CAMS_SURFACE_NO2_G&amp;_id=60efc3a56dfebc08060106ab&#39;, &#39;png&#39;: &#39;https://reliance-das.adamplatform.eu/wcs?service=WCS&amp;version=2.0.0&amp;request=GetCoverage&amp;format=image/png&amp;coverageId=EU_CAMS_SURFACE_NO2_G&amp;_id=60efc3a56dfebc08060106ab&#39;}
 ------------------------------------
 <span class=" -Color -Color-Bold -Color-Bold-Red">#7</span>
 
-_id: {&#39;$oid&#39;: &#39;60efc38a6dfebc080600e722&#39;}
+_id: {&#39;$oid&#39;: &#39;60efc3a56dfebc08060106a1&#39;}
 datasetId: EU_CAMS_SURFACE_NO2_G
-productDate: 2019-03-01T17:00:00Z
-productId: EU_CAMS_SURFACE_NO2_G_20190301170000.tif
+productDate: 2019-04-01T17:00:00Z
+productId: EU_CAMS_SURFACE_NO2_G_20190401170000.tif
 geometry: {&#39;geometries&#39;: [{&#39;type&#39;: &#39;Polygon&#39;, &#39;coordinates&#39;: [[[-25.000012, 29.999997], [44.999988, 29.999997], [44.999988, 69.999997], [-25.000012, 69.999997], [-25.000012, 29.999997]]]}], &#39;type&#39;: &#39;GeometryCollection&#39;}
-insertDate: 2021-07-15T05:11:37Z
+insertDate: 2021-07-15T05:12:05Z
 status: Online
-productLink: {&#39;tiff&#39;: &#39;https://reliance-das.adamplatform.eu/wcs?service=WCS&amp;version=2.0.0&amp;request=GetCoverage&amp;format=image/tiff&amp;coverageId=EU_CAMS_SURFACE_NO2_G&amp;_id=60efc38a6dfebc080600e722&#39;, &#39;png&#39;: &#39;https://reliance-das.adamplatform.eu/wcs?service=WCS&amp;version=2.0.0&amp;request=GetCoverage&amp;format=image/png&amp;coverageId=EU_CAMS_SURFACE_NO2_G&amp;_id=60efc38a6dfebc080600e722&#39;}
+productLink: {&#39;tiff&#39;: &#39;https://reliance-das.adamplatform.eu/wcs?service=WCS&amp;version=2.0.0&amp;request=GetCoverage&amp;format=image/tiff&amp;coverageId=EU_CAMS_SURFACE_NO2_G&amp;_id=60efc3a56dfebc08060106a1&#39;, &#39;png&#39;: &#39;https://reliance-das.adamplatform.eu/wcs?service=WCS&amp;version=2.0.0&amp;request=GetCoverage&amp;format=image/png&amp;coverageId=EU_CAMS_SURFACE_NO2_G&amp;_id=60efc3a56dfebc08060106a1&#39;}
 ------------------------------------
 <span class=" -Color -Color-Bold -Color-Bold-Red">#8</span>
 
-_id: {&#39;$oid&#39;: &#39;60efc38a6dfebc080600e724&#39;}
+_id: {&#39;$oid&#39;: &#39;60efc3a56dfebc0806010680&#39;}
 datasetId: EU_CAMS_SURFACE_NO2_G
-productDate: 2019-03-01T16:00:00Z
-productId: EU_CAMS_SURFACE_NO2_G_20190301160000.tif
+productDate: 2019-04-01T16:00:00Z
+productId: EU_CAMS_SURFACE_NO2_G_20190401160000.tif
 geometry: {&#39;geometries&#39;: [{&#39;type&#39;: &#39;Polygon&#39;, &#39;coordinates&#39;: [[[-25.000012, 29.999997], [44.999988, 29.999997], [44.999988, 69.999997], [-25.000012, 69.999997], [-25.000012, 29.999997]]]}], &#39;type&#39;: &#39;GeometryCollection&#39;}
-insertDate: 2021-07-15T05:11:37Z
+insertDate: 2021-07-15T05:12:05Z
 status: Online
-productLink: {&#39;tiff&#39;: &#39;https://reliance-das.adamplatform.eu/wcs?service=WCS&amp;version=2.0.0&amp;request=GetCoverage&amp;format=image/tiff&amp;coverageId=EU_CAMS_SURFACE_NO2_G&amp;_id=60efc38a6dfebc080600e724&#39;, &#39;png&#39;: &#39;https://reliance-das.adamplatform.eu/wcs?service=WCS&amp;version=2.0.0&amp;request=GetCoverage&amp;format=image/png&amp;coverageId=EU_CAMS_SURFACE_NO2_G&amp;_id=60efc38a6dfebc080600e724&#39;}
+productLink: {&#39;tiff&#39;: &#39;https://reliance-das.adamplatform.eu/wcs?service=WCS&amp;version=2.0.0&amp;request=GetCoverage&amp;format=image/tiff&amp;coverageId=EU_CAMS_SURFACE_NO2_G&amp;_id=60efc3a56dfebc0806010680&#39;, &#39;png&#39;: &#39;https://reliance-das.adamplatform.eu/wcs?service=WCS&amp;version=2.0.0&amp;request=GetCoverage&amp;format=image/png&amp;coverageId=EU_CAMS_SURFACE_NO2_G&amp;_id=60efc3a56dfebc0806010680&#39;}
 ------------------------------------
 <span class=" -Color -Color-Bold -Color-Bold-Red">#9</span>
 
-_id: {&#39;$oid&#39;: &#39;60efc3896dfebc080600e71e&#39;}
+_id: {&#39;$oid&#39;: &#39;60efc3a56dfebc080601065e&#39;}
 datasetId: EU_CAMS_SURFACE_NO2_G
-productDate: 2019-03-01T15:00:00Z
-productId: EU_CAMS_SURFACE_NO2_G_20190301150000.tif
+productDate: 2019-04-01T15:00:00Z
+productId: EU_CAMS_SURFACE_NO2_G_20190401150000.tif
 geometry: {&#39;geometries&#39;: [{&#39;type&#39;: &#39;Polygon&#39;, &#39;coordinates&#39;: [[[-25.000012, 29.999997], [44.999988, 29.999997], [44.999988, 69.999997], [-25.000012, 69.999997], [-25.000012, 29.999997]]]}], &#39;type&#39;: &#39;GeometryCollection&#39;}
-insertDate: 2021-07-15T05:11:37Z
+insertDate: 2021-07-15T05:12:05Z
 status: Online
-productLink: {&#39;tiff&#39;: &#39;https://reliance-das.adamplatform.eu/wcs?service=WCS&amp;version=2.0.0&amp;request=GetCoverage&amp;format=image/tiff&amp;coverageId=EU_CAMS_SURFACE_NO2_G&amp;_id=60efc3896dfebc080600e71e&#39;, &#39;png&#39;: &#39;https://reliance-das.adamplatform.eu/wcs?service=WCS&amp;version=2.0.0&amp;request=GetCoverage&amp;format=image/png&amp;coverageId=EU_CAMS_SURFACE_NO2_G&amp;_id=60efc3896dfebc080600e71e&#39;}
+productLink: {&#39;tiff&#39;: &#39;https://reliance-das.adamplatform.eu/wcs?service=WCS&amp;version=2.0.0&amp;request=GetCoverage&amp;format=image/tiff&amp;coverageId=EU_CAMS_SURFACE_NO2_G&amp;_id=60efc3a56dfebc080601065e&#39;, &#39;png&#39;: &#39;https://reliance-das.adamplatform.eu/wcs?service=WCS&amp;version=2.0.0&amp;request=GetCoverage&amp;format=image/png&amp;coverageId=EU_CAMS_SURFACE_NO2_G&amp;_id=60efc3a56dfebc080601065e&#39;}
 ------------------------------------
 <span class=" -Color -Color-Bold -Color-Bold-Red">#10</span>
 
-_id: {&#39;$oid&#39;: &#39;60efc3896dfebc080600e71a&#39;}
+_id: {&#39;$oid&#39;: &#39;60efc3a56dfebc0806010623&#39;}
 datasetId: EU_CAMS_SURFACE_NO2_G
-productDate: 2019-03-01T14:00:00Z
-productId: EU_CAMS_SURFACE_NO2_G_20190301140000.tif
+productDate: 2019-04-01T14:00:00Z
+productId: EU_CAMS_SURFACE_NO2_G_20190401140000.tif
 geometry: {&#39;geometries&#39;: [{&#39;type&#39;: &#39;Polygon&#39;, &#39;coordinates&#39;: [[[-25.000012, 29.999997], [44.999988, 29.999997], [44.999988, 69.999997], [-25.000012, 69.999997], [-25.000012, 29.999997]]]}], &#39;type&#39;: &#39;GeometryCollection&#39;}
-insertDate: 2021-07-15T05:11:37Z
+insertDate: 2021-07-15T05:12:05Z
 status: Online
-productLink: {&#39;tiff&#39;: &#39;https://reliance-das.adamplatform.eu/wcs?service=WCS&amp;version=2.0.0&amp;request=GetCoverage&amp;format=image/tiff&amp;coverageId=EU_CAMS_SURFACE_NO2_G&amp;_id=60efc3896dfebc080600e71a&#39;, &#39;png&#39;: &#39;https://reliance-das.adamplatform.eu/wcs?service=WCS&amp;version=2.0.0&amp;request=GetCoverage&amp;format=image/png&amp;coverageId=EU_CAMS_SURFACE_NO2_G&amp;_id=60efc3896dfebc080600e71a&#39;}
+productLink: {&#39;tiff&#39;: &#39;https://reliance-das.adamplatform.eu/wcs?service=WCS&amp;version=2.0.0&amp;request=GetCoverage&amp;format=image/tiff&amp;coverageId=EU_CAMS_SURFACE_NO2_G&amp;_id=60efc3a56dfebc0806010623&#39;, &#39;png&#39;: &#39;https://reliance-das.adamplatform.eu/wcs?service=WCS&amp;version=2.0.0&amp;request=GetCoverage&amp;format=image/png&amp;coverageId=EU_CAMS_SURFACE_NO2_G&amp;_id=60efc3a56dfebc0806010623&#39;}
 ------------------------------------
 </pre></div>
 </div>
@@ -1995,7 +1995,7 @@ The output of the <font color='blue'> <strong>getData</strong> </font> function 
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">Processing time: 0.0</span>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">Processing time: 0.03</span>
 </pre></div>
 </div>
 </div>
@@ -2437,7 +2437,7 @@ Attributes:
     nodatavals:     (0.0,)
     scales:         (1.0,)
     offsets:        (0.0,)
-    AREA_OR_POINT:  Area</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.Dataset</div></div><ul class='xr-sections'><li class='xr-section-item'><input id='section-c438bf6c-fa92-4e51-a0d6-a25f837c57fc' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-c438bf6c-fa92-4e51-a0d6-a25f837c57fc' class='xr-section-summary'  title='Expand/collapse section'>Dimensions:</label><div class='xr-section-inline-details'><ul class='xr-dim-list'><li><span class='xr-has-index'>latitude</span>: 80</li><li><span class='xr-has-index'>longitude</span>: 132</li></ul></div><div class='xr-section-details'></div></li><li class='xr-section-item'><input id='section-e98fd978-6c5c-4586-9fd3-44762907c55b' class='xr-section-summary-in' type='checkbox'  checked><label for='section-e98fd978-6c5c-4586-9fd3-44762907c55b' class='xr-section-summary' >Coordinates: <span>(2)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>latitude</span></div><div class='xr-var-dims'>(latitude)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>43.85 43.75 43.65 ... 36.05 35.95</div><input id='attrs-6279f512-7e06-42f6-9cca-bed0f6981b81' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-6279f512-7e06-42f6-9cca-bed0f6981b81' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-60de7da7-eaa1-4b66-ae3c-7ef016ec57b3' class='xr-var-data-in' type='checkbox'><label for='data-60de7da7-eaa1-4b66-ae3c-7ef016ec57b3' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([43.849997, 43.749997, 43.649997, 43.549997, 43.449997, 43.349997,
+    AREA_OR_POINT:  Area</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.Dataset</div></div><ul class='xr-sections'><li class='xr-section-item'><input id='section-f03c3216-d05a-47d1-ad51-2a11b17f3aaf' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-f03c3216-d05a-47d1-ad51-2a11b17f3aaf' class='xr-section-summary'  title='Expand/collapse section'>Dimensions:</label><div class='xr-section-inline-details'><ul class='xr-dim-list'><li><span class='xr-has-index'>latitude</span>: 80</li><li><span class='xr-has-index'>longitude</span>: 132</li></ul></div><div class='xr-section-details'></div></li><li class='xr-section-item'><input id='section-bdd13d22-0bec-4870-9215-88d239f3b2e9' class='xr-section-summary-in' type='checkbox'  checked><label for='section-bdd13d22-0bec-4870-9215-88d239f3b2e9' class='xr-section-summary' >Coordinates: <span>(2)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>latitude</span></div><div class='xr-var-dims'>(latitude)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>43.85 43.75 43.65 ... 36.05 35.95</div><input id='attrs-8bfb4623-67fd-453b-a7e8-78f90bcea363' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-8bfb4623-67fd-453b-a7e8-78f90bcea363' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-296cc802-4832-4d33-8546-15f3c6336105' class='xr-var-data-in' type='checkbox'><label for='data-296cc802-4832-4d33-8546-15f3c6336105' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([43.849997, 43.749997, 43.649997, 43.549997, 43.449997, 43.349997,
        43.249997, 43.149997, 43.049997, 42.949997, 42.849997, 42.749997,
        42.649997, 42.549997, 42.449997, 42.349997, 42.249997, 42.149997,
        42.049997, 41.949997, 41.849997, 41.749997, 41.649997, 41.549997,
@@ -2450,7 +2450,7 @@ Attributes:
        37.849997, 37.749997, 37.649997, 37.549997, 37.449997, 37.349997,
        37.249997, 37.149997, 37.049997, 36.949997, 36.849997, 36.749997,
        36.649997, 36.549997, 36.449997, 36.349997, 36.249997, 36.149997,
-       36.049997, 35.949997])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>longitude</span></div><div class='xr-var-dims'>(longitude)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>-9.75 -9.65 -9.55 ... 3.25 3.35</div><input id='attrs-7e184fa8-94b1-41af-a1f2-687e6dc04a14' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-7e184fa8-94b1-41af-a1f2-687e6dc04a14' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-76618598-2696-4d00-84a9-d6d64dce33dd' class='xr-var-data-in' type='checkbox'><label for='data-76618598-2696-4d00-84a9-d6d64dce33dd' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([-9.750012, -9.650012, -9.550012, -9.450012, -9.350012, -9.250012,
+       36.049997, 35.949997])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>longitude</span></div><div class='xr-var-dims'>(longitude)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>-9.75 -9.65 -9.55 ... 3.25 3.35</div><input id='attrs-9d31f39a-c7ab-4f6c-bb47-e5fd1988fc9c' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-9d31f39a-c7ab-4f6c-bb47-e5fd1988fc9c' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-2d766f4d-ecc8-4e28-ad91-0065e4f02fa5' class='xr-var-data-in' type='checkbox'><label for='data-2d766f4d-ecc8-4e28-ad91-0065e4f02fa5' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([-9.750012, -9.650012, -9.550012, -9.450012, -9.350012, -9.250012,
        -9.150012, -9.050012, -8.950012, -8.850012, -8.750012, -8.650012,
        -8.550012, -8.450012, -8.350012, -8.250012, -8.150012, -8.050012,
        -7.950012, -7.850012, -7.750012, -7.650012, -7.550012, -7.450012,
@@ -2471,13 +2471,13 @@ Attributes:
         1.049988,  1.149988,  1.249988,  1.349988,  1.449988,  1.549988,
         1.649988,  1.749988,  1.849988,  1.949988,  2.049988,  2.149988,
         2.249988,  2.349988,  2.449988,  2.549988,  2.649988,  2.749988,
-        2.849988,  2.949988,  3.049988,  3.149988,  3.249988,  3.349988])</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-77cbcd1c-88ce-4f9d-a8fd-7d482255473a' class='xr-section-summary-in' type='checkbox'  checked><label for='section-77cbcd1c-88ce-4f9d-a8fd-7d482255473a' class='xr-section-summary' >Data variables: <span>(1)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span>NO2</span></div><div class='xr-var-dims'>(latitude, longitude)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>0.0 0.0 0.0 0.0 ... 0.0 0.0 0.0 0.0</div><input id='attrs-8169b629-c05e-4a86-b321-3f8aa90f77c5' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-8169b629-c05e-4a86-b321-3f8aa90f77c5' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-13e98ad1-604a-410c-82f8-7533e0004342' class='xr-var-data-in' type='checkbox'><label for='data-13e98ad1-604a-410c-82f8-7533e0004342' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>µg m-3</dd><dt><span>long_name :</span></dt><dd>CAMS NITROGEN DIOXIDE</dd></dl></div><div class='xr-var-data'><pre>array([[0., 0., 0., ..., 0., 0., 0.],
+        2.849988,  2.949988,  3.049988,  3.149988,  3.249988,  3.349988])</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-0339843a-6c92-4584-9af2-be1c62962bc3' class='xr-section-summary-in' type='checkbox'  checked><label for='section-0339843a-6c92-4584-9af2-be1c62962bc3' class='xr-section-summary' >Data variables: <span>(1)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span>NO2</span></div><div class='xr-var-dims'>(latitude, longitude)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>0.0 0.0 0.0 0.0 ... 0.0 0.0 0.0 0.0</div><input id='attrs-df53a4bf-e9c3-4f59-880c-881d913b3c18' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-df53a4bf-e9c3-4f59-880c-881d913b3c18' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-4e430d1c-665d-40a2-afae-68a776b81f1b' class='xr-var-data-in' type='checkbox'><label for='data-4e430d1c-665d-40a2-afae-68a776b81f1b' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>µg m-3</dd><dt><span>long_name :</span></dt><dd>CAMS NITROGEN DIOXIDE</dd></dl></div><div class='xr-var-data'><pre>array([[0., 0., 0., ..., 0., 0., 0.],
        [0., 0., 0., ..., 0., 0., 0.],
        [0., 0., 0., ..., 0., 0., 0.],
        ...,
        [0., 0., 0., ..., 0., 0., 0.],
        [0., 0., 0., ..., 0., 0., 0.],
-       [0., 0., 0., ..., 0., 0., 0.]], dtype=float32)</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-445cda47-ee64-4aff-9150-edc0a0595aca' class='xr-section-summary-in' type='checkbox'  checked><label for='section-445cda47-ee64-4aff-9150-edc0a0595aca' class='xr-section-summary' >Attributes: <span>(8)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>transform :</span></dt><dd>(0.1, 0.0, -9.800012009298998, 0.0, -0.1, 43.899996997613364)</dd><dt><span>crs :</span></dt><dd>+init=epsg:4326</dd><dt><span>res :</span></dt><dd>(0.1, 0.1)</dd><dt><span>is_tiled :</span></dt><dd>0</dd><dt><span>nodatavals :</span></dt><dd>(0.0,)</dd><dt><span>scales :</span></dt><dd>(1.0,)</dd><dt><span>offsets :</span></dt><dd>(0.0,)</dd><dt><span>AREA_OR_POINT :</span></dt><dd>Area</dd></dl></div></li></ul></div></div></div></div>
+       [0., 0., 0., ..., 0., 0., 0.]], dtype=float32)</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-ea567479-e5ba-461a-abec-f33321555fe7' class='xr-section-summary-in' type='checkbox'  checked><label for='section-ea567479-e5ba-461a-abec-f33321555fe7' class='xr-section-summary' >Attributes: <span>(8)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>transform :</span></dt><dd>(0.1, 0.0, -9.800012009298998, 0.0, -0.1, 43.899996997613364)</dd><dt><span>crs :</span></dt><dd>+init=epsg:4326</dd><dt><span>res :</span></dt><dd>(0.1, 0.1)</dd><dt><span>is_tiled :</span></dt><dd>0</dd><dt><span>nodatavals :</span></dt><dd>(0.0,)</dd><dt><span>scales :</span></dt><dd>(1.0,)</dd><dt><span>offsets :</span></dt><dd>(0.0,)</dd><dt><span>AREA_OR_POINT :</span></dt><dd>Area</dd></dl></div></li></ul></div></div></div></div>
 </div>
 <p>We now read these files using <code class="docutils literal notranslate"><span class="pre">xarray</span></code>. First, we make a list of all the geotiff files in a given folder. To ensure each raster is labelled correctly with its time, we can use a helper function <code class="docutils literal notranslate"><span class="pre">paths_to_datetimeindex()</span></code> to extract time information from the file paths we obtained above. We then load and concatenate each dataset along the time dimension using <code class="docutils literal notranslate"><span class="pre">xarray.open_rasterio()</span></code>, convert the resulting <code class="docutils literal notranslate"><span class="pre">xarray.DataArray</span></code> to a <code class="docutils literal notranslate"><span class="pre">xarray.Dataset</span></code>, and give the variable a more useful name (<strong>PM10</strong>)</p>
 <div class="cell docutils container">
@@ -2531,99 +2531,96 @@ Attributes:
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_March/input/NO2_ES_ADAMAPI_2021/eu_cams_surface_no2_g_2021-03-30t000000.tif
-regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_March/input/NO2_ES_ADAMAPI_2021/eu_cams_surface_no2_g_2021-03-29t000000.tif
-regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_March/input/NO2_ES_ADAMAPI_2021/eu_cams_surface_no2_g_2021-03-28t000000.tif
-regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_March/input/NO2_ES_ADAMAPI_2021/eu_cams_surface_no2_g_2021-03-27t000000.tif
-regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_March/input/NO2_ES_ADAMAPI_2021/eu_cams_surface_no2_g_2021-03-26t000000.tif
-regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_March/input/NO2_ES_ADAMAPI_2021/eu_cams_surface_no2_g_2021-03-25t000000.tif
-regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_March/input/NO2_ES_ADAMAPI_2021/eu_cams_surface_no2_g_2021-03-24t000000.tif
-regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_March/input/NO2_ES_ADAMAPI_2021/eu_cams_surface_no2_g_2021-03-23t000000.tif
-regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_March/input/NO2_ES_ADAMAPI_2021/eu_cams_surface_no2_g_2021-03-22t000000.tif
-regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_March/input/NO2_ES_ADAMAPI_2021/eu_cams_surface_no2_g_2021-03-21t000000.tif
-regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_March/input/NO2_ES_ADAMAPI_2021/eu_cams_surface_no2_g_2021-03-20t000000.tif
-regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_March/input/NO2_ES_ADAMAPI_2021/eu_cams_surface_no2_g_2021-03-19t000000.tif
-regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_March/input/NO2_ES_ADAMAPI_2021/eu_cams_surface_no2_g_2021-03-18t000000.tif
-regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_March/input/NO2_ES_ADAMAPI_2021/eu_cams_surface_no2_g_2021-03-17t000000.tif
-regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_March/input/NO2_ES_ADAMAPI_2021/eu_cams_surface_no2_g_2021-03-16t000000.tif
-regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_March/input/NO2_ES_ADAMAPI_2021/eu_cams_surface_no2_g_2021-03-15t000000.tif
-regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_March/input/NO2_ES_ADAMAPI_2021/eu_cams_surface_no2_g_2021-03-14t000000.tif
-regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_March/input/NO2_ES_ADAMAPI_2021/eu_cams_surface_no2_g_2021-03-13t000000.tif
-regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_March/input/NO2_ES_ADAMAPI_2021/eu_cams_surface_no2_g_2021-03-12t000000.tif
-regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_March/input/NO2_ES_ADAMAPI_2021/eu_cams_surface_no2_g_2021-03-11t000000.tif
-regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_March/input/NO2_ES_ADAMAPI_2021/eu_cams_surface_no2_g_2021-03-10t000000.tif
-regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_March/input/NO2_ES_ADAMAPI_2021/eu_cams_surface_no2_g_2021-03-09t000000.tif
-regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_March/input/NO2_ES_ADAMAPI_2021/eu_cams_surface_no2_g_2021-03-08t000000.tif
-regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_March/input/NO2_ES_ADAMAPI_2021/eu_cams_surface_no2_g_2021-03-07t000000.tif
-regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_March/input/NO2_ES_ADAMAPI_2021/eu_cams_surface_no2_g_2021-03-06t000000.tif
-regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_March/input/NO2_ES_ADAMAPI_2021/eu_cams_surface_no2_g_2021-03-05t000000.tif
-regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_March/input/NO2_ES_ADAMAPI_2021/eu_cams_surface_no2_g_2021-03-04t000000.tif
-regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_March/input/NO2_ES_ADAMAPI_2021/eu_cams_surface_no2_g_2021-03-03t000000.tif
-regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_March/input/NO2_ES_ADAMAPI_2021/eu_cams_surface_no2_g_2021-03-02t000000.tif
-regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_March/input/NO2_ES_ADAMAPI_2021/eu_cams_surface_no2_g_2021-03-01t000000.tif
-regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_March/input/NO2_ES_ADAMAPI_2021/eu_cams_surface_no2_g_2021-03-31t000000.tif
-regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_March/input/NO2_ES_ADAMAPI_2020/eu_cams_surface_no2_g_2020-03-31t000000.tif
-regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_March/input/NO2_ES_ADAMAPI_2020/eu_cams_surface_no2_g_2020-03-30t000000.tif
-regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_March/input/NO2_ES_ADAMAPI_2020/eu_cams_surface_no2_g_2020-03-29t000000.tif
-regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_March/input/NO2_ES_ADAMAPI_2020/eu_cams_surface_no2_g_2020-03-28t000000.tif
-regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_March/input/NO2_ES_ADAMAPI_2020/eu_cams_surface_no2_g_2020-03-27t000000.tif
-regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_March/input/NO2_ES_ADAMAPI_2020/eu_cams_surface_no2_g_2020-03-26t000000.tif
-regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_March/input/NO2_ES_ADAMAPI_2020/eu_cams_surface_no2_g_2020-03-25t000000.tif
-regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_March/input/NO2_ES_ADAMAPI_2020/eu_cams_surface_no2_g_2020-03-24t000000.tif
-regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_March/input/NO2_ES_ADAMAPI_2020/eu_cams_surface_no2_g_2020-03-23t000000.tif
-regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_March/input/NO2_ES_ADAMAPI_2020/eu_cams_surface_no2_g_2020-03-22t000000.tif
-regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_March/input/NO2_ES_ADAMAPI_2020/eu_cams_surface_no2_g_2020-03-21t000000.tif
-regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_March/input/NO2_ES_ADAMAPI_2020/eu_cams_surface_no2_g_2020-03-20t000000.tif
-regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_March/input/NO2_ES_ADAMAPI_2020/eu_cams_surface_no2_g_2020-03-19t000000.tif
-regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_March/input/NO2_ES_ADAMAPI_2020/eu_cams_surface_no2_g_2020-03-18t000000.tif
-regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_March/input/NO2_ES_ADAMAPI_2020/eu_cams_surface_no2_g_2020-03-17t000000.tif
-regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_March/input/NO2_ES_ADAMAPI_2020/eu_cams_surface_no2_g_2020-03-16t000000.tif
-regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_March/input/NO2_ES_ADAMAPI_2020/eu_cams_surface_no2_g_2020-03-15t000000.tif
-regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_March/input/NO2_ES_ADAMAPI_2020/eu_cams_surface_no2_g_2020-03-14t000000.tif
-regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_March/input/NO2_ES_ADAMAPI_2020/eu_cams_surface_no2_g_2020-03-13t000000.tif
-regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_March/input/NO2_ES_ADAMAPI_2020/eu_cams_surface_no2_g_2020-03-12t000000.tif
-regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_March/input/NO2_ES_ADAMAPI_2020/eu_cams_surface_no2_g_2020-03-11t000000.tif
-regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_March/input/NO2_ES_ADAMAPI_2020/eu_cams_surface_no2_g_2020-03-10t000000.tif
-regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_March/input/NO2_ES_ADAMAPI_2020/eu_cams_surface_no2_g_2020-03-09t000000.tif
-regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_March/input/NO2_ES_ADAMAPI_2020/eu_cams_surface_no2_g_2020-03-08t000000.tif
-regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_March/input/NO2_ES_ADAMAPI_2020/eu_cams_surface_no2_g_2020-03-07t000000.tif
-regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_March/input/NO2_ES_ADAMAPI_2020/eu_cams_surface_no2_g_2020-03-06t000000.tif
-regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_March/input/NO2_ES_ADAMAPI_2020/eu_cams_surface_no2_g_2020-03-05t000000.tif
-regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_March/input/NO2_ES_ADAMAPI_2020/eu_cams_surface_no2_g_2020-03-04t000000.tif
-regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_March/input/NO2_ES_ADAMAPI_2020/eu_cams_surface_no2_g_2020-03-03t000000.tif
-regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_March/input/NO2_ES_ADAMAPI_2020/eu_cams_surface_no2_g_2020-03-02t000000.tif
-regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_March/input/NO2_ES_ADAMAPI_2020/eu_cams_surface_no2_g_2020-03-01t000000.tif
-regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_March/input/NO2_ES_ADAMAPI_2019/eu_cams_surface_no2_g_2019-03-31t000000.tif
-regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_March/input/NO2_ES_ADAMAPI_2019/eu_cams_surface_no2_g_2019-03-30t000000.tif
-regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_March/input/NO2_ES_ADAMAPI_2019/eu_cams_surface_no2_g_2019-03-29t000000.tif
-regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_March/input/NO2_ES_ADAMAPI_2019/eu_cams_surface_no2_g_2019-03-28t000000.tif
-regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_March/input/NO2_ES_ADAMAPI_2019/eu_cams_surface_no2_g_2019-03-27t000000.tif
-regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_March/input/NO2_ES_ADAMAPI_2019/eu_cams_surface_no2_g_2019-03-26t000000.tif
-regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_March/input/NO2_ES_ADAMAPI_2019/eu_cams_surface_no2_g_2019-03-25t000000.tif
-regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_March/input/NO2_ES_ADAMAPI_2019/eu_cams_surface_no2_g_2019-03-24t000000.tif
-regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_March/input/NO2_ES_ADAMAPI_2019/eu_cams_surface_no2_g_2019-03-23t000000.tif
-regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_March/input/NO2_ES_ADAMAPI_2019/eu_cams_surface_no2_g_2019-03-22t000000.tif
-regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_March/input/NO2_ES_ADAMAPI_2019/eu_cams_surface_no2_g_2019-03-21t000000.tif
-regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_March/input/NO2_ES_ADAMAPI_2019/eu_cams_surface_no2_g_2019-03-20t000000.tif
-regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_March/input/NO2_ES_ADAMAPI_2019/eu_cams_surface_no2_g_2019-03-19t000000.tif
-regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_March/input/NO2_ES_ADAMAPI_2019/eu_cams_surface_no2_g_2019-03-18t000000.tif
-regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_March/input/NO2_ES_ADAMAPI_2019/eu_cams_surface_no2_g_2019-03-17t000000.tif
-regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_March/input/NO2_ES_ADAMAPI_2019/eu_cams_surface_no2_g_2019-03-16t000000.tif
-regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_March/input/NO2_ES_ADAMAPI_2019/eu_cams_surface_no2_g_2019-03-15t000000.tif
-regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_March/input/NO2_ES_ADAMAPI_2019/eu_cams_surface_no2_g_2019-03-14t000000.tif
-regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_March/input/NO2_ES_ADAMAPI_2019/eu_cams_surface_no2_g_2019-03-13t000000.tif
-regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_March/input/NO2_ES_ADAMAPI_2019/eu_cams_surface_no2_g_2019-03-12t000000.tif
-regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_March/input/NO2_ES_ADAMAPI_2019/eu_cams_surface_no2_g_2019-03-11t000000.tif
-regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_March/input/NO2_ES_ADAMAPI_2019/eu_cams_surface_no2_g_2019-03-10t000000.tif
-regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_March/input/NO2_ES_ADAMAPI_2019/eu_cams_surface_no2_g_2019-03-09t000000.tif
-regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_March/input/NO2_ES_ADAMAPI_2019/eu_cams_surface_no2_g_2019-03-08t000000.tif
-regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_March/input/NO2_ES_ADAMAPI_2019/eu_cams_surface_no2_g_2019-03-07t000000.tif
-regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_March/input/NO2_ES_ADAMAPI_2019/eu_cams_surface_no2_g_2019-03-06t000000.tif
-regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_March/input/NO2_ES_ADAMAPI_2019/eu_cams_surface_no2_g_2019-03-05t000000.tif
-regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_March/input/NO2_ES_ADAMAPI_2019/eu_cams_surface_no2_g_2019-03-04t000000.tif
-regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_March/input/NO2_ES_ADAMAPI_2019/eu_cams_surface_no2_g_2019-03-03t000000.tif
-regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_March/input/NO2_ES_ADAMAPI_2019/eu_cams_surface_no2_g_2019-03-02t000000.tif
-regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_March/input/NO2_ES_ADAMAPI_2019/eu_cams_surface_no2_g_2019-03-01t000000.tif
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_April/input/NO2_ES_ADAMAPI_2021/eu_cams_surface_no2_g_2021-04-29t000000.tif
+regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_April/input/NO2_ES_ADAMAPI_2021/eu_cams_surface_no2_g_2021-04-28t000000.tif
+regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_April/input/NO2_ES_ADAMAPI_2021/eu_cams_surface_no2_g_2021-04-27t000000.tif
+regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_April/input/NO2_ES_ADAMAPI_2021/eu_cams_surface_no2_g_2021-04-26t000000.tif
+regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_April/input/NO2_ES_ADAMAPI_2021/eu_cams_surface_no2_g_2021-04-25t000000.tif
+regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_April/input/NO2_ES_ADAMAPI_2021/eu_cams_surface_no2_g_2021-04-24t000000.tif
+regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_April/input/NO2_ES_ADAMAPI_2021/eu_cams_surface_no2_g_2021-04-23t000000.tif
+regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_April/input/NO2_ES_ADAMAPI_2021/eu_cams_surface_no2_g_2021-04-22t000000.tif
+regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_April/input/NO2_ES_ADAMAPI_2021/eu_cams_surface_no2_g_2021-04-21t000000.tif
+regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_April/input/NO2_ES_ADAMAPI_2021/eu_cams_surface_no2_g_2021-04-20t000000.tif
+regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_April/input/NO2_ES_ADAMAPI_2021/eu_cams_surface_no2_g_2021-04-19t000000.tif
+regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_April/input/NO2_ES_ADAMAPI_2021/eu_cams_surface_no2_g_2021-04-18t000000.tif
+regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_April/input/NO2_ES_ADAMAPI_2021/eu_cams_surface_no2_g_2021-04-17t000000.tif
+regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_April/input/NO2_ES_ADAMAPI_2021/eu_cams_surface_no2_g_2021-04-16t000000.tif
+regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_April/input/NO2_ES_ADAMAPI_2021/eu_cams_surface_no2_g_2021-04-15t000000.tif
+regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_April/input/NO2_ES_ADAMAPI_2021/eu_cams_surface_no2_g_2021-04-14t000000.tif
+regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_April/input/NO2_ES_ADAMAPI_2021/eu_cams_surface_no2_g_2021-04-13t000000.tif
+regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_April/input/NO2_ES_ADAMAPI_2021/eu_cams_surface_no2_g_2021-04-12t000000.tif
+regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_April/input/NO2_ES_ADAMAPI_2021/eu_cams_surface_no2_g_2021-04-11t000000.tif
+regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_April/input/NO2_ES_ADAMAPI_2021/eu_cams_surface_no2_g_2021-04-10t000000.tif
+regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_April/input/NO2_ES_ADAMAPI_2021/eu_cams_surface_no2_g_2021-04-09t000000.tif
+regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_April/input/NO2_ES_ADAMAPI_2021/eu_cams_surface_no2_g_2021-04-08t000000.tif
+regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_April/input/NO2_ES_ADAMAPI_2021/eu_cams_surface_no2_g_2021-04-07t000000.tif
+regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_April/input/NO2_ES_ADAMAPI_2021/eu_cams_surface_no2_g_2021-04-06t000000.tif
+regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_April/input/NO2_ES_ADAMAPI_2021/eu_cams_surface_no2_g_2021-04-05t000000.tif
+regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_April/input/NO2_ES_ADAMAPI_2021/eu_cams_surface_no2_g_2021-04-04t000000.tif
+regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_April/input/NO2_ES_ADAMAPI_2021/eu_cams_surface_no2_g_2021-04-03t000000.tif
+regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_April/input/NO2_ES_ADAMAPI_2021/eu_cams_surface_no2_g_2021-04-02t000000.tif
+regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_April/input/NO2_ES_ADAMAPI_2021/eu_cams_surface_no2_g_2021-04-01t000000.tif
+regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_April/input/NO2_ES_ADAMAPI_2021/eu_cams_surface_no2_g_2021-04-30t000000.tif
+regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_April/input/NO2_ES_ADAMAPI_2020/eu_cams_surface_no2_g_2020-04-30t000000.tif
+regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_April/input/NO2_ES_ADAMAPI_2020/eu_cams_surface_no2_g_2020-04-29t000000.tif
+regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_April/input/NO2_ES_ADAMAPI_2020/eu_cams_surface_no2_g_2020-04-28t000000.tif
+regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_April/input/NO2_ES_ADAMAPI_2020/eu_cams_surface_no2_g_2020-04-27t000000.tif
+regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_April/input/NO2_ES_ADAMAPI_2020/eu_cams_surface_no2_g_2020-04-26t000000.tif
+regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_April/input/NO2_ES_ADAMAPI_2020/eu_cams_surface_no2_g_2020-04-25t000000.tif
+regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_April/input/NO2_ES_ADAMAPI_2020/eu_cams_surface_no2_g_2020-04-24t000000.tif
+regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_April/input/NO2_ES_ADAMAPI_2020/eu_cams_surface_no2_g_2020-04-23t000000.tif
+regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_April/input/NO2_ES_ADAMAPI_2020/eu_cams_surface_no2_g_2020-04-22t000000.tif
+regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_April/input/NO2_ES_ADAMAPI_2020/eu_cams_surface_no2_g_2020-04-21t000000.tif
+regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_April/input/NO2_ES_ADAMAPI_2020/eu_cams_surface_no2_g_2020-04-20t000000.tif
+regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_April/input/NO2_ES_ADAMAPI_2020/eu_cams_surface_no2_g_2020-04-19t000000.tif
+regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_April/input/NO2_ES_ADAMAPI_2020/eu_cams_surface_no2_g_2020-04-18t000000.tif
+regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_April/input/NO2_ES_ADAMAPI_2020/eu_cams_surface_no2_g_2020-04-17t000000.tif
+regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_April/input/NO2_ES_ADAMAPI_2020/eu_cams_surface_no2_g_2020-04-16t000000.tif
+regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_April/input/NO2_ES_ADAMAPI_2020/eu_cams_surface_no2_g_2020-04-15t000000.tif
+regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_April/input/NO2_ES_ADAMAPI_2020/eu_cams_surface_no2_g_2020-04-14t000000.tif
+regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_April/input/NO2_ES_ADAMAPI_2020/eu_cams_surface_no2_g_2020-04-13t000000.tif
+regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_April/input/NO2_ES_ADAMAPI_2020/eu_cams_surface_no2_g_2020-04-12t000000.tif
+regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_April/input/NO2_ES_ADAMAPI_2020/eu_cams_surface_no2_g_2020-04-11t000000.tif
+regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_April/input/NO2_ES_ADAMAPI_2020/eu_cams_surface_no2_g_2020-04-10t000000.tif
+regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_April/input/NO2_ES_ADAMAPI_2020/eu_cams_surface_no2_g_2020-04-09t000000.tif
+regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_April/input/NO2_ES_ADAMAPI_2020/eu_cams_surface_no2_g_2020-04-08t000000.tif
+regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_April/input/NO2_ES_ADAMAPI_2020/eu_cams_surface_no2_g_2020-04-07t000000.tif
+regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_April/input/NO2_ES_ADAMAPI_2020/eu_cams_surface_no2_g_2020-04-06t000000.tif
+regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_April/input/NO2_ES_ADAMAPI_2020/eu_cams_surface_no2_g_2020-04-05t000000.tif
+regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_April/input/NO2_ES_ADAMAPI_2020/eu_cams_surface_no2_g_2020-04-04t000000.tif
+regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_April/input/NO2_ES_ADAMAPI_2020/eu_cams_surface_no2_g_2020-04-03t000000.tif
+regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_April/input/NO2_ES_ADAMAPI_2020/eu_cams_surface_no2_g_2020-04-02t000000.tif
+regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_April/input/NO2_ES_ADAMAPI_2020/eu_cams_surface_no2_g_2020-04-01t000000.tif
+regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_April/input/NO2_ES_ADAMAPI_2019/eu_cams_surface_no2_g_2019-04-30t000000.tif
+regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_April/input/NO2_ES_ADAMAPI_2019/eu_cams_surface_no2_g_2019-04-29t000000.tif
+regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_April/input/NO2_ES_ADAMAPI_2019/eu_cams_surface_no2_g_2019-04-28t000000.tif
+regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_April/input/NO2_ES_ADAMAPI_2019/eu_cams_surface_no2_g_2019-04-27t000000.tif
+regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_April/input/NO2_ES_ADAMAPI_2019/eu_cams_surface_no2_g_2019-04-26t000000.tif
+regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_April/input/NO2_ES_ADAMAPI_2019/eu_cams_surface_no2_g_2019-04-25t000000.tif
+regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_April/input/NO2_ES_ADAMAPI_2019/eu_cams_surface_no2_g_2019-04-24t000000.tif
+regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_April/input/NO2_ES_ADAMAPI_2019/eu_cams_surface_no2_g_2019-04-23t000000.tif
+regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_April/input/NO2_ES_ADAMAPI_2019/eu_cams_surface_no2_g_2019-04-22t000000.tif
+regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_April/input/NO2_ES_ADAMAPI_2019/eu_cams_surface_no2_g_2019-04-21t000000.tif
+regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_April/input/NO2_ES_ADAMAPI_2019/eu_cams_surface_no2_g_2019-04-20t000000.tif
+regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_April/input/NO2_ES_ADAMAPI_2019/eu_cams_surface_no2_g_2019-04-19t000000.tif
+regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_April/input/NO2_ES_ADAMAPI_2019/eu_cams_surface_no2_g_2019-04-18t000000.tif
+regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_April/input/NO2_ES_ADAMAPI_2019/eu_cams_surface_no2_g_2019-04-17t000000.tif
+regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_April/input/NO2_ES_ADAMAPI_2019/eu_cams_surface_no2_g_2019-04-16t000000.tif
+regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_April/input/NO2_ES_ADAMAPI_2019/eu_cams_surface_no2_g_2019-04-15t000000.tif
+regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_April/input/NO2_ES_ADAMAPI_2019/eu_cams_surface_no2_g_2019-04-14t000000.tif
+regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_April/input/NO2_ES_ADAMAPI_2019/eu_cams_surface_no2_g_2019-04-13t000000.tif
+regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_April/input/NO2_ES_ADAMAPI_2019/eu_cams_surface_no2_g_2019-04-12t000000.tif
+regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_April/input/NO2_ES_ADAMAPI_2019/eu_cams_surface_no2_g_2019-04-11t000000.tif
+regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_April/input/NO2_ES_ADAMAPI_2019/eu_cams_surface_no2_g_2019-04-10t000000.tif
+regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_April/input/NO2_ES_ADAMAPI_2019/eu_cams_surface_no2_g_2019-04-09t000000.tif
+regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_April/input/NO2_ES_ADAMAPI_2019/eu_cams_surface_no2_g_2019-04-08t000000.tif
+regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_April/input/NO2_ES_ADAMAPI_2019/eu_cams_surface_no2_g_2019-04-07t000000.tif
+regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_April/input/NO2_ES_ADAMAPI_2019/eu_cams_surface_no2_g_2019-04-06t000000.tif
+regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_April/input/NO2_ES_ADAMAPI_2019/eu_cams_surface_no2_g_2019-04-05t000000.tif
+regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_April/input/NO2_ES_ADAMAPI_2019/eu_cams_surface_no2_g_2019-04-04t000000.tif
+regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_April/input/NO2_ES_ADAMAPI_2019/eu_cams_surface_no2_g_2019-04-03t000000.tif
+regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_April/input/NO2_ES_ADAMAPI_2019/eu_cams_surface_no2_g_2019-04-02t000000.tif
+regridding  /home/jovyan/datahub/Reliance/Climate_ES_NO2_April/input/NO2_ES_ADAMAPI_2019/eu_cams_surface_no2_g_2019-04-01t000000.tif
 </pre></div>
 </div>
 <div class="output text_html"><div><svg style="position: absolute; width: 0; height: 0; overflow: hidden">
@@ -2978,11 +2975,11 @@ dl.xr-attrs {
   fill: currentColor;
 }
 </style><pre class='xr-text-repr-fallback'>&lt;xarray.Dataset&gt;
-Dimensions:    (time: 93, latitude: 80, longitude: 132)
+Dimensions:    (time: 90, latitude: 80, longitude: 132)
 Coordinates:
   * longitude  (longitude) float64 -9.75 -9.65 -9.55 -9.45 ... 3.15 3.25 3.35
   * latitude   (latitude) float64 43.85 43.75 43.65 43.55 ... 36.15 36.05 35.95
-  * time       (time) datetime64[ns] 2021-03-30 2021-03-29 ... 2019-03-01
+  * time       (time) datetime64[ns] 2021-04-29 2021-04-28 ... 2019-04-01
 Data variables:
     NO2        (time, latitude, longitude) float32 0.0 0.0 0.0 ... 0.0 0.0 0.0
 Attributes:
@@ -2994,7 +2991,7 @@ Attributes:
     scales:         (1.0,)
     offsets:        (0.0,)
     AREA_OR_POINT:  Area
-    regrid_method:  conservative</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.Dataset</div></div><ul class='xr-sections'><li class='xr-section-item'><input id='section-400b8db1-9a2b-4db8-9379-845a4d413989' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-400b8db1-9a2b-4db8-9379-845a4d413989' class='xr-section-summary'  title='Expand/collapse section'>Dimensions:</label><div class='xr-section-inline-details'><ul class='xr-dim-list'><li><span class='xr-has-index'>time</span>: 93</li><li><span class='xr-has-index'>latitude</span>: 80</li><li><span class='xr-has-index'>longitude</span>: 132</li></ul></div><div class='xr-section-details'></div></li><li class='xr-section-item'><input id='section-47c80a60-c56e-4cf3-b66e-b806bd124734' class='xr-section-summary-in' type='checkbox'  checked><label for='section-47c80a60-c56e-4cf3-b66e-b806bd124734' class='xr-section-summary' >Coordinates: <span>(3)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>longitude</span></div><div class='xr-var-dims'>(longitude)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>-9.75 -9.65 -9.55 ... 3.25 3.35</div><input id='attrs-9419c63f-e350-463c-b549-943a31d13a0c' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-9419c63f-e350-463c-b549-943a31d13a0c' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-cd3262cf-6bb6-45f9-911d-da7b90a57dae' class='xr-var-data-in' type='checkbox'><label for='data-cd3262cf-6bb6-45f9-911d-da7b90a57dae' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([-9.750012, -9.650012, -9.550012, -9.450012, -9.350012, -9.250012,
+    regrid_method:  conservative</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.Dataset</div></div><ul class='xr-sections'><li class='xr-section-item'><input id='section-24844002-61f6-46ed-b0bf-689f26cf4f68' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-24844002-61f6-46ed-b0bf-689f26cf4f68' class='xr-section-summary'  title='Expand/collapse section'>Dimensions:</label><div class='xr-section-inline-details'><ul class='xr-dim-list'><li><span class='xr-has-index'>time</span>: 90</li><li><span class='xr-has-index'>latitude</span>: 80</li><li><span class='xr-has-index'>longitude</span>: 132</li></ul></div><div class='xr-section-details'></div></li><li class='xr-section-item'><input id='section-3e28063c-75ee-4d5f-8632-ae2a89b621ff' class='xr-section-summary-in' type='checkbox'  checked><label for='section-3e28063c-75ee-4d5f-8632-ae2a89b621ff' class='xr-section-summary' >Coordinates: <span>(3)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>longitude</span></div><div class='xr-var-dims'>(longitude)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>-9.75 -9.65 -9.55 ... 3.25 3.35</div><input id='attrs-13cab5e8-809e-4a59-9ece-92f8f2aaa0e2' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-13cab5e8-809e-4a59-9ece-92f8f2aaa0e2' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-65dfb85d-e827-41fd-a7a8-9d09ecbca829' class='xr-var-data-in' type='checkbox'><label for='data-65dfb85d-e827-41fd-a7a8-9d09ecbca829' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([-9.750012, -9.650012, -9.550012, -9.450012, -9.350012, -9.250012,
        -9.150012, -9.050012, -8.950012, -8.850012, -8.750012, -8.650012,
        -8.550012, -8.450012, -8.350012, -8.250012, -8.150012, -8.050012,
        -7.950012, -7.850012, -7.750012, -7.650012, -7.550012, -7.450012,
@@ -3015,7 +3012,7 @@ Attributes:
         1.049988,  1.149988,  1.249988,  1.349988,  1.449988,  1.549988,
         1.649988,  1.749988,  1.849988,  1.949988,  2.049988,  2.149988,
         2.249988,  2.349988,  2.449988,  2.549988,  2.649988,  2.749988,
-        2.849988,  2.949988,  3.049988,  3.149988,  3.249988,  3.349988])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>latitude</span></div><div class='xr-var-dims'>(latitude)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>43.85 43.75 43.65 ... 36.05 35.95</div><input id='attrs-352854f8-727e-4e53-87c5-1193f4e82f61' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-352854f8-727e-4e53-87c5-1193f4e82f61' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-ffea4a83-261a-49a0-8960-58f07c98495f' class='xr-var-data-in' type='checkbox'><label for='data-ffea4a83-261a-49a0-8960-58f07c98495f' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([43.849997, 43.749997, 43.649997, 43.549997, 43.449997, 43.349997,
+        2.849988,  2.949988,  3.049988,  3.149988,  3.249988,  3.349988])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>latitude</span></div><div class='xr-var-dims'>(latitude)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>43.85 43.75 43.65 ... 36.05 35.95</div><input id='attrs-793ea8b7-53ea-4a41-8796-a1471045e064' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-793ea8b7-53ea-4a41-8796-a1471045e064' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-8d925836-640b-47b7-a0d7-bdec287fb8a6' class='xr-var-data-in' type='checkbox'><label for='data-8d925836-640b-47b7-a0d7-bdec287fb8a6' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([43.849997, 43.749997, 43.649997, 43.549997, 43.449997, 43.349997,
        43.249997, 43.149997, 43.049997, 42.949997, 42.849997, 42.749997,
        42.649997, 42.549997, 42.449997, 42.349997, 42.249997, 42.149997,
        42.049997, 41.949997, 41.849997, 41.749997, 41.649997, 41.549997,
@@ -3028,53 +3025,52 @@ Attributes:
        37.849997, 37.749997, 37.649997, 37.549997, 37.449997, 37.349997,
        37.249997, 37.149997, 37.049997, 36.949997, 36.849997, 36.749997,
        36.649997, 36.549997, 36.449997, 36.349997, 36.249997, 36.149997,
-       36.049997, 35.949997])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>time</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>datetime64[ns]</div><div class='xr-var-preview xr-preview'>2021-03-30 ... 2019-03-01</div><input id='attrs-e5e4b33a-7864-43a0-93af-5e0912b3101c' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-e5e4b33a-7864-43a0-93af-5e0912b3101c' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-d835762b-dd6b-452d-8856-70c029626b1c' class='xr-var-data-in' type='checkbox'><label for='data-d835762b-dd6b-452d-8856-70c029626b1c' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([&#x27;2021-03-30T00:00:00.000000000&#x27;, &#x27;2021-03-29T00:00:00.000000000&#x27;,
-       &#x27;2021-03-28T00:00:00.000000000&#x27;, &#x27;2021-03-27T00:00:00.000000000&#x27;,
-       &#x27;2021-03-26T00:00:00.000000000&#x27;, &#x27;2021-03-25T00:00:00.000000000&#x27;,
-       &#x27;2021-03-24T00:00:00.000000000&#x27;, &#x27;2021-03-23T00:00:00.000000000&#x27;,
-       &#x27;2021-03-22T00:00:00.000000000&#x27;, &#x27;2021-03-21T00:00:00.000000000&#x27;,
-       &#x27;2021-03-20T00:00:00.000000000&#x27;, &#x27;2021-03-19T00:00:00.000000000&#x27;,
-       &#x27;2021-03-18T00:00:00.000000000&#x27;, &#x27;2021-03-17T00:00:00.000000000&#x27;,
-       &#x27;2021-03-16T00:00:00.000000000&#x27;, &#x27;2021-03-15T00:00:00.000000000&#x27;,
-       &#x27;2021-03-14T00:00:00.000000000&#x27;, &#x27;2021-03-13T00:00:00.000000000&#x27;,
-       &#x27;2021-03-12T00:00:00.000000000&#x27;, &#x27;2021-03-11T00:00:00.000000000&#x27;,
-       &#x27;2021-03-10T00:00:00.000000000&#x27;, &#x27;2021-03-09T00:00:00.000000000&#x27;,
-       &#x27;2021-03-08T00:00:00.000000000&#x27;, &#x27;2021-03-07T00:00:00.000000000&#x27;,
-       &#x27;2021-03-06T00:00:00.000000000&#x27;, &#x27;2021-03-05T00:00:00.000000000&#x27;,
-       &#x27;2021-03-04T00:00:00.000000000&#x27;, &#x27;2021-03-03T00:00:00.000000000&#x27;,
-       &#x27;2021-03-02T00:00:00.000000000&#x27;, &#x27;2021-03-01T00:00:00.000000000&#x27;,
-       &#x27;2021-03-31T00:00:00.000000000&#x27;, &#x27;2020-03-31T00:00:00.000000000&#x27;,
-       &#x27;2020-03-30T00:00:00.000000000&#x27;, &#x27;2020-03-29T00:00:00.000000000&#x27;,
-       &#x27;2020-03-28T00:00:00.000000000&#x27;, &#x27;2020-03-27T00:00:00.000000000&#x27;,
-       &#x27;2020-03-26T00:00:00.000000000&#x27;, &#x27;2020-03-25T00:00:00.000000000&#x27;,
-       &#x27;2020-03-24T00:00:00.000000000&#x27;, &#x27;2020-03-23T00:00:00.000000000&#x27;,
-       &#x27;2020-03-22T00:00:00.000000000&#x27;, &#x27;2020-03-21T00:00:00.000000000&#x27;,
-       &#x27;2020-03-20T00:00:00.000000000&#x27;, &#x27;2020-03-19T00:00:00.000000000&#x27;,
-       &#x27;2020-03-18T00:00:00.000000000&#x27;, &#x27;2020-03-17T00:00:00.000000000&#x27;,
-       &#x27;2020-03-16T00:00:00.000000000&#x27;, &#x27;2020-03-15T00:00:00.000000000&#x27;,
-       &#x27;2020-03-14T00:00:00.000000000&#x27;, &#x27;2020-03-13T00:00:00.000000000&#x27;,
-       &#x27;2020-03-12T00:00:00.000000000&#x27;, &#x27;2020-03-11T00:00:00.000000000&#x27;,
-       &#x27;2020-03-10T00:00:00.000000000&#x27;, &#x27;2020-03-09T00:00:00.000000000&#x27;,
-       &#x27;2020-03-08T00:00:00.000000000&#x27;, &#x27;2020-03-07T00:00:00.000000000&#x27;,
-       &#x27;2020-03-06T00:00:00.000000000&#x27;, &#x27;2020-03-05T00:00:00.000000000&#x27;,
-       &#x27;2020-03-04T00:00:00.000000000&#x27;, &#x27;2020-03-03T00:00:00.000000000&#x27;,
-       &#x27;2020-03-02T00:00:00.000000000&#x27;, &#x27;2020-03-01T00:00:00.000000000&#x27;,
-       &#x27;2019-03-31T00:00:00.000000000&#x27;, &#x27;2019-03-30T00:00:00.000000000&#x27;,
-       &#x27;2019-03-29T00:00:00.000000000&#x27;, &#x27;2019-03-28T00:00:00.000000000&#x27;,
-       &#x27;2019-03-27T00:00:00.000000000&#x27;, &#x27;2019-03-26T00:00:00.000000000&#x27;,
-       &#x27;2019-03-25T00:00:00.000000000&#x27;, &#x27;2019-03-24T00:00:00.000000000&#x27;,
-       &#x27;2019-03-23T00:00:00.000000000&#x27;, &#x27;2019-03-22T00:00:00.000000000&#x27;,
-       &#x27;2019-03-21T00:00:00.000000000&#x27;, &#x27;2019-03-20T00:00:00.000000000&#x27;,
-       &#x27;2019-03-19T00:00:00.000000000&#x27;, &#x27;2019-03-18T00:00:00.000000000&#x27;,
-       &#x27;2019-03-17T00:00:00.000000000&#x27;, &#x27;2019-03-16T00:00:00.000000000&#x27;,
-       &#x27;2019-03-15T00:00:00.000000000&#x27;, &#x27;2019-03-14T00:00:00.000000000&#x27;,
-       &#x27;2019-03-13T00:00:00.000000000&#x27;, &#x27;2019-03-12T00:00:00.000000000&#x27;,
-       &#x27;2019-03-11T00:00:00.000000000&#x27;, &#x27;2019-03-10T00:00:00.000000000&#x27;,
-       &#x27;2019-03-09T00:00:00.000000000&#x27;, &#x27;2019-03-08T00:00:00.000000000&#x27;,
-       &#x27;2019-03-07T00:00:00.000000000&#x27;, &#x27;2019-03-06T00:00:00.000000000&#x27;,
-       &#x27;2019-03-05T00:00:00.000000000&#x27;, &#x27;2019-03-04T00:00:00.000000000&#x27;,
-       &#x27;2019-03-03T00:00:00.000000000&#x27;, &#x27;2019-03-02T00:00:00.000000000&#x27;,
-       &#x27;2019-03-01T00:00:00.000000000&#x27;], dtype=&#x27;datetime64[ns]&#x27;)</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-c3f6e0ee-d8aa-4731-bd52-a383525d9167' class='xr-section-summary-in' type='checkbox'  checked><label for='section-c3f6e0ee-d8aa-4731-bd52-a383525d9167' class='xr-section-summary' >Data variables: <span>(1)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span>NO2</span></div><div class='xr-var-dims'>(time, latitude, longitude)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>0.0 0.0 0.0 0.0 ... 0.0 0.0 0.0 0.0</div><input id='attrs-ef6300b5-20c4-4702-a9b5-a1efb0ff6386' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-ef6300b5-20c4-4702-a9b5-a1efb0ff6386' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-a4e80155-b22a-4f54-95c8-37346ab9690b' class='xr-var-data-in' type='checkbox'><label for='data-a4e80155-b22a-4f54-95c8-37346ab9690b' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>µg m-3</dd><dt><span>long_name :</span></dt><dd>Nitrogen Dioxide</dd></dl></div><div class='xr-var-data'><pre>array([[[0., 0., 0., ..., 0., 0., 0.],
+       36.049997, 35.949997])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>time</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>datetime64[ns]</div><div class='xr-var-preview xr-preview'>2021-04-29 ... 2019-04-01</div><input id='attrs-15effc1a-30b3-4e12-bcdf-203d03cf120c' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-15effc1a-30b3-4e12-bcdf-203d03cf120c' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-498cf4cd-e756-4f20-b5f0-93a0d3886322' class='xr-var-data-in' type='checkbox'><label for='data-498cf4cd-e756-4f20-b5f0-93a0d3886322' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([&#x27;2021-04-29T00:00:00.000000000&#x27;, &#x27;2021-04-28T00:00:00.000000000&#x27;,
+       &#x27;2021-04-27T00:00:00.000000000&#x27;, &#x27;2021-04-26T00:00:00.000000000&#x27;,
+       &#x27;2021-04-25T00:00:00.000000000&#x27;, &#x27;2021-04-24T00:00:00.000000000&#x27;,
+       &#x27;2021-04-23T00:00:00.000000000&#x27;, &#x27;2021-04-22T00:00:00.000000000&#x27;,
+       &#x27;2021-04-21T00:00:00.000000000&#x27;, &#x27;2021-04-20T00:00:00.000000000&#x27;,
+       &#x27;2021-04-19T00:00:00.000000000&#x27;, &#x27;2021-04-18T00:00:00.000000000&#x27;,
+       &#x27;2021-04-17T00:00:00.000000000&#x27;, &#x27;2021-04-16T00:00:00.000000000&#x27;,
+       &#x27;2021-04-15T00:00:00.000000000&#x27;, &#x27;2021-04-14T00:00:00.000000000&#x27;,
+       &#x27;2021-04-13T00:00:00.000000000&#x27;, &#x27;2021-04-12T00:00:00.000000000&#x27;,
+       &#x27;2021-04-11T00:00:00.000000000&#x27;, &#x27;2021-04-10T00:00:00.000000000&#x27;,
+       &#x27;2021-04-09T00:00:00.000000000&#x27;, &#x27;2021-04-08T00:00:00.000000000&#x27;,
+       &#x27;2021-04-07T00:00:00.000000000&#x27;, &#x27;2021-04-06T00:00:00.000000000&#x27;,
+       &#x27;2021-04-05T00:00:00.000000000&#x27;, &#x27;2021-04-04T00:00:00.000000000&#x27;,
+       &#x27;2021-04-03T00:00:00.000000000&#x27;, &#x27;2021-04-02T00:00:00.000000000&#x27;,
+       &#x27;2021-04-01T00:00:00.000000000&#x27;, &#x27;2021-04-30T00:00:00.000000000&#x27;,
+       &#x27;2020-04-30T00:00:00.000000000&#x27;, &#x27;2020-04-29T00:00:00.000000000&#x27;,
+       &#x27;2020-04-28T00:00:00.000000000&#x27;, &#x27;2020-04-27T00:00:00.000000000&#x27;,
+       &#x27;2020-04-26T00:00:00.000000000&#x27;, &#x27;2020-04-25T00:00:00.000000000&#x27;,
+       &#x27;2020-04-24T00:00:00.000000000&#x27;, &#x27;2020-04-23T00:00:00.000000000&#x27;,
+       &#x27;2020-04-22T00:00:00.000000000&#x27;, &#x27;2020-04-21T00:00:00.000000000&#x27;,
+       &#x27;2020-04-20T00:00:00.000000000&#x27;, &#x27;2020-04-19T00:00:00.000000000&#x27;,
+       &#x27;2020-04-18T00:00:00.000000000&#x27;, &#x27;2020-04-17T00:00:00.000000000&#x27;,
+       &#x27;2020-04-16T00:00:00.000000000&#x27;, &#x27;2020-04-15T00:00:00.000000000&#x27;,
+       &#x27;2020-04-14T00:00:00.000000000&#x27;, &#x27;2020-04-13T00:00:00.000000000&#x27;,
+       &#x27;2020-04-12T00:00:00.000000000&#x27;, &#x27;2020-04-11T00:00:00.000000000&#x27;,
+       &#x27;2020-04-10T00:00:00.000000000&#x27;, &#x27;2020-04-09T00:00:00.000000000&#x27;,
+       &#x27;2020-04-08T00:00:00.000000000&#x27;, &#x27;2020-04-07T00:00:00.000000000&#x27;,
+       &#x27;2020-04-06T00:00:00.000000000&#x27;, &#x27;2020-04-05T00:00:00.000000000&#x27;,
+       &#x27;2020-04-04T00:00:00.000000000&#x27;, &#x27;2020-04-03T00:00:00.000000000&#x27;,
+       &#x27;2020-04-02T00:00:00.000000000&#x27;, &#x27;2020-04-01T00:00:00.000000000&#x27;,
+       &#x27;2019-04-30T00:00:00.000000000&#x27;, &#x27;2019-04-29T00:00:00.000000000&#x27;,
+       &#x27;2019-04-28T00:00:00.000000000&#x27;, &#x27;2019-04-27T00:00:00.000000000&#x27;,
+       &#x27;2019-04-26T00:00:00.000000000&#x27;, &#x27;2019-04-25T00:00:00.000000000&#x27;,
+       &#x27;2019-04-24T00:00:00.000000000&#x27;, &#x27;2019-04-23T00:00:00.000000000&#x27;,
+       &#x27;2019-04-22T00:00:00.000000000&#x27;, &#x27;2019-04-21T00:00:00.000000000&#x27;,
+       &#x27;2019-04-20T00:00:00.000000000&#x27;, &#x27;2019-04-19T00:00:00.000000000&#x27;,
+       &#x27;2019-04-18T00:00:00.000000000&#x27;, &#x27;2019-04-17T00:00:00.000000000&#x27;,
+       &#x27;2019-04-16T00:00:00.000000000&#x27;, &#x27;2019-04-15T00:00:00.000000000&#x27;,
+       &#x27;2019-04-14T00:00:00.000000000&#x27;, &#x27;2019-04-13T00:00:00.000000000&#x27;,
+       &#x27;2019-04-12T00:00:00.000000000&#x27;, &#x27;2019-04-11T00:00:00.000000000&#x27;,
+       &#x27;2019-04-10T00:00:00.000000000&#x27;, &#x27;2019-04-09T00:00:00.000000000&#x27;,
+       &#x27;2019-04-08T00:00:00.000000000&#x27;, &#x27;2019-04-07T00:00:00.000000000&#x27;,
+       &#x27;2019-04-06T00:00:00.000000000&#x27;, &#x27;2019-04-05T00:00:00.000000000&#x27;,
+       &#x27;2019-04-04T00:00:00.000000000&#x27;, &#x27;2019-04-03T00:00:00.000000000&#x27;,
+       &#x27;2019-04-02T00:00:00.000000000&#x27;, &#x27;2019-04-01T00:00:00.000000000&#x27;],
+      dtype=&#x27;datetime64[ns]&#x27;)</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-4ede4f3e-3b46-4c41-bf7e-01d70109de6e' class='xr-section-summary-in' type='checkbox'  checked><label for='section-4ede4f3e-3b46-4c41-bf7e-01d70109de6e' class='xr-section-summary' >Data variables: <span>(1)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span>NO2</span></div><div class='xr-var-dims'>(time, latitude, longitude)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>0.0 0.0 0.0 0.0 ... 0.0 0.0 0.0 0.0</div><input id='attrs-731f24d5-4c62-4d76-85f5-b1657238c51e' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-731f24d5-4c62-4d76-85f5-b1657238c51e' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-f13d9f71-af50-468e-b0b4-fd71de067937' class='xr-var-data-in' type='checkbox'><label for='data-f13d9f71-af50-468e-b0b4-fd71de067937' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>µg m-3</dd><dt><span>long_name :</span></dt><dd>Nitrogen Dioxide</dd></dl></div><div class='xr-var-data'><pre>array([[[0., 0., 0., ..., 0., 0., 0.],
         [0., 0., 0., ..., 0., 0., 0.],
         [0., 0., 0., ..., 0., 0., 0.],
         ...,
@@ -3114,7 +3110,7 @@ Attributes:
         ...,
         [0., 0., 0., ..., 0., 0., 0.],
         [0., 0., 0., ..., 0., 0., 0.],
-        [0., 0., 0., ..., 0., 0., 0.]]], dtype=float32)</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-96893f2e-b1b1-4aec-a9cd-83a91ad283ae' class='xr-section-summary-in' type='checkbox'  checked><label for='section-96893f2e-b1b1-4aec-a9cd-83a91ad283ae' class='xr-section-summary' >Attributes: <span>(9)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>transform :</span></dt><dd>(0.1, 0.0, -9.800012009298998, 0.0, -0.1, 43.899996997613364)</dd><dt><span>crs :</span></dt><dd>+init=epsg:4326</dd><dt><span>res :</span></dt><dd>(0.1, 0.1)</dd><dt><span>is_tiled :</span></dt><dd>0</dd><dt><span>nodatavals :</span></dt><dd>(0.0,)</dd><dt><span>scales :</span></dt><dd>(1.0,)</dd><dt><span>offsets :</span></dt><dd>(0.0,)</dd><dt><span>AREA_OR_POINT :</span></dt><dd>Area</dd><dt><span>regrid_method :</span></dt><dd>conservative</dd></dl></div></li></ul></div></div></div></div>
+        [0., 0., 0., ..., 0., 0., 0.]]], dtype=float32)</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-3b0fc03d-db8d-4da1-b4df-b042abcc386d' class='xr-section-summary-in' type='checkbox'  checked><label for='section-3b0fc03d-db8d-4da1-b4df-b042abcc386d' class='xr-section-summary' >Attributes: <span>(9)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>transform :</span></dt><dd>(0.1, 0.0, -9.800012009298998, 0.0, -0.1, 43.899996997613364)</dd><dt><span>crs :</span></dt><dd>+init=epsg:4326</dd><dt><span>res :</span></dt><dd>(0.1, 0.1)</dd><dt><span>is_tiled :</span></dt><dd>0</dd><dt><span>nodatavals :</span></dt><dd>(0.0,)</dd><dt><span>scales :</span></dt><dd>(1.0,)</dd><dt><span>offsets :</span></dt><dd>(0.0,)</dd><dt><span>AREA_OR_POINT :</span></dt><dd>Area</dd><dt><span>regrid_method :</span></dt><dd>conservative</dd></dl></div></li></ul></div></div></div></div>
 </div>
 </div>
 <div class="section" id="analyze-data">
@@ -3502,7 +3498,7 @@ Attributes:
     scales:         (1.0,)
     offsets:        (0.0,)
     AREA_OR_POINT:  Area
-    regrid_method:  conservative</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.Dataset</div></div><ul class='xr-sections'><li class='xr-section-item'><input id='section-541795ba-404b-4833-8151-33b92467b494' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-541795ba-404b-4833-8151-33b92467b494' class='xr-section-summary'  title='Expand/collapse section'>Dimensions:</label><div class='xr-section-inline-details'><ul class='xr-dim-list'><li><span class='xr-has-index'>year</span>: 3</li><li><span class='xr-has-index'>latitude</span>: 80</li><li><span class='xr-has-index'>longitude</span>: 132</li></ul></div><div class='xr-section-details'></div></li><li class='xr-section-item'><input id='section-9a2055cd-a4ca-4c0f-9125-44e36077945e' class='xr-section-summary-in' type='checkbox'  checked><label for='section-9a2055cd-a4ca-4c0f-9125-44e36077945e' class='xr-section-summary' >Coordinates: <span>(3)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>longitude</span></div><div class='xr-var-dims'>(longitude)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>-9.75 -9.65 -9.55 ... 3.25 3.35</div><input id='attrs-cf4d4cd6-0126-4b66-b783-f63045fa4132' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-cf4d4cd6-0126-4b66-b783-f63045fa4132' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-285a23a4-04af-4245-96c4-e97121c40501' class='xr-var-data-in' type='checkbox'><label for='data-285a23a4-04af-4245-96c4-e97121c40501' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([-9.750012, -9.650012, -9.550012, -9.450012, -9.350012, -9.250012,
+    regrid_method:  conservative</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.Dataset</div></div><ul class='xr-sections'><li class='xr-section-item'><input id='section-f4944c75-a657-4c31-9af9-060fa2394cc7' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-f4944c75-a657-4c31-9af9-060fa2394cc7' class='xr-section-summary'  title='Expand/collapse section'>Dimensions:</label><div class='xr-section-inline-details'><ul class='xr-dim-list'><li><span class='xr-has-index'>year</span>: 3</li><li><span class='xr-has-index'>latitude</span>: 80</li><li><span class='xr-has-index'>longitude</span>: 132</li></ul></div><div class='xr-section-details'></div></li><li class='xr-section-item'><input id='section-4e66d1c0-7560-42f1-8f4e-17abd8e5e951' class='xr-section-summary-in' type='checkbox'  checked><label for='section-4e66d1c0-7560-42f1-8f4e-17abd8e5e951' class='xr-section-summary' >Coordinates: <span>(3)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>longitude</span></div><div class='xr-var-dims'>(longitude)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>-9.75 -9.65 -9.55 ... 3.25 3.35</div><input id='attrs-d04c8bd4-bd56-4a38-8696-cd48788b842d' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-d04c8bd4-bd56-4a38-8696-cd48788b842d' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-f754f559-4ecc-49f3-a425-c71f43d5e9ac' class='xr-var-data-in' type='checkbox'><label for='data-f754f559-4ecc-49f3-a425-c71f43d5e9ac' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([-9.750012, -9.650012, -9.550012, -9.450012, -9.350012, -9.250012,
        -9.150012, -9.050012, -8.950012, -8.850012, -8.750012, -8.650012,
        -8.550012, -8.450012, -8.350012, -8.250012, -8.150012, -8.050012,
        -7.950012, -7.850012, -7.750012, -7.650012, -7.550012, -7.450012,
@@ -3523,7 +3519,7 @@ Attributes:
         1.049988,  1.149988,  1.249988,  1.349988,  1.449988,  1.549988,
         1.649988,  1.749988,  1.849988,  1.949988,  2.049988,  2.149988,
         2.249988,  2.349988,  2.449988,  2.549988,  2.649988,  2.749988,
-        2.849988,  2.949988,  3.049988,  3.149988,  3.249988,  3.349988])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>latitude</span></div><div class='xr-var-dims'>(latitude)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>43.85 43.75 43.65 ... 36.05 35.95</div><input id='attrs-8a8bd7e3-b332-4411-891e-11d3e8d234a8' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-8a8bd7e3-b332-4411-891e-11d3e8d234a8' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-c2695699-8998-496e-9377-39ed38652aba' class='xr-var-data-in' type='checkbox'><label for='data-c2695699-8998-496e-9377-39ed38652aba' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([43.849997, 43.749997, 43.649997, 43.549997, 43.449997, 43.349997,
+        2.849988,  2.949988,  3.049988,  3.149988,  3.249988,  3.349988])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>latitude</span></div><div class='xr-var-dims'>(latitude)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>43.85 43.75 43.65 ... 36.05 35.95</div><input id='attrs-462d17eb-ce6c-418b-aad7-ef7b27dba9d1' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-462d17eb-ce6c-418b-aad7-ef7b27dba9d1' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-7f5a1b14-92ff-4ae0-a5a7-1f3ee8015ee5' class='xr-var-data-in' type='checkbox'><label for='data-7f5a1b14-92ff-4ae0-a5a7-1f3ee8015ee5' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([43.849997, 43.749997, 43.649997, 43.549997, 43.449997, 43.349997,
        43.249997, 43.149997, 43.049997, 42.949997, 42.849997, 42.749997,
        42.649997, 42.549997, 42.449997, 42.349997, 42.249997, 42.149997,
        42.049997, 41.949997, 41.849997, 41.749997, 41.649997, 41.549997,
@@ -3536,7 +3532,7 @@ Attributes:
        37.849997, 37.749997, 37.649997, 37.549997, 37.449997, 37.349997,
        37.249997, 37.149997, 37.049997, 36.949997, 36.849997, 36.749997,
        36.649997, 36.549997, 36.449997, 36.349997, 36.249997, 36.149997,
-       36.049997, 35.949997])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>year</span></div><div class='xr-var-dims'>(year)</div><div class='xr-var-dtype'>int64</div><div class='xr-var-preview xr-preview'>2019 2020 2021</div><input id='attrs-6e675de0-bcd0-4c56-b1f8-6f020912f792' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-6e675de0-bcd0-4c56-b1f8-6f020912f792' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-b9e81fae-b940-48ec-aff3-bb4b0e99ec2a' class='xr-var-data-in' type='checkbox'><label for='data-b9e81fae-b940-48ec-aff3-bb4b0e99ec2a' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([2019, 2020, 2021])</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-4625080e-75e1-4397-bb4a-325006e16886' class='xr-section-summary-in' type='checkbox'  checked><label for='section-4625080e-75e1-4397-bb4a-325006e16886' class='xr-section-summary' >Data variables: <span>(1)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span>NO2</span></div><div class='xr-var-dims'>(year, latitude, longitude)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>0.0 0.0 0.0 0.0 ... 0.0 0.0 0.0 0.0</div><input id='attrs-acd74017-41d6-4599-b0eb-6f86d9f78abe' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-acd74017-41d6-4599-b0eb-6f86d9f78abe' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-1005d219-4e58-42a6-a9ea-3ee61b3340fe' class='xr-var-data-in' type='checkbox'><label for='data-1005d219-4e58-42a6-a9ea-3ee61b3340fe' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>µg m-3</dd><dt><span>long_name :</span></dt><dd>Nitrogen Dioxide</dd></dl></div><div class='xr-var-data'><pre>array([[[0., 0., 0., ..., 0., 0., 0.],
+       36.049997, 35.949997])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>year</span></div><div class='xr-var-dims'>(year)</div><div class='xr-var-dtype'>int64</div><div class='xr-var-preview xr-preview'>2019 2020 2021</div><input id='attrs-ff0f58ed-dfcb-4037-9f4b-41045b3d467b' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-ff0f58ed-dfcb-4037-9f4b-41045b3d467b' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-1d2cd295-6692-4604-af69-1b0bb7efc215' class='xr-var-data-in' type='checkbox'><label for='data-1d2cd295-6692-4604-af69-1b0bb7efc215' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([2019, 2020, 2021])</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-ab5e40b4-9072-4835-bf02-afcadf56f57d' class='xr-section-summary-in' type='checkbox'  checked><label for='section-ab5e40b4-9072-4835-bf02-afcadf56f57d' class='xr-section-summary' >Data variables: <span>(1)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span>NO2</span></div><div class='xr-var-dims'>(year, latitude, longitude)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>0.0 0.0 0.0 0.0 ... 0.0 0.0 0.0 0.0</div><input id='attrs-fbe339d2-54ec-441e-93df-486613c299ba' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-fbe339d2-54ec-441e-93df-486613c299ba' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-4b228b40-b014-4ec1-b47f-7ee6ea9e8acc' class='xr-var-data-in' type='checkbox'><label for='data-4b228b40-b014-4ec1-b47f-7ee6ea9e8acc' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>µg m-3</dd><dt><span>long_name :</span></dt><dd>Nitrogen Dioxide</dd></dl></div><div class='xr-var-data'><pre>array([[[0., 0., 0., ..., 0., 0., 0.],
         [0., 0., 0., ..., 0., 0., 0.],
         [0., 0., 0., ..., 0., 0., 0.],
         ...,
@@ -3558,7 +3554,7 @@ Attributes:
         ...,
         [0., 0., 0., ..., 0., 0., 0.],
         [0., 0., 0., ..., 0., 0., 0.],
-        [0., 0., 0., ..., 0., 0., 0.]]], dtype=float32)</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-0ff302ab-347b-4adc-8467-3e08d6fa341d' class='xr-section-summary-in' type='checkbox'  checked><label for='section-0ff302ab-347b-4adc-8467-3e08d6fa341d' class='xr-section-summary' >Attributes: <span>(9)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>transform :</span></dt><dd>(0.1, 0.0, -9.800012009298998, 0.0, -0.1, 43.899996997613364)</dd><dt><span>crs :</span></dt><dd>+init=epsg:4326</dd><dt><span>res :</span></dt><dd>(0.1, 0.1)</dd><dt><span>is_tiled :</span></dt><dd>0</dd><dt><span>nodatavals :</span></dt><dd>(0.0,)</dd><dt><span>scales :</span></dt><dd>(1.0,)</dd><dt><span>offsets :</span></dt><dd>(0.0,)</dd><dt><span>AREA_OR_POINT :</span></dt><dd>Area</dd><dt><span>regrid_method :</span></dt><dd>conservative</dd></dl></div></li></ul></div></div></div></div>
+        [0., 0., 0., ..., 0., 0., 0.]]], dtype=float32)</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-96c1cd68-1063-4d3d-820a-d09280bba073' class='xr-section-summary-in' type='checkbox'  checked><label for='section-96c1cd68-1063-4d3d-820a-d09280bba073' class='xr-section-summary' >Attributes: <span>(9)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>transform :</span></dt><dd>(0.1, 0.0, -9.800012009298998, 0.0, -0.1, 43.899996997613364)</dd><dt><span>crs :</span></dt><dd>+init=epsg:4326</dd><dt><span>res :</span></dt><dd>(0.1, 0.1)</dd><dt><span>is_tiled :</span></dt><dd>0</dd><dt><span>nodatavals :</span></dt><dd>(0.0,)</dd><dt><span>scales :</span></dt><dd>(1.0,)</dd><dt><span>offsets :</span></dt><dd>(0.0,)</dd><dt><span>AREA_OR_POINT :</span></dt><dd>Area</dd><dt><span>regrid_method :</span></dt><dd>conservative</dd></dl></div></li></ul></div></div></div></div>
 </div>
 </div>
 <div class="section" id="visualize-data">
@@ -3576,30 +3572,30 @@ Requirement already satisfied: GeoViews in /opt/conda/envs/cams/lib/python3.9/si
 Requirement already satisfied: cartopy in /opt/conda/envs/cams/lib/python3.9/site-packages (0.20.2)
 Requirement already satisfied: matplotlib in /opt/conda/envs/cams/lib/python3.9/site-packages (from cmaps) (3.5.1)
 Requirement already satisfied: numpy in /opt/conda/envs/cams/lib/python3.9/site-packages (from cmaps) (1.21.6)
-Requirement already satisfied: pyviz-comms&gt;=0.7.4 in /opt/conda/envs/cams/lib/python3.9/site-packages (from holoviews&lt;1.14.8) (2.2.0)
+Requirement already satisfied: panel&gt;=0.8.0 in /opt/conda/envs/cams/lib/python3.9/site-packages (from holoviews&lt;1.14.8) (0.12.6)
+Requirement already satisfied: colorcet in /opt/conda/envs/cams/lib/python3.9/site-packages (from holoviews&lt;1.14.8) (3.0.0)
 Requirement already satisfied: pandas&gt;=0.20.0 in /opt/conda/envs/cams/lib/python3.9/site-packages (from holoviews&lt;1.14.8) (1.4.2)
 Requirement already satisfied: param&lt;2.0,&gt;=1.9.3 in /opt/conda/envs/cams/lib/python3.9/site-packages (from holoviews&lt;1.14.8) (1.12.1)
-Requirement already satisfied: colorcet in /opt/conda/envs/cams/lib/python3.9/site-packages (from holoviews&lt;1.14.8) (3.0.0)
-Requirement already satisfied: panel&gt;=0.8.0 in /opt/conda/envs/cams/lib/python3.9/site-packages (from holoviews&lt;1.14.8) (0.12.6)
-Requirement already satisfied: packaging in /opt/conda/envs/cams/lib/python3.9/site-packages (from GeoViews) (20.9)
+Requirement already satisfied: pyviz-comms&gt;=0.7.4 in /opt/conda/envs/cams/lib/python3.9/site-packages (from holoviews&lt;1.14.8) (2.2.0)
 Requirement already satisfied: bokeh&lt;2.5,&gt;=2.4.0 in /opt/conda/envs/cams/lib/python3.9/site-packages (from GeoViews) (2.4.2)
+Requirement already satisfied: packaging in /opt/conda/envs/cams/lib/python3.9/site-packages (from GeoViews) (21.3)
 Requirement already satisfied: pyshp&gt;=2.1 in /opt/conda/envs/cams/lib/python3.9/site-packages (from cartopy) (2.2.0)
-Requirement already satisfied: pyproj&gt;=3.0.0 in /opt/conda/envs/cams/lib/python3.9/site-packages (from cartopy) (3.3.1)
 Requirement already satisfied: shapely&gt;=1.6.4 in /opt/conda/envs/cams/lib/python3.9/site-packages (from cartopy) (1.8.0)
-Requirement already satisfied: typing-extensions&gt;=3.10.0 in /opt/conda/envs/cams/lib/python3.9/site-packages (from bokeh&lt;2.5,&gt;=2.4.0-&gt;GeoViews) (4.2.0)
+Requirement already satisfied: pyproj&gt;=3.0.0 in /opt/conda/envs/cams/lib/python3.9/site-packages (from cartopy) (3.3.1)
 Requirement already satisfied: tornado&gt;=5.1 in /opt/conda/envs/cams/lib/python3.9/site-packages (from bokeh&lt;2.5,&gt;=2.4.0-&gt;GeoViews) (6.1)
 Requirement already satisfied: Jinja2&gt;=2.9 in /opt/conda/envs/cams/lib/python3.9/site-packages (from bokeh&lt;2.5,&gt;=2.4.0-&gt;GeoViews) (3.0.2)
-Requirement already satisfied: pillow&gt;=7.1.0 in /opt/conda/envs/cams/lib/python3.9/site-packages (from bokeh&lt;2.5,&gt;=2.4.0-&gt;GeoViews) (9.1.0)
 Requirement already satisfied: PyYAML&gt;=3.10 in /opt/conda/envs/cams/lib/python3.9/site-packages (from bokeh&lt;2.5,&gt;=2.4.0-&gt;GeoViews) (6.0)
-Requirement already satisfied: pyparsing&gt;=2.2.1 in /opt/conda/envs/cams/lib/python3.9/site-packages (from matplotlib-&gt;cmaps) (3.0.8)
-Requirement already satisfied: kiwisolver&gt;=1.0.1 in /opt/conda/envs/cams/lib/python3.9/site-packages (from matplotlib-&gt;cmaps) (1.4.2)
-Requirement already satisfied: python-dateutil&gt;=2.7 in /opt/conda/envs/cams/lib/python3.9/site-packages (from matplotlib-&gt;cmaps) (2.8.2)
-Requirement already satisfied: fonttools&gt;=4.22.0 in /opt/conda/envs/cams/lib/python3.9/site-packages (from matplotlib-&gt;cmaps) (4.33.3)
+Requirement already satisfied: pillow&gt;=7.1.0 in /opt/conda/envs/cams/lib/python3.9/site-packages (from bokeh&lt;2.5,&gt;=2.4.0-&gt;GeoViews) (9.1.0)
+Requirement already satisfied: typing-extensions&gt;=3.10.0 in /opt/conda/envs/cams/lib/python3.9/site-packages (from bokeh&lt;2.5,&gt;=2.4.0-&gt;GeoViews) (4.2.0)
 Requirement already satisfied: cycler&gt;=0.10 in /opt/conda/envs/cams/lib/python3.9/site-packages (from matplotlib-&gt;cmaps) (0.11.0)
+Requirement already satisfied: fonttools&gt;=4.22.0 in /opt/conda/envs/cams/lib/python3.9/site-packages (from matplotlib-&gt;cmaps) (4.33.3)
+Requirement already satisfied: pyparsing&gt;=2.2.1 in /opt/conda/envs/cams/lib/python3.9/site-packages (from matplotlib-&gt;cmaps) (3.0.8)
+Requirement already satisfied: python-dateutil&gt;=2.7 in /opt/conda/envs/cams/lib/python3.9/site-packages (from matplotlib-&gt;cmaps) (2.8.2)
+Requirement already satisfied: kiwisolver&gt;=1.0.1 in /opt/conda/envs/cams/lib/python3.9/site-packages (from matplotlib-&gt;cmaps) (1.4.2)
 Requirement already satisfied: pytz&gt;=2020.1 in /opt/conda/envs/cams/lib/python3.9/site-packages (from pandas&gt;=0.20.0-&gt;holoviews&lt;1.14.8) (2022.1)
+Requirement already satisfied: requests in /opt/conda/envs/cams/lib/python3.9/site-packages (from panel&gt;=0.8.0-&gt;holoviews&lt;1.14.8) (2.27.1)
 Requirement already satisfied: pyct&gt;=0.4.4 in /opt/conda/envs/cams/lib/python3.9/site-packages (from panel&gt;=0.8.0-&gt;holoviews&lt;1.14.8) (0.4.6)
 Requirement already satisfied: markdown in /opt/conda/envs/cams/lib/python3.9/site-packages (from panel&gt;=0.8.0-&gt;holoviews&lt;1.14.8) (3.3.6)
-Requirement already satisfied: requests in /opt/conda/envs/cams/lib/python3.9/site-packages (from panel&gt;=0.8.0-&gt;holoviews&lt;1.14.8) (2.27.1)
 Requirement already satisfied: bleach in /opt/conda/envs/cams/lib/python3.9/site-packages (from panel&gt;=0.8.0-&gt;holoviews&lt;1.14.8) (5.0.0)
 Requirement already satisfied: tqdm&gt;=4.48.0 in /opt/conda/envs/cams/lib/python3.9/site-packages (from panel&gt;=0.8.0-&gt;holoviews&lt;1.14.8) (4.64.0)
 Requirement already satisfied: certifi in /opt/conda/envs/cams/lib/python3.9/site-packages (from pyproj&gt;=3.0.0-&gt;cartopy) (2021.10.8)
@@ -3607,9 +3603,9 @@ Requirement already satisfied: MarkupSafe&gt;=2.0 in /opt/conda/envs/cams/lib/py
 Requirement already satisfied: six&gt;=1.5 in /opt/conda/envs/cams/lib/python3.9/site-packages (from python-dateutil&gt;=2.7-&gt;matplotlib-&gt;cmaps) (1.16.0)
 Requirement already satisfied: webencodings in /opt/conda/envs/cams/lib/python3.9/site-packages (from bleach-&gt;panel&gt;=0.8.0-&gt;holoviews&lt;1.14.8) (0.5.1)
 Requirement already satisfied: importlib-metadata&gt;=4.4 in /opt/conda/envs/cams/lib/python3.9/site-packages (from markdown-&gt;panel&gt;=0.8.0-&gt;holoviews&lt;1.14.8) (4.11.3)
-Requirement already satisfied: charset-normalizer~=2.0.0 in /opt/conda/envs/cams/lib/python3.9/site-packages (from requests-&gt;panel&gt;=0.8.0-&gt;holoviews&lt;1.14.8) (2.0.12)
 Requirement already satisfied: urllib3&lt;1.27,&gt;=1.21.1 in /opt/conda/envs/cams/lib/python3.9/site-packages (from requests-&gt;panel&gt;=0.8.0-&gt;holoviews&lt;1.14.8) (1.26.9)
 Requirement already satisfied: idna&lt;4,&gt;=2.5 in /opt/conda/envs/cams/lib/python3.9/site-packages (from requests-&gt;panel&gt;=0.8.0-&gt;holoviews&lt;1.14.8) (3.3)
+Requirement already satisfied: charset-normalizer~=2.0.0 in /opt/conda/envs/cams/lib/python3.9/site-packages (from requests-&gt;panel&gt;=0.8.0-&gt;holoviews&lt;1.14.8) (2.0.12)
 Requirement already satisfied: zipp&gt;=0.5 in /opt/conda/envs/cams/lib/python3.9/site-packages (from importlib-metadata&gt;=4.4-&gt;markdown-&gt;panel&gt;=0.8.0-&gt;holoviews&lt;1.14.8) (3.8.0)
 Note: you may need to restart the kernel to use updated packages.
 </pre></div>
@@ -3744,15 +3740,15 @@ Note: you may need to restart the kernel to use updated packages.
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: rohub in /opt/conda/envs/cams/lib/python3.9/site-packages (1.0.7)
-Requirement already satisfied: requests in /opt/conda/envs/cams/lib/python3.9/site-packages (from rohub) (2.27.1)
 Requirement already satisfied: pandas in /opt/conda/envs/cams/lib/python3.9/site-packages (from rohub) (1.4.2)
+Requirement already satisfied: requests in /opt/conda/envs/cams/lib/python3.9/site-packages (from rohub) (2.27.1)
 Requirement already satisfied: python-dateutil&gt;=2.8.1 in /opt/conda/envs/cams/lib/python3.9/site-packages (from pandas-&gt;rohub) (2.8.2)
 Requirement already satisfied: pytz&gt;=2020.1 in /opt/conda/envs/cams/lib/python3.9/site-packages (from pandas-&gt;rohub) (2022.1)
 Requirement already satisfied: numpy&gt;=1.18.5 in /opt/conda/envs/cams/lib/python3.9/site-packages (from pandas-&gt;rohub) (1.21.6)
-Requirement already satisfied: urllib3&lt;1.27,&gt;=1.21.1 in /opt/conda/envs/cams/lib/python3.9/site-packages (from requests-&gt;rohub) (1.26.9)
-Requirement already satisfied: idna&lt;4,&gt;=2.5 in /opt/conda/envs/cams/lib/python3.9/site-packages (from requests-&gt;rohub) (3.3)
-Requirement already satisfied: charset-normalizer~=2.0.0 in /opt/conda/envs/cams/lib/python3.9/site-packages (from requests-&gt;rohub) (2.0.12)
 Requirement already satisfied: certifi&gt;=2017.4.17 in /opt/conda/envs/cams/lib/python3.9/site-packages (from requests-&gt;rohub) (2021.10.8)
+Requirement already satisfied: urllib3&lt;1.27,&gt;=1.21.1 in /opt/conda/envs/cams/lib/python3.9/site-packages (from requests-&gt;rohub) (1.26.9)
+Requirement already satisfied: charset-normalizer~=2.0.0 in /opt/conda/envs/cams/lib/python3.9/site-packages (from requests-&gt;rohub) (2.0.12)
+Requirement already satisfied: idna&lt;4,&gt;=2.5 in /opt/conda/envs/cams/lib/python3.9/site-packages (from requests-&gt;rohub) (3.3)
 Requirement already satisfied: six&gt;=1.5 in /opt/conda/envs/cams/lib/python3.9/site-packages (from python-dateutil&gt;=2.8.1-&gt;pandas-&gt;rohub) (1.16.0)
 Note: you may need to restart the kernel to use updated packages.
 </pre></div>
@@ -3816,7 +3812,7 @@ Note: you may need to restart the kernel to use updated packages.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Research Object was successfully created with id = 2f4c4963-ba0f-4069-a211-988fb62006ef
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Research Object was successfully created with id = 6dc56ffa-2e51-4a44-8bca-c95b0a053c64
 </pre></div>
 </div>
 </div>
@@ -3831,18 +3827,18 @@ Note: you may need to restart the kernel to use updated packages.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;identifier&#39;: &#39;2f4c4963-ba0f-4069-a211-988fb62006ef&#39;,
- &#39;shared_link&#39;: &#39;https://w3id.org/ro-id/2f4c4963-ba0f-4069-a211-988fb62006ef&#39;,
- &#39;title&#39;: &#39;NO2 (March 2019, 2020, 2021) in Spain Jupyter notebook demonstrating the usage of CAMS European air quality analysis from Copernicus Atmosphere Monitoring with RELIANCE services&#39;,
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;identifier&#39;: &#39;6dc56ffa-2e51-4a44-8bca-c95b0a053c64&#39;,
+ &#39;shared_link&#39;: &#39;https://w3id.org/ro-id/6dc56ffa-2e51-4a44-8bca-c95b0a053c64&#39;,
+ &#39;title&#39;: &#39;NO2 (April 2019, 2020, 2021) in Spain Jupyter notebook demonstrating the usage of CAMS European air quality analysis from Copernicus Atmosphere Monitoring with RELIANCE services&#39;,
  &#39;description&#39;: &#39;This Research Object demonstrates how to use CAMS European air quality analysis from Copernicus Atmosphere Monitoring with RELIANCE services and compute monthly map of NO2 over a given geographical area, here Spain&#39;,
  &#39;status&#39;: &#39;LIVE&#39;,
  &#39;access_mode&#39;: &#39;PUBLIC&#39;,
  &#39;type&#39;: &#39;Executable Research Object&#39;,
  &#39;template&#39;: &#39;Executable Research Object folders structure&#39;,
- &#39;created&#39;: &#39;2022-05-01T20:15:42.899723Z&#39;,
+ &#39;created&#39;: &#39;2022-05-02T18:31:25.914604Z&#39;,
  &#39;creator&#39;: &#39;annefou@geo.uio.no&#39;,
  &#39;modificator&#39;: None,
- &#39;modified&#39;: &#39;2022-05-01T20:15:43.260263Z&#39;,
+ &#39;modified&#39;: &#39;2022-05-02T18:31:26.313832Z&#39;,
  &#39;importer&#39;: None,
  &#39;research_areas&#39;: [&#39;Earth sciences&#39;],
  &#39;owner&#39;: &#39;annefou@geo.uio.no&#39;,
@@ -3856,7 +3852,7 @@ Note: you may need to restart the kernel to use updated packages.
  &#39;size&#39;: 0,
  &#39;creation_mode&#39;: &#39;MANUAL&#39;,
  &#39;doi&#39;: None,
- &#39;api_link&#39;: &#39;https://api.rohub.org/api/ros/2f4c4963-ba0f-4069-a211-988fb62006ef/&#39;}
+ &#39;api_link&#39;: &#39;https://api.rohub.org/api/ros/6dc56ffa-2e51-4a44-8bca-c95b0a053c64/&#39;}
 </pre></div>
 </div>
 </div>
@@ -4201,42 +4197,42 @@ Agent: {&#39;org_id&#39;: &#39;https://neic.no/&#39;, &#39;display_name&#39;: &#
   <tbody>
     <tr>
       <th>0</th>
-      <td>88b7d9fa-3c6a-4232-950c-736c3e0b3768</td>
+      <td>1ae9ed76-df71-4644-965b-ea6cc6a76bda</td>
       <td>biblio</td>
       <td>None</td>
       <td>annefou@geo.uio.no</td>
-      <td>2022-05-01T20:15:43.450956+0000</td>
-      <td>2022-05-01T20:15:43.451840+0000</td>
+      <td>2022-05-02T18:31:26.555817+0000</td>
+      <td>2022-05-02T18:31:26.557560+0000</td>
       <td>biblio</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>b97cbc88-03ab-47cc-be9e-673245513627</td>
+      <td>6b348ba4-1a87-4cfa-98d6-c3bfe3507003</td>
       <td>input</td>
       <td>None</td>
       <td>annefou@geo.uio.no</td>
-      <td>2022-05-01T20:15:43.451106+0000</td>
-      <td>2022-05-01T20:15:43.451943+0000</td>
+      <td>2022-05-02T18:31:26.556247+0000</td>
+      <td>2022-05-02T18:31:26.557719+0000</td>
       <td>input</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>99d35a77-ae94-488f-9188-3440d14f3f82</td>
+      <td>58647273-e7f0-4224-900f-d74f4e495314</td>
       <td>output</td>
       <td>None</td>
       <td>annefou@geo.uio.no</td>
-      <td>2022-05-01T20:15:43.451189+0000</td>
-      <td>2022-05-01T20:15:43.452006+0000</td>
+      <td>2022-05-02T18:31:26.556510+0000</td>
+      <td>2022-05-02T18:31:26.557788+0000</td>
       <td>output</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>af75adff-5015-4a9a-9317-432c577252ff</td>
+      <td>64678743-326f-4838-a0bb-baa7460fb6c6</td>
       <td>tool</td>
       <td>None</td>
       <td>annefou@geo.uio.no</td>
-      <td>2022-05-01T20:15:43.451263+0000</td>
-      <td>2022-05-01T20:15:43.452066+0000</td>
+      <td>2022-05-02T18:31:26.556748+0000</td>
+      <td>2022-05-02T18:31:26.557855+0000</td>
       <td>tool</td>
     </tr>
   </tbody>
@@ -4262,10 +4258,10 @@ Agent: {&#39;org_id&#39;: &#39;https://neic.no/&#39;, &#39;display_name&#39;: &#
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Resource was successfully created with id = faf2af90-0919-4f58-8bb3-412e21cc07c6
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Resource was successfully created with id = e313762b-2f3d-4f23-8d68-282d97725d33
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Resource(identifier=faf2af90-0919-4f58-8bb3-412e21cc07c6, post_request=False)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Resource(identifier=e313762b-2f3d-4f23-8d68-282d97725d33, post_request=False)
 </pre></div>
 </div>
 </div>
@@ -4315,9 +4311,9 @@ Agent: {&#39;org_id&#39;: &#39;https://neic.no/&#39;, &#39;display_name&#39;: &#
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Resource was successfully created with id = 8cdd8c9c-cc05-47e6-bda4-c50ba1095929
-Resource was successfully created with id = 5fb2de1b-7f4d-417a-8282-c9a6bd8ce821
-Resource was successfully created with id = 6d99c455-e836-4094-9157-4007d558fccf
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Resource was successfully created with id = def4e51c-9ef3-45ae-af61-f74121cbfdb4
+Resource was successfully created with id = 9e448934-14dc-4662-bd83-cc113661c58e
+Resource was successfully created with id = fc71cf9a-e065-4df0-bbc6-c9c5f02ee895
 </pre></div>
 </div>
 </div>
@@ -4468,12 +4464,12 @@ Resource was successfully created with id = 6d99c455-e836-4094-9157-4007d558fccf
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/jovyan/datahub/Reliance/Climate_ES_NO2_March/input/es.geo.json
-https://cesnet-oneprovider-01.datahub.egi.eu/api/v3/oneprovider/files/Reliance/Climate_ES_NO2_March/input/es.geo.json
-Resource was successfully created with id = 362b16ca-da9f-4d16-9b72-8f0d08a35ea2
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/jovyan/datahub/Reliance/Climate_ES_NO2_April/input/es.geo.json
+https://cesnet-oneprovider-01.datahub.egi.eu/api/v3/oneprovider/files/Reliance/Climate_ES_NO2_April/input/es.geo.json
+Resource was successfully created with id = e3ebc2da-6e70-43db-af77-b769b8d86fab
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Resource(identifier=362b16ca-da9f-4d16-9b72-8f0d08a35ea2, post_request=False)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Resource(identifier=e3ebc2da-6e70-43db-af77-b769b8d86fab, post_request=False)
 </pre></div>
 </div>
 </div>
@@ -4496,15 +4492,15 @@ Resource was successfully created with id = 362b16ca-da9f-4d16-9b72-8f0d08a35ea2
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/jovyan/datahub/Reliance/Climate_ES_NO2_March/input/NO2_ES_ADAMAPI_2019.zip
-https://cesnet-oneprovider-01.datahub.egi.eu/api/v3/oneprovider/files/Reliance/Climate_ES_NO2_March/input/NO2_ES_ADAMAPI_2019.zip
-Resource was successfully created with id = 9e9e9acd-8ed8-4618-b0e5-a6ec14e6e9b9
-/home/jovyan/datahub/Reliance/Climate_ES_NO2_March/input/NO2_ES_ADAMAPI_2020.zip
-https://cesnet-oneprovider-01.datahub.egi.eu/api/v3/oneprovider/files/Reliance/Climate_ES_NO2_March/input/NO2_ES_ADAMAPI_2020.zip
-Resource was successfully created with id = fd0b10cc-64d2-44b6-93f1-198f9ef216c0
-/home/jovyan/datahub/Reliance/Climate_ES_NO2_March/input/NO2_ES_ADAMAPI_2021.zip
-https://cesnet-oneprovider-01.datahub.egi.eu/api/v3/oneprovider/files/Reliance/Climate_ES_NO2_March/input/NO2_ES_ADAMAPI_2021.zip
-Resource was successfully created with id = e11e7b48-54da-4288-b645-5333b880c0c2
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/jovyan/datahub/Reliance/Climate_ES_NO2_April/input/NO2_ES_ADAMAPI_2019.zip
+https://cesnet-oneprovider-01.datahub.egi.eu/api/v3/oneprovider/files/Reliance/Climate_ES_NO2_April/input/NO2_ES_ADAMAPI_2019.zip
+Resource was successfully created with id = f20410a4-d038-4a5c-90ba-f7e01c6bafed
+/home/jovyan/datahub/Reliance/Climate_ES_NO2_April/input/NO2_ES_ADAMAPI_2020.zip
+https://cesnet-oneprovider-01.datahub.egi.eu/api/v3/oneprovider/files/Reliance/Climate_ES_NO2_April/input/NO2_ES_ADAMAPI_2020.zip
+Resource was successfully created with id = 4e28f8b9-b67c-4349-9e91-5ea06aede647
+/home/jovyan/datahub/Reliance/Climate_ES_NO2_April/input/NO2_ES_ADAMAPI_2021.zip
+https://cesnet-oneprovider-01.datahub.egi.eu/api/v3/oneprovider/files/Reliance/Climate_ES_NO2_April/input/NO2_ES_ADAMAPI_2021.zip
+Resource was successfully created with id = d0e63dc4-7a48-41ac-aebe-b1cb70d91911
 </pre></div>
 </div>
 </div>
@@ -4531,7 +4527,7 @@ Resource was successfully created with id = e11e7b48-54da-4288-b645-5333b880c0c2
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;/home/jovyan/datahub/Reliance/Climate_ES_NO2_March/tool/RELIANCE_Spain_NO2_month.ipynb&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;/home/jovyan/datahub/Reliance/Climate_ES_NO2_April/tool/RELIANCE_Spain_NO2_month.ipynb&#39;
 </pre></div>
 </div>
 </div>
@@ -4550,7 +4546,7 @@ Resource was successfully created with id = e11e7b48-54da-4288-b645-5333b880c0c2
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;/home/jovyan/datahub/Reliance/Climate_ES_NO2_March/tool/RELIANCE_Spain_NO2_month.ipynb&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;/home/jovyan/datahub/Reliance/Climate_ES_NO2_April/tool/RELIANCE_Spain_NO2_month.ipynb&#39;
 </pre></div>
 </div>
 </div>
@@ -4573,11 +4569,11 @@ Resource was successfully created with id = e11e7b48-54da-4288-b645-5333b880c0c2
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>https://cesnet-oneprovider-01.datahub.egi.eu/api/v3/oneprovider/files/Reliance/Climate_ES_NO2_March/tool/RELIANCE_Spain_NO2_month.ipynb
-Resource was successfully created with id = faeb0e7e-7782-4e41-a199-a54300055ba4
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>https://cesnet-oneprovider-01.datahub.egi.eu/api/v3/oneprovider/files/Reliance/Climate_ES_NO2_April/tool/RELIANCE_Spain_NO2_month.ipynb
+Resource was successfully created with id = 7a148679-98a3-4721-b05e-9c3784e10eca
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Resource(identifier=faeb0e7e-7782-4e41-a199-a54300055ba4, post_request=False)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Resource(identifier=7a148679-98a3-4721-b05e-9c3784e10eca, post_request=False)
 </pre></div>
 </div>
 </div>
@@ -4596,6 +4592,14 @@ Resource was successfully created with id = faeb0e7e-7782-4e41-a199-a54300055ba4
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Resource was successfully created with id = 1b9df015-65e7-4e23-8db9-ac080a07f1e3
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Resource(identifier=1b9df015-65e7-4e23-8db9-ac080a07f1e3, post_request=False)
+</pre></div>
+</div>
+</div>
 </div>
 </div>
 <div class="section" id="add-link-to-online-rendered-jupyter-notebook">
@@ -4603,11 +4607,19 @@ Resource was successfully created with id = faeb0e7e-7782-4e41-a199-a54300055ba4
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">res_file_url</span> <span class="o">=</span> <span class="s1">&#39;https://nordicesmhub.github.io/RELIANCE/demo-eosc-future/RELIANCE_Spain_NO2_month.html&#39;</span>
-<span class="n">res_type</span> <span class="o">=</span> <span class="s2">&quot;Web&quot;</span>
+<span class="n">res_type</span> <span class="o">=</span> <span class="s2">&quot;Result&quot;</span>
 <span class="n">res_title</span> <span class="o">=</span> <span class="s2">&quot;online rendered jupyter book of CAMS European air quality analysis from Copernicus Atmosphere Monitoring with RELIANCE services - Applied over &quot;</span> <span class="o">+</span> <span class="n">country_fullname</span> <span class="o">+</span> <span class="s2">&quot; and variable &quot;</span> <span class="o">+</span> <span class="n">variable_long_name</span>
 <span class="n">res_description</span> <span class="o">=</span> <span class="s2">&quot;Jupyter Notebook (stored in Github) for discovering, accessing and processing RELIANCE data cube, and creating a Research Object with results, and finally publish it in Zenodo&quot;</span>
 <span class="n">res_folder</span> <span class="o">=</span> <span class="s1">&#39;tool&#39;</span>
 <span class="n">ro</span><span class="o">.</span><span class="n">add_external_resource</span><span class="p">(</span><span class="n">res_type</span><span class="o">=</span><span class="n">res_type</span><span class="p">,</span> <span class="n">input_url</span><span class="o">=</span><span class="n">res_file_url</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="n">res_title</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="n">res_description</span><span class="p">,</span> <span class="n">folder</span><span class="o">=</span><span class="n">res_folder</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Resource was successfully created with id = 5361f09b-6dab-488d-b05f-406eb1ce8853
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Resource(identifier=5361f09b-6dab-488d-b05f-406eb1ce8853, post_request=False)
 </pre></div>
 </div>
 </div>
@@ -4629,12 +4641,12 @@ Resource was successfully created with id = faeb0e7e-7782-4e41-a199-a54300055ba4
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/jovyan/datahub/Reliance/Climate_ES_NO2_March/output/NO2_March_ES_2019-2021.png
-https://cesnet-oneprovider-01.datahub.egi.eu/api/v3/oneprovider/files/Reliance/Climate_ES_NO2_March/output/NO2_March_ES_2019-2021.png
-Resource was successfully created with id = e60982b1-2c52-4473-a428-8be1f9f9fb83
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/jovyan/datahub/Reliance/Climate_ES_NO2_April/output/NO2_April_ES_2019-2021.png
+https://cesnet-oneprovider-01.datahub.egi.eu/api/v3/oneprovider/files/Reliance/Climate_ES_NO2_April/output/NO2_April_ES_2019-2021.png
+Resource was successfully created with id = ed7a067c-5784-490f-8894-fc4815e6f693
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Resource(identifier=e60982b1-2c52-4473-a428-8be1f9f9fb83, post_request=False)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Resource(identifier=ed7a067c-5784-490f-8894-fc4815e6f693, post_request=False)
 </pre></div>
 </div>
 </div>
@@ -4655,11 +4667,11 @@ Resource was successfully created with id = e60982b1-2c52-4473-a428-8be1f9f9fb83
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>https://cesnet-oneprovider-01.datahub.egi.eu/api/v3/oneprovider/files/Reliance/Climate_ES_NO2_March/output/NO2_March _ES_2021-03-15.png
-Resource was successfully created with id = 3a4d9e49-73e9-46d4-9ce2-f2c25c5f072c
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>https://cesnet-oneprovider-01.datahub.egi.eu/api/v3/oneprovider/files/Reliance/Climate_ES_NO2_April/output/NO2_April _ES_2021-04-15.png
+Resource was successfully created with id = 5fe69046-cc50-417b-898e-ecf96422ba61
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Resource(identifier=3a4d9e49-73e9-46d4-9ce2-f2c25c5f072c, post_request=False)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Resource(identifier=5fe69046-cc50-417b-898e-ecf96422ba61, post_request=False)
 </pre></div>
 </div>
 </div>
@@ -4680,11 +4692,11 @@ Resource was successfully created with id = 3a4d9e49-73e9-46d4-9ce2-f2c25c5f072c
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>https://cesnet-oneprovider-01.datahub.egi.eu/api/v3/oneprovider/files/Reliance/Climate_ES_NO2_March/output/NO2_March_ES_2019-2021.nc
-Resource was successfully created with id = 6c3046e0-889f-45d6-8b34-84fdecc940a4
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>https://cesnet-oneprovider-01.datahub.egi.eu/api/v3/oneprovider/files/Reliance/Climate_ES_NO2_April/output/NO2_April_ES_2019-2021.nc
+Resource was successfully created with id = 4ba41ebf-8b9a-4e49-9746-69df3d77f90f
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Resource(identifier=6c3046e0-889f-45d6-8b34-84fdecc940a4, post_request=False)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Resource(identifier=4ba41ebf-8b9a-4e49-9746-69df3d77f90f, post_request=False)
 </pre></div>
 </div>
 </div>
@@ -4736,22 +4748,22 @@ Resource was successfully created with id = 6c3046e0-889f-45d6-8b34-84fdecc940a4
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[{&#39;identifier&#39;: &#39;e01b460d-db4f-4426-87ab-4495cf7b2860&#39;,
-  &#39;shared_link&#39;: &#39;https://w3id.org/ro-id/2f4c4963-ba0f-4069-a211-988fb62006ef/annotations/e01b460d-db4f-4426-87ab-4495cf7b2860&#39;,
-  &#39;name&#39;: &#39;annotations/e01b460d-db4f-4426-87ab-4495cf7b2860&#39;,
-  &#39;filename&#39;: &#39;.ro/annotations/e01b460d-db4f-4426-87ab-4495cf7b2860.ttl&#39;,
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[{&#39;identifier&#39;: &#39;4d606cde-43de-48f7-a792-18069b1a7ab2&#39;,
+  &#39;shared_link&#39;: &#39;https://w3id.org/ro-id/6dc56ffa-2e51-4a44-8bca-c95b0a053c64/annotations/4d606cde-43de-48f7-a792-18069b1a7ab2&#39;,
+  &#39;name&#39;: &#39;annotations/4d606cde-43de-48f7-a792-18069b1a7ab2&#39;,
+  &#39;filename&#39;: &#39;.ro/annotations/4d606cde-43de-48f7-a792-18069b1a7ab2.ttl&#39;,
   &#39;relation&#39;: False,
   &#39;read_only&#39;: False,
-  &#39;target&#39;: &#39;2f4c4963-ba0f-4069-a211-988fb62006ef&#39;,
-  &#39;ro&#39;: &#39;2f4c4963-ba0f-4069-a211-988fb62006ef&#39;,
+  &#39;target&#39;: &#39;6dc56ffa-2e51-4a44-8bca-c95b0a053c64&#39;,
+  &#39;ro&#39;: &#39;6dc56ffa-2e51-4a44-8bca-c95b0a053c64&#39;,
   &#39;resources&#39;: [],
-  &#39;created&#39;: &#39;2022-05-01T20:18:52.528984+0000&#39;,
+  &#39;created&#39;: &#39;2022-05-02T18:34:40.107902+0000&#39;,
   &#39;creator&#39;: &#39;annefou@geo.uio.no&#39;,
   &#39;modificator&#39;: None,
-  &#39;modified&#39;: &#39;2022-05-01T20:18:52.528921+0000&#39;,
+  &#39;modified&#39;: &#39;2022-05-02T18:34:40.107799+0000&#39;,
   &#39;authors_credits&#39;: [&#39;annefou@geo.uio.no&#39;],
   &#39;contributors_credits&#39;: [],
-  &#39;api_link&#39;: &#39;https://api.rohub.org/api/annotations/e01b460d-db4f-4426-87ab-4495cf7b2860/&#39;}]
+  &#39;api_link&#39;: &#39;https://api.rohub.org/api/annotations/4d606cde-43de-48f7-a792-18069b1a7ab2/&#39;}]
 </pre></div>
 </div>
 </div>
@@ -4766,8 +4778,8 @@ Resource was successfully created with id = 6c3046e0-889f-45d6-8b34-84fdecc940a4
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;identifier&#39;: &#39;279b32d0-848f-4aad-891d-31ac206e26ea&#39;,
- &#39;ro&#39;: &#39;2f4c4963-ba0f-4069-a211-988fb62006ef&#39;,
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;identifier&#39;: &#39;e823c64b-5e90-4750-a8f8-4bbe1152cd14&#39;,
+ &#39;ro&#39;: &#39;6dc56ffa-2e51-4a44-8bca-c95b0a053c64&#39;,
  &#39;keywords&#39;: [&#39;air quality&#39;,
   &#39;CAMS&#39;,
   &#39;copernicus&#39;,
@@ -4814,11 +4826,6 @@ Resource was successfully created with id = 6c3046e0-889f-45d6-8b34-84fdecc940a4
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Trying to confirm status of the job. It can take a while...
-</pre></div>
-</div>
-</div>
 </div>
 </div>
 <div class="section" id="load-the-published-research-object">
@@ -4854,7 +4861,27 @@ Resource was successfully created with id = 6c3046e0-889f-45d6-8b34-84fdecc940a4
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#ro.delete()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ro</span><span class="o">.</span><span class="n">delete</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Trying to confirm status of the job. It can take a while...
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;identifier&#39;: &#39;95eb3495-36af-49cf-b1f7-666091e5d04c&#39;,
+ &#39;created_by&#39;: &#39;annefou@geo.uio.no&#39;,
+ &#39;created_on&#39;: &#39;2022-05-02T18:36:18.371515+0000&#39;,
+ &#39;started_on&#39;: &#39;2022-05-02T18:36:18.456192+0000&#39;,
+ &#39;finished_on&#39;: &#39;2022-05-02T18:36:24.268073+0000&#39;,
+ &#39;operation&#39;: &#39;RO_DELETE&#39;,
+ &#39;status&#39;: &#39;SUCCESS&#39;,
+ &#39;input&#39;: &#39;RO identifier for remove: 6dc56ffa-2e51-4a44-8bca-c95b0a053c64&#39;,
+ &#39;output&#39;: &#39;Task done successfully&#39;,
+ &#39;results&#39;: &#39;6dc56ffa-2e51-4a44-8bca-c95b0a053c64&#39;,
+ &#39;warnings&#39;: None,
+ &#39;execution&#39;: &#39;5.811881&#39;,
+ &#39;api_link&#39;: &#39;https://api.rohub.org/api/jobs/95eb3495-36af-49cf-b1f7-666091e5d04c/&#39;}
 </pre></div>
 </div>
 </div>
